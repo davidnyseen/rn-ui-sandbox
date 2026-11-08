@@ -1,0 +1,100 @@
+name: build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  upload:
+    runs-on: macos-26
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Expo makes ios/ from app.json; the build number is the time, so every upload is newer than the last
+      - name: Make the Xcode project
+        run: |
+          npm ci --no-audit --no-fund
+          CI=1 npx expo prebuild --platform ios --clean
+          WS=$(ls -d ios/*.xcworkspace | head -1); SCHEME=$(basename "$WS" .xcworkspace)
+          /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $(date -u +%y%m%d%H%M)" "ios/$SCHEME/Info.plist"
+          echo "WS=$WS" >> $GITHUB_ENV; echo "SCHEME=$SCHEME" >> $GITHUB_ENV
+
+      - name: App Store Connect key
+        run: |
+          mkdir -p ~/private_keys
+          printf '%s' "${{ secrets.ASC_KEY_P8 }}" > ~/private_keys/AuthKey_${{ secrets.ASC_KEY_ID }}.p8
+
+      - name: Archive
+        id: archive
+        continue-on-error: true
+        run: |
+          xcodebuild archive -workspace "$WS" -scheme "$SCHEME" -configuration Release \
+            -destination 'generic/platform=iOS' -archivePath "$RUNNER_TEMP/app.xcarchive" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath ~/private_keys/AuthKey_${{ secrets.ASC_KEY_ID }}.p8 \
+            -authenticationKeyID "${{ secrets.ASC_KEY_ID }}" -authenticationKeyIssuerID "${{ secrets.ASC_ISSUER_ID }}" \
+            DEVELOPMENT_TEAM="${{ secrets.APPLE_TEAM_ID }}" CODE_SIGN_STYLE=Automatic | tail -n 30
+          exit ${PIPESTATUS[0]}
+
+      # Each run's fresh Mac makes a new development certificate through the API key, and Apple caps how many there can be
+      # ("reached the maximum number of certificates", 2026-11-01). Old ones from earlier runs are useless, but revoking them
+      # emails the account holder each time, so they're only revoked (and the archive retried) when the archive fails.
+      # Only "Created via API" development certificates.
+      - name: Free the certificate slots
+        if: steps.archive.outcome == 'failure'
+        env:
+          KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          node - <<'EOF'
+          const crypto = require('crypto'), fs = require('fs'), os = require('os');
+          const kid = process.env.KEY_ID, iss = process.env.ISSUER_ID;
+          const key = fs.readFileSync(`${os.homedir()}/private_keys/AuthKey_${kid}.p8`, 'utf8');
+          const b64 = o => Buffer.from(JSON.stringify(o)).toString('base64url');
+          const now = Math.floor(Date.now() / 1000);
+          const head = b64({ alg: 'ES256', kid, typ: 'JWT' }), body = b64({ iss, iat: now, exp: now + 600, aud: 'appstoreconnect-v1' });
+          const sig = crypto.sign('sha256', Buffer.from(head + '.' + body), { key, dsaEncoding: 'ieee-p1363' }).toString('base64url');
+          const auth = { Authorization: `Bearer ${head}.${body}.${sig}` };
+          (async () => {
+            const r = await fetch('https://api.appstoreconnect.apple.com/v1/certificates?filter[certificateType]=DEVELOPMENT,IOS_DEVELOPMENT&limit=200', { headers: auth });
+            const j = await r.json();
+            if (!r.ok) { console.log('could not list certificates', r.status); return; }
+            for (const c of j.data) {
+              if (!(c.attributes.name || '').includes('Created via API')) continue;
+              const d = await fetch(`https://api.appstoreconnect.apple.com/v1/certificates/${c.id}`, { method: 'DELETE', headers: auth });
+              console.log('revoked', c.id, d.status);
+            }
+          })();
+          EOF
+
+      - name: Archive again
+        if: steps.archive.outcome == 'failure'
+        run: |
+          rm -rf "$RUNNER_TEMP/app.xcarchive"
+          xcodebuild archive -workspace "$WS" -scheme "$SCHEME" -configuration Release \
+            -destination 'generic/platform=iOS' -archivePath "$RUNNER_TEMP/app.xcarchive" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath ~/private_keys/AuthKey_${{ secrets.ASC_KEY_ID }}.p8 \
+            -authenticationKeyID "${{ secrets.ASC_KEY_ID }}" -authenticationKeyIssuerID "${{ secrets.ASC_ISSUER_ID }}" \
+            DEVELOPMENT_TEAM="${{ secrets.APPLE_TEAM_ID }}" CODE_SIGN_STYLE=Automatic | tail -n 30
+          exit ${PIPESTATUS[0]}
+
+      - name: Upload to TestFlight
+        run: |
+          cat > "$RUNNER_TEMP/export.plist" <<EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0"><dict>
+            <key>method</key><string>app-store-connect</string>
+            <key>destination</key><string>upload</string>
+            <key>teamID</key><string>${{ secrets.APPLE_TEAM_ID }}</string>
+            <key>signingStyle</key><string>automatic</string>
+          </dict></plist>
+          EOF
+          xcodebuild -exportArchive -archivePath "$RUNNER_TEMP/app.xcarchive" -exportOptionsPlist "$RUNNER_TEMP/export.plist" \
+            -exportPath "$RUNNER_TEMP/export" -allowProvisioningUpdates \
+            -authenticationKeyPath ~/private_keys/AuthKey_${{ secrets.ASC_KEY_ID }}.p8 \
+            -authenticationKeyID "${{ secrets.ASC_KEY_ID }}" -authenticationKeyIssuerID "${{ secrets.ASC_ISSUER_ID }}"

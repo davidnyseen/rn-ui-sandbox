@@ -1,0 +1,16 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    // expo-modules-core ships nested under expo/ rather than hoisted, so a
+    // type-only `import ... from 'expo-modules-core'` inside another Expo
+    // package (expo-audio) can't be resolved by tsc from the project root.
+    // Metro resolves it fine at runtime; this only teaches tsc where it is,
+    // which restores the SharedObject/EventEmitter base types (and so
+    // `player.addListener`) on expo-audio's AudioPlayer.
+    "paths": {
+      "expo-modules-core": ["./node_modules/expo/node_modules/expo-modules-core"],
+      "expo-modules-core/*": ["./node_modules/expo/node_modules/expo-modules-core/*"]
+    }
+  }
+}

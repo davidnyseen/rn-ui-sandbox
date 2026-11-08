@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "Thai Path",
+    "slug": "thai-path",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "bundleIdentifier": "com.davidnyseen.thaipath",
+      "supportsTablet": false,
+      "buildNumber": "1",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSPhotoLibraryUsageDescription": "Thai Path does not use your photos. (A library the app includes mentions photo access, and Apple asks for this note.)"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-splash-screen",
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Thai Path uses the microphone to check your pronunciation.",
+          "speechRecognitionPermission": "Thai Path uses speech recognition to check your pronunciation."
+        }
+      ],
+      "expo-secure-store",
+      "expo-audio",
+      "expo-web-browser",
+      "expo-status-bar",
+      "expo-asset"
+    ]
+  }
+}
