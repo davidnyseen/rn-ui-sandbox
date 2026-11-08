@@ -58,8 +58,6 @@ const UNIT_ICONS: Record<string, typeof BookIcon> = {
 
 const NODE_SIZE = 64;
 const ROW_GAP = 132; // was 176: more stops on screen at once (user, 2026-11-08)
-// Room under a stop for its name pill before the trail sets off (the map shows lesson names since 2026-11-07).
-const LABEL_CLEARANCE = 44;
 // The divider card's own rendered height, plus the clear space below it
 // before the first node's top edge (measured at the larger "current" node
 // size, since that's whichever section is still in progress) — kept as two
@@ -85,10 +83,6 @@ const DOT_SIZE = 18;
 // and the dotted "not unlocked yet" segments read as a trail rather than a
 // technical diagram line.
 const PATH_STROKE_WIDTH = 5;
-// Vertical clearance a departing segment gives a done node's star row
-// (marginTop 4 + ~13px star icons + a little breathing room) before it's
-// allowed to start curving away — see pathSegments.
-const STAR_ROW_CLEARANCE = 24;
 // Gap from a section's last node down to the next section's header —
 // tighter than ROW_GAP since there's no connector line filling that space.
 const SECTION_END_GAP = 96;
@@ -103,8 +97,9 @@ const STICKY_SWITCH_OFFSET = 40;
 // Phase resets at the start of every section so each subject's run of
 // lessons starts the wave fresh rather than carrying an odd offset over
 // from wherever the previous subject's lesson count left off.
+// Left, right, left… from a section's first stop (user, 2026-11-08: "why not start from left").
 function waveOffset(index: number, amplitude: number): number {
-  return [0, 1, 0, -1][index % 4] * amplitude;
+  return (index % 2 === 0 ? -1 : 1) * amplitude;
 }
 
 // Text/icon/overlay colors for a section header rendered on its bold
@@ -222,7 +217,7 @@ export function PathScreen({
   const items = [...unitItems, ...courseItems];
 
   const centerX = trackWidth / 2;
-  const amplitude = Math.max(0, Math.min(centerX - NODE_SIZE / 2 - 8, centerX * 0.55));
+  const amplitude = Math.max(0, Math.min(centerX - (WRAP_WIDTH + 40) / 2 - 12, centerX * 0.45));
 
   let cursorY = TOP_PADDING;
   let waveIndex = 0;
@@ -267,11 +262,15 @@ export function PathScreen({
     // A done node's star row sits just below it — start the curve past that
     // row instead of at the node's own center, so it never shows through
     // the gaps between the stars.
-    const startY = prev.y + NODE_SIZE / 2 + (prevNode.status === 'done' ? STAR_ROW_CLEARANCE : 0) + LABEL_CLEARANCE;
-    const midY = (startY + y) / 2;
+    // Leave from the side of this stop that faces the next one, sweep across, and land on the top of the next circle
+    // (the current stop is drawn 8px bigger) — clear of the name pill under the stop, and never into a circle's side.
+    const prevR = (prevNode.status === 'current' ? NODE_SIZE + 8 : NODE_SIZE) / 2;
+    const startX = prev.x + Math.sign(x - prev.x) * prevR;
+    const startY = prev.y;
+    const endY = y - (node.status === 'current' ? NODE_SIZE + 8 : NODE_SIZE) / 2;
     return [{
       key: `path-${node.key}`,
-      d: `M ${prev.x} ${startY} C ${prev.x} ${midY}, ${x} ${midY}, ${x} ${y}`,
+      d: `M ${startX} ${startY} C ${x} ${startY}, ${x} ${startY}, ${x} ${endY}`,
       stroke: locked ? '#b88a3a' : pal.base, // locked: a warm gold-brown trail that still reads on white
       dashed: locked,
     }];
