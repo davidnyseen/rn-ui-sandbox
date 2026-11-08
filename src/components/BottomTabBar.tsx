@@ -61,6 +61,6 @@ const styles = StyleSheet.create({
   tabActive: { backgroundColor: colors.accent100 },
   icon: { width: 36, height: 30 },
   iconIdle: { opacity: 0.75 },
-  label: { fontFamily: fonts.bodySemibold, fontSize: 11, letterSpacing: 0.2, color: colors.accent700 },
-  labelActive: { color: colors.accent800, fontWeight: '800' },
+  label: { fontFamily: fonts.bodySemibold, fontSize: 11, letterSpacing: 0.2, color: colors.text }, // black, not gold (user, 2026-11-08)
+  labelActive: { fontFamily: fonts.heading },
 });

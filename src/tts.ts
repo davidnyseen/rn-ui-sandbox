@@ -3,6 +3,7 @@ import * as Speech from 'expo-speech';
 import { AudioPlayer, createAudioPlayer } from 'expo-audio';
 import thaiAudioMap from './generated/thaiAudioMap';
 import thaiAudioMapMale from './generated/thaiAudioMapMale';
+import englishAudioMap from './generated/englishAudioMap';
 
 // Pregenerated Google Cloud Neural2 audio (see scripts/generateThaiAudio.js)
 // sounds far more natural than the on-device TTS voice, and is used whenever
@@ -90,6 +91,59 @@ function stopCurrentPlayer() {
   }
 }
 
+// Plays one bundled clip, cancelling whatever was playing; onDone fires once when it ends (or is replaced).
+function playClip(source: number, onDone?: () => void) {
+  const player = createAudioPlayer(source);
+  currentPlayer = player;
+  let done = false;
+  let durationTimer: ReturnType<typeof setTimeout> | null = null;
+  const finish = () => {
+    if (done) return;
+    done = true;
+    if (durationTimer) clearTimeout(durationTimer);
+    listener.remove();
+    try {
+      player.remove();
+    } catch {
+      // ignore
+    }
+    if (currentPlayer === player) currentPlayer = null;
+    if (currentCleanup === cleanup) currentCleanup = null;
+    onDone?.();
+  };
+  const cleanup = () => {
+    done = true; // suppress finish()'s own work — the caller (stopCurrentPlayer) already removes the player
+    if (durationTimer) clearTimeout(durationTimer);
+    listener.remove();
+  };
+  // expo-audio's web player doesn't reliably emit a "finished" status
+  // update on web (its `media.onended` handler never emits one — see
+  // node_modules/expo-audio/src/AudioModule.web.ts), so `didJustFinish`
+  // alone can never fire there. Once we learn the clip's duration (from
+  // any status update after it loads), schedule onDone as a fallback timer
+  // too — whichever signal arrives first wins, real event or timeout.
+  const listener = player.addListener('playbackStatusUpdate', (status) => {
+    if (status.didJustFinish) {
+      finish();
+      return;
+    }
+    // Reschedule on every update (not just the first) so the fallback
+    // tracks actual playback position — a network stall between the first
+    // status update and the clip actually finishing loading/buffering
+    // would otherwise leave the timer counting down against wall-clock
+    // time while the audio itself lags behind, cutting the end of the
+    // clip off early. Later updates correct the deadline to match where
+    // the clip really is.
+    if (status.duration > 0) {
+      if (durationTimer) clearTimeout(durationTimer);
+      const remainingMs = Math.max(0, (status.duration - status.currentTime) * 1000) + 150;
+      durationTimer = setTimeout(finish, remainingMs);
+    }
+  });
+  currentCleanup = cleanup;
+  player.play();
+}
+
 // `speaker` picks a male voice for reply()-step lines said by 'M' (see
 // scripts/generateThaiAudioMale.js) — everything else (including 'F' lines,
 // which already sound right) keeps using the single bundled female voice.
@@ -99,55 +153,7 @@ export function speakThai(text: string, onDone?: () => void, speaker?: 'M' | 'F'
 
   const source = speaker === 'M' ? (thaiAudioMapMale[text] ?? thaiAudioMap[text]) : thaiAudioMap[text];
   if (source !== undefined) {
-    const player = createAudioPlayer(source);
-    currentPlayer = player;
-    let done = false;
-    let durationTimer: ReturnType<typeof setTimeout> | null = null;
-    const finish = () => {
-      if (done) return;
-      done = true;
-      if (durationTimer) clearTimeout(durationTimer);
-      listener.remove();
-      try {
-        player.remove();
-      } catch {
-        // ignore
-      }
-      if (currentPlayer === player) currentPlayer = null;
-      if (currentCleanup === cleanup) currentCleanup = null;
-      onDone?.();
-    };
-    const cleanup = () => {
-      done = true; // suppress finish()'s own work — the caller (stopCurrentPlayer) already removes the player
-      if (durationTimer) clearTimeout(durationTimer);
-      listener.remove();
-    };
-    // expo-audio's web player doesn't reliably emit a "finished" status
-    // update on web (its `media.onended` handler never emits one — see
-    // node_modules/expo-audio/src/AudioModule.web.ts), so `didJustFinish`
-    // alone can never fire there. Once we learn the clip's duration (from
-    // any status update after it loads), schedule onDone as a fallback timer
-    // too — whichever signal arrives first wins, real event or timeout.
-    const listener = player.addListener('playbackStatusUpdate', (status) => {
-      if (status.didJustFinish) {
-        finish();
-        return;
-      }
-      // Reschedule on every update (not just the first) so the fallback
-      // tracks actual playback position — a network stall between the first
-      // status update and the clip actually finishing loading/buffering
-      // would otherwise leave the timer counting down against wall-clock
-      // time while the audio itself lags behind, cutting the end of the
-      // clip off early. Later updates correct the deadline to match where
-      // the clip really is.
-      if (status.duration > 0) {
-        if (durationTimer) clearTimeout(durationTimer);
-        const remainingMs = Math.max(0, (status.duration - status.currentTime) * 1000) + 150;
-        durationTimer = setTimeout(finish, remainingMs);
-      }
-    });
-    currentCleanup = cleanup;
-    player.play();
+    playClip(source, onDone);
     return;
   }
 
@@ -167,6 +173,13 @@ export function speakThai(text: string, onDone?: () => void, speaker?: 'M' | 'F'
 export function speakEnglish(text: string, onDone?: () => void) {
   Speech.stop();
   stopCurrentPlayer();
+  // Pre-recorded Google voice (scripts/generateEnglishAudio.js) when there is one, so English doesn't drop to the
+  // phone's own, flatter voice; the device voice stays as the fallback for anything not recorded.
+  const source = englishAudioMap[text];
+  if (source !== undefined) {
+    playClip(source, onDone);
+    return;
+  }
   Speech.speak(text, {
     language: 'en-US',
     pitch: 1.0,
