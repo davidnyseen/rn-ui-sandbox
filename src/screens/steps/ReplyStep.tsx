@@ -7,7 +7,7 @@ import { ReplyContextLine } from '../../courseTypes';
 
 const BUBBLE_RADIUS = 18;
 const TAIL_RADIUS = 4;
-const AVATAR_SIZE = 24;
+const AVATAR_SIZE = 28;
 
 const speakerColor = (speaker: 'M' | 'F') => (speaker === 'M' ? colors.maleSpeaker : colors.pink);
 const SpeakerIcon = ({ speaker, size }: { speaker: 'M' | 'F'; size: number }) =>
@@ -97,14 +97,13 @@ export function ReplyStep({
 
   return (
     <View style={styles.screen}>
-      <Text style={styles.scene}>Tap a message to hear it, then answer as the {replySpeaker === 'M' ? 'man' : 'woman'}.</Text>
-      <View style={styles.sceneRule} />
+      <Text style={styles.hint}>Tap a message to hear it, then answer as the {replySpeaker === 'M' ? 'man' : 'woman'}.</Text>
       <View style={styles.context}>
         {context.slice(0, visibleCount).map((line, i) => {
           const isRight = line.speaker === 'M';
           const avatar = (
             <View style={[styles.avatar, { backgroundColor: speakerColor(line.speaker) }]}>
-              <SpeakerIcon speaker={line.speaker} size={13} />
+              <SpeakerIcon speaker={line.speaker} size={15} />
             </View>
           );
           return (
@@ -119,7 +118,6 @@ export function ReplyStep({
                       isRight ? styles.bubbleTailRight : styles.bubbleTailLeft,
                     ]}
                   >
-                    <View style={[styles.tail, isRight ? styles.tailRight : styles.tailLeft, { backgroundColor: speakerColor(line.speaker) }]} />
                     <View style={styles.bubbleTop}>
                       <Text style={styles.bubbleRoman}>{line.roman}</Text>
                       <PlayIcon size={14} color="rgba(255,255,255,0.9)" />
@@ -145,7 +143,7 @@ export function ReplyStep({
             const isRight = replySpeaker === 'M';
             const avatar = (
               <View style={[styles.avatar, { backgroundColor: speakerColor(replySpeaker) }]}>
-                <SpeakerIcon speaker={replySpeaker} size={13} />
+                <SpeakerIcon speaker={replySpeaker} size={15} />
               </View>
             );
             return (
@@ -160,17 +158,17 @@ export function ReplyStep({
                         isRight ? styles.bubbleTailRight : styles.bubbleTailLeft,
                       ]}
                     >
-                      <View style={[styles.tail, isRight ? styles.tailRight : styles.tailLeft, { backgroundColor: speakerColor(replySpeaker) }]} />
                       <View style={styles.bubbleTop}>
-                        <Text style={styles.bubbleEnglishLine}>{english}</Text>
+                        <Text style={styles.bubbleThai}>{english}</Text>
                         <PlayIcon size={14} color="rgba(255,255,255,0.9)" />
                       </View>
                     </View>
                   </Pressable>
                   {isRight && avatar}
                 </View>
-                <Text style={styles.translatePrompt}>How do you say this in Thai?</Text>
-                <View style={styles.promptRule} />
+                <Text style={[styles.translatePrompt, isRight ? styles.textRight : styles.textLeft]}>
+                  How do you say this in Thai?
+                </Text>
               </View>
             );
           })()}
@@ -189,10 +187,10 @@ export function ReplyStep({
               const speakerFill = speakerColor(replySpeaker);
               const avatar = (
                 <View style={[styles.avatar, { backgroundColor: speakerFill }]}>
-                  <SpeakerIcon speaker={replySpeaker} size={13} />
+                  <SpeakerIcon speaker={replySpeaker} size={15} />
                 </View>
               );
-              let bg: string = replySpeaker === 'M' ? '#f4f7fe' : '#fff5f9';
+              let bg: string = colors.white;
               let border: string = speakerFill;
               let color: string = speakerFill;
               let romanColor: string = textMuted(0.55);
@@ -252,38 +250,32 @@ const styles = StyleSheet.create({
     width: AVATAR_SIZE, height: AVATAR_SIZE, borderRadius: 9999, alignItems: 'center', justifyContent: 'center', flexShrink: 0,
   },
 
-  scene: { fontFamily: fonts.bodySemibold, fontSize: 14, color: colors.accent700 },
-  sceneRule: { width: '60%', height: 2, borderRadius: 1, backgroundColor: 'rgba(230,176,0,0.35)', marginTop: 8, marginBottom: 14 },
-  context: { gap: 10, marginBottom: 12 },
-  bubbleRow: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+  hint: { fontFamily: fonts.bodySemibold, fontSize: 14, color: colors.accent700, marginBottom: 14 },
+  context: { gap: 10, marginBottom: 20 }, // no caption lines under the bubbles any more
+  bubbleRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   bubbleRowLeft: { justifyContent: 'flex-start' },
   bubbleRowRight: { justifyContent: 'flex-end' },
   bubbleCol: { maxWidth: '74%' },
   bubble: {
-    borderRadius: BUBBLE_RADIUS, paddingVertical: 8, paddingHorizontal: 16, gap: 1, alignItems: 'center',
+    borderRadius: BUBBLE_RADIUS, paddingVertical: 10, paddingHorizontal: 15, gap: 2,
   },
-  // a small rotated square peeking out of the bubble's bottom corner, on the speaker's side
-  tail: { position: 'absolute', bottom: -1, width: 12, height: 12, borderRadius: 2, transform: [{ rotate: '45deg' }] },
-  tailRight: { right: -4 },
-  tailLeft: { left: -4 },
   bubbleTailLeft: { borderBottomLeftRadius: TAIL_RADIUS },
   bubbleTailRight: { borderBottomRightRadius: TAIL_RADIUS },
   bubbleTop: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   bubbleMeaning: { fontSize: 12, color: 'rgba(255,255,255,0.85)', marginTop: 1 },
-  bubbleRoman: { fontFamily: fonts.bodySemibold, fontSize: 12, color: 'rgba(255,255,255,0.85)' },
-  bubbleThai: { fontSize: 18, color: colors.white, fontFamily: fonts.heading },
-  bubbleEnglishLine: { fontSize: 16, color: colors.white, fontFamily: fonts.heading, paddingVertical: 2 },
+  bubbleRoman: { fontFamily: fonts.bodySemibold, fontSize: 13, color: 'rgba(255,255,255,0.85)' },
+  bubbleThai: { fontSize: 17, color: colors.white, fontFamily: fonts.bodySemibold },
+  textLeft: { textAlign: 'left' },
+  textRight: { textAlign: 'right' },
 
-  translatePrompt: { fontFamily: fonts.heading, fontSize: 17, color: colors.text, marginTop: 14, marginBottom: 6, textAlign: 'center' },
-  promptRule: { alignSelf: 'center', width: 36, height: 3, borderRadius: 2, backgroundColor: colors.accent, marginBottom: 14 },
+  translatePrompt: { fontFamily: fonts.heading, fontSize: 15, color: colors.text, marginTop: 14, marginBottom: 14 },
 
-  options: { gap: 10 },
+  options: { gap: 8 },
   option: {
-    borderWidth: 1.5, borderRadius: BUBBLE_RADIUS, paddingVertical: 7, paddingHorizontal: 16, gap: 1, alignItems: 'center',
-    shadowColor: '#2f6fed', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.08, shadowRadius: 6, elevation: 1,
+    borderWidth: 2, borderRadius: BUBBLE_RADIUS, paddingVertical: 10, paddingHorizontal: 15, gap: 2,
   },
   optionTailRight: { borderBottomRightRadius: TAIL_RADIUS },
   optionTailLeft: { borderBottomLeftRadius: TAIL_RADIUS },
-  optionRoman: { fontFamily: fonts.bodySemibold, fontSize: 12 },
-  optionThai: { fontSize: 18, fontFamily: fonts.heading },
+  optionRoman: { fontFamily: fonts.bodySemibold, fontSize: 13 },
+  optionThai: { fontSize: 17, fontFamily: fonts.bodySemibold },
 });
