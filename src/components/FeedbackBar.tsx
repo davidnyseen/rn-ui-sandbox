@@ -29,6 +29,7 @@ export function FeedbackBar({
         <Text style={[styles.label, correct ? styles.labelCorrect : styles.labelWrong]}>{text}</Text>
       </View>
       <Pressable onPress={onContinue} style={({ pressed }) => [styles.button, pressed && styles.buttonPressed]}>
+        <Image source={require('../../assets/redesign/lotus.png')} style={styles.buttonFlower} resizeMode="contain" />
         <Text style={styles.buttonText}>Continue</Text>
         <View style={styles.chevron}><ChevronRightIcon size={18} color={colors.onAccent} /></View>
       </Pressable>
@@ -59,4 +60,5 @@ const styles = StyleSheet.create({
   buttonPressed: { backgroundColor: colors.accent600 },
   buttonText: { fontFamily: fonts.heading, fontSize: 17, color: colors.onAccent },
   chevron: { position: 'absolute', right: 22 },
+  buttonFlower: { position: 'absolute', left: 18, width: 30, height: 20, tintColor: colors.white, opacity: 0.9 },
 });

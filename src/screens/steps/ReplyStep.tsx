@@ -2,12 +2,15 @@ import { useEffect, useState } from 'react';
 import { Pressable, Text, View, StyleSheet } from 'react-native';
 import { colors, fonts, textMuted } from '../../theme';
 import { Button } from '../../components/Button';
-import { MaleIcon, FemaleIcon } from '../../components/icons';
+import { MaleIcon, FemaleIcon, PlayIcon } from '../../components/icons';
 import { ReplyContextLine } from '../../courseTypes';
 
 const BUBBLE_RADIUS = 18;
 const TAIL_RADIUS = 4;
-const AVATAR_SIZE = 28;
+const AVATAR_SIZE = 24;
+// your side of the chat — the same warm yellow as the conversation page's second speaker
+const MINE_FILL = '#ffd84a';
+const MINE_EDGE = '#f2c230';
 
 const speakerColor = (speaker: 'M' | 'F') => (speaker === 'M' ? colors.maleSpeaker : colors.pink);
 const SpeakerIcon = ({ speaker, size }: { speaker: 'M' | 'F'; size: number }) =>
@@ -97,12 +100,15 @@ export function ReplyStep({
 
   return (
     <View style={styles.screen}>
+      <Text style={styles.instruction}>Read the chat — tap a message to hear it.</Text>
+      <Text style={styles.scene}>Then answer as the {replySpeaker === 'M' ? 'man' : 'woman'}, in Thai.</Text>
+      <View style={styles.sceneRule} />
       <View style={styles.context}>
         {context.slice(0, visibleCount).map((line, i) => {
           const isRight = line.speaker === 'M';
           const avatar = (
             <View style={[styles.avatar, { backgroundColor: speakerColor(line.speaker) }]}>
-              <SpeakerIcon speaker={line.speaker} size={15} />
+              <SpeakerIcon speaker={line.speaker} size={13} />
             </View>
           );
           return (
@@ -113,12 +119,17 @@ export function ReplyStep({
                   <View
                     style={[
                       styles.bubble,
-                      { backgroundColor: speakerColor(line.speaker) },
+                      line.speaker === replySpeaker ? styles.fillMine : styles.fillTheirs,
                       isRight ? styles.bubbleTailRight : styles.bubbleTailLeft,
                     ]}
                   >
-                    <Text style={styles.bubbleRoman}>{line.roman}</Text>
+                    <View style={[styles.tail, isRight ? styles.tailRight : styles.tailLeft, line.speaker === replySpeaker ? styles.tailMine : styles.tailTheirs]} />
+                    <View style={styles.bubbleTop}>
+                      <Text style={styles.bubbleRoman}>{line.roman}</Text>
+                      <PlayIcon size={14} color={colors.accent700} />
+                    </View>
                     <Text style={styles.bubbleThai}>{line.parts.join(' ')}</Text>
+                    <Text style={styles.bubbleMeaning}>{line.english}</Text>
                   </View>
                 </Pressable>
                 {isRight && avatar}
@@ -147,7 +158,7 @@ export function ReplyStep({
             const isRight = replySpeaker === 'M';
             const avatar = (
               <View style={[styles.avatar, { backgroundColor: speakerColor(replySpeaker) }]}>
-                <SpeakerIcon speaker={replySpeaker} size={15} />
+                <SpeakerIcon speaker={replySpeaker} size={13} />
               </View>
             );
             return (
@@ -158,19 +169,21 @@ export function ReplyStep({
                     <View
                       style={[
                         styles.bubble,
-                        { backgroundColor: speakerColor(replySpeaker) },
+                        styles.fillMine,
                         isRight ? styles.bubbleTailRight : styles.bubbleTailLeft,
                       ]}
                     >
-                      <Text style={styles.bubbleThai}>{english}</Text>
+                      <View style={[styles.tail, isRight ? styles.tailRight : styles.tailLeft, styles.tailMine]} />
+                      <View style={styles.bubbleTop}>
+                        <Text style={styles.bubbleEnglishLine}>{english}</Text>
+                        <PlayIcon size={14} color={colors.accent700} />
+                      </View>
                     </View>
                   </Pressable>
                   {isRight && avatar}
                 </View>
-                <Text style={[styles.translatePrompt, isRight ? styles.textRight : styles.textLeft]}>
-                  How do you say this in Thai?
-                </Text>
-                <View style={[styles.promptRule, isRight && styles.promptRuleRight]} />
+                <Text style={styles.translatePrompt}>How do you say this in Thai?</Text>
+                <View style={styles.promptRule} />
               </View>
             );
           })()}
@@ -189,12 +202,12 @@ export function ReplyStep({
               const speakerFill = speakerColor(replySpeaker);
               const avatar = (
                 <View style={[styles.avatar, { backgroundColor: speakerFill }]}>
-                  <SpeakerIcon speaker={replySpeaker} size={15} />
+                  <SpeakerIcon speaker={replySpeaker} size={13} />
                 </View>
               );
-              let bg: string = replySpeaker === 'M' ? '#f4f7fe' : '#fff5f9';
-              let border: string = speakerFill;
-              let color: string = speakerFill;
+              let bg: string = colors.white;
+              let border: string = MINE_EDGE;
+              let color: string = colors.text;
               let romanColor: string = textMuted(0.55);
               let opacity = 1;
               if (answered) {
@@ -206,7 +219,7 @@ export function ReplyStep({
                   opacity = 0.35;
                 }
               } else if (i === selected) {
-                bg = speakerFill; border = speakerFill; color = colors.white; romanColor = 'rgba(255,255,255,0.8)';
+                bg = MINE_FILL; border = MINE_EDGE; color = colors.text; romanColor = textMuted(0.65);
               }
               return (
                 <View key={i} style={[styles.bubbleRow, isRight ? styles.bubbleRowRight : styles.bubbleRowLeft]}>
@@ -221,7 +234,10 @@ export function ReplyStep({
                       { backgroundColor: bg, borderColor: border, opacity },
                     ]}
                   >
-                    <Text style={[styles.optionRoman, { color: romanColor }]}>{o.roman}</Text>
+                    <View style={styles.bubbleTop}>
+                      <Text style={[styles.optionRoman, { color: romanColor }]}>{o.roman}</Text>
+                      <PlayIcon size={13} color={romanColor} />
+                    </View>
                     <Text style={[styles.optionThai, { color }]}>{o.thai}</Text>
                   </Pressable>
                   {isRight && avatar}
@@ -249,19 +265,34 @@ const styles = StyleSheet.create({
     width: AVATAR_SIZE, height: AVATAR_SIZE, borderRadius: 9999, alignItems: 'center', justifyContent: 'center', flexShrink: 0,
   },
 
-  context: { gap: 4, marginBottom: 20 },
-  bubbleRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  instruction: { fontSize: 14, color: textMuted(0.6), marginBottom: 2 },
+  scene: { fontFamily: fonts.bodySemibold, fontSize: 14, color: colors.accent700 },
+  sceneRule: { width: '60%', height: 2, borderRadius: 1, backgroundColor: 'rgba(230,176,0,0.35)', marginTop: 8, marginBottom: 14 },
+  context: { gap: 2, marginBottom: 12 },
+  bubbleRow: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   bubbleRowLeft: { justifyContent: 'flex-start' },
   bubbleRowRight: { justifyContent: 'flex-end' },
   bubbleCol: { maxWidth: '74%' },
   bubble: {
-    borderRadius: BUBBLE_RADIUS, paddingVertical: 10, paddingHorizontal: 15, gap: 2,
+    borderRadius: BUBBLE_RADIUS, paddingVertical: 8, paddingHorizontal: 16, gap: 1, alignItems: 'center',
   },
+  // a small rotated square peeking out of the bubble's bottom corner, on the speaker's side
+  tail: { position: 'absolute', bottom: -1, width: 12, height: 12, borderRadius: 2, transform: [{ rotate: '45deg' }] },
+  tailRight: { right: -4 },
+  tailLeft: { left: -4 },
+  fillMine: { backgroundColor: MINE_FILL, borderWidth: 1.5, borderColor: MINE_EDGE },
+  fillTheirs: { backgroundColor: colors.white, borderWidth: 1.5, borderColor: 'rgba(32,30,29,0.14)',
+    shadowColor: '#7a5c00', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.06, shadowRadius: 6, elevation: 1 },
+  tailMine: { backgroundColor: MINE_FILL },
+  tailTheirs: { backgroundColor: colors.white },
   bubbleTailLeft: { borderBottomLeftRadius: TAIL_RADIUS },
   bubbleTailRight: { borderBottomRightRadius: TAIL_RADIUS },
-  bubbleRoman: { fontFamily: fonts.bodySemibold, fontSize: 13, color: 'rgba(255,255,255,0.85)' },
-  bubbleThai: { fontSize: 17, color: colors.white, fontFamily: fonts.bodySemibold },
-  bubbleEnglish: { fontSize: 12, color: textMuted(0.5), marginBottom: 8 },
+  bubbleTop: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  bubbleMeaning: { fontSize: 12, color: textMuted(0.6), marginTop: 1 },
+  bubbleRoman: { fontFamily: fonts.bodySemibold, fontSize: 12, color: textMuted(0.6) },
+  bubbleThai: { fontSize: 18, color: colors.text, fontFamily: fonts.heading },
+  bubbleEnglishLine: { fontSize: 16, color: colors.text, fontFamily: fonts.heading, paddingVertical: 2 },
+  bubbleEnglish: { fontSize: 11, color: textMuted(0.5), marginTop: 2, marginBottom: 6 },
   textLeft: { textAlign: 'left' },
   textRight: { textAlign: 'right' },
   // Keeps the caption under the bubble itself, not under the avatar beside
@@ -269,16 +300,16 @@ const styles = StyleSheet.create({
   captionInsetLeft: { paddingLeft: AVATAR_SIZE + 8 },
   captionInsetRight: { paddingRight: AVATAR_SIZE + 8 },
 
-  translatePrompt: { fontFamily: fonts.heading, fontSize: 18, color: colors.text, marginTop: 16, marginBottom: 6 },
-  promptRule: { width: 36, height: 3, borderRadius: 2, backgroundColor: colors.accent, marginBottom: 16 },
-  promptRuleRight: { alignSelf: 'flex-end' },
+  translatePrompt: { fontFamily: fonts.heading, fontSize: 17, color: colors.text, marginTop: 14, marginBottom: 6, textAlign: 'center' },
+  promptRule: { alignSelf: 'center', width: 36, height: 3, borderRadius: 2, backgroundColor: colors.accent, marginBottom: 14 },
 
-  options: { gap: 8 },
+  options: { gap: 10 },
   option: {
-    borderWidth: 1.5, borderRadius: BUBBLE_RADIUS, paddingVertical: 10, paddingHorizontal: 15, gap: 2,
+    borderWidth: 1.5, borderRadius: BUBBLE_RADIUS, paddingVertical: 7, paddingHorizontal: 16, gap: 1, alignItems: 'center',
+    shadowColor: '#7a5c00', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.08, shadowRadius: 6, elevation: 1,
   },
   optionTailRight: { borderBottomRightRadius: TAIL_RADIUS },
   optionTailLeft: { borderBottomLeftRadius: TAIL_RADIUS },
-  optionRoman: { fontFamily: fonts.bodySemibold, fontSize: 13 },
-  optionThai: { fontSize: 17, fontFamily: fonts.bodySemibold },
+  optionRoman: { fontFamily: fonts.bodySemibold, fontSize: 12 },
+  optionThai: { fontSize: 18, fontFamily: fonts.heading },
 });

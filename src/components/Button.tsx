@@ -1,8 +1,10 @@
 import { ReactNode } from 'react';
-import { Pressable, Text, StyleSheet, StyleProp, ViewStyle } from 'react-native';
+import { Image, Pressable, Text, StyleSheet, StyleProp, ViewStyle } from 'react-native';
 import { colors, fonts, textMuted } from '../theme';
 
 type Variant = 'primary' | 'secondary' | 'ghost';
+
+const LOTUS = require('../../assets/redesign/lotus.png');
 
 export function Button({
   children,
@@ -39,6 +41,13 @@ export function Button({
         style,
       ]}
     >
+      {/* a little lotus at each end of a full-width yellow button (user, 2026-11-08: from ChatGPT's Continue) */}
+      {block && variant === 'primary' && !disabled && (
+        <>
+          <Image source={LOTUS} style={[styles.flower, styles.flowerLeft]} resizeMode="contain" />
+          <Image source={LOTUS} style={[styles.flower, styles.flowerRight]} resizeMode="contain" />
+        </>
+      )}
       <Text
         style={[
           styles.label,
@@ -80,6 +89,9 @@ const styles = StyleSheet.create({
   // washed-out pill whose label was hard to read (user, 2026-11-08: button contrast).
   solidDisabled: { backgroundColor: colors.neutral200, borderWidth: 0, shadowOpacity: 0, elevation: 0 },
   labelDisabled: { color: textMuted(0.55) },
+  flower: { position: 'absolute', width: 30, height: 20, tintColor: colors.white, opacity: 0.9 }, // white so it shows on the yellow
+  flowerLeft: { left: 18 },
+  flowerRight: { right: 18 },
   label: { fontFamily: fonts.heading, fontSize: 17, color: colors.text },
   labelPrimary: { color: colors.onAccent },
   // accent700, not accent: a ghost button's label sits directly on the

@@ -70,8 +70,10 @@ export function CourseLessonScreen({
   useSpeechRecognitionEvent('result', (event) => {
     const target = speakTargetRef.current;
     if (!target) return;
-    const transcript = event.results[0]?.transcript ?? '';
-    const correct = matchesSpokenThai(transcript, target);
+    // Any of the recogniser's top guesses counts (it often has the right phrase second, behind a near-homophone).
+    const transcripts = event.results.map((r) => r.transcript).filter(Boolean);
+    const transcript = transcripts[0] ?? '';
+    const correct = transcripts.some((t) => matchesSpokenThai(t, target));
     (correct ? playCorrectSound : playWrongSound)();
     setSpeakHeardText(transcript);
     setSpeakCorrect(correct);
@@ -307,7 +309,11 @@ export function CourseLessonScreen({
     setSpeakHeardText(null);
     setSpeakCorrect(false);
     try {
-      SpeechRecognitionModule.start({ lang: 'th-TH', interimResults: false, continuous: false });
+      // contextualStrings tells the recogniser which phrase to expect (a big help with learners' accents);
+      // maxAlternatives gives the matcher its top few guesses instead of only the first.
+      SpeechRecognitionModule.start({
+        lang: 'th-TH', interimResults: false, continuous: false, maxAlternatives: 5, contextualStrings: [step.thai],
+      });
     } catch {
       // The module loaded but the browser has no real speech recognizer to
       // back it (e.g. Safari, which never implemented the Web Speech API) —
