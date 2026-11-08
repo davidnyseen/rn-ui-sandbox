@@ -290,7 +290,9 @@ export function PathScreen({
 
   return (
     <View style={styles.screen}>
-      {/* Cream sky, temple and frangipani behind the whole map (assets/redesign: ChatGPT art, 2026-11-07) */}
+      {/* faint temple and frangipani in the bottom corners, behind the map (ChatGPT's map, 2026-11-08) */}
+      <Image source={require('../../assets/redesign/corner-temple.png')} style={styles.cornerTemple} resizeMode="contain" />
+      <Image source={require('../../assets/redesign/corner-flowers.png')} style={styles.cornerFlowers} resizeMode="contain" />
       <View style={styles.headerRow}>
         <View style={styles.streak}>
           <FlameIcon size={18} color={colors.accent700} />
@@ -313,6 +315,9 @@ export function PathScreen({
         const fg = bold ? boldColors!.fg : pal.dark;
         const BannerIcon = activeSection.Icon;
         return (
+          <View id="unit-card-wrap">
+          {/* the elephant mascot peeking over the unit card — drawn first, so the card hides its lower half */}
+          <Image source={require('../../assets/redesign/elephant-logo.png')} style={styles.mascot} resizeMode="contain" />
           <View style={[styles.stickyHeader, { backgroundColor: bg }]}>
             <View style={[styles.sectionIconWrap, { backgroundColor: bold ? boldColors!.badgeBg : colors.white }]}>
               <BannerIcon size={18} color={bold ? boldColors!.icon : pal.base} />
@@ -322,6 +327,7 @@ export function PathScreen({
               <Text style={[styles.sectionRoman, { color: bold ? boldColors!.subtitle : textMuted(0.5) }]} numberOfLines={1}>{activeSection.unitLabel}</Text>
             </View>
             {activeSection.isDone && <CheckIcon size={16} color={fg} strokeWidth={2.5} />}
+          </View>
           </View>
         );
       })()}
@@ -458,7 +464,9 @@ export function PathScreen({
 
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.white },
-  // Full width at the picture's own shape, from the top: the temple sits beside the title, the flowers near the tab bar.
+  cornerTemple: { position: 'absolute', pointerEvents: 'none', left: 0, bottom: 0, width: 170, height: 104, opacity: 0.55 },
+  cornerFlowers: { position: 'absolute', pointerEvents: 'none', right: 0, bottom: 0, width: 130, height: 103, opacity: 0.6 },
+  mascot: { position: 'absolute', pointerEvents: 'none', right: 72, top: -50, width: 78, height: 84 }, // left of the XP count
   scroll: { flex: 1 },
   content: { paddingHorizontal: 20, paddingBottom: 24 },
   headerRow: {
