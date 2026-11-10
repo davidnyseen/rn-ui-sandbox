@@ -1,8 +1,8 @@
-import { Pressable, Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import { DialogueOption } from '../../data';
 import { colors, fonts, textMuted } from '../../theme';
 import { Button } from '../../components/Button';
-import { AnswerMark } from '../../components/AnswerMark';
+import { AnswerOption } from '../../components/AnswerOption';
 
 export function DialogueBlankStep({
   before,
@@ -62,32 +62,17 @@ export function DialogueBlankStep({
         </Text>
       )}
       <View style={styles.options}>
-        {options.map((o, i) => {
-          let bg: string = colors.white;
-          let border: string = 'rgba(32,30,29,0.14)';
-          let color: string = colors.text;
-          let opacity = 1;
-          if (answered) {
-            if (o.correct) {
-              bg = colors.success100; border = colors.success600;
-            } else if (i === selected) {
-              bg = colors.danger100; border = colors.danger600;
-            }
-          } else if (i === selected) {
-            bg = colors.select100; border = colors.select; color = colors.text;
-          }
-          return (
-            <Pressable
-              key={i}
-              disabled={answered}
-              onPress={() => onSelect(i)}
-              style={[styles.option, { backgroundColor: bg, borderColor: border, opacity }]}
-            >
-              <Text style={[styles.optionText, { color }]}>{o.text}</Text>
-              {answered && (o.correct || i === selected) && <AnswerMark right={o.correct} />}
-            </Pressable>
-          );
-        })}
+        {options.map((o, i) => (
+          <AnswerOption
+            key={i}
+            label={o.text}
+            chip
+            selected={i === selected}
+            answered={answered}
+            correct={o.correct}
+            onPress={() => onSelect(i)}
+          />
+        ))}
       </View>
       <View style={styles.spacer} />
       {!answered && (
@@ -117,6 +102,4 @@ const styles = StyleSheet.create({
   blankWrong: { backgroundColor: colors.danger100, borderColor: colors.danger600 },
   blankWrongText: { color: colors.danger800 },
   options: { flexDirection: 'row', flexWrap: 'wrap', gap: 10, marginBottom: 12 },
-  option: { flexDirection: 'row', alignItems: 'center', gap: 8, paddingVertical: 12, paddingHorizontal: 18, borderWidth: 1.5, borderRadius: 14 },
-  optionText: { fontSize: 17, fontFamily: fonts.bodySemibold },
 });

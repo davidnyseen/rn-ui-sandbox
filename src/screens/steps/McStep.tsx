@@ -3,8 +3,8 @@ import { Pressable, Text, View, StyleSheet } from 'react-native';
 import { WordItem } from '../../data';
 import { colors, fonts, radius, textMuted } from '../../theme';
 import { Button } from '../../components/Button';
-import { CheckIcon, PlayIcon } from '../../components/icons';
-import { AnswerMark } from '../../components/AnswerMark';
+import { AnswerOption } from '../../components/AnswerOption';
+import { PlayIcon } from '../../components/icons';
 
 // One word stays big; a whole sentence shrinks so it doesn't fill the screen (user, 2026-11-10: "isn't text a bit big").
 function romanSize(roman: string) {
@@ -45,35 +45,16 @@ export function McStep({
         </Pressable>
       </View>
       <View style={styles.options}>
-        {word.options.map((o, i) => {
-          let bg: string = colors.white;
-          let border: string = 'rgba(32,30,29,0.14)';
-          let color: string = colors.text;
-          let opacity = 1;
-          if (answered) {
-            if (o.correct) {
-              bg = colors.success100; border = colors.success600;
-            } else if (i === selected) {
-              bg = colors.danger100; border = colors.danger600;
-            }
-          } else if (i === selected) {
-            bg = colors.select100; border = colors.select; color = colors.text;
-          }
-          return (
-            <Pressable
-              key={i}
-              disabled={answered}
-              onPress={() => onSelect(i)}
-              style={[styles.option, { backgroundColor: bg, borderColor: border, opacity }]}
-            >
-              <Text style={[styles.optionText, { color }]}>{o.text}</Text>
-              {answered && (o.correct || i === selected) && <AnswerMark right={o.correct} />}
-              {!answered && i === selected && (
-                <View style={styles.tick}><CheckIcon size={13} color={colors.white} strokeWidth={3.5} /></View>
-              )}
-            </Pressable>
-          );
-        })}
+        {word.options.map((o, i) => (
+          <AnswerOption
+            key={i}
+            label={o.text}
+            selected={i === selected}
+            answered={answered}
+            correct={o.correct}
+            onPress={() => onSelect(i)}
+          />
+        ))}
       </View>
       <View style={styles.spacer} />
       {!answered && (
@@ -97,10 +78,4 @@ const styles = StyleSheet.create({
   roman: { fontFamily: fonts.heading, fontSize: 44, lineHeight: 46, color: colors.text, marginBottom: 6 },
   thai: { fontSize: 20, color: textMuted(0.55), marginBottom: 32 },
   options: { gap: 8, marginBottom: 12 },
-  option: {
-    flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 10,
-    paddingVertical: 14, paddingHorizontal: 16, minHeight: 56, borderWidth: 1.5, borderRadius: 14,
-  },
-  tick: { width: 22, height: 22, borderRadius: 9999, backgroundColor: colors.accent700, alignItems: 'center', justifyContent: 'center' },
-  optionText: { flex: 1, fontSize: 17, fontFamily: fonts.bodySemibold },
 });

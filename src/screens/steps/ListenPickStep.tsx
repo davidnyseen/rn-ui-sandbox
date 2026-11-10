@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { Pressable, Text, View, StyleSheet } from 'react-native';
-import { colors, fonts, textMuted } from '../../theme';
+import { colors, textMuted } from '../../theme';
 import { Button } from '../../components/Button';
+import { AnswerOption } from '../../components/AnswerOption';
 import { PlayIcon } from '../../components/icons';
 import { PulseRing } from '../../components/PulseRing';
-import { AnswerMark } from '../../components/AnswerMark';
 
 // Thai audio plays first, no text shown, and the learner picks the matching
 // sentence — by ear — out of a few already-taught candidates (see
@@ -51,35 +51,17 @@ export function ListenPickStep({
         </View>
       )}
       <View style={styles.options}>
-        {options.map((o, i) => {
-          let bg: string = colors.white;
-          let border: string = 'rgba(32,30,29,0.14)';
-          let color: string = colors.text;
-          let opacity = 1;
-          if (answered) {
-            if (o.correct) {
-              bg = colors.success100; border = colors.success600;
-            } else if (i === selected) {
-              bg = colors.danger100; border = colors.danger600;
-            }
-          } else if (i === selected) {
-            bg = colors.select100; border = colors.select; color = colors.text;
-          }
-          return (
-            <Pressable
-              key={i}
-              disabled={answered}
-              onPress={() => onSelect(i)}
-              style={[styles.option, { backgroundColor: bg, borderColor: border, opacity }]}
-            >
-              <View style={styles.optionText}>
-                <Text style={[styles.optionRoman, { color }]}>{o.roman}</Text>
-                <Text style={[styles.optionThai, { color }]}>{o.thai}</Text>
-              </View>
-              {answered && (o.correct || i === selected) && <AnswerMark right={o.correct} />}
-            </Pressable>
-          );
-        })}
+        {options.map((o, i) => (
+          <AnswerOption
+            key={i}
+            label={o.roman}
+            sub={o.thai}
+            selected={i === selected}
+            answered={answered}
+            correct={o.correct}
+            onPress={() => onSelect(i)}
+          />
+        ))}
       </View>
       <View style={styles.spacer} />
       {!answered && (
@@ -103,11 +85,4 @@ const styles = StyleSheet.create({
   reveal: { alignItems: 'center', marginBottom: 20 },
   revealMeaning: { fontSize: 15, color: textMuted(0.55) },
   options: { gap: 8, marginBottom: 12 },
-  option: {
-    flexDirection: 'row', alignItems: 'center', gap: 10,
-    paddingVertical: 12, paddingHorizontal: 16, minHeight: 56, borderWidth: 1.5, borderRadius: 14,
-  },
-  optionText: { flex: 1 },
-  optionRoman: { fontSize: 16, fontFamily: fonts.bodySemibold },
-  optionThai: { fontSize: 14, opacity: 0.7, marginTop: 2 },
 });

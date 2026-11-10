@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { Pressable, Text, View, StyleSheet } from 'react-native';
 import { colors, fonts } from '../../theme';
 import { Button } from '../../components/Button';
-import { MaleIcon, FemaleIcon, PlayIcon, CheckIcon, XIcon } from '../../components/icons';
+import { MaleIcon, FemaleIcon, PlayIcon } from '../../components/icons';
+import { AnswerOption } from '../../components/AnswerOption';
 import { ReplyContextLine } from '../../courseTypes';
 
 const BUBBLE_RADIUS = 14;
@@ -175,46 +176,31 @@ export function ReplyStep({
             );
           })()}
           <View style={styles.options}>
-            {options.map((o, i) => {
-              // ChatGPT's pass (2026-11-10): full-width answer cards, all lined up — speaker badge, a thin divider, then
-              // the romanization and the Thai — so the three choices scan top to bottom. Picking one outlines it in the
-              // speaker's colour; after Check the right one turns green with a tick, a wrong pick red with a cross.
-              let bg: string = colors.white;
-              let border: string = 'rgba(32,30,29,0.14)';
-              let mark: 'right' | 'wrong' | null = null;
-              if (answered) {
-                if (o.correct) { bg = colors.success100; border = colors.success600; mark = 'right'; }
-                else if (i === selected) { bg = colors.danger100; border = colors.danger600; mark = 'wrong'; }
-              } else if (i === selected) {
-                bg = bubbleTint(replySpeaker); border = speakerColor(replySpeaker);
-              }
-              return (
-                <Pressable
-                  key={i}
-                  id="answer-card"
-                  disabled={answered}
-                  onPress={() => { onSelect(i); onPlayOption(i); }}
-                  style={[styles.answer, { backgroundColor: bg, borderColor: border }]}
-                >
+            {options.map((o, i) => (
+              // The shared answer card, with this chat's extras: the speaker badge, the romanization + sound icon above
+              // the Thai, and the picked state tinted in the speaker's colour.
+              <AnswerOption
+                key={i}
+                label={o.thai}
+                big
+                eyebrow={
+                  <View style={styles.bubbleTop}>
+                    <Text style={styles.bubbleRoman}>{o.roman}</Text>
+                    <PlayIcon size={13} color={MUTED} />
+                  </View>
+                }
+                leading={
                   <View style={[styles.avatar, { backgroundColor: speakerColor(replySpeaker) }]}>
                     <SpeakerIcon speaker={replySpeaker} size={15} />
                   </View>
-                  <View style={styles.answerDivider} />
-                  <View style={styles.answerText}>
-                    <View style={styles.bubbleTop}>
-                      <Text style={styles.bubbleRoman}>{o.roman}</Text>
-                      <PlayIcon size={13} color={MUTED} />
-                    </View>
-                    <Text style={styles.answerThai}>{o.thai}</Text>
-                  </View>
-                  {mark && (
-                    <View style={[styles.answerMark, { backgroundColor: mark === 'right' ? colors.success600 : colors.danger600 }]}>
-                      {mark === 'right' ? <CheckIcon size={13} color={colors.white} strokeWidth={3.5} /> : <XIcon size={11} color={colors.white} strokeWidth={3.5} />}
-                    </View>
-                  )}
-                </Pressable>
-              );
-            })}
+                }
+                pickedTint={{ bg: bubbleTint(replySpeaker), border: speakerColor(replySpeaker) }}
+                selected={i === selected}
+                answered={answered}
+                correct={o.correct}
+                onPress={() => { onSelect(i); onPlayOption(i); }}
+              />
+            ))}
           </View>
         </>
       )}
@@ -258,12 +244,4 @@ const styles = StyleSheet.create({
   translatePrompt: { fontFamily: fonts.heading, fontSize: 15, color: colors.text, marginTop: 14, marginBottom: 14 },
 
   options: { gap: 8 },
-  answer: {
-    flexDirection: 'row', alignItems: 'center', gap: 10, borderWidth: 1.5, borderRadius: 14,
-    paddingVertical: 8, paddingLeft: 8, paddingRight: 12,
-  },
-  answerDivider: { width: 1, alignSelf: 'stretch', marginVertical: -8, backgroundColor: 'rgba(32,30,29,0.12)' },
-  answerText: { flex: 1, gap: 1 },
-  answerThai: { fontSize: 18, color: colors.text, fontFamily: fonts.bodySemibold },
-  answerMark: { width: 24, height: 24, borderRadius: 9999, alignItems: 'center', justifyContent: 'center' },
 });
