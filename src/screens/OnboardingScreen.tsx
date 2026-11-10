@@ -26,6 +26,9 @@ const REASON_ICONS: Record<Reason, ComponentType<IconProps>> = {
 };
 
 type Step = 'reason' | 'goal';
+// The "why are you learning Thai?" step is off for the MVP: everyone starts at the same lesson, so the answer changed
+// nothing (user, 2026-11-10). Flip to true to bring it back, e.g. once it picks a starting topic.
+const ASK_REASON = false;
 
 export function OnboardingScreen({
   reason,
@@ -40,21 +43,23 @@ export function OnboardingScreen({
   onSelectGoal: (v: number) => void;
   onStart: () => void;
 }) {
-  const [step, setStep] = useState<Step>('reason');
+  const [step, setStep] = useState<Step>(ASK_REASON ? 'reason' : 'goal');
 
   return (
     <View style={styles.screen}>
       <View style={styles.top}>
-        {step === 'goal' ? (
+        {step === 'goal' && ASK_REASON ? (
           <Pressable onPress={() => setStep('reason')} style={styles.backBtn} accessibilityLabel="Back">
             <ArrowLeftIcon size={22} color={colors.text} />
           </Pressable>
         ) : (
           <View style={styles.backBtn} />
         )}
-        <View style={styles.progressTrack}>
-          <View style={[styles.progressFill, { width: step === 'reason' ? '50%' : '100%' }]} />
-        </View>
+        {ASK_REASON && (
+          <View style={styles.progressTrack}>
+            <View style={[styles.progressFill, { width: step === 'reason' ? '50%' : '100%' }]} />
+          </View>
+        )}
       </View>
 
       <ScrollView style={styles.scroll} contentContainerStyle={styles.scrollContent}>
