@@ -1,4 +1,4 @@
-import { Image, Pressable, Text, View, StyleSheet } from 'react-native';
+import { Pressable, Text, View, StyleSheet } from 'react-native';
 import { colors, fonts } from '../theme';
 import { CheckIcon, XIcon } from './icons';
 import { ButtonFlowers } from './ButtonFlowers';
@@ -23,9 +23,8 @@ export function FeedbackBar({
   return (
     <View
       id="feedback-bar"
-      style={[styles.bar, correct ? styles.barCorrect : styles.barWrong, { paddingBottom: 24 + bottomInset }]}
+      style={[styles.bar, correct ? styles.barCorrect : styles.barWrong, { paddingBottom: 14 + bottomInset }]}
     >
-      <Image source={require('../../assets/redesign/lotus.png')} style={styles.lotus} resizeMode="contain" />
       <View id="feedback-verdict" style={styles.verdict}>
         <View style={[styles.mark, correct ? styles.markCorrect : styles.markWrong]}>
           {correct ? <CheckIcon size={14} color={colors.white} strokeWidth={3.5} /> : <XIcon size={12} color={colors.white} strokeWidth={3.5} />}
@@ -48,24 +47,23 @@ export function FeedbackBar({
 
 const styles = StyleSheet.create({
   bar: {
-    paddingHorizontal: 20, paddingTop: 20, marginHorizontal: -20, gap: 16,
-    borderTopLeftRadius: 28, borderTopRightRadius: 28, overflow: 'hidden',
+    paddingHorizontal: 20, paddingTop: 14, marginHorizontal: -20, gap: 12,
+    borderTopLeftRadius: 22, borderTopRightRadius: 22, overflow: 'hidden',
   },
   barCorrect: { backgroundColor: colors.success100 },
   barWrong: { backgroundColor: colors.danger100 },
-  lotus: { position: 'absolute', right: 20, top: 12, width: 48, height: 32, opacity: 0.3 },
-  verdict: { flexDirection: 'row', alignItems: 'center', gap: 10, paddingRight: 56 },
-  mark: { width: 26, height: 26, borderRadius: 9999, alignItems: 'center', justifyContent: 'center' },
+  verdict: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  mark: { width: 22, height: 22, borderRadius: 9999, alignItems: 'center', justifyContent: 'center' },
   markCorrect: { backgroundColor: colors.success600 },
   markWrong: { backgroundColor: colors.danger600 },
-  label: { flexShrink: 1, fontFamily: fonts.heading, fontSize: 18 },
-  answerBlock: { marginTop: -6, gap: 2 },
+  label: { flexShrink: 1, fontFamily: fonts.heading, fontSize: 17 },
+  answerBlock: { marginTop: -4, gap: 1 },
   answerLabel: { fontFamily: fonts.bodySemibold, fontSize: 13, color: 'rgba(32,30,29,0.6)' },
   answerText: { fontFamily: fonts.heading, fontSize: 17, color: colors.text },
   labelCorrect: { color: colors.success800 },
   labelWrong: { color: colors.danger800 },
   button: {
-    width: '100%', paddingVertical: 16, alignItems: 'center', justifyContent: 'center', borderRadius: 9999,
+    width: '100%', paddingVertical: 14, alignItems: 'center', justifyContent: 'center', borderRadius: 9999,
     backgroundColor: colors.accent, borderBottomWidth: 3, borderBottomColor: colors.accent600,
     shadowColor: '#e6b000', shadowOffset: { width: 0, height: 6 }, shadowOpacity: 0.35, shadowRadius: 14, elevation: 4,
   },

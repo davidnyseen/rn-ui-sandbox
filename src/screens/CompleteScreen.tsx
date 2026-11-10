@@ -1,7 +1,14 @@
 import { Image, Text, View, StyleSheet } from 'react-native';
 import { colors, fonts, textMuted } from '../theme';
 import { Button } from '../components/Button';
-import { FlameIcon, StarIcon } from '../components/icons';
+import { StarIcon } from '../components/icons';
+
+// ChatGPT's own art for this screen (2026-11-10, user: "use their icons"): the cheering elephant, laurel sprigs
+// beside the stars, a sparkle on the XP card and a flame on the streak card.
+const ELEPHANT = require('../../assets/redesign/complete-elephant.png');
+const LAUREL = require('../../assets/redesign/laurel.png');
+const FLAME = require('../../assets/redesign/flame.png');
+const SPARKLE = require('../../assets/redesign/sparkle-burst.png');
 
 export function CompleteScreen({
   correctCount,
@@ -25,25 +32,28 @@ export function CompleteScreen({
   return (
     <View style={styles.screen}>
       <View style={styles.body}>
-        <Image source={require('../../assets/redesign/complete-art.png')} style={styles.art} resizeMode="contain" />
+        <Image source={ELEPHANT} style={styles.art} resizeMode="contain" />
         <Text style={styles.title}>Nice work.</Text>
         <View style={styles.titleRule} />
-        <View style={styles.stars}>
+        <View id="star-row" style={styles.stars}>
+          <Image source={LAUREL} style={[styles.laurel, styles.laurelLeft]} resizeMode="contain" />
           {[1, 2, 3].map((i) => (
             <StarIcon key={i} size={36} color={colors.accent} filled={i <= stars} />
           ))}
+          <Image source={LAUREL} style={[styles.laurel, styles.laurelRight]} resizeMode="contain" />
         </View>
         <Text style={styles.subtitle}>
           Lesson complete — {correctCount} of {totalSteps} correct.
         </Text>
         <View style={styles.statsRow}>
           <View style={styles.statCell}>
+            <Image source={SPARKLE} style={styles.sparkle} resizeMode="contain" />
             <Text style={styles.statValue}>+{xpEarned}</Text>
             <Text style={styles.statLabel}>XP earned</Text>
           </View>
           <View style={styles.statCell}>
             <View style={styles.streakValue}>
-              <FlameIcon size={20} color={colors.accent700} />
+              <Image source={FLAME} style={styles.flame} resizeMode="contain" />
               <Text style={styles.statValueText}>{streak}</Text>
             </View>
             <Text style={styles.statLabel}>day streak</Text>
@@ -65,10 +75,15 @@ export function CompleteScreen({
 const styles = StyleSheet.create({
   screen: { flex: 1, paddingHorizontal: 24, paddingTop: 64, paddingBottom: 24, backgroundColor: colors.white },
   body: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  art: { width: 220, height: 220, marginBottom: 8 },
+  art: { width: 240, height: 203, marginBottom: 12 },
   title: { fontFamily: fonts.heading, fontSize: 34, letterSpacing: -0.3, color: colors.text, marginBottom: 12, textAlign: 'center' },
   titleRule: { width: 44, height: 3, borderRadius: 2, backgroundColor: colors.accent, marginTop: -4, marginBottom: 14 },
-  stars: { flexDirection: 'row', gap: 8, marginBottom: 12 },
+  stars: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 12 },
+  laurel: { width: 34, height: 34, opacity: 0.9 },
+  laurelLeft: { marginRight: 6, transform: [{ scaleX: -1 }] }, // the sprig is drawn leaning right; mirror it on the left
+  laurelRight: { marginLeft: 6 },
+  sparkle: { position: 'absolute', top: 10, left: 22, width: 26, height: 17 },
+  flame: { width: 22, height: 26 },
   subtitle: { fontSize: 15, color: textMuted(0.6), marginBottom: 28, textAlign: 'center' },
   statsRow: { flexDirection: 'row', gap: 12, alignSelf: 'stretch' },
   statCell: {

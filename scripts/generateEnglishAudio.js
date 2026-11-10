@@ -30,6 +30,7 @@ function collectEnglishStrings() {
     for (const step of steps) {
       if (step.type === 'reply' && step.english) set.add(step.english);
       if (step.type === 'rule') set.add(`${step.title}. ${step.body}`);
+      if (step.type === 'match') for (const p of step.pairs) set.add(p.english); // match cards read aloud on tap
     }
   }
   return [...set];

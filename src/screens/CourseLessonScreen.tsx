@@ -236,10 +236,13 @@ export function CourseLessonScreen({
 
   const onClickMatchTile = (tileKey: string, pairId: number) => {
     if (step.type !== 'match') return;
+    const kind = tileKey.startsWith('th-') ? 'th' : 'en';
+    // Every tap reads its card aloud — Thai or English, first pick or second, even a card already matched or picked
+    // (user, 2026-11-10).
+    if (kind === 'th') speakThai(step.pairs[pairId].thai);
+    else speakEnglish(step.pairs[pairId].english);
     if (matchedPairs.includes(pairId) || matchWrong.length) return;
     if (matchSelected.includes(tileKey)) return;
-    const kind = tileKey.startsWith('th-') ? 'th' : 'en';
-    if (kind === 'th') speakThai(step.pairs[pairId].thai);
     if (matchSelected.length === 0) {
       setMatchSelected([tileKey]);
       return;
