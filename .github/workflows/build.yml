@@ -115,17 +115,27 @@ jobs:
           const { KEY_ID: kid, ISSUER_ID: iss, KEY_P8: key, UPLOAD_STARTED: STARTED } = process.env;
           const b64 = o => Buffer.from(JSON.stringify(o)).toString('base64url');
           const auth = () => { const now = Math.floor(Date.now() / 1000); const head = b64({ alg: 'ES256', kid, typ: 'JWT' }), body = b64({ iss, iat: now, exp: now + 600, aud: 'appstoreconnect-v1' }); const sig = crypto.sign('sha256', Buffer.from(head + '.' + body), { key, dsaEncoding: 'ieee-p1363' }).toString('base64url'); return { Authorization: `Bearer ${head}.${body}.${sig}`, 'Content-Type': 'application/json' }; };
-          const A = 'https://api.appstoreconnect.apple.com', APP = '6831966870';
+          const A = 'https://api.appstoreconnect.apple.com', APP = '6831966870', GROUP = '11c8b717-8d68-41fd-b073-bb2c8aec012c';
           if (!STARTED) { console.log('no upload time recorded; nothing changed'); process.exit(0); }
           const get = async p => { const r = await fetch(A + p, { headers: auth() }); if (!r.ok) throw new Error(p + ' ' + r.status + ' ' + await r.text()); return r.json(); };
           (async () => {
             const since = new Date(STARTED).getTime();
             for (let i = 0; i < 120; i++) { // up to 30 minutes for the upload to show up
+              // (polls fast: the build can appear only moments before it's processed)
               const b = (await get(`/v1/builds?filter[app]=${APP}&sort=-uploadedDate&limit=1`)).data[0];
               if (b && new Date(b.attributes.uploadedDate).getTime() >= since) {
                 const d = (await get(`/v1/builds/${b.id}/buildBetaDetail`)).data;
                 const r = await fetch(`${A}/v1/buildBetaDetails/${d.id}`, { method: 'PATCH', headers: auth(), body: JSON.stringify({ data: { type: 'buildBetaDetails', id: d.id, attributes: { autoNotifyEnabled: false } } }) });
-                console.log('build', b.attributes.version, b.attributes.processingState, 'email off:', r.status); return;
+                console.log('build', b.attributes.version, b.attributes.processingState, 'email off:', r.status);
+                // Testers (internal group 'Testers') don't get builds automatically, so Apple can't email them before
+                // the switch above lands; hand them the build now that it's silent (user, 2026-11-10: "emails bad").
+                for (let j = 0; j < 80; j++) {
+                  const st = (await get(`/v1/builds/${b.id}?fields[builds]=processingState`)).data.attributes.processingState;
+                  if (st === 'VALID') break;
+                  await new Promise(res => setTimeout(res, 15000));
+                }
+                const g = await fetch(`${A}/v1/betaGroups/${GROUP}/relationships/builds`, { method: 'POST', headers: auth(), body: JSON.stringify({ data: [{ type: 'builds', id: b.id }] }) });
+                console.log('given to Testers:', g.status); return;
               }
               await new Promise(r => setTimeout(r, 15000));
             }
