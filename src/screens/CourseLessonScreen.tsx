@@ -13,7 +13,7 @@ import { SpeakState } from '../state';
 import { speakThai, speakEnglish, stopSpeech } from '../tts';
 import { playCorrectSound, playWrongSound } from '../audio';
 import { matchesSpokenThai } from '../text';
-import { isSpeechRecognitionAvailable, SpeechRecognitionModule, useSpeechRecognitionEvent } from '../stt';
+import { RECORDING_SESSION_IOS, restorePlaybackAudio, isSpeechRecognitionAvailable, SpeechRecognitionModule, useSpeechRecognitionEvent } from '../stt';
 import { McStep } from './steps/McStep';
 import { BankStep } from './steps/BankStep';
 import { SpeakStep } from './steps/SpeakStep';
@@ -78,8 +78,14 @@ export function CourseLessonScreen({
     setSpeakHeardText(transcript);
     setSpeakCorrect(correct);
   });
-  useSpeechRecognitionEvent('end', () => setSpeakState('done'));
-  useSpeechRecognitionEvent('error', () => setSpeakState('idle'));
+  useSpeechRecognitionEvent('end', () => {
+    restorePlaybackAudio();
+    setSpeakState('done');
+  });
+  useSpeechRecognitionEvent('error', () => {
+    restorePlaybackAudio();
+    setSpeakState('idle');
+  });
 
   const step: CourseStep = lesson.steps[stepIndex];
 
@@ -327,7 +333,7 @@ export function CourseLessonScreen({
       // contextualStrings tells the recogniser which phrase to expect (a big help with learners' accents);
       // maxAlternatives gives the matcher its top few guesses instead of only the first.
       SpeechRecognitionModule.start({
-        lang: 'th-TH', interimResults: false, continuous: false, maxAlternatives: 5, contextualStrings: [step.thai],
+        lang: 'th-TH', iosCategory: RECORDING_SESSION_IOS, interimResults: false, continuous: false, maxAlternatives: 5, contextualStrings: [step.thai],
       });
     } catch {
       // The module loaded but the browser has no real speech recognizer to

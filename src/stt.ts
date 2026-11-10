@@ -21,3 +21,23 @@ export const SpeechRecognitionModule = loaded?.module ?? null;
 // Always a real hook (never conditionally called) — a no-op when the
 // native module isn't available, so call sites don't need to branch.
 export const useSpeechRecognitionEvent: UseSpeechRecognitionEvent = loaded?.useEvent ?? (() => {});
+
+// iPhone: while the mic is on, iOS puts audio in "play and record" mode, and the speech library's default
+// "measurement" mode plays everything noticeably quieter — which then stuck for the rest of the lesson (user,
+// 2026-11-10: "once I hit the voice recording question the voice volume changes"). Record in the normal mode with
+// the loudspeaker, and hand the session back to plain playback as soon as recording ends.
+type SetCategoryOptions = Parameters<SpeechRecognitionModuleType['setCategoryIOS']>[0];
+export const RECORDING_SESSION_IOS: SetCategoryOptions = {
+  category: 'playAndRecord',
+  categoryOptions: ['defaultToSpeaker', 'allowBluetooth'],
+  mode: 'default',
+};
+
+export function restorePlaybackAudio() {
+  if (!loaded) return;
+  try {
+    loaded.module.setCategoryIOS({ category: 'playback', categoryOptions: [], mode: 'default' });
+  } catch {
+    // not iOS, or the session is busy — playback still works, just possibly quieter
+  }
+}

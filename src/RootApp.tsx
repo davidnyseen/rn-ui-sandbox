@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { StatusBar, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import type { Session } from '@supabase/supabase-js';
-import { isSpeechRecognitionAvailable, SpeechRecognitionModule, useSpeechRecognitionEvent } from './stt';
+import { RECORDING_SESSION_IOS, restorePlaybackAudio, isSpeechRecognitionAvailable, SpeechRecognitionModule, useSpeechRecognitionEvent } from './stt';
 import { AppState, initialState, lessonResetFields, mergeCourseProgress, Screen, stepResetFields, toPersisted } from './state';
 import { bankBuiltMatches, isDialogueLesson, listenScriptOptions, Reason, STEP_LABELS, UNITS } from './data';
 import { MAX_MISTAKES, starsForMistakes, stepStatus } from './lessonLogic';
@@ -161,8 +161,14 @@ export function RootApp() {
     (correct ? playCorrectSound : playWrongSound)();
     patch({ speakHeardText: transcript, speakCorrect: correct });
   });
-  useSpeechRecognitionEvent('end', () => patch({ speakState: 'done' }));
-  useSpeechRecognitionEvent('error', () => patch({ speakState: 'idle' }));
+  useSpeechRecognitionEvent('end', () => {
+    restorePlaybackAudio();
+    patch({ speakState: 'done' });
+  });
+  useSpeechRecognitionEvent('error', () => {
+    restorePlaybackAudio();
+    patch({ speakState: 'idle' });
+  });
 
   const setGoal = (v: number) => patch({ goal: v });
   const setReason = (v: Reason) => patch({ reason: v });
@@ -390,7 +396,7 @@ export function RootApp() {
     if (!permission.granted) return;
     patch({ speakState: 'recording', speakHeardText: null, speakCorrect: false });
     try {
-      SpeechRecognitionModule.start({ lang: 'th-TH', interimResults: false, continuous: false });
+      SpeechRecognitionModule.start({ lang: 'th-TH', iosCategory: RECORDING_SESSION_IOS, interimResults: false, continuous: false });
     } catch {
       // The module loaded but the browser has no real speech recognizer to
       // back it (e.g. Safari, which never implemented the Web Speech API) —

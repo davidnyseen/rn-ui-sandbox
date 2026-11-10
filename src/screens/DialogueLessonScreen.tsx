@@ -23,7 +23,7 @@ import { SpeakState } from '../state';
 import { speakThai, stopSpeech } from '../tts';
 import { playCorrectSound, playWrongSound } from '../audio';
 import { matchesSpokenThai } from '../text';
-import { isSpeechRecognitionAvailable, SpeechRecognitionModule, useSpeechRecognitionEvent } from '../stt';
+import { RECORDING_SESSION_IOS, restorePlaybackAudio, isSpeechRecognitionAvailable, SpeechRecognitionModule, useSpeechRecognitionEvent } from '../stt';
 import { McStep } from './steps/McStep';
 import { ListenChoiceStep } from './steps/ListenChoiceStep';
 import { SpeakStep } from './steps/SpeakStep';
@@ -71,8 +71,14 @@ export function DialogueLessonScreen({
     setSpeakHeardText(transcript);
     setSpeakCorrect(correct);
   });
-  useSpeechRecognitionEvent('end', () => setSpeakState('done'));
-  useSpeechRecognitionEvent('error', () => setSpeakState('idle'));
+  useSpeechRecognitionEvent('end', () => {
+    restorePlaybackAudio();
+    setSpeakState('done');
+  });
+  useSpeechRecognitionEvent('error', () => {
+    restorePlaybackAudio();
+    setSpeakState('idle');
+  });
 
   const step: DialogueStep = lesson.steps[stepIndex];
   const line = step.type !== 'intro' ? lesson.lines[step.lineIndex] : null;
@@ -162,7 +168,7 @@ export function DialogueLessonScreen({
     setSpeakHeardText(null);
     setSpeakCorrect(false);
     try {
-      SpeechRecognitionModule.start({ lang: 'th-TH', interimResults: false, continuous: false });
+      SpeechRecognitionModule.start({ lang: 'th-TH', iosCategory: RECORDING_SESSION_IOS, interimResults: false, continuous: false });
     } catch {
       // The module loaded but the browser has no real speech recognizer to
       // back it (e.g. Safari, which never implemented the Web Speech API) —

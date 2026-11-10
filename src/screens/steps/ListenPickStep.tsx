@@ -4,6 +4,7 @@ import { colors, fonts, textMuted } from '../../theme';
 import { Button } from '../../components/Button';
 import { PlayIcon } from '../../components/icons';
 import { PulseRing } from '../../components/PulseRing';
+import { AnswerMark } from '../../components/AnswerMark';
 
 // Thai audio plays first, no text shown, and the learner picks the matching
 // sentence — by ear — out of a few already-taught candidates (see
@@ -57,11 +58,9 @@ export function ListenPickStep({
           let opacity = 1;
           if (answered) {
             if (o.correct) {
-              bg = colors.success100; border = colors.success600; color = colors.success800;
+              bg = colors.success100; border = colors.success600;
             } else if (i === selected) {
-              bg = colors.danger100; border = colors.danger600; color = colors.danger800;
-            } else {
-              opacity = 0.4;
+              bg = colors.danger100; border = colors.danger600;
             }
           } else if (i === selected) {
             bg = colors.select100; border = colors.select; color = colors.text;
@@ -73,8 +72,11 @@ export function ListenPickStep({
               onPress={() => onSelect(i)}
               style={[styles.option, { backgroundColor: bg, borderColor: border, opacity }]}
             >
-              <Text style={[styles.optionRoman, { color }]}>{o.roman}</Text>
-              <Text style={[styles.optionThai, { color }]}>{o.thai}</Text>
+              <View style={styles.optionText}>
+                <Text style={[styles.optionRoman, { color }]}>{o.roman}</Text>
+                <Text style={[styles.optionThai, { color }]}>{o.thai}</Text>
+              </View>
+              {answered && (o.correct || i === selected) && <AnswerMark right={o.correct} />}
             </Pressable>
           );
         })}
@@ -100,10 +102,12 @@ const styles = StyleSheet.create({
   },
   reveal: { alignItems: 'center', marginBottom: 20 },
   revealMeaning: { fontSize: 15, color: textMuted(0.55) },
-  options: { gap: 10, marginBottom: 12 },
+  options: { gap: 8, marginBottom: 12 },
   option: {
-    paddingVertical: 14, paddingHorizontal: 16, borderWidth: 1.5, borderRadius: 18,
+    flexDirection: 'row', alignItems: 'center', gap: 10,
+    paddingVertical: 12, paddingHorizontal: 16, minHeight: 56, borderWidth: 1.5, borderRadius: 14,
   },
+  optionText: { flex: 1 },
   optionRoman: { fontSize: 16, fontFamily: fonts.bodySemibold },
   optionThai: { fontSize: 14, opacity: 0.7, marginTop: 2 },
 });
