@@ -1,0 +1,175 @@
+# restaurant — Order at a Restaurant
+
+## L0 Asking for a menu, and what they have
+  RULE Thai tones: Thai has five tones: mid, low, falling, high, and rising. The same syllable changes meaning with its tone — mái (high) is "wood", mài (low) is "new", and mǎi (rising) is "silk". Getting the tone right changes the word.
+  NEW ขอ | khɔ̌ɔ | may I have / please give me
+  NEW เมนู | menuu | menu
+  NEW ด้วย | dûai | please / also
+  CHOICE ขอเมนูด้วย | khɔ̌ɔ menuu dûai: I like it very much. / *May I have a menu? / What do you have? / Check, please.
+  BUILD "May I have a menu?" = ขอ(khɔ̌ɔ) เมนู(menuu) ด้วย(dûai)  [extra: ]
+  SPEAK ขอเมนูด้วย | khɔ̌ɔ menuu dûai | May I have a menu?
+  CHOICE ขอเมนูด้วย | khɔ̌ɔ menuu dûai: How much is it? / *May I have a menu? / What do you have? / Check, please.
+  NEW มี | mii | have / there is
+  NEW อะไร | à-rai | what
+  NEW บ้าง | bâang | some / any
+  CHOICE มีอะไรบ้าง | mii à-rai bâang: May I have a menu? / It is very good. / *What do you have? / Check, please.
+  BUILD "What do you have?" = มี(mii) อะไร(à-rai) บ้าง(bâang)  [extra: menuu, khɔ̌ɔ]
+  SPEAK มีอะไรบ้าง | mii à-rai bâang | What do you have?
+  MATCH ขอ=may I have / please give me, เมนู=menu, ด้วย=please / also, มี=have / there is, อะไร=what, บ้าง=some / any
+
+## L1 Numbers, plates, and water
+  RULE Counting in Thai: Numbers in Thai go before the container or classifier word when they are more than one — but "one" can go either before or after it. Learn one to ten and you can build almost any number.
+  NEW หนึ่ง | nɯ̀ng | one
+  CHOICE หนึ่ง | nɯ̀ng: *One / Three / Menu / Two
+  SPEAK หนึ่ง | nɯ̀ng | one
+  NEW สอง | sɔ̌ɔng | two
+  CHOICE สอง | sɔ̌ɔng: Three / What do you have? / *Two / One
+  SPEAK สอง | sɔ̌ɔng | two
+  NEW สาม | sǎam | three
+  CHOICE สาม | sǎam: *Three / One / Please / Two
+  BUILD "One, two, three" = หนึ่ง(nɯ̀ng) สอง(sɔ̌ɔng) สาม(sǎam)  [extra: dûai, mii]
+  NEW จาน | jaan | plate
+  NEW แก้ว | gɛ̂ɛo | glass
+  NEW น้ำ | náam | water
+  CHOICE ขอน้ำด้วย | khɔ̌ɔ náam dûai: *May I have some water? / What do you have? / May I have a menu? / One, please.
+  NEW กับ | gàp | and / with
+  BUILD "I'd like a plate and a glass." = ขอ(khɔ̌ɔ) จาน(jaan) กับ(gàp) แก้ว(gɛ̂ɛo)  [extra: náam, sǎam]
+  CHOICE ขอจานกับแก้ว | khɔ̌ɔ jaan gàp gɛ̂ɛo: What do you have? / Two glasses, please. / *I'd like a plate and a glass. / May I have some water?
+  SPEAK ขอน้ำกับจาน | khɔ̌ɔ náam gàp jaan | May I have water and a plate?
+  MATCH หนึ่ง=one, สอง=two, สาม=three, จาน=plate, แก้ว=glass, น้ำ=water, กับ=and / with
+
+## L2 Ordering fried rice, and more
+  NEW ข้าวผัด | khâao-phàt | fried rice
+  NEW ไก่ | gài | chicken
+  CHOICE ขอข้าวผัดไก่หนึ่งจาน | khɔ̌ɔ khâao-phàt gài nɯ̀ng jaan: One more plate, please. / pork fried rice / *One chicken fried rice, please. / with chicken
+  SPEAK ขอข้าวผัดไก่หนึ่งจาน | khɔ̌ɔ khâao-phàt gài nɯ̀ng jaan | One chicken fried rice, please.
+  NEW ใส่ | sài | put / with
+  BUILD "with chicken" = ใส่(sài) ไก่(gài)  [extra: à-rai, gɛ̂ɛo]
+  NEW อีก | ìik | more / another
+  SPEAK ขออีกจานหนึ่ง | khɔ̌ɔ ìik jaan nɯ̀ng | One more plate, please.
+  NEW ขวด | khùat | bottle
+  BUILD "Another bottle of water, please." = ขอ(khɔ̌ɔ) น้ำ(náam) อีก(ìik) ขวด(khùat)  [extra: sài, khâao-phàt]
+  CHAT M:ใส่ อะไร(sài à-rai=With what?) → reply as F "With chicken.": ขวด(khùat) / ขอเมนูด้วย(khɔ̌ɔ menuu dûai) / *ใส่ไก่(sài gài)
+  NEW หมู | mǔu | pork
+  CHOICE ข้าวผัดหมู | khâao-phàt mǔu: One chicken fried rice, please. / with chicken / *pork fried rice / One more plate, please.
+  MATCH ข้าวผัด=fried rice, ไก่=chicken, ใส่=put / with, อีก=more / another, ขวด=bottle, หมู=pork
+
+## L3 With, without, and spicy
+  NEW ไม่ | mâi | not
+  NEW เนื้อ | nɯ́a | beef
+  SPEAK ไม่ใส่เนื้อ | mâi sài nɯ́a | No beef, please.
+  NEW น้ำตาล | náam-taan | sugar
+  CHOICE ใส่น้ำตาล | sài náam-taan: No chili, please. / Not spicy at all. / *with sugar / No beef, please.
+  NEW เผ็ด | phèt | spicy / hot
+  BUILD "fried rice, not spicy" = ข้าวผัด(khâao-phàt) ไม่(mâi) เผ็ด(phèt)  [extra: sɔ̌ɔng, jaan]
+  NEW พริก | phrík | chili pepper
+  CHOICE ไม่ใส่พริก | mâi sài phrík: *No chili, please. / with sugar / Not spicy at all. / No beef, please.
+  SPEAK ไม่ใส่พริก | mâi sài phrík | No chili, please.
+  CHAT M:ใส่ อะไร(sài à-rai=What do you want in it?) → reply as F "No chili, please.": ขอเมนูด้วย(khɔ̌ɔ menuu dûai) / *ไม่ใส่พริก(mâi sài phrík) / มีอะไรบ้าง(mii à-rai bâang)
+  NEW เลย | loei | at all
+  BUILD "Not spicy at all." = ไม่(mâi) เผ็ด(phèt) เลย(loei)  [extra: gài, mǔu]
+  MATCH ไม่=not, เนื้อ=beef, น้ำตาล=sugar, เผ็ด=spicy / hot, พริก=chili pepper, เลย=at all
+
+## L4 Hot and iced drinks
+  NEW กาแฟ | gaa-fɛɛ | coffee
+  NEW ชา | chaa | tea
+  NEW ร้อน | rɔ́ɔn | hot (temperature)
+  CHOICE ขอกาแฟร้อน | khɔ̌ɔ gaa-fɛɛ rɔ́ɔn: *A hot coffee, please. / two iced coffees / Plain water, please. / iced tea
+  SPEAK ขอกาแฟร้อน | khɔ̌ɔ gaa-fɛɛ rɔ́ɔn | A hot coffee, please.
+  NEW แล้วก็ | láew-gɔ̂ɔ | and then / also
+  NEW เย็น | yen | cold / iced
+  BUILD "iced tea" = ชา(chaa) เย็น(yen)  [extra: dûai, phrík]
+  BUILD "A hot tea and an iced coffee, please." = ขอ(khɔ̌ɔ) ชา(chaa) ร้อน(rɔ́ɔn) แล้วก็(láew-gɔ̂ɔ) กาแฟ(gaa-fɛɛ) เย็น(yen)  [extra: loei, gài]
+  NEW เปล่า | plào | plain
+  CHOICE ขอน้ำเปล่า | khɔ̌ɔ náam plào: two iced coffees / iced tea / A hot coffee, please. / *Plain water, please.
+  CHAT M:มี อะไร บ้าง(mii à-rai bâang=What do you have?) → reply as F "We have coffee and tea.": *มีกาแฟแล้วก็ชา(mii gaa-fɛɛ láew-gɔ̂ɔ chaa) / ชาเย็น(chaa yen) / ขอน้ำเปล่า(khɔ̌ɔ náam plào)
+  NEW ที่ | thîi | order (classifier)
+  SPEAK กาแฟเย็นสองที่ | gaa-fɛɛ yen sɔ̌ɔng thîi | two iced coffees
+  MATCH กาแฟ=coffee, ชา=tea, ร้อน=hot (temperature), แล้วก็=and then / also, เย็น=cold / iced, เปล่า=plain, ที่=order (classifier)
+
+## L5 Beer sizes, and flavors
+  NEW เบียร์ | bia | beer
+  NEW ใหญ่ | yài | large
+  CHOICE ขอเบียร์ขวดใหญ่ | khɔ̌ɔ bia khùat yài: a small bottle / *A large bottle of beer, please. / not sweet / sweet and sour
+  SPEAK ขอเบียร์ขวดใหญ่ | khɔ̌ɔ bia khùat yài | A large bottle of beer, please.
+  NEW เล็ก | lék | small
+  BUILD "a small bottle" = ขวด(khùat) เล็ก(lék)  [extra: mâi, yài]
+  NEW หวาน | wǎan | sweet
+  SPEAK ไม่หวาน | mâi wǎan | not sweet
+  NEW เปรี้ยว | prîao | sour
+  CHOICE เปรี้ยวหวาน | prîao wǎan: *sweet and sour / not sweet / A large bottle of beer, please. / a small bottle
+  CHAT M:มี อะไร บ้าง(mii à-rai bâang=What do you have?) → reply as F "We have large and small bottles of beer.": เปรี้ยวหวาน(prîao wǎan) / *มีเบียร์ขวดใหญ่กับขวดเล็ก(mii bia khùat yài gàp khùat lék) / ไม่หวาน(mâi wǎan)
+  NEW เค็ม | khem | salty
+  BUILD "not salty" = ไม่(mâi) เค็ม(khem)  [extra: jaan, náam-taan]
+  MATCH เบียร์=beer, ใหญ่=large, เล็ก=small, หวาน=sweet, เปรี้ยว=sour, เค็ม=salty
+
+## L6 Utensils, help, and the bill
+  NEW ช้อน | chɔ́ɔn | spoon
+  BUILD "A spoon, please." = ขอ(khɔ̌ɔ) ช้อน(chɔ́ɔn) ด้วย(dûai)  [extra: ìik, lék]
+  NEW ส้อม | sɔ̂m | fork
+  CHOICE ขอช้อนกับส้อม | khɔ̌ɔ chɔ́ɔn gàp sɔ̂m: Please wipe the table. / *A spoon and fork, please. / The check, please. / Keep the change.
+  SPEAK ขอช้อนกับส้อม | khɔ̌ɔ chɔ́ɔn gàp sɔ̂m | A spoon and fork, please.
+  NEW ช่วยเช็ดโต๊ะหน่อย | chûai chét tó nɔ̀i | Please wipe off the table.
+  CHOICE ช่วยเช็ดโต๊ะหน่อย | chûai chét tó nɔ̀i: The check, please. / A spoon and fork, please. / Keep the change. / *Please wipe the table.
+  NEW เช็คบิล | chék-bin | the bill
+  CHOICE ขอเช็คบิลด้วย | khɔ̌ɔ chék-bin dûai: A spoon and fork, please. / Please wipe the table. / Keep the change. / *The check, please.
+  NEW ต้อง | tɔ̂ng | have to / need to
+  NEW ทอน | thɔɔn | give change
+  SPEAK ไม่ต้องทอน | mâi tɔ̂ng thɔɔn | Keep the change.
+  MATCH ช้อน=spoon, ส้อม=fork, ช่วยเช็ดโต๊ะหน่อย=Please wipe off the table., เช็คบิล=the bill, ต้อง=have to / need to, ทอน=give change
+
+## L7 Vegetarian, and asking for tofu
+  NEW ฉัน | chán | I
+  NEW กิน | gin | eat
+  BUILD "I don't eat beef." = ฉัน(chán) ไม่(mâi) กิน(gin) เนื้อ(nɯ́a)  [extra: phrík, khɔ̌ɔ]
+  NEW เจ | jee | vegetarian (style of food)
+  CHOICE ฉันกินเจ | chán gin jee: Do you have tofu? / Do you eat spicy food? / *I'm vegetarian. / I don't eat beef.
+  SPEAK ฉันกินเจ | chán gin jee | I'm vegetarian.
+  NEW เต้าหู้ | tâo-hûu | tofu
+  NEW น้ำมันพืช | náam-man-phɯ̂ɯt | vegetable oil
+  BUILD "with vegetable oil" = ใส่(sài) น้ำมันพืช(náam-man-phɯ̂ɯt)  [extra: sɔ̌ɔng, khem]
+  NEW มั้ย | mái | question particle (do you...?)
+  CHOICE มีเต้าหู้มั้ย | mii tâo-hûu mái: *Do you have tofu? / Do you eat spicy food? / I don't eat beef. / I'm vegetarian.
+  SPEAK กินเผ็ดมั้ย | gin phèt mái | Do you eat spicy food?
+  CHAT M:มี เต้าหู้ มั้ย(mii tâo-hûu mái=Do you have tofu?) → reply as F "Yes, we do.": ไม่เผ็ดเลย(mâi phèt loei) / *มี(mii) / ฉันกินเจ(chán gin jee)
+  MATCH ฉัน=I, กิน=eat, เจ=vegetarian (style of food), เต้าหู้=tofu, น้ำมันพืช=vegetable oil, มั้ย=question particle (do you...?)
+
+## L8 Eggs, and price per kilo
+  NEW ไข่ | khài | egg
+  BUILD "with egg" = ใส่(sài) ไข่(khài)  [extra: tâo-hûu, gàp]
+  NEW ได้ | dâi | can / able to
+  CHOICE ไม่ใส่ไข่ได้มั้ย | mâi sài khài dâi mái: with egg / *Can you make it without egg? / Two kilos, please. / How much per kilo?
+  CHOICE ได้ | dâi: with egg / How much per kilo? / Can you make it without egg? / *Sure, I can.
+  SPEAK ไม่ใส่ไข่ได้มั้ย | mâi sài khài dâi mái | Can you make it without egg?
+  NEW โล | loo | kilogram
+  SPEAK ขอสองโล | khɔ̌ɔ sɔ̌ɔng loo | Two kilos, please.
+  CHAT M:ไม่ ใส่ ไข่ ได้ มั้ย(mâi sài khài dâi mái=Can you make it without egg?) → reply as F "Sure, no problem.": ขอสองโล(khɔ̌ɔ sɔ̌ɔng loo) / *ได้(dâi) / ใส่ไข่(sài khài)
+  NEW ละ | lá | per
+  NEW เท่าไหร่ | thâo-rài | how much
+  CHOICE โลละเท่าไหร่ | loo lá thâo-rài: with egg / Two kilos, please. / Can you make it without egg? / *How much per kilo?
+  MATCH ไข่=egg, ได้=can / able to, โล=kilogram, ละ=per, เท่าไหร่=how much
+
+## L9 How many kilos do you want?
+  SPEAK โลละเท่าไหร่ | loo lá thâo-rài | How much per kilo?
+  NEW เอา | ao | want / take
+  CHOICE เอาเต้าหู้สองโล | ao tâo-hûu sɔ̌ɔng loo: *I'll take two kilos of tofu. / How much per kilo? / I'll take half a kilo. / How many kilos do you want?
+  BUILD "I'll take one kilo." = เอา(ao) หนึ่ง(nɯ̀ng) โล(loo)  [extra: plào, yài]
+  NEW กี่ | gìi | how many
+  CHOICE เอากี่โล | ao gìi loo: *How many kilos do you want? / How much per kilo? / I'll take half a kilo. / I'll take two kilos of tofu.
+  SPEAK เอากี่โล | ao gìi loo | How many kilos do you want?
+  NEW ครึ่ง | khrɯ̂ng | half
+  BUILD "I'll take half a kilo." = เอา(ao) ครึ่ง(khrɯ̂ng) โล(loo)  [extra: thîi, khɔ̌ɔ]
+  CHAT M:เอา กี่ โล(ao gìi loo=How many kilos do you want?) → reply as F "Half a kilo.": โลละเท่าไหร่(loo lá thâo-rài) / *เอาครึ่งโล(ao khrɯ̂ng loo) / มีเต้าหู้มั้ย(mii tâo-hûu mái)
+  MATCH เอา=want / take, กี่=how many, ครึ่ง=half
+
+## L10 Ordering dinner
+scene: Two friends order food, skip the spice, and ask for the check.
+  D0 A: ขอเมนูด้วย | khɔ̌ɔ menuu dûai | May I have a menu?
+  D1 B: ขอข้าวผัดไก่หนึ่งจาน | khɔ̌ɔ khâao-phàt gài nɯ̀ng jaan | I'd like one plate of fried rice with chicken.
+  D2 A: ไม่ใส่พริก ไม่เผ็ดเลย | mâi sài phrík, mâi phèt loei | No chili — not spicy at all.
+  D3 B: ขอเช็คบิลด้วย | khɔ̌ɔ chék-bin dûai | Check, please.
+  comprehension D0: *May I have a menu? / What do you have? / Check, please. / Not spicy at all.
+  comprehension D2: *No chili — not spicy at all. / May I have a menu? / I'd like one plate of fried rice with chicken. / Check, please.
+  translate D1: *I'd like one plate of fried rice with chicken. / May I have a menu? / Check, please. / Keep the change.
+  translate D3: *Check, please. / May I have some water? / What do you have? / One more plate, please.
+  blank D2 "mâi sài ___ , mâi phèt loei": *phrík / nɯ́a / khài / náam-taan

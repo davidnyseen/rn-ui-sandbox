@@ -1,20 +1,13 @@
 import { useEffect, useState } from 'react';
-import { Pressable, Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import { colors, fonts } from '../../theme';
 import { Button } from '../../components/Button';
-import { MaleIcon, FemaleIcon, PlayIcon } from '../../components/icons';
+import { PlayIcon } from '../../components/icons';
+import { ChatBubble, SpeakerBadge, bubbleTint, speakerColor } from '../../components/ChatBubble';
 import { AnswerOption } from '../../components/AnswerOption';
 import { ReplyContextLine } from '../../courseTypes';
 
-const BUBBLE_RADIUS = 14;
-const AVATAR_SIZE = 28;
-
-const speakerColor = (speaker: 'M' | 'F') => (speaker === 'M' ? colors.maleSpeaker : colors.pink);
-// ChatGPT's pass (2026-11-10): soft tinted bubbles with dark text, so the Thai stands out instead of white-on-colour.
-const bubbleTint = (speaker: 'M' | 'F') => (speaker === 'M' ? '#dde9fc' : '#fce3ec');
 const MUTED = 'rgba(32,30,29,0.6)';
-const SpeakerIcon = ({ speaker, size }: { speaker: 'M' | 'F'; size: number }) =>
-  speaker === 'M' ? <MaleIcon size={size} color={colors.white} /> : <FemaleIcon size={size} color={colors.white} />;
 
 export function ReplyStep({
   context,
@@ -102,37 +95,16 @@ export function ReplyStep({
     <View style={styles.screen}>
       <Text style={styles.hint}>Tap a message to hear it, then answer as the {replySpeaker === 'M' ? 'man' : 'woman'}.</Text>
       <View style={styles.context}>
-        {context.slice(0, visibleCount).map((line, i) => {
-          const isRight = line.speaker === 'M';
-          const avatar = (
-            <View style={[styles.avatar, { backgroundColor: speakerColor(line.speaker) }]}>
-              <SpeakerIcon speaker={line.speaker} size={15} />
-            </View>
-          );
-          return (
-            <View key={i}>
-              <View style={[styles.bubbleRow, isRight ? styles.bubbleRowRight : styles.bubbleRowLeft]}>
-                {!isRight && avatar}
-                <Pressable onPress={() => onPlayLine(i)} style={styles.bubbleCol}>
-                  <View
-                    style={[
-                      styles.bubble,
-                      { backgroundColor: bubbleTint(line.speaker) },
-                    ]}
-                  >
-                    <View style={styles.bubbleTop}>
-                      <Text style={styles.bubbleRoman}>{line.roman}</Text>
-                      <PlayIcon size={14} color={MUTED} />
-                    </View>
-                    <Text style={styles.bubbleThai}>{line.parts.join(' ')}</Text>
-                    <Text style={styles.bubbleMeaning}>{line.english}</Text>
-                  </View>
-                </Pressable>
-                {isRight && avatar}
-              </View>
-            </View>
-          );
-        })}
+        {context.slice(0, visibleCount).map((line, i) => (
+          <ChatBubble
+            key={i}
+            speaker={line.speaker}
+            eyebrow={line.roman}
+            main={line.parts.join(' ')}
+            sub={line.english}
+            onPress={() => onPlayLine(i)}
+          />
+        ))}
       </View>
 
       {introDone && (
@@ -143,32 +115,9 @@ export function ReplyStep({
             // haven't produced the Thai for it yet — rather than a
             // separate caption floating outside the chat.
             const isRight = replySpeaker === 'M';
-            const avatar = (
-              <View style={[styles.avatar, { backgroundColor: speakerColor(replySpeaker) }]}>
-                <SpeakerIcon speaker={replySpeaker} size={15} />
-              </View>
-            );
             return (
               <View>
-                <View style={[styles.bubbleRow, isRight ? styles.bubbleRowRight : styles.bubbleRowLeft]}>
-                  {!isRight && avatar}
-                  <Pressable onPress={onPlayEnglish} style={styles.bubbleCol}>
-                    <View
-                      style={[
-                        styles.bubble,
-                        { backgroundColor: bubbleTint(replySpeaker) },
-                      ]}
-                    >
-                      <View style={styles.bubbleTop}>
-                        <Text style={[styles.promptText, styles.shrink]}>{english}</Text>
-                        <View style={styles.noShrink}>
-                          <PlayIcon size={14} color={MUTED} />
-                        </View>
-                      </View>
-                    </View>
-                  </Pressable>
-                  {isRight && avatar}
-                </View>
+                <ChatBubble speaker={replySpeaker} main={english} onPress={onPlayEnglish} />
                 <Text style={[styles.translatePrompt, isRight ? styles.textRight : styles.textLeft]}>
                   How do you say this in Thai?
                 </Text>
@@ -185,15 +134,11 @@ export function ReplyStep({
                 big
                 eyebrow={
                   <View style={styles.bubbleTop}>
-                    <Text style={styles.bubbleRoman}>{o.roman}</Text>
-                    <PlayIcon size={13} color={MUTED} />
+                    <Text style={[styles.bubbleRoman, styles.romanShrink]}>{o.roman}</Text>
+                    <View style={styles.iconKeep}><PlayIcon size={13} color={MUTED} /></View>
                   </View>
                 }
-                leading={
-                  <View style={[styles.avatar, { backgroundColor: speakerColor(replySpeaker) }]}>
-                    <SpeakerIcon speaker={replySpeaker} size={15} />
-                  </View>
-                }
+                leading={<SpeakerBadge speaker={replySpeaker} />}
                 pickedTint={{ bg: bubbleTint(replySpeaker), border: speakerColor(replySpeaker) }}
                 selected={i === selected}
                 answered={answered}
@@ -218,26 +163,13 @@ const styles = StyleSheet.create({
   screen: { flex: 1 },
   spacer: { flex: 1, minHeight: 12 },
 
-  avatar: {
-    width: AVATAR_SIZE, height: AVATAR_SIZE, borderRadius: 9999, alignItems: 'center', justifyContent: 'center', flexShrink: 0,
-  },
 
   hint: { fontFamily: fonts.bodySemibold, fontSize: 14, color: colors.accent700, marginBottom: 14 },
-  context: { gap: 10, marginBottom: 20 }, // no caption lines under the bubbles any more
-  bubbleRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
-  bubbleRowLeft: { justifyContent: 'flex-start' },
-  bubbleRowRight: { justifyContent: 'flex-end' },
-  bubbleCol: { maxWidth: '74%' },
-  bubble: {
-    borderRadius: BUBBLE_RADIUS, paddingVertical: 10, paddingHorizontal: 15, gap: 2,
-  },
-  noShrink: { flexShrink: 0 },
-  shrink: { flexShrink: 1 }, // a long English line wraps instead of pushing its sound icon out of the bubble
+  context: { gap: 10, marginBottom: 20 },
   bubbleTop: { flexDirection: 'row', alignItems: 'center', gap: 8 },
-  bubbleMeaning: { fontSize: 12, color: MUTED, marginTop: 1 },
+  romanShrink: { flexShrink: 1 },
+  iconKeep: { flexShrink: 0 },
   bubbleRoman: { fontFamily: fonts.bodySemibold, fontSize: 13, color: MUTED },
-  bubbleThai: { fontSize: 18, color: colors.text, fontFamily: fonts.bodySemibold },
-  promptText: { fontSize: 16, color: colors.text, fontFamily: fonts.bodySemibold },
   textLeft: { textAlign: 'left' },
   textRight: { textAlign: 'right' },
 

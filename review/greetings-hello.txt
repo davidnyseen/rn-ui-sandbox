@@ -1,0 +1,145 @@
+# greetings-hello — Hello & Everyday Phrases
+
+## L0 Hello!
+  RULE Polite particles: Thai has two words, khâ for women and khráp for men, added to the end of a question, response, or statement to make it sound more polite. They are used with people older than you, or whenever you want to sound polite — for example, when first meeting someone.
+  NEW สวัสดี | sà-wàt-dii | hello
+  NEW ค่ะ | khâ | polite particle (said by women)
+  CHOICE สวัสดีค่ะ | sà-wàt-dii khâ: Good luck. / *Hello. (said by a woman) / Excuse me. / Thank you.
+  SPEAK สวัสดีค่ะ | sà-wàt-dii khâ | Hello. (said by a woman)
+  BUILD "Hello. (said by a woman)" = สวัสดี(sà-wàt-dii) ค่ะ(khâ)  [extra: ]
+  CHOICE ค่ะ | khâ: Polite particle (said by a man). / Thank you. / *Polite particle (said by a woman). / Hello.
+  NEW ครับ | khráp | polite particle (said by men)
+  CHAT M:สวัสดี ครับ(sà-wàt-dii khráp=Hello. (said by a man)) → reply as F "Hello. (said by a woman)": ค่ะ(khâ) / *สวัสดีค่ะ(sà-wàt-dii khâ) / ครับ(khráp)
+  CHOICE สวัสดีครับ | sà-wàt-dii khráp: How are you? / Thank you. / Good luck. / *Hello. (said by a man)
+  SPEAK สวัสดีครับ | sà-wàt-dii khráp | Hello. (said by a man)
+  CHOICE ครับ | khráp: *Polite particle (said by a man). / Polite particle (said by a woman). / Thank you. / Hello.
+  NEW ไป | pai | go
+  NEW ไหน | nǎi | where
+  CHOICE ไปไหน | pai nǎi: Hello. / *Where are you going? / What's your name? / Good luck.
+  BUILD "Where are you going?" = ไป(pai) ไหน(nǎi)  [extra: khráp, sà-wàt-dii]
+  MATCH สวัสดี=hello, ค่ะ=polite particle (said by women), ครับ=polite particle (said by men), ไป=go, ไหน=where
+
+## L1 Where are you going?
+  CHAT M:สวัสดี ครับ(sà-wàt-dii khráp=Hello. (said by a man)) → F:สวัสดี ค่ะ(sà-wàt-dii khâ=Hello. (said by a woman)) → reply as M "Where are you going?": ค่ะ(khâ) / สวัสดีครับ(sà-wàt-dii khráp) / ครับ(khráp) / *ไปไหน(pai nǎi)
+  SPEAK ไปไหน | pai nǎi | Where are you going?
+  CHOICE สวัสดีครับ | sà-wàt-dii khráp: *Hello. (said by a man) / I'm going out. / Where are you going? / Thank you.
+  BUILD "Hello. (said by a woman)" = สวัสดี(sà-wàt-dii) ค่ะ(khâ)  [extra: nǎi, khráp]
+  NEW เที่ยว | thîao | go out / travel around
+  BUILD "I'm going out/traveling around." = ไป(pai) เที่ยว(thîao)  [extra: nǎi, khráp]
+  CHOICE ไปเที่ยว | pai thîao: Where are you going? / *I'm going out/traveling around. / Hello. / Thank you.
+  SPEAK ไปเที่ยว | pai thîao | I'm going out/traveling around.
+  CHAT M:สวัสดี ครับ(sà-wàt-dii khráp=Hello. (said by a man)) → F:สวัสดี ค่ะ(sà-wàt-dii khâ=Hello. (said by a woman)) → M:ไป ไหน(pai nǎi=Where are you going?) → reply as F "I'm going out/traveling around.": *ไปเที่ยว(pai thîao) / สวัสดีค่ะ(sà-wàt-dii khâ) / ครับ(khráp)
+  CHOICE เที่ยว | thîao: where / hello / *go out / travel around / go
+  NEW หา | hǎa | look for / see (someone)
+  CHOICE หา | hǎa: *look for / see (someone) / friend / go out / travel around / go
+  NEW เพื่อน | phɯ̂an | friend
+  BUILD "I'm going to see a friend." = ไป(pai) หา(hǎa) เพื่อน(phɯ̂an)  [extra: nǎi, khâ]
+  CHOICE ไปหาเพื่อน | pai hǎa phɯ̂an: I'm going out/traveling around. / Hello. / *I'm going to see a friend. / Where are you going?
+  SPEAK ไปหาเพื่อน | pai hǎa phɯ̂an | I'm going to see a friend.
+  CHOICE เพื่อน | phɯ̂an: *friend / go out / travel around / look for / see (someone) / home
+  MATCH เที่ยว=go out / travel around, หา=look for / see (someone), เพื่อน=friend
+
+## L2 Good, or not?
+  RULE Yes/no questions with mái: To make a simple question like "is it good?", put mái (high tone) after the word. Answer "yes" by repeating the word, or "no" by putting mâi (falling tone) before it.
+  NEW ดี | dii | good
+  CHOICE ดี | dii: not / no / hello / *good / question particle: is it ___?
+  NEW มั้ย | mái | question particle: is it ___?
+  CHOICE ดีมั้ย | dii mái: Where are you going? / Is it fun? / Hello. / *Is it good?
+  BUILD "Is it good?" = ดี(dii) มั้ย(mái)  [extra: phɯ̂an, thîao]
+  SPEAK ดีมั้ย | dii mái | Is it good?
+  NEW ไม่ | mâi | not / no
+  CHOICE ไม่ดี | mâi dii: Where are you going? / *No, it's not good. / Is it good? / Yes, it's good.
+  BUILD "No, it's not good." = ไม่(mâi) ดี(dii)  [extra: pai, nǎi]
+  CHOICE ไม่ | mâi: question particle: is it ___? / *not / no / good / hello
+  CHAT M:ไป ไหน(pai nǎi=Where did you go?) → F:ไป เที่ยว(pai thîao=I went out/traveled around.) → M:ดี มั้ย(dii mái=Was it good?) → reply as F "Good.": *ดี(dii) / ไปเที่ยว(pai thîao) / สวัสดีครับ(sà-wàt-dii khráp) / ไม่ดี(mâi dii)
+  CHAT M:สวัสดี ครับ(sà-wàt-dii khráp=Hello. (said by a man)) → F:สวัสดี ค่ะ(sà-wàt-dii khâ=Hello. (said by a woman)) → M:ดี มั้ย(dii mái=Is it good?) → reply as F "No, it's not good.": *ไม่ดี(mâi dii) / ไปไหน(pai nǎi) / ดี(dii) / ไปเที่ยว(pai thîao)
+  SPEAK ไม่ดี | mâi dii | No, it's not good.
+  MATCH ดี=good, มั้ย=question particle: is it ___?, ไม่=not / no
+
+## L3 Eating, and going home
+  NEW กิน | gin | eat
+  CHOICE กิน | gin: good / where / go / *eat
+  NEW ข้าว | khâao | rice
+  CHOICE ข้าว | khâao: eat / *rice / not / no / go out / travel around
+  BUILD "Eat. (rice/food)" = กิน(gin) ข้าว(khâao)  [extra: thîao, hǎa]
+  SPEAK กินข้าว | gin khâao | eat (rice/food)
+  BUILD "Go eat." = ไป(pai) กิน(gin) ข้าว(khâao)  [extra: hǎa, dii]
+  NEW กลับ | glàp | return / go back
+  CHOICE กลับ | glàp: *return / go back / not / no / go out / travel around / hello
+  CHAT M:สวัสดี ครับ(sà-wàt-dii khráp=Hello. (said by a man)) → F:สวัสดี ค่ะ(sà-wàt-dii khâ=Hello. (said by a woman)) → M:ไป ไหน(pai nǎi=Where are you going?) → reply as F "I'm going to eat.": *ไปกินข้าว(pai gin khâao) / ไปเที่ยว(pai thîao) / กลับ(glàp) / ไม่ดี(mâi dii)
+  NEW บ้าน | bâan | home / house
+  CHOICE บ้าน | bâan: rice / eat / return / go back / *home / house
+  BUILD "I'm going home." = กลับ(glàp) บ้าน(bâan)  [extra: phɯ̂an, mâi]
+  SPEAK กลับบ้าน | glàp bâan | go home / I'm going home
+  MATCH กิน=eat, ข้าว=rice, กลับ=return / go back, บ้าน=home / house
+
+## L4 And, and then, a lot
+  NEW กับ | gàp | and / with
+  CHOICE กับ | gàp: eat / return / go back / *and / with / rice
+  SPEAK กับ | gàp | and / with
+  NEW แล้วก็ | láew-gɔ̂ɔ | and then / also
+  CHOICE แล้วก็ | láew-gɔ̂ɔ: very / a lot / eat / *and then / also / and / with
+  SPEAK แล้วก็ | láew-gɔ̂ɔ | and then / also
+  SPEAK ไปเที่ยวแล้วก็กลับบ้าน | pai thîao láew-gɔ̂ɔ glàp bâan | Go out, and then go home.
+  BUILD "Go eat, and then go home." = ไป(pai) กิน(gin) ข้าว(khâao) แล้วก็(láew-gɔ̂ɔ) กลับ(glàp) บ้าน(bâan)  [extra: dii, mái]
+  NEW มาก | mâak | very / a lot
+  CHOICE มาก | mâak: and / with / and then / also / *very / a lot / rice
+  SPEAK มาก | mâak | very / a lot
+  CHAT M:ไป ไหน(pai nǎi=Where did you go?) → F:ไป เที่ยว แล้วก็ กลับ บ้าน(pai thîao láew-gɔ̂ɔ glàp bâan=I went out, and then came home.) → M:ดี มั้ย(dii mái=Was it good?) → reply as F "It was very good.": *ดีมาก(dii mâak) / สวัสดีครับ(sà-wàt-dii khráp) / ไม่ดี(mâi dii) / ไปกินข้าว(pai gin khâao)
+  MATCH กับ=and / with, แล้วก็=and then / also, มาก=very / a lot
+
+## L5 Fun, beautiful, want
+  NEW สนุก | sà-nùk | fun / enjoyable
+  CHOICE สนุก | sà-nùk: *fun / enjoyable / very / a lot / and then / also / and / with
+  SPEAK สนุก | sà-nùk | fun / enjoyable
+  CHOICE สนุกดี | sà-nùk dii: Thank you. / It's not fun. / Is it good? / *It's fun.
+  CHOICE ไม่สนุก | mâi sà-nùk: I'm going home. / *It's not fun. / It's fun. / Is it beautiful?
+  BUILD "Went out, and it was a lot of fun." = ไป(pai) เที่ยว(thîao) แล้วก็(láew-gɔ̂ɔ) สนุก(sà-nùk) มาก(mâak)  [extra: hǎa, phɯ̂an]
+  NEW สวย | sǔai | beautiful
+  CHOICE สวย | sǔai: *beautiful / fun / enjoyable / rice / want
+  SPEAK สวย | sǔai | beautiful
+  CHOICE สวยมั้ย | sǔai mái: Thank you. / Is it good? / Where are you going? / *Is it beautiful?
+  BUILD "Is it beautiful?" = สวย(sǔai) มั้ย(mái)  [extra: láew-gɔ̂ɔ, mâi]
+  SPEAK สวยมาก | sǔai mâak | It's very beautiful.
+  CHAT M:ไป ไหน(pai nǎi=Where did you go?) → F:ไป เที่ยว แล้วก็ กิน ข้าว(pai thîao láew-gɔ̂ɔ gin khâao=I went out, and then ate.) → M:สนุก มั้ย(sà-nùk mái=Was it fun?) → reply as F "It was a lot of fun.": ไม่สนุก(mâi sà-nùk) / สวยมั้ย(sǔai mái) / *สนุกมาก(sà-nùk mâak) / กลับบ้าน(glàp bâan)
+  NEW เอา | ao | want
+  CHOICE เอา | ao: *want / beautiful / return / go back / fun / enjoyable
+  SPEAK เอา | ao | want
+  MATCH สนุก=fun / enjoyable, สวย=beautiful, เอา=want
+
+## L6 Like, thank you, excuse me
+  NEW ชอบ | chɔ̂ɔp | like
+  NEW ขอบคุณ | khɔ̀ɔp-khun | thank you
+  CHOICE ชอบมากขอบคุณค่ะ | chɔ̂ɔp mâak, khɔ̀ɔp-khun khâ: Excuse me. / *I like it a lot, thank you. / Hello. / Do you understand?
+  BUILD "(It was) very fun, thank you." = สนุก(sà-nùk) มาก(mâak) ขอบคุณ(khɔ̀ɔp-khun) ครับ(khráp)  [extra: mái, mâi]
+  CHOICE ขอบคุณมาก | khɔ̀ɔp-khun mâak: It's very beautiful. / I don't want it. / *Thanks a lot. / Excuse me.
+  BUILD "Went out, it was a lot of fun, thank you." = ไป(pai) เที่ยว(thîao) สนุก(sà-nùk) มาก(mâak) ขอบคุณ(khɔ̀ɔp-khun) ค่ะ(khâ)  [extra: gin, bâan]
+  SPEAK ไม่เอาขอบคุณค่ะ | mâi ao khɔ̀ɔp-khun khâ | No thank you.
+  NEW ขอโทษ | khɔ̌ɔ-thôot | excuse me / sorry
+  CHOICE ขอโทษ | khɔ̌ɔ-thôot: want / like / thank you / *excuse me / sorry
+  SPEAK ขอโทษ | khɔ̌ɔ-thôot | excuse me / sorry
+  CHAT M:ไป ไหน(pai nǎi=Where did you go?) → F:ไป กิน ข้าว(pai gin khâao=I went to eat.) → M:ชอบ มั้ย(chɔ̂ɔp mái=Did you like it?) → reply as F "I liked it a lot, thank you.": *ชอบมากขอบคุณค่ะ(chɔ̂ɔp mâak, khɔ̀ɔp-khun khâ) / ไม่เอาขอบคุณค่ะ(mâi ao khɔ̀ɔp-khun khâ) / ไม่ดี(mâi dii) / ขอโทษ(khɔ̌ɔ-thôot)
+  NEW ไม่เป็นไร | mâi-pen-rai | that's alright / never mind
+  CHOICE ไม่เป็นไร | mâi-pen-rai: thank you / excuse me / sorry / *that's alright / never mind / like
+  SPEAK ไม่เป็นไร | mâi-pen-rai | that's alright / never mind
+  CHOICE ขอโทษค่ะไม่เป็นไรค่ะ | khɔ̌ɔ-thôot khâ, mâi-pen-rai khâ: *Excuse me — that's alright. / Thank you. / Do you understand? / Hello.
+  BUILD "Excuse me — that's alright. (said by a man)" = ขอโทษ(khɔ̌ɔ-thôot) ครับ(khráp) ไม่เป็นไร(mâi-pen-rai) ครับ(khráp)  [extra: mâak, nǎi]
+  NEW เข้าใจ | khâo-jai | understand
+  CHOICE เข้าใจ | khâo-jai: that's alright / never mind / like / want / *understand
+  SPEAK เข้าใจ | khâo-jai | understand
+  MATCH ชอบ=like, ขอบคุณ=thank you, ขอโทษ=excuse me / sorry, ไม่เป็นไร=that's alright / never mind, เข้าใจ=understand
+
+## L7 Review
+  CHOICE สวัสดีค่ะ | sà-wàt-dii khâ: *Hello. (said by a woman) / Good luck. / Excuse me. / Thank you.
+  BUILD "Where are you going?" = ไป(pai) ไหน(nǎi)  [extra: khráp, gàp]
+  CHOICE ดีมั้ย | dii mái: Where are you going? / *Is it good? / Hello. / Is it fun?
+  BUILD "Go eat." = ไป(pai) กิน(gin) ข้าว(khâao)  [extra: láew-gɔ̂ɔ, mái]
+  CHOICE สนุกมาก | sà-nùk mâak: *It's a lot of fun. / It's not fun. / Is it beautiful? / Thank you.
+  CHOICE ขอโทษค่ะไม่เป็นไรค่ะ | khɔ̌ɔ-thôot khâ, mâi-pen-rai khâ: Do you understand? / Hello. / Thank you. / *Excuse me — that's alright.
+  BUILD "Excuse me — that's alright. (said by a man)" = ขอโทษ(khɔ̌ɔ-thôot) ครับ(khráp) ไม่เป็นไร(mâi-pen-rai) ครับ(khráp)  [extra: khɔ̀ɔp-khun, sà-wàt-dii]
+  SPEAK ไม่เป็นไรค่ะขอบคุณค่ะ | mâi-pen-rai khâ, khɔ̀ɔp-khun khâ | That's alright, thank you.
+  CHOICE ขอโทษค่ะเข้าใจมั้ย | khɔ̌ɔ-thôot khâ, khâo-jai mái: Excuse me. / *Excuse me — do you understand? / Thank you. / That's alright.
+  BUILD "Sorry, I don't understand." = ขอโทษ(khɔ̌ɔ-thôot) ค่ะ(khâ) ไม่(mâi) เข้าใจ(khâo-jai) ค่ะ(khâ)  [extra: sǔai, pai]
+  SPEAK เข้าใจแล้วก็ชอบมาก | khâo-jai láew-gɔ̂ɔ chɔ̂ɔp mâak | I understand, and I like it a lot.
+  CHAT F:ขอโทษ ค่ะ(khɔ̌ɔ-thôot khâ=Excuse me. (said by a woman)) → reply as M "That's alright. (said by a man)": ขอบคุณครับ(khɔ̀ɔp-khun khráp) / เข้าใจครับ(khâo-jai khráp) / สวัสดีครับ(sà-wàt-dii khráp) / *ไม่เป็นไรครับ(mâi-pen-rai khráp)
+  CHAT F:ขอโทษ ค่ะ(khɔ̌ɔ-thôot khâ=Excuse me. (said by a woman)) → M:ไม่เป็นไร ครับ(mâi-pen-rai khráp=That's alright. (said by a man)) → reply as F "Thank you. (said by a woman)": *ขอบคุณค่ะ(khɔ̀ɔp-khun khâ) / ขอโทษค่ะ(khɔ̌ɔ-thôot khâ) / เข้าใจมั้ย(khâo-jai mái) / ไม่เป็นไรครับ(mâi-pen-rai khráp)

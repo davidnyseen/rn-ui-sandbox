@@ -59,6 +59,21 @@ export function isDialogueLesson(lesson: LessonContent): lesson is DialogueLesso
   return (lesson as DialogueLesson).kind === 'dialogue';
 }
 
+// Conversation questions are written with the right answer first; shuffle each step's options once per lesson
+// attempt so its position gives nothing away (user, 2026-11-10: "The first is always the correct answer").
+export function shuffleDialogueSteps(steps: DialogueStep[]): DialogueStep[] {
+  return steps.map((step) => {
+    const options = dialogueStepOptions(step);
+    if (!options) return step;
+    const out = [...options];
+    for (let i = out.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [out[i], out[j]] = [out[j], out[i]];
+    }
+    return { ...step, options: out } as DialogueStep;
+  });
+}
+
 export function dialogueStepOptions(step: DialogueStep): DialogueOption[] | null {
   return step.type === 'comprehension' || step.type === 'translate' || step.type === 'blank' ? step.options : null;
 }

@@ -456,8 +456,8 @@ const lessons = [
   lesson('b10', 'Days of the week, and who', [
     rule(
       'Days of the week',
-      'Every day name starts with wan ("day"). Wan-nǎi? ("what day?") or mɯ̂a-rài asks about the past, put at the end of the ' +
-        'question.',
+      'Every day name starts with wan ("day"). To ask which day, put wan-nǎi ("which day?") at the end of the question — ' +
+        'pai wan-nǎi is "What day are you going?"',
       SRC.days
     ),
     wordIntro('วันจันทร์', 'wan-jan', 'Monday', SRC.days),
@@ -513,10 +513,10 @@ const lessons = [
     'Asking about a friend',
     'Two friends talking about someone they both know',
     [
-      { speaker: 'A', thai: 'ใครคนโน้น', roman: 'krai kon-nóon', english: 'Who is that person over there?' },
+      { speaker: 'A', thai: 'คนโน้นเป็นใคร', roman: 'kon-nóon pen krai', english: 'Who is that person over there?' },
       { speaker: 'B', thai: 'เค้าเป็นเพื่อน', roman: 'kháo pen phɯ̂an', english: "He's a friend." },
       { speaker: 'A', thai: 'เค้าหล่อมั้ย', roman: 'kháo lɔ̀ɔ mái', english: 'Is he handsome?' },
-      { speaker: 'B', thai: 'ใช่แล้วก็รวยมาก', roman: 'châi láew-gɔ̂ɔ ruai mâak', english: 'Yes, and very rich.' },
+      { speaker: 'B', thai: 'หล่อ แล้วก็รวยมาก', roman: 'lɔ̀ɔ, láew-gɔ̂ɔ ruai mâak', english: 'He is, and very rich.' },
       { speaker: 'A', thai: 'เค้าอยู่ที่ไหน', roman: 'kháo yùu thîi-nǎi', english: 'Where is he?' },
     ],
     [
@@ -538,7 +538,7 @@ const lessons = [
           { text: 'Is he handsome?', correct: true },
           { text: "He's a friend.", correct: false },
           { text: 'Where is he?', correct: false },
-          { text: 'Yes, and very rich.', correct: false },
+          { text: 'He is, and very rich.', correct: false },
         ],
       },
       {
@@ -555,7 +555,7 @@ const lessons = [
         type: 'translate',
         lineIndex: 3,
         options: [
-          { text: 'Yes, and very rich.', correct: true },
+          { text: 'He is, and very rich.', correct: true },
           { text: "He's a friend.", correct: false },
           { text: 'Is he handsome?', correct: false },
           { text: 'Where is he?', correct: false },

@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Animated, Platform, Pressable, ScrollView, Text, View, StyleSheet } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { DialogueStep, dialogueStepOptions } from '../data';
+import { DialogueStep, dialogueStepOptions, shuffleDialogueSteps } from '../data';
 
 // Structural, not imported from data.ts — both the legacy hand-authored
 // DialogueLesson and courseTypes.ts's CourseDialogueLesson satisfy this
@@ -80,7 +80,9 @@ export function DialogueLessonScreen({
     setSpeakState('idle');
   });
 
-  const step: DialogueStep = lesson.steps[stepIndex];
+  // options shuffled once per attempt (see shuffleDialogueSteps)
+  const steps = useMemo(() => shuffleDialogueSteps(lesson.steps), [lesson]);
+  const step: DialogueStep = steps[stepIndex];
   const line = step.type !== 'intro' ? lesson.lines[step.lineIndex] : null;
 
   const progressAnim = useRef(new Animated.Value(stepIndex / lesson.steps.length)).current;

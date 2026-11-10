@@ -116,7 +116,7 @@ const rawLessons = [
   lesson('n04', 'Eleven to nineteen', [
     rule(
       'Two-digit numbers: sip + unit',
-      'Put the unit number after sip for two-digit numbers 11-19. The only exception is 11, which is sip-et, not sip-neung.',
+      'Put the unit number after sìp for 11-19 — sìp-sǎam is 13. The one exception is 11, which is sìp-èt, not sìp-nɯ̀ng.',
       SRC.numbers1
     ),
     wordIntro('เอ็ด', 'èt', 'one (in 11, 21, 31… — "-ty-one")', SRC.numbers1),
@@ -141,7 +141,7 @@ const rawLessons = [
   lesson('n05', 'Twenty to ninety', [
     rule(
       'Tens: unit + sip (except twenty)',
-      '"For 20, 30, 40, etc, put the unit number before sip. "Twenty" is an exception — it\'s yee-sip, not sawng-sip.',
+      'For 20, 30, 40 and so on, put the unit number before sìp — sǎam-sìp is 30. "Twenty" is the exception: it\'s yîi-sìp, not sɔ̌ɔng-sìp.',
       SRC.numbers1
     ),
     wordIntro('ยี่สิบ', 'yîi-sìp', 'twenty', SRC.numbers1),
@@ -166,8 +166,8 @@ const rawLessons = [
   lesson('n06', 'Any two-digit number', [
     rule(
       'Building any two-digit number',
-      'For other two-digit numbers, add the unit number again after the tens — "45" is see-sip-ha (forty-five), "99" is ' +
-        'gao-sip-gao (ninety-nine).',
+      'For other two-digit numbers, add the unit after the tens — "45" is sìi-sìp-hâa, "99" is kâo-sìp-kâo, and "21" is ' +
+        'yîi-sìp-èt.',
       SRC.numbers1
     ),
     order('Twenty-one, twenty-two', [
@@ -190,7 +190,7 @@ const rawLessons = [
   lesson('n07', 'Hundreds', [
     rule(
       'Hundreds',
-      '"One hundred" is roi or neung roi. Add tens and units after roi for other hundreds, like roi-ha-sip for 150.',
+      '"One hundred" is rɔ́ɔi or nɯ̀ng-rɔ́ɔi. Add the tens and units after it — rɔ́ɔi-hâa-sìp is 150.',
       SRC.numbers1
     ),
     wordIntro('ร้อย', 'rɔ́ɔi', 'hundred', SRC.numbers1),
@@ -214,7 +214,7 @@ const rawLessons = [
 
   // ---------------------------------------------------------------
   lesson('n08', 'Thousands', [
-    rule('Thousands', '"One thousand" is phan or neung phan. Add other numbers for other digits.', SRC.numbers2),
+    rule('Thousands', '"One thousand" is phan or nɯ̀ng-phan. Add the hundreds, tens and units after it — sɔ̌ɔng-phan-hâa-rɔ́ɔi is 2,500.', SRC.numbers2),
     wordIntro('พัน', 'phan', 'thousand', SRC.numbers2),
     mc('หนึ่งพันสองพันสามพันสี่พัน', 'nɯ̀ng-phan sɔ̌ɔng-phan sǎam-phan sìi-phan', 'One thousand, two thousand, three thousand, four thousand', ['Two thousand, three thousand, four thousand, five thousand', 'One thousand, two thousand, three thousand', 'One thousand, three thousand, four thousand, five thousand'], ['หนึ่ง', 'พัน', 'สอง', 'พัน', 'สาม', 'พัน', 'สี่', 'พัน'], SRC.numbers2),
     order('Two thousand five hundred', [
@@ -237,7 +237,7 @@ const rawLessons = [
   lesson('n09', 'Ten-thousands and hundred-thousands', [
     rule(
       'Higher numbers',
-      'Unlike English, Thai has separate words for the ten-thousand and hundred-thousand places: meun and saen.',
+      'Unlike English, Thai has separate words for the ten-thousand and hundred-thousand places: mɯ̀ɯn and sɛ̌ɛn.',
       SRC.numbers2
     ),
     wordIntro('หมื่น', 'mɯ̀ɯn', 'ten thousand', SRC.numbers2),
@@ -481,8 +481,8 @@ const rawLessons = [
   lesson('n21', 'What time is it? Morning and afternoon', [
     rule(
       'Telling time: mong',
-      'For 6am-11am, put mong after the number and add chao ("morning"). Afternoon hours (1pm-6pm) use bai ("afternoon") or ' +
-        'yen ("late afternoon") instead.',
+      'For 6am-11am, put mong after the number and add cháo ("morning") — hòk mong cháo is 6am. For 1pm-3pm, put bàai ' +
+        '("afternoon") first: bàai sɔ̌ɔng mong is 2pm. For 4pm-6pm, add yen ("evening") instead: sìi mong yen is 4pm.',
       SRC.time1
     ),
     wordIntro('โมง', 'mong', "o'clock (daytime hour)", SRC.time1),
@@ -508,7 +508,7 @@ const rawLessons = [
   lesson('n22', 'Evening and early-morning hours', [
     rule(
       'Evening and early-morning hours',
-      'For 7pm-11pm, put thoom after the numbers 1-5. For 1am-5am, put tee BEFORE the number instead. Thiang means "noon".',
+      'For 7pm-11pm, count 1-5 and add thûm: sɔ̌ɔng thûm is 8pm. For 1am-5am, put tii before the number: tii hâa is 5am. Thîang is noon.',
       SRC.time2
     ),
     wordIntro('ทุ่ม', 'thûm', 'evening hour (7pm-11pm count)', SRC.time2),
@@ -592,39 +592,39 @@ const lessons = [
   // ---------------------------------------------------------------
   // Recombines vocab already taught above — every Thai token below was
   // introduced by an earlier wordIntro in this file.
-  dialogue('n-dlg', 'Buying a shirt', 'Bargaining over the price of a shirt at a market stall', [
+  dialogue('n-dlg', 'Buying a shirt', 'Haggling over the price of a shirt at a market stall', [
     { speaker: 'A', thai: 'เสื้อตัวนี้เท่าไหร่', roman: 'sɯ̂a tua níi thâo-rài', english: 'How much is this shirt?' },
-    { speaker: 'B', thai: 'สองร้อยบาท', roman: 'sɔ̌ɔng-rɔ́ɔi bàat', english: 'Two hundred baht.' },
-    { speaker: 'A', thai: 'อันนี้แพงมีสามร้อยบาท', roman: 'an-níi phaeng mii sǎam-rɔ́ɔi bàat', english: 'This one is expensive. I have three hundred baht.' },
-    { speaker: 'B', thai: 'พอเอากี่ตัว', roman: 'phɔɔ ao gìi tua', english: 'Enough. How many do you want?' },
+    { speaker: 'B', thai: 'สามร้อยบาท', roman: 'sǎam-rɔ́ɔi bàat', english: 'Three hundred baht.' },
+    { speaker: 'A', thai: 'แพง มีเงินสองร้อยบาท', roman: 'phaeng, mii ngəən sɔ̌ɔng-rɔ́ɔi bàat', english: "That's expensive. I have two hundred baht." },
+    { speaker: 'B', thai: 'สองร้อยบาท เอากี่ตัว', roman: 'sɔ̌ɔng-rɔ́ɔi bàat, ao gìi tua', english: 'Two hundred baht, then. How many do you want?' },
     { speaker: 'A', thai: 'เอาหนึ่งตัว', roman: 'ao nɯ̀ng tua', english: "I'll take one." },
   ], [
     { type: 'intro' },
     { type: 'comprehension', lineIndex: 0, options: [
       { text: 'How much is this shirt?', correct: true },
-      { text: 'Two hundred baht.', correct: false },
-      { text: 'This one is expensive. I have three hundred baht.', correct: false },
+      { text: 'Three hundred baht.', correct: false },
+      { text: "That's expensive. I have two hundred baht.", correct: false },
       { text: "I'll take one.", correct: false },
     ] },
     { type: 'comprehension', lineIndex: 2, options: [
-      { text: 'This one is expensive. I have three hundred baht.', correct: true },
+      { text: "That's expensive. I have two hundred baht.", correct: true },
       { text: 'How much is this shirt?', correct: false },
-      { text: 'Two hundred baht.', correct: false },
-      { text: 'Enough. How many do you want?', correct: false },
+      { text: 'Three hundred baht.', correct: false },
+      { text: 'Two hundred baht, then. How many do you want?', correct: false },
     ] },
     { type: 'translate', lineIndex: 1, options: [
-      { text: 'Two hundred baht.', correct: true },
+      { text: 'Three hundred baht.', correct: true },
       { text: 'How much is this shirt?', correct: false },
       { text: "I'll take one.", correct: false },
-      { text: 'Enough. How many do you want?', correct: false },
+      { text: 'Two hundred baht, then. How many do you want?', correct: false },
     ] },
     { type: 'translate', lineIndex: 3, options: [
-      { text: 'Enough. How many do you want?', correct: true },
-      { text: 'Two hundred baht.', correct: false },
-      { text: 'This one is expensive. I have three hundred baht.', correct: false },
+      { text: 'Two hundred baht, then. How many do you want?', correct: true },
+      { text: 'Three hundred baht.', correct: false },
+      { text: "That's expensive. I have two hundred baht.", correct: false },
       { text: "I'll take one.", correct: false },
     ] },
-    { type: 'blank', lineIndex: 1, before: 'sɔ̌ɔng', after: 'bàat', options: [
+    { type: 'blank', lineIndex: 1, before: 'sǎam', after: 'bàat', options: [
       { text: 'rɔ́ɔi', correct: true },
       { text: 'phan', correct: false },
       { text: 'sɛ̌ɛn', correct: false },

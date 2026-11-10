@@ -1,0 +1,166 @@
+# travel — Travel: Getting Around
+
+## L0 Where are you going? Bangkok, Phuket
+  NEW ไป | pai | go
+  NEW ไหน | nǎi | where
+  CHOICE ไปไหน | pai nǎi: I'm going to Bangkok. / I'm going to Phuket. / I'm going out. / *Where are you going?
+  SPEAK ไปไหน | pai nǎi | Where are you going?
+  NEW เที่ยว | thîao | go out / travel around
+  BUILD "I'm going out." = ไป(pai) เที่ยว(thîao)  [extra: nǎi]
+  NEW กรุงเทพฯ | grung-thêep | Bangkok
+  CHOICE ไปกรุงเทพฯ | pai grung-thêep: I'm going out. / *I'm going to Bangkok. / I'm going to Phuket. / Where are you going?
+  NEW ภูเก็ต | phuu-gèt | Phuket
+  SPEAK ไปภูเก็ต | pai phuu-gèt | I'm going to Phuket.
+  BUILD "I'm going on a trip to Phuket." = ไป(pai) เที่ยว(thîao) ภูเก็ต(phuu-gèt)  [extra: grung-thêep, nǎi]
+  CHAT M:ไป ไหน(pai nǎi=Where are you going?) → reply as F "I'm going to Phuket.": เที่ยว(thîao) / *ไปภูเก็ต(pai phuu-gèt) / ไปไหน(pai nǎi)
+  MATCH ไป=go, ไหน=where, เที่ยว=go out / travel around, กรุงเทพฯ=Bangkok, ภูเก็ต=Phuket
+
+## L1 How are you going? Bus, train, taxi
+  RULE "By" isn't needed: Thai doesn't use a word for "by" — "I'm going by bus" is just "go-bus" (pai + the vehicle name), with nothing in between.
+  NEW รถเมล์ | rót-mee | bus
+  CHOICE ไปรถเมล์ | pai rót-mee: I'm going by tuk-tuk. / I'm going by taxi. / *I'm going by bus. / I'm going by train.
+  SPEAK ไปรถเมล์ | pai rót-mee | I'm going by bus.
+  NEW รถไฟ | rót-fai | train
+  BUILD "I'm going by train." = ไป(pai) รถไฟ(rót-fai)  [extra: nǎi, phuu-gèt]
+  BUILD "I'm going to Bangkok by train." = ไป(pai) กรุงเทพฯ(grung-thêep) รถไฟ(rót-fai)  [extra: nǎi, rót-mee]
+  NEW แท็กซี่ | thák-sîi | taxi
+  CHOICE ไปแท็กซี่ | pai thák-sîi: I'm going by train. / I'm going by bus. / I'm going by tuk-tuk. / *I'm going by taxi.
+  NEW ตุ๊กตุ๊ก | túk-túk | tuk-tuk (motorized three-wheel taxi)
+  SPEAK ไปตุ๊กตุ๊ก | pai túk-túk | I'm going by tuk-tuk.
+  MATCH รถเมล์=bus, รถไฟ=train, แท็กซี่=taxi, ตุ๊กตุ๊ก=tuk-tuk (motorized three-wheel taxi)
+
+## L2 Airplane tickets, station, airport
+  NEW เครื่องบิน | khrɯ̂ang-bin | airplane
+  CHOICE ไปเครื่องบิน | pai khrɯ̂ang-bin: Where's the airport? / round trip / *I'm going by plane. / one-way
+  SPEAK ไปเครื่องบิน | pai khrɯ̂ang-bin | I'm going by plane.
+  NEW เดียว | diao | single / only one
+  BUILD "one-way" = เที่ยว(thîao) เดียว(diao)  [extra: khrɯ̂ang-bin, thák-sîi]
+  NEW กลับ | glàp | return / go back
+  CHOICE ไปกลับ | pai glàp: I'm going by plane. / one-way / *round trip / Where's the airport?
+  NEW สถานี | sà-thǎa-nee | station
+  NEW สนามบิน | sà-nǎam-bin | airport
+  CHAT M:ไป ไหน(pai nǎi=Where are you going?) → reply as F "To the airport.": เที่ยวเดียว(thîao diao) / สถานีรถไฟ(sà-thǎa-nee rót-fai) / *ไปสนามบิน(pai sà-nǎam-bin)
+  NEW อยู่ | yùu | be at / stay
+  NEW ที่ไหน | thîi-nǎi | where?
+  SPEAK สนามบินอยู่ที่ไหน | sà-nǎam-bin yùu thîi-nǎi | Where's the airport?
+  BUILD "Where's the train station?" = สถานี(sà-thǎa-nee) รถไฟ(rót-fai) อยู่(yùu) ที่ไหน(thîi-nǎi)  [extra: rót-mee, phuu-gèt]
+  MATCH เครื่องบิน=airplane, เดียว=single / only one, กลับ=return / go back, สถานี=station, สนามบิน=airport, อยู่=be at / stay, ที่ไหน=where?
+
+## L3 Buying tickets, getting on the bus
+  NEW เอา | ao | want / take
+  NEW ตั๋ว | tǔa | ticket
+  CHOICE เอาตั๋วไปกรุงเทพฯ | ao tǔa pai grung-thêep: *A ticket to Bangkok, please. / two tickets / How many tickets? / Where's the bus stop?
+  SPEAK เอาตั๋วไปกรุงเทพฯ | ao tǔa pai grung-thêep | A ticket to Bangkok, please.
+  NEW กี่ | gìi | how many?
+  NEW ใบ | bai | classifier for tickets
+  BUILD "How many tickets?" = เอา(ao) กี่(gìi) ใบ(bai)  [extra: glàp, sà-nǎam-bin]
+  NEW สอง | sɔ̌ɔng | two
+  CHOICE สองใบ | sɔ̌ɔng bai: A ticket to Bangkok, please. / How many tickets? / *two tickets / Where's the bus stop?
+  NEW ป้าย | pâai | bus stop / sign
+  SPEAK ป้ายรถเมล์อยู่ที่ไหน | pâai rót-mee yùu thîi-nǎi | Where's the bus stop?
+  NEW ขึ้น | khɯ̂n | get on
+  BUILD "Where do I get on?" = ขึ้น(khɯ̂n) ที่ไหน(thîi-nǎi)  [extra: khrɯ̂ang-bin, nǎi]
+  CHAT M:เอา กี่ ใบ(ao gìi bai=How many tickets?) → reply as F "Two.": ขึ้นที่ไหน(khɯ̂n thîi-nǎi) / *สองใบ(sɔ̌ɔng bai) / ป้ายรถเมล์(pâai rót-mee)
+  MATCH เอา=want / take, ตั๋ว=ticket, กี่=how many?, ใบ=classifier for tickets, สอง=two, ป้าย=bus stop / sign, ขึ้น=get on
+
+## L4 Getting off, which bus is this?
+  NEW ลง | long | get off
+  CHOICE ลงที่ไหน | long thîi-nǎi: *Where do I get off? / this one (bus) / Which bus do I take? / I'm getting off at this stop.
+  SPEAK ลงที่ไหน | long thîi-nǎi | Where do I get off?
+  NEW นี้ | níi | this (after a noun)
+  BUILD "I'm getting off at this stop." = ลง(long) ป้าย(pâai) นี้(níi)  [extra: tǔa, khɯ̂n]
+  NEW คัน | khan | classifier for vehicles
+  CHOICE ขึ้นคันไหน | khɯ̂n khan nǎi: this one (bus) / I'm getting off at this stop. / Where do I get off? / *Which bus do I take?
+  SPEAK คันนี้ | khan níi | this one (bus)
+  BUILD "this bus" = รถเมล์(rót-mee) คัน(khan) นี้(níi)  [extra: thîi-nǎi, yùu]
+  CHAT M:ลง ที่ไหน(long thîi-nǎi=Where are you getting off?) → reply as F "At this stop.": *ลงป้ายนี้(long pâai níi) / สองใบ(sɔ̌ɔng bai) / รถเมล์คันนี้(rót-mee khan níi)
+  MATCH ลง=get off, นี้=this (after a noun), คัน=classifier for vehicles
+
+## L5 Hotel rooms and vacancy
+  NEW มี | mii | have
+  NEW ห้อง | hɔ̂ng | room
+  CHOICE เอาห้องนี้ | ao hɔ̂ng níi: *I'll take this room. / Where's this room? / Do you have a room? / We don't have any rooms.
+  SPEAK ห้องนี้อยู่ที่ไหน | hɔ̂ng níi yùu thîi-nǎi | Where's this room?
+  NEW มั้ย | mái | question particle (yes/no)
+  CHOICE มีห้องมั้ย | mii hɔ̂ng mái: We don't have any rooms. / *Do you have a room? / Where's this room? / I'll take this room.
+  SPEAK มีห้องมั้ย | mii hɔ̂ng mái | Do you have a room?
+  NEW ไม่ | mâi | not / no
+  BUILD "We don't have any rooms." = ไม่(mâi) มี(mii) ห้อง(hɔ̂ng)  [extra: pai, long]
+  NEW ได้ | dâi | can / able to
+  BUILD "Is that OK?" = ได้(dâi) มั้ย(mái)  [extra: níi, sà-nǎam-bin]
+  CHAT M:มี ห้อง มั้ย(mii hɔ̂ng mái=Do you have a room?) → reply as F "Yes, we do.": ไม่ได้(mâi dâi) / *มี(mii) / ห้องนี้(hɔ̂ng níi)
+  MATCH มี=have, ห้อง=room, มั้ย=question particle (yes/no), ไม่=not / no, ได้=can / able to
+
+## L6 Drive slowly, turn right
+  CHOICE ไปสนามบิน | pai sà-nǎam-bin: Could you drive slowly? / Turn right. / Can you turn right? / *To the airport.
+  NEW ขับ | khàp | drive
+  NEW ช้าๆ | cháa-cháa | slowly
+  CHOICE ขับช้าๆได้มั้ย | khàp cháa-cháa dâi mái: Turn right. / *Could you drive slowly? / To the airport. / Can you turn right?
+  BUILD "Drive slowly." = ขับ(khàp) ช้าๆ(cháa-cháa)  [extra: nǎi, túk-túk]
+  SPEAK ขับช้าๆได้มั้ย | khàp cháa-cháa dâi mái | Could you drive slowly?
+  NEW เลี้ยว | líao | turn
+  NEW ขวา | khwǎa | right
+  BUILD "Turn right." = เลี้ยว(líao) ขวา(khwǎa)  [extra: mái, sà-nǎam-bin]
+  SPEAK เลี้ยวขวาได้มั้ย | líao khwǎa dâi mái | Can you turn right?
+  CHAT M:ขับ ช้าๆ ได้ มั้ย(khàp cháa-cháa dâi mái=Could you drive slowly?) → reply as F "Sure.": ไปสนามบิน(pai sà-nǎam-bin) / *ได้(dâi) / เลี้ยวขวา(líao khwǎa)
+  MATCH ขับ=drive, ช้าๆ=slowly, เลี้ยว=turn, ขวา=right
+
+## L7 Turn left, near or far?
+  RULE Near or far?: "Near" (glâi) and "far" (glai) differ only by tone, which causes confusion — so Thais usually solve the problem by just asking "is it far?" and answering "far" or "not far".
+  NEW ซ้าย | sáai | left
+  CHOICE เลี้ยวซ้าย | líao sáai: Not far. / *Turn left. / Go straight. / Is it far?
+  SPEAK เลี้ยวซ้าย | líao sáai | Turn left.
+  NEW ตรง | trong | straight
+  BUILD "Go straight." = ตรง(trong) ไป(pai)  [extra: thák-sîi, khan]
+  NEW ใกล้ | glâi | near
+  CHOICE ใกล้ | glâi: Is it far? / Turn left. / Go straight. / *It's near.
+  NEW ไกล | glai | far
+  CHOICE ไกลมั้ย | glai mái: Not far. / *Is it far? / Go straight. / Turn left.
+  SPEAK ไม่ไกล | mâi glai | Not far.
+  CHAT M:สนามบิน ไกล มั้ย(sà-nǎam-bin glai mái=Is the airport far?) → reply as F "No, not far.": เลี้ยวซ้าย(líao sáai) / *ไม่ไกล(mâi glai) / ตรงไป(trong pai)
+  MATCH ซ้าย=left, ตรง=straight, ใกล้=near, ไกล=far
+
+## L8 Streets, intersections, room key
+  BUILD "this room" = ห้อง(hɔ̂ng) นี้(níi)  [extra: khàp, ao]
+  NEW ถนน | thà-nǒn | street
+  BUILD "this street" = ถนน(thà-nǒn) นี้(níi)  [extra: khrɯ̂ang-bin, trong]
+  SPEAK ตรงไปถนนนี้ | trong pai thà-nǒn níi | Go straight along this street.
+  NEW สี่แยก | sìi-yɛ̂ɛk | intersection
+  NEW ที่ | thîi | at
+  CHOICE เลี้ยวขวาที่สี่แยก | líao khwǎa thîi sìi-yɛ̂ɛk: *Turn right at the intersection. / May I have the key, please? / Go straight along this street. / this street
+  SPEAK เลี้ยวขวาที่สี่แยก | líao khwǎa thîi sìi-yɛ̂ɛk | Turn right at the intersection.
+  NEW ขอ | khɔ̌ɔ | may I have / please give me
+  NEW กุญแจ | gun-jɛɛ | key
+  NEW ด้วย | dûai | please / also
+  CHOICE ขอกุญแจด้วย | khɔ̌ɔ gun-jɛɛ dûai: Turn right at the intersection. / *May I have the key, please? / Go straight along this street. / this street
+  CHAT M:เลี้ยว ที่ไหน(líao thîi-nǎi=Where do I turn?) → reply as F "Turn left at the intersection.": ขอกุญแจด้วย(khɔ̌ɔ gun-jɛɛ dûai) / *เลี้ยวซ้ายที่สี่แยก(líao sáai thîi sìi-yɛ̂ɛk) / ถนนนี้(thà-nǒn níi)
+  MATCH ถนน=street, สี่แยก=intersection, ที่=at, ขอ=may I have / please give me, กุญแจ=key, ด้วย=please / also
+
+## L9 Towels, mosquitos, bank, market
+  NEW ผ้าเช็ดตัว | phâa-chét-tua | towel
+  CHOICE ขอผ้าเช็ดตัวด้วย | khɔ̌ɔ phâa-chét-tua dûai: There are mosquitoes. / Where's the bank? / *A towel, please. / Is the post office far?
+  SPEAK ขอผ้าเช็ดตัวด้วย | khɔ̌ɔ phâa-chét-tua dûai | A towel, please.
+  NEW ยุง | yung | mosquito
+  BUILD "There are mosquitoes." = มี(mii) ยุง(yung)  [extra: phâa-chét-tua, khrɯ̂ang-bin]
+  NEW ธนาคาร | thá-naa-khaan | bank
+  CHOICE ธนาคารอยู่ที่ไหน | thá-naa-khaan yùu thîi-nǎi: Is the post office far? / There are mosquitoes. / A towel, please. / *Where's the bank?
+  NEW ไปรษณีย์ | prai-sà-nii | post office
+  SPEAK ไปรษณีย์ไกลมั้ย | prai-sà-nii glai mái | Is the post office far?
+  NEW ตลาด | tà-làat | market
+  BUILD "Where's the market?" = ตลาด(tà-làat) อยู่(yùu) ที่ไหน(thîi-nǎi)  [extra: grung-thêep, rót-fai]
+  CHAT M:ตลาด อยู่ ที่ไหน(tà-làat yùu thîi-nǎi=Where's the market?) → reply as F "Turn left at the intersection.": ขอผ้าเช็ดตัวด้วย(khɔ̌ɔ phâa-chét-tua dûai) / *เลี้ยวซ้ายที่สี่แยก(líao sáai thîi sìi-yɛ̂ɛk) / มียุง(mii yung)
+  MATCH ผ้าเช็ดตัว=towel, ยุง=mosquito, ธนาคาร=bank, ไปรษณีย์=post office, ตลาด=market
+
+## L10 Finding a room in town
+scene: Checking into a hotel in Phuket, then asking the way to the market
+  D0 A: มีห้องมั้ย | mii hɔ̂ng mái | Do you have a room?
+  D1 B: มี ห้องนี้ได้มั้ย | mii, hɔ̂ng níi dâi mái | Yes — is this room OK?
+  D2 A: ได้ ขอกุญแจด้วย | dâi, khɔ̌ɔ gun-jɛɛ dûai | Yes. May I have the key, please?
+  D3 A: ตลาดอยู่ที่ไหน | tà-làat yùu thîi-nǎi | Where's the market?
+  D4 B: เลี้ยวขวาที่สี่แยก ไม่ไกล | líao khwǎa thîi sìi-yɛ̂ɛk, mâi glai | Turn right at the intersection — not far.
+  comprehension D0: *Do you have a room? / Where's the market? / May I have the key, please? / Not far.
+  comprehension D3: *Where's the market? / Where's the bank? / Do you have a room? / Turn left.
+  translate D1: *Yes — is this room OK? / Do you have a room? / Where's this room? / We don't have any rooms.
+  translate D4: *Turn right at the intersection — not far. / Turn left at the intersection. / Where's the market? / Go straight along this street.
+  blank D2 "dâi, khɔ̌ɔ ___ dûai": *gun-jɛɛ / hɔ̂ng / phâa-chét-tua / tǔa
+  blank D4 "líao ___ thîi sìi-yɛ̂ɛk, mâi glai": *khwǎa / sáai / trong / long

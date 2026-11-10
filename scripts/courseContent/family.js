@@ -341,7 +341,7 @@ const lessons = [
   // ---------------------------------------------------------------
   lesson('f10', 'Not yet married; kids, how many?', [
     wordIntro('ไม่', 'mâi', 'not / no', SRC.not),
-    wordIntro('ได้', 'dâi', 'can / able to', SRC.can),
+    wordIntro('ได้', 'dâi', 'have (done) — yang mâi dâi: not ... yet', SRC.can),
     mc('คุณแต่งงานรึยังยังไม่ได้แต่งงาน', 'khun tɛ̀ng-ngaan rɯ́-yang, yang mâi dâi tɛ̀ng-ngaan', "Are you married yet? Not married yet.", ['Married already.', 'Are you married yet?', 'How many children do you have?'], ['คุณ', 'แต่งงาน', 'รึยัง', 'ยัง', 'ไม่', 'ได้', 'แต่งงาน'], SRC.family3),
     order("I'm not married yet, and I don't have children yet.", [
       { roman: 'yang', thai: 'ยัง' },

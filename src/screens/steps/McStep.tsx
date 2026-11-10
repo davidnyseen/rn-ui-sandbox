@@ -5,13 +5,7 @@ import { colors, fonts, radius, textMuted } from '../../theme';
 import { Button } from '../../components/Button';
 import { AnswerOption } from '../../components/AnswerOption';
 import { PlayIcon } from '../../components/icons';
-
-// One word stays big; a whole sentence shrinks so it doesn't fill the screen (user, 2026-11-10: "isn't text a bit big").
-function romanSize(roman: string) {
-  if (roman.length <= 14) return { fontSize: 44, lineHeight: 46 };
-  if (roman.length <= 28) return { fontSize: 32, lineHeight: 36 };
-  return { fontSize: 26, lineHeight: 31 };
-}
+import { phraseSize } from '../../lib/phraseSize';
 
 export function McStep({
   word,
@@ -40,7 +34,7 @@ export function McStep({
           <PlayIcon size={26} color={colors.accent700} />
         </Pressable>
         <Pressable onPress={onPlaySample} style={styles.headerText} accessibilityLabel="Hear pronunciation">
-          <Text style={[styles.roman, romanSize(word.roman)]}>{word.roman}</Text>
+          <Text style={[styles.roman, phraseSize(word.roman)]}>{word.roman}</Text>
           <Text style={styles.thai}>{word.thai}</Text>
         </Pressable>
       </View>

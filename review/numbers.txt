@@ -1,0 +1,209 @@
+# numbers — Numbers
+
+## L0 Counting one to eight
+  NEW หนึ่ง | nɯ̀ng | one
+  NEW สอง | sɔ̌ɔng | two
+  CHOICE หนึ่งสอง | nɯ̀ng sɔ̌ɔng: Four, five / *One, two / Two, three / Three, four
+  NEW สาม | sǎam | three
+  NEW สี่ | sìi | four
+  CHOICE สามสี่ | sǎam sìi: One, two / Four, five / *Three, four / Two, three
+  NEW ห้า | hâa | five
+  BUILD "Two, three, four, five" = สอง(sɔ̌ɔng) สาม(sǎam) สี่(sìi) ห้า(hâa)  [extra: nɯ̀ng]
+  SPEAK สี่ห้า | sìi hâa | Four, five
+  MATCH หนึ่ง=one, สอง=two, สาม=three, สี่=four, ห้า=five
+  NEW หก | hòk | six
+  NEW เจ็ด | jèt | seven
+  CHOICE หกเจ็ด | hòk jèt: Five, six / Six, eight / *Six, seven / Seven, eight
+  NEW แปด | pɛ̀ɛt | eight
+  CHOICE เจ็ดแปด | jèt pɛ̀ɛt: Six, seven / *Seven, eight / Six, eight / Five, six
+  BUILD "Six, seven, eight" = หก(hòk) เจ็ด(jèt) แปด(pɛ̀ɛt)  [extra: sìi, sǎam]
+  SPEAK หกเจ็ดแปด | hòk jèt pɛ̀ɛt | Six, seven, eight
+  MATCH หก=six, เจ็ด=seven, แปด=eight
+  MATCH หนึ่ง=one, สอง=two, สาม=three, สี่=four, ห้า=five, หก=six, เจ็ด=seven, แปด=eight
+
+## L1 Nine to nineteen
+  RULE Two-digit numbers: sip + unit: Put the unit number after sìp for 11-19 — sìp-sǎam is 13. The one exception is 11, which is sìp-èt, not sìp-nɯ̀ng.
+  NEW เก้า | kâo | nine
+  NEW สิบ | sìp | ten
+  BUILD "Nine, ten" = เก้า(kâo) สิบ(sìp)  [extra: nɯ̀ng, sìi]
+  BUILD "Eight, nine, ten" = แปด(pɛ̀ɛt) เก้า(kâo) สิบ(sìp)  [extra: jèt, hòk]
+  BUILD "Thirteen, fourteen" = สิบ(sìp) สาม(sǎam) สิบ(sìp) สี่(sìi)  [extra: jèt, hâa]
+  CHOICE สิบหกสิบเจ็ด | sìp-hòk sìp-jèt: Seventeen, eighteen / Eighteen, nineteen / *Sixteen, seventeen / Fifteen, sixteen
+  BUILD "Eighteen, nineteen" = สิบ(sìp) แปด(pɛ̀ɛt) สิบ(sìp) เก้า(kâo)  [extra: hòk, jèt]
+  SPEAK สิบห้าสิบหก | sìp-hâa sìp-hòk | Fifteen, sixteen
+  NEW ศูนย์ | sǔun | zero
+  CHOICE เก้าศูนย์ | kâo sǔun: *Nine, zero / Six, zero / One, two / Two, three
+  CHOICE หกศูนย์ | hòk sǔun: Nine, zero / Seven, eight / *Six, zero / Four, five
+  SPEAK ห้าศูนย์เก้า | hâa sǔun kâo | Five, zero, nine
+  MATCH เก้า=nine, สิบ=ten, ศูนย์=zero
+  NEW เอ็ด | èt | one (in 11, 21, 31… — "-ty-one")
+  CHOICE สิบเอ็ดสิบสอง | sìp-èt sìp-sɔ̌ɔng: *Eleven, twelve / Ten, eleven / Twelve, thirteen / Thirteen, fourteen
+  MATCH เก้า=nine, สิบ=ten, ศูนย์=zero, เอ็ด=one (in 11, 21, 31… — "-ty-one")
+
+## L2 Tens and two-digit numbers
+  RULE Tens: unit + sip (except twenty): For 20, 30, 40 and so on, put the unit number before sìp — sǎam-sìp is 30. "Twenty" is the exception: it's yîi-sìp, not sɔ̌ɔng-sìp.
+  BUILD "Forty, fifty" = สี่(sìi) สิบ(sìp) ห้า(hâa) สิบ(sìp)  [extra: hòk, pɛ̀ɛt]
+  CHOICE สี่สิบหกสิบ | sìi-sìp hòk-sìp: Fifty, sixty / Forty, fifty / Thirty, forty / *Forty, sixty
+  BUILD "Seventy, eighty" = เจ็ด(jèt) สิบ(sìp) แปด(pɛ̀ɛt) สิบ(sìp)  [extra: kâo, nɯ̀ng]
+  SPEAK แปดสิบเก้าสิบ | pɛ̀ɛt-sìp kâo-sìp | Eighty, ninety
+  RULE Building any two-digit number: For other two-digit numbers, add the unit after the tens — "45" is sìi-sìp-hâa, "99" is kâo-sìp-kâo, and "21" is yîi-sìp-èt.
+  CHOICE สี่สิบห้าหกสิบเจ็ด | sìi-sìp-hâa hòk-sìp-jèt: Forty-five, seventy-six / *Forty-five, sixty-seven / Sixty-seven, ninety-nine / Fifty-four, seventy-six
+  BUILD "Ninety-nine" = เก้า(kâo) สิบ(sìp) เก้า(kâo)  [extra: pɛ̀ɛt, sǔun]
+  CHOICE หกสิบเจ็ดแปดสิบสาม | hòk-sìp-jèt pɛ̀ɛt-sìp-sǎam: Seventy-six, eighty-three / Sixty-seven, ninety-nine / *Sixty-seven, eighty-three / Forty-five, sixty-seven
+  SPEAK สี่สิบห้าหกสิบเจ็ดแปดสิบสาม | sìi-sìp-hâa hòk-sìp-jèt pɛ̀ɛt-sìp-sǎam | Forty-five, sixty-seven, eighty-three
+  NEW ยี่สิบ | yîi-sìp | twenty
+  CHOICE ยี่สิบสามสิบ | yîi-sìp sǎam-sìp: Forty, fifty / *Twenty, thirty / Ten, twenty / Thirty, forty
+  BUILD "Twenty-one, twenty-two" = ยี่สิบ(yîi-sìp) เอ็ด(èt) ยี่สิบ(yîi-sìp) สอง(sɔ̌ɔng)  [extra: hâa, sǎam]
+
+## L3 Hundreds and thousands
+  RULE Hundreds: "One hundred" is rɔ́ɔi or nɯ̀ng-rɔ́ɔi. Add the tens and units after it — rɔ́ɔi-hâa-sìp is 150.
+  RULE Thousands: "One thousand" is phan or nɯ̀ng-phan. Add the hundreds, tens and units after it — sɔ̌ɔng-phan-hâa-rɔ́ɔi is 2,500.
+  NEW ร้อย | rɔ́ɔi | hundred
+  CHOICE ร้อยสองร้อยสามร้อยสี่ร้อย | rɔ́ɔi sɔ̌ɔng-rɔ́ɔi sǎam-rɔ́ɔi sìi-rɔ́ɔi: One hundred, two hundred, three hundred / Two hundred, three hundred, four hundred, five hundred / *One hundred, two hundred, three hundred, four hundred / One hundred, three hundred, four hundred, five hundred
+  BUILD "Four hundred fifty" = สี่(sìi) ร้อย(rɔ́ɔi) ห้า(hâa) สิบ(sìp)  [extra: nɯ̀ng, hòk]
+  CHOICE ห้าร้อยหกร้อยเจ็ดร้อยแปดร้อย | hâa-rɔ́ɔi hòk-rɔ́ɔi jèt-rɔ́ɔi pɛ̀ɛt-rɔ́ɔi: Five hundred, six hundred, seven hundred / Six hundred, seven hundred, eight hundred, nine hundred / Five hundred, seven hundred, eight hundred, nine hundred / *Five hundred, six hundred, seven hundred, eight hundred
+  BUILD "Six hundred fifty-five" = หก(hòk) ร้อย(rɔ́ɔi) ห้า(hâa) สิบ(sìp) ห้า(hâa)  [extra: sɔ̌ɔng, sǎam]
+  SPEAK ร้อยสองร้อยสามร้อย | rɔ́ɔi sɔ̌ɔng-rɔ́ɔi sǎam-rɔ́ɔi | One hundred, two hundred, three hundred
+  NEW พัน | phan | thousand
+  CHOICE หนึ่งพันสองพันสามพันสี่พัน | nɯ̀ng-phan sɔ̌ɔng-phan sǎam-phan sìi-phan: One thousand, two thousand, three thousand / *One thousand, two thousand, three thousand, four thousand / One thousand, three thousand, four thousand, five thousand / Two thousand, three thousand, four thousand, five thousand
+  BUILD "Two thousand five hundred" = สอง(sɔ̌ɔng) พัน(phan) ห้า(hâa) ร้อย(rɔ́ɔi)  [extra: sìp, hòk]
+  CHOICE ห้าพันหกพันเจ็ดพันแปดพัน | hâa-phan hòk-phan jèt-phan pɛ̀ɛt-phan: *Five thousand, six thousand, seven thousand, eight thousand / Five thousand, six thousand, seven thousand / Six thousand, seven thousand, eight thousand, nine thousand / Five thousand, seven thousand, eight thousand, nine thousand
+  BUILD "Nine thousand nine hundred" = เก้า(kâo) พัน(phan) เก้า(kâo) ร้อย(rɔ́ɔi)  [extra: hòk, hâa]
+  SPEAK หกพันเจ็ดพันแปดพันเก้าพัน | hòk-phan jèt-phan pɛ̀ɛt-phan kâo-phan | Six thousand, seven thousand, eight thousand, nine thousand
+  MATCH ร้อย=hundred, พัน=thousand
+
+## L4 Ten-thousands to millions
+  RULE Higher numbers: Unlike English, Thai has separate words for the ten-thousand and hundred-thousand places: mɯ̀ɯn and sɛ̌ɛn.
+  NEW หมื่น | mɯ̀ɯn | ten thousand
+  CHOICE หมื่นสองหมื่นสามหมื่นสี่หมื่น | mɯ̀ɯn sɔ̌ɔng-mɯ̀ɯn sǎam-mɯ̀ɯn sìi-mɯ̀ɯn: *Ten thousand, twenty thousand, thirty thousand, forty thousand / Twenty thousand, thirty thousand, forty thousand, fifty thousand / Ten thousand, twenty thousand, thirty thousand / Ten thousand, thirty thousand, forty thousand, fifty thousand
+  BUILD "Twenty thousand five hundred" = สอง(sɔ̌ɔng) หมื่น(mɯ̀ɯn) ห้า(hâa) ร้อย(rɔ́ɔi)  [extra: nɯ̀ng, pɛ̀ɛt]
+  NEW แสน | sɛ̌ɛn | hundred thousand
+  CHOICE แสนสองแสนสามแสนสี่แสน | sɛ̌ɛn sɔ̌ɔng-sɛ̌ɛn sǎam-sɛ̌ɛn sìi-sɛ̌ɛn: *Hundred thousand, two hundred thousand, three hundred thousand, four hundred thousand / Hundred thousand, three hundred thousand, four hundred thousand, five hundred thousand / Two hundred thousand, three hundred thousand, four hundred thousand, five hundred thousand / Hundred thousand, two hundred thousand, three hundred thousand
+  BUILD "Five hundred thousand, six hundred thousand" = ห้า(hâa) แสน(sɛ̌ɛn) หก(hòk) แสน(sɛ̌ɛn)  [extra: kâo, rɔ́ɔi]
+  SPEAK สองหมื่นสามแสนสี่แสนห้าแสน | sɔ̌ɔng-mɯ̀ɯn sǎam-sɛ̌ɛn sìi-sɛ̌ɛn hâa-sɛ̌ɛn | Twenty thousand, three hundred thousand, four hundred thousand, five hundred thousand
+  MATCH หมื่น=ten thousand, แสน=hundred thousand
+  BUILD "Two hundred thousand, three hundred thousand" = สอง(sɔ̌ɔng) แสน(sɛ̌ɛn) สาม(sǎam) แสน(sɛ̌ɛn)  [extra: jèt, sǔun]
+  NEW ล้าน | láan | million
+  CHOICE ล้านสองล้านสามล้านสี่ล้าน | láan sɔ̌ɔng-láan sǎam-láan sìi-láan: *One million, two million, three million, four million / One million, three million, four million / Two million, three million, four million, five million / One million, two million
+  BUILD "Four million five hundred thousand" = สี่(sìi) ล้าน(láan) ห้า(hâa) แสน(sɛ̌ɛn)  [extra: sǔun, hòk]
+  CHOICE ห้าล้านหกล้านเจ็ดล้านแปดล้าน | hâa-láan hòk-láan jèt-láan pɛ̀ɛt-láan: Six million, seven million, eight million, nine million / *Five million, six million, seven million, eight million / Five million, six million, seven million / Five million, seven million, eight million, nine million
+  SPEAK เจ็ดล้านแปดล้านเก้าล้านสิบล้าน | jèt-láan pɛ̀ɛt-láan kâo-láan sìp-láan | Seven million, eight million, nine million, ten million
+  SPEAK สี่ล้านห้าล้านหกล้านเจ็ดล้าน | sìi-láan hâa-láan hòk-láan jèt-láan | Four million, five million, six million, seven million
+  MATCH หมื่น=ten thousand, แสน=hundred thousand, ล้าน=million
+
+## L5 Ordinal numbers and do you have it?
+  RULE Ordinal numbers: Put thîi (falling tone) before a number to make an ordinal — "the third person" is kon thîi sǎam, "the second day" is wan thîi sɔ̌ɔng.
+  NEW ที่ | thîi | ordinal marker ("-th")
+  NEW คน | kon | person (classifier for people)
+  CHOICE คนที่หนึ่ง | kon thîi nɯ̀ng: the second person / *the first person / There are five people. / the third person
+  BUILD "the second person" = คน(kon) ที่(thîi) สอง(sɔ̌ɔng)  [extra: rɔ́ɔi, mɯ̀ɯn]
+  SPEAK คนที่สาม | kon thîi sǎam | the third person
+  SPEAK คนที่หนึ่ง | kon thîi nɯ̀ng | the first person
+  NEW เอา | ao | want / take
+  SPEAK เอาสอง | ao sɔ̌ɔng | I'll take two.
+  NEW มี | mii | have
+  CHOICE มีห้าคน | mii hâa kon: the first person / the second person / the third person / *There are five people.
+  BUILD "There are three of us." = มี(mii) สาม(sǎam) คน(kon)  [extra: hâa, sìi]
+  MATCH ที่=ordinal marker ("-th"), คน=person (classifier for people), เอา=want / take, มี=have
+
+## L6 How many do you want? Is it expensive?
+  NEW กี่ | gìi | how many?
+  NEW อัน | an | item (classifier for objects)
+  CHOICE เอากี่อัน | ao gìi an: This one is expensive. / *How many do you want? / I'll take three. / This is expensive.
+  BUILD "I'll take three." = เอา(ao) สาม(sǎam) อัน(an)  [extra: phan, mii]
+  BUILD "There are five." = มี(mii) ห้า(hâa) อัน(an)  [extra: sɔ̌ɔng, phan]
+  SPEAK เอากี่อัน | ao gìi an | How many do you want?
+  NEW นี่ | nîi | this
+  NEW แพง | phaeng | expensive
+  CHOICE นี่แพง | nîi phaeng: This one is expensive. / *This is expensive. / I'll take three. / How many do you want?
+  NEW นี้ | níi | this (after a noun)
+  SPEAK อันนี้แพง | an níi phaeng | This one is expensive.
+  CHAT M:เอา กี่ อัน(ao gìi an=How many do you want?) → reply as F "I'll take two.": อันนี้แพง(an níi phaeng) / *เอาสองอัน(ao sɔ̌ɔng an) / คนที่สอง(kon thîi sɔ̌ɔng)
+  MATCH กี่=how many?, อัน=item (classifier for objects), นี่=this, แพง=expensive, นี้=this (after a noun)
+
+## L7 How much is it? Baht and bottles
+  NEW เท่าไหร่ | thâo-rài | how much / how many
+  CHOICE นี่เท่าไหร่ | nîi thâo-rài: *How much is this? / How much is this bottle? / two bottles / 100 baht
+  SPEAK นี่เท่าไหร่ | nîi thâo-rài | How much is this?
+  NEW บาท | bàat | baht (currency)
+  BUILD "100 baht" = ร้อย(rɔ́ɔi) บาท(bàat)  [extra: nîi, kâo]
+  BUILD "50 baht" = ห้า(hâa) สิบ(sìp) บาท(bàat)  [extra: gìi, kon]
+  NEW ขวด | khùat | bottle (classifier)
+  CHOICE ขวดนี้เท่าไหร่ | khùat níi thâo-rài: How much is this? / *How much is this bottle? / two bottles / 100 baht
+  SPEAK สองขวด | sɔ̌ɔng khùat | two bottles
+  CHAT M:ขวด นี้ เท่าไหร่(khùat níi thâo-rài=How much is this bottle?) → reply as F "50 baht.": เอากี่อัน(ao gìi an) / *ห้าสิบบาท(hâa sìp bàat) / สองขวด(sɔ̌ɔng khùat)
+  MATCH เท่าไหร่=how much / how many, บาท=baht (currency), ขวด=bottle (classifier)
+
+## L8 Clothes and money
+  BUILD "200 baht" = สอง(sɔ̌ɔng) ร้อย(rɔ́ɔi) บาท(bàat)  [extra: hâa, mɯ̀ɯn]
+  NEW ตัว | tua | classifier for clothes
+  BUILD "I'll take two." = เอา(ao) สอง(sɔ̌ɔng) ตัว(tua)  [extra: gìi, hâa]
+  NEW เสื้อ | sɯ̂a | shirt
+  CHOICE เสื้อตัวนี้เท่าไหร่ | sɯ̂a tua níi thâo-rài: 200 baht / These pants are expensive. / *How much is this shirt? / I have enough money.
+  SPEAK เสื้อตัวนี้เท่าไหร่ | sɯ̂a tua níi thâo-rài | How much is this shirt?
+  NEW กางเกง | gaang-geeng | pants
+  CHOICE กางเกงตัวนี้แพง | gaang-geeng tua níi phaeng: I have enough money. / 200 baht / How much is this shirt? / *These pants are expensive.
+  NEW เงิน | ngəən | money
+  NEW พอ | phɔɔ | enough
+  SPEAK มีเงินพอ | mii ngəən phɔɔ | I have enough money.
+  CHAT M:เสื้อ ตัว นี้ เท่าไหร่(sɯ̂a tua níi thâo-rài=How much is this shirt?) → reply as F "300 baht.": มีเงินพอ(mii ngəən phɔɔ) / *สามร้อยบาท(sǎam rɔ́ɔi bàat) / กางเกง(gaang-geeng)
+  MATCH ตัว=classifier for clothes, เสื้อ=shirt, กางเกง=pants, เงิน=money, พอ=enough
+
+## L9 House and phone numbers
+  RULE House numbers: Bâan-lêek-thîi means "house number" — Thai house numbers often include a slash, like 26/3 (yîi-sìp-hòk tháp sǎam).
+  BUILD "zero, eight, one, two" = ศูนย์(sǔun) แปด(pɛ̀ɛt) หนึ่ง(nɯ̀ng) สอง(sɔ̌ɔng)  [extra: mii, gìi]
+  NEW บ้าน | bâan | home / house
+  NEW เลข | lêek | number / numeral
+  CHOICE บ้านเลขที่สิบเอ็ด | bâan lêek thîi sìp èt: house number 26/3 / *house number 11 / What's your phone number? / phone number
+  SPEAK บ้านเลขที่สิบเอ็ด | bâan lêek thîi sìp èt | house number 11
+  NEW ทับ | tháp | slash (used in addresses)
+  BUILD "house number 26/3" = บ้าน(bâan) เลข(lêek) ที่(thîi) ยี่สิบ(yîi-sìp) หก(hòk) ทับ(tháp) สาม(sǎam)  [extra: sìp, láan]
+  NEW เบอร์ | bəə | number / phone number (informal)
+  NEW โทรศัพท์ | thoo-rá-sàp | telephone
+  CHOICE เบอร์โทรศัพท์ | bəə thoo-rá-sàp: house number 26/3 / *phone number / What's your phone number? / house number 11
+  SPEAK เบอร์โทรศัพท์เท่าไหร่ | bəə thoo-rá-sàp thâo-rài | What's your phone number?
+  CHAT M:เบอร์ โทรศัพท์ เท่าไหร่(bəə thoo-rá-sàp thâo-rài=What's your phone number?) → reply as F "Zero, eight, one, two, three.": สองร้อยบาท(sɔ̌ɔng rɔ́ɔi bàat) / บ้านเลขที่สิบเอ็ด(bâan lêek thîi sìp èt) / *ศูนย์แปดหนึ่งสองสาม(sǔun pɛ̀ɛt nɯ̀ng sɔ̌ɔng sǎam)
+  MATCH บ้าน=home / house, เลข=number / numeral, ทับ=slash (used in addresses), เบอร์=number / phone number (informal), โทรศัพท์=telephone
+
+## L10 Telling time, morning to night
+  RULE Telling time: mong: For 6am-11am, put mong after the number and add cháo ("morning") — hòk mong cháo is 6am. For 1pm-3pm, put bàai ("afternoon") first: bàai sɔ̌ɔng mong is 2pm. For 4pm-6pm, add yen ("evening") instead: sìi mong yen is 4pm.
+  RULE Evening and early-morning hours: For 7pm-11pm, count 1-5 and add thûm: sɔ̌ɔng thûm is 8pm. For 1am-5am, put tii before the number: tii hâa is 5am. Thîang is noon.
+  NEW โมง | mong | o'clock (daytime hour)
+  CHOICE กี่โมง | gìi mong: 2 p.m. / 8 p.m. / *What time is it? / 6 a.m.
+  SPEAK กี่โมง | gìi mong | What time is it?
+  NEW เช้า | cháo | morning
+  BUILD "6 a.m." = หก(hòk) โมง(mong) เช้า(cháo)  [extra: jèt, níi]
+  NEW บ่าย | bàai | afternoon
+  CHOICE บ่ายสองโมง | bàai sɔ̌ɔng mong: What time is it? / 6 a.m. / 8 p.m. / *2 p.m.
+  CHAT M:กี่ โมง(gìi mong=What time is it?) → reply as F "3 p.m.": สองร้อยบาท(sɔ̌ɔng rɔ́ɔi bàat) / เบอร์โทรศัพท์(bəə thoo-rá-sàp) / *บ่ายสามโมง(bàai sǎam mong)
+  NEW ทุ่ม | thûm | evening hour (7pm-11pm count)
+  SPEAK สองทุ่ม | sɔ̌ɔng thûm | 8 p.m.
+  NEW ตี | tii | early-morning hour (1am-5am count)
+  BUILD "5 a.m." = ตี(tii) ห้า(hâa)  [extra: an, cháo]
+  NEW เที่ยง | thîang | noon
+  SPEAK เที่ยง | thîang | noon
+  MATCH โมง=o'clock (daytime hour), เช้า=morning, บ่าย=afternoon, ทุ่ม=evening hour (7pm-11pm count), ตี=early-morning hour (1am-5am count), เที่ยง=noon
+
+## L11 Dates: review in real sentences
+  SPEAK กี่โมง | gìi mong | What time is it?
+  BUILD "How much is this shirt?" = เสื้อ(sɯ̂a) ตัว(tua) นี้(níi) เท่าไหร่(thâo-rài)  [extra: phan, kâo]
+  NEW วัน | wan | day
+  CHOICE วันนี้วันที่เท่าไหร่ | wan níi wan thîi thâo-rài: What time is it? / *What's the date today? / the 20th / Today is the 15th.
+  BUILD "the 20th" = วัน(wan) ที่(thîi) ยี่สิบ(yîi-sìp)  [extra: gaang-geeng, lêek]
+  CHOICE วันนี้วันที่สิบห้า | wan níi wan thîi sìp hâa: What's the date today? / *Today is the 15th. / What time is it? / the 20th
+  SPEAK วันนี้วันที่เท่าไหร่ | wan níi wan thîi thâo-rài | What's the date today?
+  CHAT M:วัน นี้ วัน ที่ เท่าไหร่(wan níi wan thîi thâo-rài=What's the date today?) → reply as F "The 20th.": *วันที่ยี่สิบ(wan thîi yîi-sìp) / ร้อยบาท(rɔ́ɔi bàat) / บ่ายสองโมง(bàai sɔ̌ɔng mong)
+
+## L12 Buying a shirt
+scene: Haggling over the price of a shirt at a market stall
+  D0 A: เสื้อตัวนี้เท่าไหร่ | sɯ̂a tua níi thâo-rài | How much is this shirt?
+  D1 B: สามร้อยบาท | sǎam-rɔ́ɔi bàat | Three hundred baht.
+  D2 A: แพง มีเงินสองร้อยบาท | phaeng, mii ngəən sɔ̌ɔng-rɔ́ɔi bàat | That's expensive. I have two hundred baht.
+  D3 B: สองร้อยบาท เอากี่ตัว | sɔ̌ɔng-rɔ́ɔi bàat, ao gìi tua | Two hundred baht, then. How many do you want?
+  D4 A: เอาหนึ่งตัว | ao nɯ̀ng tua | I'll take one.
+  comprehension D0: *How much is this shirt? / Three hundred baht. / That's expensive. I have two hundred baht. / I'll take one.
+  comprehension D2: *That's expensive. I have two hundred baht. / How much is this shirt? / Three hundred baht. / Two hundred baht, then. How many do you want?
+  translate D1: *Three hundred baht. / How much is this shirt? / I'll take one. / Two hundred baht, then. How many do you want?
+  translate D3: *Two hundred baht, then. How many do you want? / Three hundred baht. / That's expensive. I have two hundred baht. / I'll take one.
+  blank D1 "sǎam ___ bàat": *rɔ́ɔi / phan / sɛ̌ɛn / láan
+  blank D4 "ao ___ tua": *nɯ̀ng / sɔ̌ɔng / sǎam / sìi

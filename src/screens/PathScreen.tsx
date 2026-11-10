@@ -331,8 +331,6 @@ export function PathScreen({
         const BannerIcon = activeSection.Icon;
         return (
           <View id="unit-card-wrap">
-          {/* the elephant mascot peeking over the unit card — drawn first, so the card hides its lower half */}
-          <Image source={require('../../assets/redesign/elephant-logo.png')} style={styles.mascot} resizeMode="contain" />
           <View style={[styles.stickyHeader, { backgroundColor: bg }]}>
             <View style={[styles.sectionIconWrap, { backgroundColor: bold ? boldColors!.badgeBg : colors.white }]}>
               <BannerIcon size={18} color={bold ? boldColors!.icon : pal.base} />
@@ -343,6 +341,9 @@ export function PathScreen({
             </View>
             {activeSection.isDone && <CheckIcon size={16} color={fg} strokeWidth={2.5} />}
           </View>
+          {/* ChatGPT's map: the elephant peeking over the card with its hands resting on the top edge — drawn after the
+              card, so the hands sit in front of it (user, 2026-11-10) */}
+          <Image source={require('../../assets/redesign/elephant-peek.png')} style={styles.mascot} resizeMode="contain" />
           </View>
         );
       })()}
@@ -483,7 +484,7 @@ const styles = StyleSheet.create({
   flame: { width: 16, height: 19 }, // ChatGPT's flame (same art as the lesson-complete streak card)
   cornerTemple: { position: 'absolute', pointerEvents: 'none', left: 0, bottom: 0, width: 170, height: 104, opacity: 0.55 },
   cornerFlowers: { position: 'absolute', pointerEvents: 'none', right: 0, bottom: 0, width: 130, height: 103, opacity: 0.6 },
-  mascot: { position: 'absolute', pointerEvents: 'none', right: 72, top: -50, width: 78, height: 84 }, // left of the XP count
+  mascot: { position: 'absolute', pointerEvents: 'none', right: 66, top: -56, width: 104, height: 68 }, // hands overlap the card's top edge by ~12px, left of the XP count
   scroll: { flex: 1 },
   content: { paddingHorizontal: 20, paddingBottom: 24 },
   headerRow: {

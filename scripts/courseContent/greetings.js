@@ -826,6 +826,7 @@ const namesLessons = [
     ),
     wordIntro('ก่อน', 'gɔ̀ɔn', 'first / before', SRC.goodbye),
     wordIntro('นะ', 'ná', 'softening particle', SRC.goodbye),
+    wordIntro('คะ', 'khá', 'polite particle (women: after ná, and in questions)', SRC.goodbye),
     wordIntro('โชคดี', 'chôok-dii', 'good luck', SRC.goodbye),
     order("Thanks a lot, I'm going back now. (said by a woman)", [
       { roman: 'khɔ̀ɔp-khun', thai: 'ขอบคุณ' },
@@ -835,7 +836,7 @@ const namesLessons = [
       { roman: 'glàp', thai: 'กลับ' },
       { roman: 'gɔ̀ɔn', thai: 'ก่อน' },
       { roman: 'ná', thai: 'นะ' },
-      { roman: 'khâ', thai: 'ค่ะ' },
+      { roman: 'khá', thai: 'คะ' },
     ], SRC.goodbye),
     speak('สบายดีเหรอผมไปแล้วนะครับขอบคุณมากครับ', 'sà-baai dii rə̌ə, phǒm pai láew ná khráp, khɔ̀ɔp-khun mâak khráp', "Are you well? I'm off now. Thanks a lot.", ['สบาย', 'ดี', 'เหรอ', 'ผม', 'ไป', 'แล้ว', 'นะ', 'ครับ', 'ขอบคุณ', 'มาก', 'ครับ'], SRC.goodbye),
     order("Thanks a lot, I'm going now, good luck! (said by a man)", [
@@ -861,7 +862,7 @@ const namesLessons = [
         { speaker: 'M', thai: 'สบายดีเหรอ', roman: 'sà-baai dii rə̌ə', english: 'Are you well?', parts: ['สบาย', 'ดี', 'เหรอ'] },
         { speaker: 'F', thai: 'ฉันสบายดีค่ะขอบคุณค่ะ', roman: 'chán sà-baai dii khâ, khɔ̀ɔp-khun khâ', english: "I'm well, thank you. (said by a woman)", parts: ['ฉัน', 'สบาย', 'ดี', 'ค่ะ', 'ขอบคุณ', 'ค่ะ'] },
         { speaker: 'M', thai: 'ขอบคุณมากครับผมไปก่อนนะครับ', roman: 'khɔ̀ɔp-khun mâak khráp, phǒm pai gɔ̀ɔn ná khráp', english: "Thanks a lot, I'm going now. (goodbye)", parts: ['ขอบคุณ', 'มาก', 'ครับ', 'ผม', 'ไป', 'ก่อน', 'นะ', 'ครับ'] },
-        { speaker: 'F', thai: 'แล้วเจอกันใหม่นะค่ะ', roman: 'láew jəə gan mài ná khâ', english: 'See you again.', parts: ['แล้ว', 'เจอ', 'กัน', 'ใหม่', 'นะ', 'ค่ะ'] },
+        { speaker: 'F', thai: 'แล้วเจอกันใหม่นะคะ', roman: 'láew jəə gan mài ná khá', english: 'See you again.', parts: ['แล้ว', 'เจอ', 'กัน', 'ใหม่', 'นะ', 'คะ'] },
       ],
       [
         { thai: 'ขอบคุณค่ะ', roman: 'khɔ̀ɔp-khun khâ', parts: ['ขอบคุณ', 'ค่ะ'] },
@@ -883,7 +884,7 @@ const namesLessons = [
       { roman: 'ang-krìt', thai: 'อังกฤษ' },
       { roman: 'khráp', thai: 'ครับ' },
     ], SRC.name),
-    mc('ขอบคุณค่ะฉันไปก่อนนะค่ะแล้วเจอกันใหม่ค่ะ', 'khɔ̀ɔp-khun khâ, chán pai gɔ̀ɔn ná khâ, láew jəə gan mài khâ', "Thank you, I'm going now, see you again!", ["I'm going home.", "How old are you?", "That's alright."], ['ขอบคุณ', 'ค่ะ', 'ฉัน', 'ไป', 'ก่อน', 'นะ', 'ค่ะ', 'แล้ว', 'เจอ', 'กัน', 'ใหม่', 'ค่ะ'], SRC.goodbye),
+    mc('ขอบคุณค่ะฉันไปก่อนนะคะแล้วเจอกันใหม่ค่ะ', 'khɔ̀ɔp-khun khâ, chán pai gɔ̀ɔn ná khá, láew jəə gan mài khâ', "Thank you, I'm going now, see you again!", ["I'm going home.", "How old are you?", "That's alright."], ['ขอบคุณ', 'ค่ะ', 'ฉัน', 'ไป', 'ก่อน', 'นะ', 'คะ', 'แล้ว', 'เจอ', 'กัน', 'ใหม่', 'ค่ะ'], SRC.goodbye),
     speak('สวัสดีค่ะคุณสบายดีเหรอฉันสบายดีค่ะขอบคุณค่ะ', 'sà-wàt-dii khâ, khun sà-baai dii rə̌ə? chán sà-baai dii khâ, khɔ̀ɔp-khun khâ', "Hello, are you well? I'm well, thank you.", ['สวัสดี', 'ค่ะ', 'คุณ', 'สบาย', 'ดี', 'เหรอ', 'ฉัน', 'สบาย', 'ดี', 'ค่ะ', 'ขอบคุณ', 'ค่ะ'], SRC.howAreYou),
   ]),
 
@@ -898,7 +899,7 @@ const namesLessons = [
       { speaker: 'B', thai: 'สบายดีครับ คุณมาจากไหนครับ', roman: 'sà-baai dii khráp, khun maa jàak nǎi khráp', english: "I'm fine. Where are you from?" },
       { speaker: 'A', thai: 'ฉันมาจากอเมริกาค่ะ เมืองไทยสนุกมากค่ะ', roman: 'chán maa jàak à-me-rí-gaa khâ, mɯang-thai sà-nùk mâak khâ', english: "I'm from America. Thailand is a lot of fun." },
       { speaker: 'B', thai: 'เข้าใจครับ ผมชอบเมืองไทยมากครับ', roman: 'khâo-jai khráp, phǒm chɔ̂ɔp mɯang-thai mâak khráp', english: 'I understand. I like Thailand a lot.' },
-      { speaker: 'A', thai: 'ขอบคุณค่ะ ฉันไปก่อนนะค่ะ โชคดีค่ะ', roman: 'khɔ̀ɔp-khun khâ, chán pai gɔ̀ɔn ná khâ, chôok-dii khâ', english: 'Thank you. I\'m going now. Good luck.' },
+      { speaker: 'A', thai: 'ขอบคุณค่ะ ฉันไปก่อนนะคะ โชคดีค่ะ', roman: 'khɔ̀ɔp-khun khâ, chán pai gɔ̀ɔn ná khá, chôok-dii khâ', english: 'Thank you. I\'m going now. Good luck.' },
     ],
     [
       { type: 'intro' },
@@ -939,7 +940,7 @@ const namesLessons = [
         ],
       },
       {
-        type: 'blank', lineIndex: 4, before: 'khɔ̀ɔp-khun khâ, chán pai gɔ̀ɔn ná khâ,', after: '',
+        type: 'blank', lineIndex: 4, before: 'khɔ̀ɔp-khun khâ, chán pai gɔ̀ɔn ná khá,', after: '',
         options: [
           { text: 'chôok-dii', correct: true, meaning: 'good luck' },
           { text: 'mâi-pen-rai', correct: false, meaning: "that's alright / never mind" },

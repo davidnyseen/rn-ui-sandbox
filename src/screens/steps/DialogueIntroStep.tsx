@@ -1,6 +1,6 @@
-import { Image, Pressable, Text, View, StyleSheet } from 'react-native';
+import { Image, Text, View, StyleSheet } from 'react-native';
 import { colors, fonts, textMuted } from '../../theme';
-import { PlayIcon } from '../../components/icons';
+import { ChatBubble, Speaker } from '../../components/ChatBubble';
 
 // Structural, not DialogueLesson from data.ts — courseTypes.ts's
 // CourseDialogueLesson satisfies this shape too, so this step renders
@@ -17,7 +17,7 @@ export function DialogueIntroStep({
   lesson: DialogueIntroLesson;
   onPlayLine: (lineIndex: number) => void;
 }) {
-  const firstSpeaker = lesson.lines[0]?.speaker;
+  const genderOf = speakerGenders(lesson.lines);
 
   return (
     <View style={styles.screen}>
@@ -28,30 +28,39 @@ export function DialogueIntroStep({
       </View>
       <View style={styles.sceneRule} />
       <View style={styles.lines}>
-        {lesson.lines.map((line, i) => {
-          const isRight = line.speaker !== firstSpeaker;
-          return (
-            <Pressable
-              key={i}
-              onPress={() => onPlayLine(i)}
-              style={[styles.bubbleRow, isRight && styles.bubbleRowRight]}
-            >
-              <View style={[styles.bubble, isRight ? styles.bubbleRight : styles.bubbleLeft]}>
-                <View style={[styles.tail, isRight ? styles.tailRight : styles.tailLeft]} />
-                <View style={styles.bubbleHeader}>
-                  <Text style={[styles.speaker, isRight && styles.textOnAccentMuted]}>{line.speaker}</Text>
-                  <PlayIcon size={16} color={isRight ? colors.onAccent : colors.accent600} />
-                </View>
-                <Text style={[styles.roman, isRight && styles.textOnAccent]}>{line.roman}</Text>
-                <Text style={[styles.thai, isRight && styles.textOnAccentMuted]}>{line.thai}</Text>
-                <Text style={[styles.english, isRight && styles.textOnAccentMuted]}>{line.english}</Text>
-              </View>
-            </Pressable>
-          );
-        })}
+        {lesson.lines.map((line, i) => (
+          <ChatBubble
+            key={i}
+            speaker={genderOf[line.speaker] ?? 'F'}
+            eyebrow={line.roman}
+            main={line.thai}
+            sub={line.english}
+            onPress={() => onPlayLine(i)}
+          />
+        ))}
       </View>
     </View>
   );
+}
+
+// Conversation lines are written with speakers "A" / "B"; show each as a man or a woman instead, from the polite
+// particle or pronoun they use (ครับ / ผม = man, ค่ะ / คะ / ฉัน = woman). If a speaker never says one, A is a woman and
+// B a man, so the two still look different.
+function speakerGenders(lines: { speaker: string; thai: string }[]): Record<string, Speaker> {
+  const out: Record<string, Speaker> = {};
+  for (const l of lines) {
+    if (out[l.speaker]) continue;
+    if (/ครับ|ผม/.test(l.thai)) out[l.speaker] = 'M';
+    else if (/ค่ะ|คะ|ฉัน/.test(l.thai)) out[l.speaker] = 'F';
+  }
+  const ids = [...new Set(lines.map((l) => l.speaker))];
+  ids.forEach((id, i) => {
+    if (!out[id]) {
+      const other = ids.find((x) => x !== id && out[x]);
+      out[id] = other ? (out[other] === 'M' ? 'F' : 'M') : i === 0 ? 'F' : 'M';
+    }
+  });
+  return out;
 }
 
 const styles = StyleSheet.create({
@@ -63,21 +72,5 @@ const styles = StyleSheet.create({
   scene: { flex: 1, fontFamily: fonts.bodySemibold, fontSize: 14, color: colors.accent700 },
   sceneLotus: { width: 34, height: 23, opacity: 0.7, marginTop: -6 },
   sceneRule: { width: '70%', height: 2, borderRadius: 1, backgroundColor: 'rgba(230,176,0,0.35)', marginTop: 10, marginBottom: 20 },
-  tail: { position: 'absolute', bottom: -6, width: 12, height: 12, borderWidth: 1.5, borderTopWidth: 0, borderLeftWidth: 0, transform: [{ rotate: '45deg' }] },
-  tailLeft: { left: 16, backgroundColor: colors.white, borderColor: 'rgba(32,30,29,0.12)' },
-  tailRight: { right: 16, backgroundColor: '#ffd84a', borderColor: '#f2c230' },
-  lines: { gap: 16 },
-  bubbleRow: { flexDirection: 'row' },
-  bubbleRowRight: { justifyContent: 'flex-end' },
-  // ChatGPT's 'improve' pass (2026-11-08): soft rounded bubbles with a light shadow instead of hard outlines
-  bubble: { maxWidth: '82%', padding: 14, borderWidth: 1.5, borderRadius: 18, shadowColor: '#7a5c00', shadowOffset: { width: 0, height: 3 }, shadowOpacity: 0.06, shadowRadius: 8, elevation: 1, },
-  bubbleLeft: { backgroundColor: colors.white, borderColor: 'rgba(32,30,29,0.12)' },
-  bubbleRight: { backgroundColor: '#ffd84a', borderColor: '#f2c230' },
-  bubbleHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 4, gap: 10 },
-  speaker: { fontFamily: fonts.bodySemibold, fontSize: 11, letterSpacing: 0.5, textTransform: 'uppercase', color: textMuted(0.5) },
-  roman: { fontFamily: fonts.bodySemibold, fontSize: 17, color: colors.text },
-  thai: { fontSize: 14, color: textMuted(0.55), marginTop: 1 },
-  english: { fontSize: 12, color: textMuted(0.45), marginTop: 4 },
-  textOnAccent: { color: colors.onAccent },
-  textOnAccentMuted: { color: colors.onAccent, opacity: 0.7 },
+  lines: { gap: 10 },
 });

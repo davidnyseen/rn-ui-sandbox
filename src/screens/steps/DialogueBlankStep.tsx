@@ -4,6 +4,8 @@ import { colors, fonts, textMuted } from '../../theme';
 import { Button } from '../../components/Button';
 import { AnswerOption } from '../../components/AnswerOption';
 
+const words = (s: string) => s.split(' ').filter(Boolean);
+
 export function DialogueBlankStep({
   before,
   after,
@@ -50,11 +52,12 @@ export function DialogueBlankStep({
     <View style={styles.screen}>
       <Text style={styles.instruction}>Tap the missing word.</Text>
       <View style={styles.sentenceRow}>
-        {before ? <Text style={styles.sentence}>{before}</Text> : null}
+        {/* one Text per word, so the row wraps between words and the slot sits right beside its neighbours */}
+        {words(before).map((w, i) => <Text key={`b${i}`} style={styles.sentence}>{w}</Text>)}
         <View style={[styles.blank, blankStyle]}>
           <Text style={[styles.blankText, blankTextStyle]}>{selectedOption ? selectedOption.text : ' '}</Text>
         </View>
-        {after ? <Text style={styles.sentence}>{after}</Text> : null}
+        {words(after).map((w, i) => <Text key={`a${i}`} style={styles.sentence}>{w}</Text>)}
       </View>
       {revealMeaning && (
         <Text style={styles.meaning}>
@@ -76,7 +79,7 @@ export function DialogueBlankStep({
       </View>
       <View style={styles.spacer} />
       {!answered && (
-        <Button variant="secondary" block disabled={selected === null} onPress={onCheck}>
+        <Button variant={selected === null ? 'secondary' : 'primary'} block disabled={selected === null} onPress={onCheck}>
           Check
         </Button>
       )}
@@ -88,7 +91,7 @@ const styles = StyleSheet.create({
   screen: { flex: 1 },
   instruction: { fontSize: 14, color: textMuted(0.55), marginBottom: 20 },
   spacer: { flex: 1, minHeight: 12 },
-  sentenceRow: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: 8, marginBottom: 28 },
+  sentenceRow: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', columnGap: 7, rowGap: 6, marginBottom: 28 },
   sentence: { fontFamily: fonts.heading, fontSize: 22, lineHeight: 32, color: colors.text },
   meaning: { fontSize: 14, color: textMuted(0.55), marginTop: -20, marginBottom: 16 },
   blank: { minWidth: 64, height: 40, paddingHorizontal: 12, borderWidth: 1.5, borderRadius: 12, alignItems: 'center', justifyContent: 'center' },

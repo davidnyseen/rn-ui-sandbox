@@ -1,0 +1,211 @@
+# basics — Basics: Everyday Sentences
+
+## L0 This one, and how many?
+  RULE This vs. this one: Nîi ("this") alone has a falling tone. But when it's attached right after a classifier, as in "this one" (an-níi) or "this person", it takes a high tone instead.
+  NEW เอา | ao | want / take
+  NEW นี่ | nîi | this
+  SPEAK นี่ | nîi | this
+  NEW อันนี้ | an-níi | this one
+  CHOICE เอาอันนี้ | ao an-níi: I don't want it. / *I want this one. / Which one do you want? / It's expensive.
+  NEW อันไหน | an-nǎi | which one?
+  BUILD "Which one do you want?" = เอา(ao) อันไหน(an-nǎi)  [extra: nîi, an-níi]
+  CHOICE อันไหน | an-nǎi: I don't want it. / It's beautiful. / This one. / *Which one?
+  NEW กี่ | gìi | how many?
+  NEW อัน | an | item (classifier for objects)
+  CHOICE เอากี่อัน | ao gìi an: I have one. / *How many do you want? / I want this one. / Which one?
+  SPEAK กี่อัน | gìi an | how many (items)?
+  SPEAK เอากี่อัน | ao gìi an | How many do you want?
+  CHAT M:เอา อันไหน(ao an-nǎi=Which one do you want?) → reply as F "I want this one.": อันไหน(an-nǎi) / *เอาอันนี้(ao an-níi) / เอากี่อัน(ao gìi an)
+  NEW เดียว | diao | single / only one
+  BUILD "I want just one." = เอา(ao) อัน(an) เดียว(diao)  [extra: an-nǎi, gìi]
+  CHOICE อันเดียว | an diao: How many? / *A single one / just one. / Two items. / This one.
+  MATCH เอา=want / take, นี่=this, อันนี้=this one, อันไหน=which one?, กี่=how many?, อัน=item (classifier for objects), เดียว=single / only one
+
+## L1 Yes/no, and confirming
+  RULE Yes/no questions with mái: Put mái after a verb to ask a yes/no question — it often works like an invitation ("...mái?" can mean "want to...?"). Answer "yes" by repeating the verb, or "no" by putting mâi in front of it.
+  RULE Confirming with châi mái: Use châi mái at the end of a statement when you already think something is true and just want to confirm it, like English "right?". Answer châi ("right") or mâi châi ("no, that's not right").
+  NEW มั้ย | mái | question particle (yes/no)
+  CHOICE เอามั้ย | ao mái: I want this one. / How many? / *Do you want it? / This one.
+  SPEAK มั้ย | mái | question particle (yes/no)
+  NEW ไม่ | mâi | not / no
+  BUILD "No, I don't want it." = ไม่(mâi) เอา(ao)  [extra: gìi, an-níi]
+  CHOICE ไม่เอา | mâi ao: Do you want it? / Just one. / *No, I don't want it. / Which one?
+  SPEAK ไม่เอา | mâi ao | No, I don't want it.
+  NEW ใช่ | châi | right / that's correct
+  CHOICE ใช่มั้ย | châi mái: *Isn't that right? / I want this one. / No, that's not right. / How many?
+  BUILD "No, that's not right." = ไม่(mâi) ใช่(châi)  [extra: ao, mái]
+  CHOICE ไม่ใช่ | mâi châi: Do you want it? / Just one. / *No, that's not right. / Yes, that's right.
+  SPEAK ใช่ | châi | Yes, that's right.
+  SPEAK ใช่มั้ย | châi mái | Isn't that right?
+  CHAT M:เอา มั้ย(ao mái=Do you want it?) → reply as F "No, I don't want it.": ใช่มั้ย(châi mái) / *ไม่เอา(mâi ao) / อันไหน(an-nǎi)
+  MATCH มั้ย=question particle (yes/no), ไม่=not / no, ใช่=right / that's correct
+
+## L2 Tall, short, fat, thin
+  RULE Describing people: To describe someone, just put the adjective right after their name or a pronoun like "you" — Thai doesn't use a word for "to be" with adjectives.
+  NEW คุณ | khun | you
+  NEW สูง | sǔung | tall
+  CHOICE คุณสูงมั้ย | khun sǔung mái: Do you want it? / That's right. / You're short. / *Are you tall?
+  NEW เตี้ย | tîa | short
+  BUILD "You're not short." = คุณ(khun) ไม่(mâi) เตี้ย(tîa)  [extra: an-nǎi, châi]
+  CHOICE คุณเตี้ยมั้ย | khun tîa mái: Just one. / *Are you short? / Which one? / You're tall.
+  SPEAK คุณไม่เตี้ย | khun mâi tîa | You're not short.
+  NEW อ้วน | ûan | fat / well-built
+  CHOICE ไม่อ้วน | mâi ûan: Very tall. / Very thin. / *Not fat. / Not short.
+  NEW ผอม | phɔ̌ɔm | thin
+  NEW มาก | mâak | very / a lot
+  CHOICE คุณสูงมาก | khun sǔung mâak: You're not short. / You're very thin. / Are you tall? / *You're very tall.
+  BUILD "Very thin." = ผอม(phɔ̌ɔm) มาก(mâak)  [extra: khun, an-níi]
+  SPEAK ผอมมาก | phɔ̌ɔm mâak | very thin
+  CHAT M:คุณ สูง มั้ย(khun sǔung mái=Are you tall?) → reply as F "No, not tall.": *ไม่สูง(mâi sǔung) / ผอมมาก(phɔ̌ɔm mâak) / คุณเตี้ยมั้ย(khun tîa mái)
+  MATCH คุณ=you, สูง=tall, เตี้ย=short, อ้วน=fat / well-built, ผอม=thin, มาก=very / a lot
+
+## L3 Beautiful, clean, rich
+  NEW สวย | sǔai | beautiful
+  CHOICE คุณสวยมาก | khun sǔai mâak: Handsome. / *You're very beautiful. / Not fat. / You're very tall.
+  NEW หล่อ | lɔ̀ɔ | handsome
+  BUILD "Very handsome." = หล่อ(lɔ̀ɔ) มาก(mâak)  [extra: nîi, phɔ̌ɔm]
+  CHOICE ไม่หล่อ | mâi lɔ̀ɔ: *Not handsome. / Beautiful. / Very cute. / Tall.
+  NEW น่ารัก | nâa-rák | cute / lovable
+  SPEAK น่ารักมาก | nâa-rák mâak | very cute
+  NEW สะอาด | sà-àat | clean
+  CHOICE สะอาดมั้ย | sà-àat mái: Handsome. / Very poor. / *Is it clean? / Not clean.
+  BUILD "Not clean." = ไม่(mâi) สะอาด(sà-àat)  [extra: an-níi, nîi]
+  SPEAK สะอาดมาก | sà-àat mâak | very clean
+  NEW รวย | ruai | rich
+  CHOICE คุณรวยมาก | khun ruai mâak: *You're very rich. / Very cute. / You're poor. / Very clean.
+  CHAT M:สะอาด มั้ย(sà-àat mái=Is it clean?) → reply as F "No, it's not clean.": คุณรวยมาก(khun ruai mâak) / ไม่หล่อ(mâi lɔ̀ɔ) / *ไม่สะอาด(mâi sà-àat)
+  NEW จน | jon | poor
+  MATCH สวย=beautiful, หล่อ=handsome, น่ารัก=cute / lovable, สะอาด=clean, รวย=rich, จน=poor
+
+## L4 To be, and 'this ___'
+  RULE Two ways to say "is": Keu links two things that are exactly equivalent (it's usually left out in speech). Pen links a subject to a describing noun, like a job or relationship — but not to an adjective. To say a noun sentence is false, use mâi châi, not mâi alone.
+  RULE "This ___": Put níi (high tone) right after a noun to say "this ___". There's no separate word for "the" in Thai — just say the name of the thing.
+  NEW เป็น | pen | to be / is
+  NEW เค้า | kháo | he / she
+  NEW เพื่อน | phɯ̂an | friend
+  CHOICE เค้าเป็นเพื่อน | kháo pen phɯ̂an: He's not a friend. / *He's/she's a friend. / You're rich. / Is it clean?
+  BUILD "She's not a friend." = เค้า(kháo) ไม่(mâi) ใช่(châi) เพื่อน(phɯ̂an)  [extra: phɔ̌ɔm, sà-àat]
+  CHOICE เค้าไม่ใช่เพื่อน | kháo mâi châi phɯ̂an: *He's/she's not a friend. / He's a friend. / You're very beautiful. / A single one.
+  SPEAK เค้าเป็นเพื่อน | kháo pen phɯ̂an | He's/she's a friend.
+  NEW เสื้อ | sɯ̂a | shirt
+  NEW นี้ | níi | this (after a noun)
+  CHOICE เสื้อนี้สวย | sɯ̂a níi sǔai: *This shirt is beautiful. / This hotel is expensive. / Very rich. / He's a friend.
+  NEW โรงแรม | rong-raem | hotel
+  NEW แพง | phaeng | expensive
+  BUILD "This hotel is expensive." = โรงแรม(rong-raem) นี้(níi) แพง(phaeng)  [extra: khun, gìi]
+  CHOICE โรงแรมนี้แพงมั้ย | rong-raem níi phaeng mái: Not clean. / This shirt is beautiful. / He's a friend. / *Is this hotel expensive?
+  CHAT M:โรงแรม นี้ แพง มั้ย(rong-raem níi phaeng mái=Is this hotel expensive?) → reply as F "No, it's not expensive.": เค้าเป็นเพื่อน(kháo pen phɯ̂an) / เสื้อนี้สวย(sɯ̂a níi sǔai) / *ไม่แพง(mâi phaeng)
+  NEW แล้วก็ | láew-gɔ̂ɔ | and then / also
+  SPEAK เสื้อนี้สวยแล้วก็ไม่แพง | sɯ̂a níi sǔai láew-gɔ̂ɔ mâi phaeng | This shirt is beautiful, and it's not expensive.
+  MATCH เป็น=to be / is, เค้า=he / she, เพื่อน=friend, เสื้อ=shirt, นี้=this (after a noun), โรงแรม=hotel, แพง=expensive, แล้วก็=and then / also
+
+## L5 The same, or too much
+  RULE The same as: Meuan means "the same as" or "like". Add gan ("each other") when you're saying two things are the same, especially at the end of a sentence.
+  RULE Too ___: Add pai right after an adjective to say "too ___" — the same word pai also means "go", but here it works as an intensifier.
+  NEW เหมือน | mɯ̌an | the same as / like
+  CHOICE คุณเหมือนเค้า | khun mɯ̌an kháo: *You're like him/her. / A single one. / This hotel is expensive. / They're the same.
+  NEW กัน | gan | each other / together
+  CHOICE เหมือนกัน | mɯ̌an gan: This shirt is beautiful. / He's a friend. / They're not the same. / *They're the same.
+  BUILD "Not the same." = ไม่(mâi) เหมือน(mɯ̌an) กัน(gan)  [extra: châi, phɔ̌ɔm]
+  SPEAK ไม่เหมือนกัน | mâi mɯ̌an gan | not the same
+  NEW ไป | pai | go / too (after an adjective)
+  CHOICE แพงไป | phaeng pai: Too small. / Very beautiful. / *It's too expensive. / Not expensive.
+  SPEAK แพงไป | phaeng pai | too expensive
+  NEW เล็ก | lék | small
+  CHOICE เล็กไป | lék pai: *It's too small. / That's not right. / Too expensive. / Very small.
+  BUILD "This shirt is too small." = เสื้อ(sɯ̂a) นี้(níi) เล็ก(lék) ไป(pai)  [extra: lɔ̀ɔ, an-nǎi]
+  CHAT M:เอา อันนี้ มั้ย(ao an-níi mái=Do you want this one?) → reply as F "No, it's too small.": คุณเหมือนเค้า(khun mɯ̌an kháo) / เหมือนกัน(mɯ̌an gan) / *ไม่เอาเล็กไป(mâi ao, lék pai)
+  MATCH เหมือน=the same as / like, กัน=each other / together, ไป=go / too (after an adjective), เล็ก=small
+
+## L6 Colors, have to, can
+  RULE Colors: Put sǐi ("color") before any color word — then put the whole color word after the name of the object it describes.
+  RULE Have to / can: Put tɔ̂ng right before a verb for "have to/must". Dâi means "can" for permission, availability, or ability — answer mâi dâi for "can't".
+  NEW สี | sǐi | color
+  NEW แดง | dɛɛng | red
+  CHOICE เสื้อสีแดง | sɯ̂a sǐi dɛɛng: a black shirt / a white shirt / This shirt is beautiful. / *a red shirt
+  SPEAK สีแดง | sǐi dɛɛng | red
+  NEW ดำ | dam | black
+  BUILD "A black shirt." = เสื้อ(sɯ̂a) สี(sǐi) ดำ(dam)  [extra: phɔ̌ɔm, pen]
+  NEW ขาว | khǎao | white
+  CHOICE เสื้อสีขาวสวย | sɯ̂a sǐi khǎao sǔai: *The white shirt is beautiful. / The red shirt is expensive. / a black shirt / too small
+  NEW ต้อง | tɔ̂ng | have to / must
+  CHOICE ต้องไป | tɔ̂ng pai: Too small. / *I have to go. / A red shirt. / I can't go.
+  NEW ได้ | dâi | can / able to
+  BUILD "I can't go." = ไป(pai) ไม่(mâi) ได้(dâi)  [extra: ao, mâak]
+  CHOICE ไปได้มั้ย | pai dâi mái: *Can you go? / A black shirt. / I have to go. / The color white.
+  SPEAK ไปไม่ได้ | pai mâi dâi | I can't go.
+  CHAT M:ไป ได้ มั้ย(pai dâi mái=Can you go?) → reply as F "No, I can't go.": *ไปไม่ได้(pai mâi dâi) / เสื้อสีดำ(sɯ̂a sǐi dam) / สีขาว(sǐi khǎao)
+  MATCH สี=color, แดง=red, ดำ=black, ขาว=white, ต้อง=have to / must, ได้=can / able to
+
+## L7 Want to, like to, and doing what
+  RULE Want to / like to: "Want to" before a verb is yàak, not ao — ao is only for wanting an object, not an action. Chɔ̂ɔp before a verb means "like to" (or "always do").
+  NEW อยาก | yàak | want to (+ verb)
+  CHOICE อยากไป | yàak pai: I have to go. / I like to go. / I don't want to go. / *I want to go.
+  BUILD "I don't want to go." = ไม่(mâi) อยาก(yàak) ไป(pai)  [extra: ao, diao]
+  SPEAK อยากไป | yàak pai | I want to go.
+  NEW ชอบ | chɔ̂ɔp | like to (+ verb) / like
+  CHOICE ไม่ชอบไป | mâi chɔ̂ɔp pai: I like to go. / I can't go. / I want to go. / *I don't like to go.
+  NEW มา | maa | come
+  NEW กิน | gin | eat
+  CHOICE มากิน | maa gin: What are you doing? / I want to go. / Going to eat. / *Come and eat.
+  NEW ทำ | tham | do / make
+  NEW อะไร | à-rai | what
+  BUILD "What do you want to eat?" = อยาก(yàak) กิน(gin) อะไร(à-rai)  [extra: tham, phaeng]
+  CHOICE ทำอะไร | tham à-rai: What do you want to eat? / Come and eat. / I like to go. / *What are you doing?
+  SPEAK ทำอะไร | tham à-rai | What are you doing?
+  CHAT M:อยาก ไป มั้ย(yàak pai mái=Do you want to go?) → reply as F "Yes, I want to go.": ทำอะไร(tham à-rai) / *อยากไป(yàak pai) / มากิน(maa gin)
+  MATCH อยาก=want to (+ verb), ชอบ=like to (+ verb) / like, มา=come, กิน=eat, ทำ=do / make, อะไร=what
+
+## L8 Daily verbs: where and when
+  RULE Where is...?: Yùu means "to be at a place". Put thîi-nǎi ("where?") after yùu to ask where something is.
+  NEW ดู | duu | see / look at / watch
+  NEW เดิน | dəən | walk
+  CHOICE ชอบเดิน | chɔ̂ɔp dəən: Come and eat. / I want to watch. / I'm going to sleep. / *I like to walk.
+  NEW นอน | nɔɔn | sleep
+  CHOICE ไปนอน | pai nɔɔn: Come and eat. / I like to walk. / What are you doing? / *I'm going to sleep.
+  BUILD "I want to sleep." = อยาก(yàak) นอน(nɔɔn)  [extra: sǐi, phɔ̌ɔm]
+  SPEAK ไปนอน | pai nɔɔn | I'm going to sleep.
+  NEW อยู่ | yùu | be at / stay
+  NEW ที่ไหน | thîi-nǎi | where?
+  CHOICE โรงแรมอยู่ที่ไหน | rong-raem yùu thîi-nǎi: I want to go. / When are you going? / *Where is the hotel? / Come and eat.
+  BUILD "Where is he?" = เค้า(kháo) อยู่(yùu) ที่ไหน(thîi-nǎi)  [extra: pai, láew-gɔ̂ɔ]
+  SPEAK โรงแรมอยู่ที่ไหน | rong-raem yùu thîi-nǎi | Where is the hotel?
+  NEW เมื่อไหร่ | mɯ̂a-rài | when?
+  CHOICE ไปเมื่อไหร่ | pai mɯ̂a-rài: I like to go. / Where is it? / *When are you going? / Where's the shirt?
+  CHAT M:อยาก ทำ อะไร(yàak tham à-rai=What do you want to do?) → reply as F "I want to sleep.": *อยากนอน(yàak nɔɔn) / ไปเมื่อไหร่(pai mɯ̂a-rài) / อยู่ที่ไหน(yùu thîi-nǎi)
+  MATCH ดู=see / look at / watch, เดิน=walk, นอน=sleep, อยู่=be at / stay, ที่ไหน=where?, เมื่อไหร่=when?
+
+## L9 Days of the week, and who
+  RULE Days of the week: Every day name starts with wan ("day"). To ask which day, put wan-nǎi ("which day?") at the end of the question — pai wan-nǎi is "What day are you going?"
+  NEW วันจันทร์ | wan-jan | Monday
+  CHOICE ไปวันจันทร์ | pai wan-jan: I'm going on Friday. / I'm going on Sunday. / *I'm going on Monday. / What day?
+  NEW วันศุกร์ | wan-sùk | Friday
+  BUILD "I'm going on Friday." = ไป(pai) วันศุกร์(wan-sùk)  [extra: mái, tɔ̂ng]
+  NEW วันอาทิตย์ | wan-aa-thít | Sunday
+  SPEAK วันอาทิตย์ | wan-aa-thít | Sunday
+  NEW วันไหน | wan-nǎi | what day?
+  CHOICE ไปวันไหน | pai wan-nǎi: Monday. / *What day are you going? / When? / Sunday.
+  CHAT M:ไป วันไหน(pai wan-nǎi=What day are you going?) → reply as F "I'm going on Friday.": วันไหน(wan-nǎi) / ไปเมื่อไหร่(pai mɯ̂a-rài) / *ไปวันศุกร์(pai wan-sùk)
+  NEW คน | kon | person (classifier for people)
+  NEW ใคร | krai | who?
+  BUILD "Who is he?" = เค้า(kháo) เป็น(pen) ใคร(krai)  [extra: an-níi, tɔ̂ng]
+  NEW คนไหน | kon-nǎi | which person?
+  CHOICE คนไหน | kon-nǎi: Sunday. / *Which person? / That person over there. / Who?
+  NEW คนโน้น | kon-nóon | that person over there
+  CHOICE คนโน้นเป็นใคร | kon-nóon pen krai: What day? / *Who's that person over there? / Which person? / That person over there.
+  SPEAK คนโน้นเป็นใคร | kon-nóon pen krai | Who's that person over there?
+  CHAT M:คนโน้น เป็น ใคร(kon-nóon pen krai=Who's that person over there?) → reply as F "He's a friend.": *เค้าเป็นเพื่อน(kháo pen phɯ̂an) / คนไหน(kon-nǎi) / วันอาทิตย์(wan-aa-thít)
+  MATCH วันจันทร์=Monday, วันศุกร์=Friday, วันอาทิตย์=Sunday, วันไหน=what day?, คน=person (classifier for people), ใคร=who?, คนไหน=which person?, คนโน้น=that person over there
+
+## L10 Asking about a friend
+scene: Two friends talking about someone they both know
+  D0 A: คนโน้นเป็นใคร | kon-nóon pen krai | Who is that person over there?
+  D1 B: เค้าเป็นเพื่อน | kháo pen phɯ̂an | He's a friend.
+  D2 A: เค้าหล่อมั้ย | kháo lɔ̀ɔ mái | Is he handsome?
+  D3 B: หล่อ แล้วก็รวยมาก | lɔ̀ɔ, láew-gɔ̂ɔ ruai mâak | He is, and very rich.
+  D4 A: เค้าอยู่ที่ไหน | kháo yùu thîi-nǎi | Where is he?
+  comprehension D0: *Who is that person over there? / He's a friend. / Where is he? / Very rich.
+  comprehension D2: *Is he handsome? / He's a friend. / Where is he? / He is, and very rich.
+  translate D1: *He's a friend. / Who is that person over there? / Where is he? / Very rich.
+  translate D3: *He is, and very rich. / He's a friend. / Is he handsome? / Where is he?
+  blank D4 "kháo yùu ___ ": *thîi-nǎi / kon-nóon / phɯ̂an / rong-raem
