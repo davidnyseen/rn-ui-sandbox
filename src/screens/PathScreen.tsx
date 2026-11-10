@@ -13,7 +13,7 @@ import { lessonDisplayInfo } from '../lib/lessonDisplay';
 // TESTING ONLY: unlocks every unit and course subject regardless of
 // progress, for phone testing. Flip back to false to restore normal
 // sequential gating.
-const TESTING_UNLOCK_ALL = false;
+const TESTING_UNLOCK_ALL = true; // TEMPORARY (user, 2026-11-10: "temporarily open all the courses") — set back to false before release
 
 // One node per LESSON (not per subject) — each course subject contributes
 // a section header followed by one node per lesson, so the map mirrors

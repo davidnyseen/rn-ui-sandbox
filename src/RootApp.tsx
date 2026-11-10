@@ -34,7 +34,7 @@ import { BottomTabBar, TAB_SCREENS } from './components/BottomTabBar';
 // TESTING ONLY: mirrors PathScreen's TESTING_UNLOCK_ALL — lets openUnit jump
 // to any unit regardless of progress. Flip back to false to restore normal
 // sequential gating.
-const TESTING_UNLOCK_ALL = false;
+const TESTING_UNLOCK_ALL = true; // TEMPORARY (user, 2026-11-10: "temporarily open all the courses") — set back to false before release
 
 export function RootApp() {
   const [state, setState] = useState<AppState>(initialState);
