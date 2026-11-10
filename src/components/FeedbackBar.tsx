@@ -17,6 +17,9 @@ export function FeedbackBar({
   bottomInset: number;
   onContinue: () => void;
 }) {
+  // ChatGPT's pass (2026-11-10): "Not quite" on its own line, so the red × reads as being about the picked answer,
+  // and the right answer underneath with a small "Correct answer" label.
+  const answer = !correct && text.startsWith('Correct answer: ') ? text.slice('Correct answer: '.length) : null;
   return (
     <View
       id="feedback-bar"
@@ -27,10 +30,16 @@ export function FeedbackBar({
         <View style={[styles.mark, correct ? styles.markCorrect : styles.markWrong]}>
           {correct ? <CheckIcon size={14} color={colors.white} strokeWidth={3.5} /> : <XIcon size={12} color={colors.white} strokeWidth={3.5} />}
         </View>
-        <Text style={[styles.label, correct ? styles.labelCorrect : styles.labelWrong]}>{text}</Text>
+        <Text style={[styles.label, correct ? styles.labelCorrect : styles.labelWrong]}>{answer !== null ? 'Not quite' : text}</Text>
       </View>
+      {answer !== null && (
+        <View id="feedback-answer" style={styles.answerBlock}>
+          <Text style={styles.answerLabel}>Correct answer</Text>
+          <Text style={styles.answerText}>{answer}</Text>
+        </View>
+      )}
       <Pressable onPress={onContinue} style={({ pressed }) => [styles.button, pressed && styles.buttonPressed]}>
-        <ButtonFlowers />
+        <ButtonFlowers rightOnly />
         <Text style={styles.buttonText}>Continue</Text>
       </Pressable>
     </View>
@@ -50,6 +59,9 @@ const styles = StyleSheet.create({
   markCorrect: { backgroundColor: colors.success600 },
   markWrong: { backgroundColor: colors.danger600 },
   label: { flexShrink: 1, fontFamily: fonts.heading, fontSize: 18 },
+  answerBlock: { marginTop: -6, gap: 2 },
+  answerLabel: { fontFamily: fonts.bodySemibold, fontSize: 13, color: 'rgba(32,30,29,0.6)' },
+  answerText: { fontFamily: fonts.heading, fontSize: 17, color: colors.text },
   labelCorrect: { color: colors.success800 },
   labelWrong: { color: colors.danger800 },
   button: {

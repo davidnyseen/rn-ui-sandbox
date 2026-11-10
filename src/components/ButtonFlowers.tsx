@@ -5,10 +5,10 @@ const FLOWER = require('../../assets/redesign/button-flower.png');
 // The soft cream frangipani tucked into both ends of a big yellow button, as in ChatGPT's Continue button (user,
 // 2026-11-08). Drawn inside its own clipped pill so the flowers are cut off by the button's rounded ends without
 // clipping the button's shadow.
-export function ButtonFlowers() {
+export function ButtonFlowers({ rightOnly = false }: { rightOnly?: boolean } = {}) {
   return (
     <View id="button-flowers" style={styles.clip} pointerEvents="none">
-      <Image source={FLOWER} style={[styles.flower, styles.left]} resizeMode="contain" />
+      {!rightOnly && <Image source={FLOWER} style={[styles.flower, styles.left]} resizeMode="contain" />}
       <Image source={FLOWER} style={[styles.flower, styles.right]} resizeMode="contain" />
     </View>
   );

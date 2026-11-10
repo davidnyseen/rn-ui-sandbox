@@ -3,7 +3,7 @@ import { Pressable, Text, View, StyleSheet } from 'react-native';
 import { WordItem } from '../../data';
 import { colors, fonts, radius, textMuted } from '../../theme';
 import { Button } from '../../components/Button';
-import { CheckIcon, PlayIcon } from '../../components/icons';
+import { CheckIcon, PlayIcon, XIcon } from '../../components/icons';
 
 export function McStep({
   word,
@@ -61,6 +61,8 @@ export function McStep({
               style={[styles.option, { backgroundColor: bg, borderColor: border, opacity }]}
             >
               <Text style={[styles.optionText, { color }]}>{o.text}</Text>
+              {answered && o.correct && <CheckIcon size={20} color={colors.success600} strokeWidth={3} />}
+              {answered && !o.correct && i === selected && <XIcon size={16} color={colors.danger600} strokeWidth={3} />}
               {!answered && i === selected && (
                 <View style={styles.tick}><CheckIcon size={13} color={colors.white} strokeWidth={3.5} /></View>
               )}
