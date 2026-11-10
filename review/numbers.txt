@@ -194,7 +194,23 @@
   SPEAK วันนี้วันที่เท่าไหร่ | wan níi wan thîi thâo-rài | What's the date today?
   CHAT M:วัน นี้ วัน ที่ เท่าไหร่(wan níi wan thîi thâo-rài=What's the date today?) → reply as F "The 20th.": *วันที่ยี่สิบ(wan thîi yîi-sìp) / ร้อยบาท(rɔ́ɔi bàat) / บ่ายสองโมง(bàai sɔ̌ɔng mong)
 
-## L12 Buying a shirt
+## L12 Unit quiz
+  CHOICE สี่สิบห้าหกสิบเจ็ด | sìi-sìp-hâa hòk-sìp-jèt: Forty-five, seventy-six / *Forty-five, sixty-seven / Sixty-seven, ninety-nine / Fifty-four, seventy-six
+  BUILD "Nine thousand nine hundred" = เก้า(kâo) พัน(phan) เก้า(kâo) ร้อย(rɔ́ɔi)  [extra: hòk, hâa]
+  CHOICE หมื่นสองหมื่นสามหมื่นสี่หมื่น | mɯ̀ɯn sɔ̌ɔng-mɯ̀ɯn sǎam-mɯ̀ɯn sìi-mɯ̀ɯn: *Ten thousand, twenty thousand, thirty thousand, forty thousand / Twenty thousand, thirty thousand, forty thousand, fifty thousand / Ten thousand, twenty thousand, thirty thousand / Ten thousand, thirty thousand, forty thousand, fifty thousand
+  BUILD "Four million five hundred thousand" = สี่(sìi) ล้าน(láan) ห้า(hâa) แสน(sɛ̌ɛn)  [extra: sǔun, hòk]
+  CHOICE นี่แพง | nîi phaeng: This one is expensive. / *This is expensive. / I'll take three. / How many do you want?
+  CHAT M:เอา กี่ อัน(ao gìi an=How many do you want?) → reply as F "I'll take two.": อันนี้แพง(an níi phaeng) / *เอาสองอัน(ao sɔ̌ɔng an) / คนที่สอง(kon thîi sɔ̌ɔng)
+  CHAT M:ขวด นี้ เท่าไหร่(khùat níi thâo-rài=How much is this bottle?) → reply as F "50 baht.": เอากี่อัน(ao gìi an) / *ห้าสิบบาท(hâa sìp bàat) / สองขวด(sɔ̌ɔng khùat)
+  CHAT M:เสื้อ ตัว นี้ เท่าไหร่(sɯ̂a tua níi thâo-rài=How much is this shirt?) → reply as F "300 baht.": มีเงินพอ(mii ngəən phɔɔ) / *สามร้อยบาท(sǎam rɔ́ɔi bàat) / กางเกง(gaang-geeng)
+  BUILD "house number 26/3" = บ้าน(bâan) เลข(lêek) ที่(thîi) ยี่สิบ(yîi-sìp) หก(hòk) ทับ(tháp) สาม(sǎam)  [extra: sìp, láan]
+  CHAT M:เบอร์ โทรศัพท์ เท่าไหร่(bəə thoo-rá-sàp thâo-rài=What's your phone number?) → reply as F "Zero, eight, one, two, three.": สองร้อยบาท(sɔ̌ɔng rɔ́ɔi bàat) / บ้านเลขที่สิบเอ็ด(bâan lêek thîi sìp èt) / *ศูนย์แปดหนึ่งสองสาม(sǔun pɛ̀ɛt nɯ̀ng sɔ̌ɔng sǎam)
+  BUILD "6 a.m." = หก(hòk) โมง(mong) เช้า(cháo)  [extra: jèt, níi]
+  BUILD "5 a.m." = ตี(tii) ห้า(hâa)  [extra: an, cháo]
+  CHAT M:วัน นี้ วัน ที่ เท่าไหร่(wan níi wan thîi thâo-rài=What's the date today?) → reply as F "The 20th.": *วันที่ยี่สิบ(wan thîi yîi-sìp) / ร้อยบาท(rɔ́ɔi bàat) / บ่ายสองโมง(bàai sɔ̌ɔng mong)
+  MATCH ทุ่ม=evening hour (7pm-11pm count), เที่ยง=noon, หนึ่ง=one
+
+## L13 Buying a shirt
 scene: Haggling over the price of a shirt at a market stall
   D0 A: เสื้อตัวนี้เท่าไหร่ | sɯ̂a tua níi thâo-rài | How much is this shirt?
   D1 B: สามร้อยบาท | sǎam-rɔ́ɔi bàat | Three hundred baht.

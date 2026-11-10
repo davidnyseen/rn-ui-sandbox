@@ -197,7 +197,25 @@
   CHAT M:คนโน้น เป็น ใคร(kon-nóon pen krai=Who's that person over there?) → reply as F "He's a friend.": *เค้าเป็นเพื่อน(kháo pen phɯ̂an) / คนไหน(kon-nǎi) / วันอาทิตย์(wan-aa-thít)
   MATCH วันจันทร์=Monday, วันศุกร์=Friday, วันอาทิตย์=Sunday, วันไหน=what day?, คน=person (classifier for people), ใคร=who?, คนไหน=which person?, คนโน้น=that person over there
 
-## L10 Asking about a friend
+## L10 Unit quiz
+  CHAT M:เอา อันไหน(ao an-nǎi=Which one do you want?) → reply as F "I want this one.": อันไหน(an-nǎi) / *เอาอันนี้(ao an-níi) / เอากี่อัน(ao gìi an)
+  BUILD "I want just one." = เอา(ao) อัน(an) เดียว(diao)  [extra: an-nǎi, gìi]
+  CHOICE ใช่มั้ย | châi mái: *Isn't that right? / I want this one. / No, that's not right. / How many?
+  CHOICE ไม่อ้วน | mâi ûan: Very tall. / Very thin. / *Not fat. / Not short.
+  CHAT M:คุณ สูง มั้ย(khun sǔung mái=Are you tall?) → reply as F "No, not tall.": *ไม่สูง(mâi sǔung) / ผอมมาก(phɔ̌ɔm mâak) / คุณเตี้ยมั้ย(khun tîa mái)
+  CHAT M:สะอาด มั้ย(sà-àat mái=Is it clean?) → reply as F "No, it's not clean.": คุณรวยมาก(khun ruai mâak) / ไม่หล่อ(mâi lɔ̀ɔ) / *ไม่สะอาด(mâi sà-àat)
+  CHAT M:โรงแรม นี้ แพง มั้ย(rong-raem níi phaeng mái=Is this hotel expensive?) → reply as F "No, it's not expensive.": เค้าเป็นเพื่อน(kháo pen phɯ̂an) / เสื้อนี้สวย(sɯ̂a níi sǔai) / *ไม่แพง(mâi phaeng)
+  CHAT M:เอา อันนี้ มั้ย(ao an-níi mái=Do you want this one?) → reply as F "No, it's too small.": คุณเหมือนเค้า(khun mɯ̌an kháo) / เหมือนกัน(mɯ̌an gan) / *ไม่เอาเล็กไป(mâi ao, lék pai)
+  CHAT M:ไป ได้ มั้ย(pai dâi mái=Can you go?) → reply as F "No, I can't go.": *ไปไม่ได้(pai mâi dâi) / เสื้อสีดำ(sɯ̂a sǐi dam) / สีขาว(sǐi khǎao)
+  BUILD "What do you want to eat?" = อยาก(yàak) กิน(gin) อะไร(à-rai)  [extra: tham, phaeng]
+  CHOICE ชอบเดิน | chɔ̂ɔp dəən: Come and eat. / I want to watch. / I'm going to sleep. / *I like to walk.
+  CHAT M:อยาก ทำ อะไร(yàak tham à-rai=What do you want to do?) → reply as F "I want to sleep.": *อยากนอน(yàak nɔɔn) / ไปเมื่อไหร่(pai mɯ̂a-rài) / อยู่ที่ไหน(yùu thîi-nǎi)
+  CHAT M:ไป วันไหน(pai wan-nǎi=What day are you going?) → reply as F "I'm going on Friday.": วันไหน(wan-nǎi) / ไปเมื่อไหร่(pai mɯ̂a-rài) / *ไปวันศุกร์(pai wan-sùk)
+  CHAT M:คนโน้น เป็น ใคร(kon-nóon pen krai=Who's that person over there?) → reply as F "He's a friend.": *เค้าเป็นเพื่อน(kháo pen phɯ̂an) / คนไหน(kon-nǎi) / วันอาทิตย์(wan-aa-thít)
+  MATCH นี่=this, น่ารัก=cute / lovable, จน=poor, แล้วก็=and then / also, แดง=red
+  MATCH ต้อง=have to / must, ดู=see / look at / watch, วันจันทร์=Monday
+
+## L11 Asking about a friend
 scene: Two friends talking about someone they both know
   D0 A: คนโน้นเป็นใคร | kon-nóon pen krai | Who is that person over there?
   D1 B: เค้าเป็นเพื่อน | kháo pen phɯ̂an | He's a friend.

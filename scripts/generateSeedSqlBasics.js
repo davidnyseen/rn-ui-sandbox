@@ -4,7 +4,7 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { checkDictionary, stripAuthoringFields, addOrderDistractors, interleaveWordIntros } = require('./lib/courseBuilder');
+const { checkDictionary, stripAuthoringFields, addOrderDistractors, interleaveWordIntros, addUnitQuiz, checkQuizCoverage } = require('./lib/courseBuilder');
 const { basicsSubject: raw } = require('./courseContent/basics');
 
 checkDictionary(raw);
@@ -12,7 +12,7 @@ const interleaved = interleaveWordIntros(raw);
 checkDictionary(interleaved);
 const withDistractors = addOrderDistractors(interleaved);
 checkDictionary(withDistractors);
-const basicsSubject = stripAuthoringFields(withDistractors);
+const basicsSubject = checkQuizCoverage(addUnitQuiz(stripAuthoringFields(withDistractors)));
 
 function sqlText(s) {
   return `$q$${s}$q$`;

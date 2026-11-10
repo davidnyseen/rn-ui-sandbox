@@ -120,7 +120,21 @@
   CHOICE ขอบคุณค่ะฉันไปก่อนนะคะแล้วเจอกันใหม่ค่ะ | khɔ̀ɔp-khun khâ, chán pai gɔ̀ɔn ná khá, láew jəə gan mài khâ: That's alright. / *Thank you, I'm going now, see you again! / How old are you? / I'm going home.
   MATCH ก่อน=first / before, นะ=softening particle, คะ=polite particle (women: after ná, and in questions), โชคดี=good luck, เจอ=meet, กัน=each other / together, ใหม่=new / again
 
-## L6 Catching up
+## L6 Unit quiz
+  BUILD "Hello, what's your name? Thank you. (said by a man)" = สวัสดี(sà-wàt-dii) ครับ(khráp) คุณ(khun) ชื่อ(chɯ̂ɯ) อะไร(à-rai) ขอบคุณ(khɔ̀ɔp-khun) ครับ(khráp)  [extra: hǎa, dii]
+  CHOICE ผมชื่อเล็กชื่อเล่นนิดครับ | phǒm chɯ̂ɯ lék chɯ̂ɯ-lên nít khráp: What's your name? / *My name is Lek, my nickname is Nit. / My name is Lek. / My nickname is Daeng.
+  CHOICE แดง | dɛɛng: *Daeng ("red", a nickname) / name / Nit ("little bit", a nickname) / nickname
+  BUILD "Hello, are you well or not?" = สวัสดี(sà-wàt-dii) ครับ(khráp) สบาย(sà-baai) ดี(dii) หรือเปล่า(rɯ̌ɯ-plàao) ครับ(khráp)  [extra: khɔ̀ɔp-khun, gàp]
+  CHOICE อังกฤษ | ang-krìt: come / thank you / from / *England
+  CHOICE สวัสดีค่ะฉันเป็นคนเยอรมันค่ะ | sà-wàt-dii khâ, chán pen kon yəə-rá-man khâ: He's Thai. / Where are you from? / I'm from America. / *Hello, I'm German. (said by a woman)
+  BUILD "He's/she's Thai and (is) well." = เค้า(kháo) เป็น(pen) คน(kon) ไทย(thai) แล้วก็(láew-gɔ̂ɔ) สบาย(sà-baai) ดี(dii)  [extra: jàak, gàp]
+  CHAT M:สวัสดี ครับ(sà-wàt-dii khráp=Hello. (said by a man)) → M:ผม ชื่อ เล็ก คุณ อายุ เท่าไหร่ ครับ(phǒm chɯ̂ɯ lék, khun aa-yú thâo-rài khráp=My name is Lek. How old are you?) → reply as F "My name is Noi, I'm 25.": สวัสดีค่ะฉันชื่อน้อยขอบคุณค่ะ(sà-wàt-dii khâ, chán chɯ̂ɯ nɔ́ɔi, khɔ̀ɔp-khun khâ) / *ฉันชื่อน้อยฉันอายุยี่สิบห้าค่ะ(chán chɯ̂ɯ nɔ́ɔi, chán aa-yú yîi-sìp-hâa khâ) / สวัสดีค่ะฉันมาจากอเมริกาค่ะ(sà-wàt-dii khâ, chán maa jàak à-me-rí-gaa khâ)
+  CHOICE สวัสดีครับผมชื่อเล็กคุณกินข้าวรึยังครับ | sà-wàt-dii khráp, phǒm chɯ̂ɯ lék, khun gin-khâao rɯ́-yang khráp: Are you well? / *Hello, my name is Lek. Have you eaten yet? / I'm German. / How old are you?
+  CHOICE สวัสดีครับคุณอยู่เมืองไทยนานรึยังครับ | sà-wàt-dii khráp, khun yùu mɯang-thai naan rɯ́-yang khráp: *Hello, have you been in Thailand long? / I'm from America. / How old are you? / Have you eaten yet?
+  BUILD "Thanks a lot, I'm going now, good luck! (said by a man)" = ขอบคุณ(khɔ̀ɔp-khun) มาก(mâak) ครับ(khráp) ผม(phǒm) ไป(pai) ก่อน(gɔ̀ɔn) นะ(ná) ครับ(khráp) โชคดี(chôok-dii) นะ(ná) ครับ(khráp)  [extra: gàp, rə̌ə]
+  CHAT M:สบาย ดี เหรอ(sà-baai dii rə̌ə=Are you well?) → F:ฉัน สบาย ดี ค่ะ ขอบคุณ ค่ะ(chán sà-baai dii khâ, khɔ̀ɔp-khun khâ=I'm well, thank you. (said by a woman)) → M:ขอบคุณ มาก ครับ ผม ไป ก่อน นะ ครับ(khɔ̀ɔp-khun mâak khráp, phǒm pai gɔ̀ɔn ná khráp=Thanks a lot, I'm going now. (goodbye)) → reply as F "See you again.": ไปไหน(pai nǎi) / *แล้วเจอกันใหม่นะคะ(láew jəə gan mài ná khá) / ดีมั้ย(dii mái) / ขอบคุณค่ะ(khɔ̀ɔp-khun khâ)
+
+## L7 Catching up
 scene: Two friends run into each other on the street
   D0 A: สวัสดีค่ะ คุณสบายดีเหรอ | sà-wàt-dii khâ, khun sà-baai dii rə̌ə | Hello, are you well?
   D1 B: สบายดีครับ คุณมาจากไหนครับ | sà-baai dii khráp, khun maa jàak nǎi khráp | I'm fine. Where are you from?

@@ -143,3 +143,11 @@
   SPEAK เข้าใจแล้วก็ชอบมาก | khâo-jai láew-gɔ̂ɔ chɔ̂ɔp mâak | I understand, and I like it a lot.
   CHAT F:ขอโทษ ค่ะ(khɔ̌ɔ-thôot khâ=Excuse me. (said by a woman)) → reply as M "That's alright. (said by a man)": ขอบคุณครับ(khɔ̀ɔp-khun khráp) / เข้าใจครับ(khâo-jai khráp) / สวัสดีครับ(sà-wàt-dii khráp) / *ไม่เป็นไรครับ(mâi-pen-rai khráp)
   CHAT F:ขอโทษ ค่ะ(khɔ̌ɔ-thôot khâ=Excuse me. (said by a woman)) → M:ไม่เป็นไร ครับ(mâi-pen-rai khráp=That's alright. (said by a man)) → reply as F "Thank you. (said by a woman)": *ขอบคุณค่ะ(khɔ̀ɔp-khun khâ) / ขอโทษค่ะ(khɔ̌ɔ-thôot khâ) / เข้าใจมั้ย(khâo-jai mái) / ไม่เป็นไรครับ(mâi-pen-rai khráp)
+
+## L8 Unit quiz
+  BUILD "I'm going to see a friend." = ไป(pai) หา(hǎa) เพื่อน(phɯ̂an)  [extra: nǎi, khâ]
+  CHOICE กับ | gàp: eat / return / go back / *and / with / rice
+  CHAT M:ไป ไหน(pai nǎi=Where did you go?) → F:ไป เที่ยว แล้วก็ กลับ บ้าน(pai thîao láew-gɔ̂ɔ glàp bâan=I went out, and then came home.) → M:ดี มั้ย(dii mái=Was it good?) → reply as F "It was very good.": *ดีมาก(dii mâak) / สวัสดีครับ(sà-wàt-dii khráp) / ไม่ดี(mâi dii) / ไปกินข้าว(pai gin khâao)
+  CHAT M:ไป ไหน(pai nǎi=Where did you go?) → F:ไป เที่ยว แล้วก็ กิน ข้าว(pai thîao láew-gɔ̂ɔ gin khâao=I went out, and then ate.) → M:สนุก มั้ย(sà-nùk mái=Was it fun?) → reply as F "It was a lot of fun.": ไม่สนุก(mâi sà-nùk) / สวยมั้ย(sǔai mái) / *สนุกมาก(sà-nùk mâak) / กลับบ้าน(glàp bâan)
+  CHAT M:ไป ไหน(pai nǎi=Where did you go?) → F:ไป กิน ข้าว(pai gin khâao=I went to eat.) → M:ชอบ มั้ย(chɔ̂ɔp mái=Did you like it?) → reply as F "I liked it a lot, thank you.": *ชอบมากขอบคุณค่ะ(chɔ̂ɔp mâak, khɔ̀ɔp-khun khâ) / ไม่เอาขอบคุณค่ะ(mâi ao khɔ̀ɔp-khun khâ) / ไม่ดี(mâi dii) / ขอโทษ(khɔ̌ɔ-thôot)
+  CHAT F:ขอโทษ ค่ะ(khɔ̌ɔ-thôot khâ=Excuse me. (said by a woman)) → reply as M "That's alright. (said by a man)": ขอบคุณครับ(khɔ̀ɔp-khun khráp) / เข้าใจครับ(khâo-jai khráp) / สวัสดีครับ(sà-wàt-dii khráp) / *ไม่เป็นไรครับ(mâi-pen-rai khráp)

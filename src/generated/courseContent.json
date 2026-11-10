@@ -3912,9 +3912,627 @@
       ]
     },
     {
-      "id": "b-dlg",
+      "id": "basics-quiz",
       "subject_id": "basics",
       "sort_order": 10,
+      "title": "Unit quiz",
+      "steps": [
+        {
+          "id": "rp-18",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "เอาอันไหน",
+              "parts": [
+                "เอา",
+                "อันไหน"
+              ],
+              "roman": "ao an-nǎi",
+              "english": "Which one do you want?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "เอาอันนี้",
+          "roman": "ao an-níi",
+          "english": "I want this one.",
+          "options": [
+            {
+              "thai": "อันไหน",
+              "roman": "an-nǎi",
+              "correct": false
+            },
+            {
+              "thai": "เอาอันนี้",
+              "roman": "ao an-níi",
+              "correct": true
+            },
+            {
+              "thai": "เอากี่อัน",
+              "roman": "ao gìi an",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.27",
+          "parts": [
+            "เอา",
+            "อันนี้"
+          ]
+        },
+        {
+          "id": "so-14",
+          "type": "sentenceOrder",
+          "prompt": "I want just one.",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "ao",
+              "thai": "เอา"
+            },
+            "b": {
+              "roman": "an",
+              "thai": "อัน"
+            },
+            "c": {
+              "roman": "diao",
+              "thai": "เดียว"
+            },
+            "x0": {
+              "thai": "กี่",
+              "roman": "gìi"
+            },
+            "x1": {
+              "thai": "อันไหน",
+              "roman": "an-nǎi"
+            }
+          },
+          "poolOrder": [
+            "b",
+            "x1",
+            "c",
+            "x0",
+            "a"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c"
+          ],
+          "source": "Essential Thai (Higbie), p.28"
+        },
+        {
+          "id": "mc-30",
+          "type": "translationChoice",
+          "thai": "ใช่มั้ย",
+          "roman": "châi mái",
+          "options": [
+            {
+              "text": "Isn't that right?",
+              "correct": true
+            },
+            {
+              "text": "I want this one.",
+              "correct": false
+            },
+            {
+              "text": "No, that's not right.",
+              "correct": false
+            },
+            {
+              "text": "How many?",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.57",
+          "parts": [
+            "ใช่",
+            "มั้ย"
+          ]
+        },
+        {
+          "id": "mc-50",
+          "type": "translationChoice",
+          "thai": "ไม่อ้วน",
+          "roman": "mâi ûan",
+          "options": [
+            {
+              "text": "Very tall.",
+              "correct": false
+            },
+            {
+              "text": "Very thin.",
+              "correct": false
+            },
+            {
+              "text": "Not fat.",
+              "correct": true
+            },
+            {
+              "text": "Not short.",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.46",
+          "parts": [
+            "ไม่",
+            "อ้วน"
+          ]
+        },
+        {
+          "id": "rp-52",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "คุณสูงมั้ย",
+              "parts": [
+                "คุณ",
+                "สูง",
+                "มั้ย"
+              ],
+              "roman": "khun sǔung mái",
+              "english": "Are you tall?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ไม่สูง",
+          "roman": "mâi sǔung",
+          "english": "No, not tall.",
+          "options": [
+            {
+              "thai": "ไม่สูง",
+              "roman": "mâi sǔung",
+              "correct": true
+            },
+            {
+              "thai": "ผอมมาก",
+              "roman": "phɔ̌ɔm mâak",
+              "correct": false
+            },
+            {
+              "thai": "คุณเตี้ยมั้ย",
+              "roman": "khun tîa mái",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.46",
+          "parts": [
+            "ไม่",
+            "สูง"
+          ]
+        },
+        {
+          "id": "rp-68",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "สะอาดมั้ย",
+              "parts": [
+                "สะอาด",
+                "มั้ย"
+              ],
+              "roman": "sà-àat mái",
+              "english": "Is it clean?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ไม่สะอาด",
+          "roman": "mâi sà-àat",
+          "english": "No, it's not clean.",
+          "options": [
+            {
+              "thai": "คุณรวยมาก",
+              "roman": "khun ruai mâak",
+              "correct": false
+            },
+            {
+              "thai": "ไม่หล่อ",
+              "roman": "mâi lɔ̀ɔ",
+              "correct": false
+            },
+            {
+              "thai": "ไม่สะอาด",
+              "roman": "mâi sà-àat",
+              "correct": true
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.46",
+          "parts": [
+            "ไม่",
+            "สะอาด"
+          ]
+        },
+        {
+          "id": "rp-88",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "โรงแรมนี้แพงมั้ย",
+              "parts": [
+                "โรงแรม",
+                "นี้",
+                "แพง",
+                "มั้ย"
+              ],
+              "roman": "rong-raem níi phaeng mái",
+              "english": "Is this hotel expensive?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ไม่แพง",
+          "roman": "mâi phaeng",
+          "english": "No, it's not expensive.",
+          "options": [
+            {
+              "thai": "เค้าเป็นเพื่อน",
+              "roman": "kháo pen phɯ̂an",
+              "correct": false
+            },
+            {
+              "thai": "เสื้อนี้สวย",
+              "roman": "sɯ̂a níi sǔai",
+              "correct": false
+            },
+            {
+              "thai": "ไม่แพง",
+              "roman": "mâi phaeng",
+              "correct": true
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.49",
+          "parts": [
+            "ไม่",
+            "แพง"
+          ]
+        },
+        {
+          "id": "rp-104",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "เอาอันนี้มั้ย",
+              "parts": [
+                "เอา",
+                "อันนี้",
+                "มั้ย"
+              ],
+              "roman": "ao an-níi mái",
+              "english": "Do you want this one?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ไม่เอาเล็กไป",
+          "roman": "mâi ao, lék pai",
+          "english": "No, it's too small.",
+          "options": [
+            {
+              "thai": "คุณเหมือนเค้า",
+              "roman": "khun mɯ̌an kháo",
+              "correct": false
+            },
+            {
+              "thai": "เหมือนกัน",
+              "roman": "mɯ̌an gan",
+              "correct": false
+            },
+            {
+              "thai": "ไม่เอาเล็กไป",
+              "roman": "mâi ao, lék pai",
+              "correct": true
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.48",
+          "parts": [
+            "ไม่",
+            "เอา",
+            "เล็ก",
+            "ไป"
+          ]
+        },
+        {
+          "id": "rp-122",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "ไปได้มั้ย",
+              "parts": [
+                "ไป",
+                "ได้",
+                "มั้ย"
+              ],
+              "roman": "pai dâi mái",
+              "english": "Can you go?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ไปไม่ได้",
+          "roman": "pai mâi dâi",
+          "english": "No, I can't go.",
+          "options": [
+            {
+              "thai": "ไปไม่ได้",
+              "roman": "pai mâi dâi",
+              "correct": true
+            },
+            {
+              "thai": "เสื้อสีดำ",
+              "roman": "sɯ̂a sǐi dam",
+              "correct": false
+            },
+            {
+              "thai": "สีขาว",
+              "roman": "sǐi khǎao",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.59",
+          "parts": [
+            "ไป",
+            "ไม่",
+            "ได้"
+          ]
+        },
+        {
+          "id": "so-136",
+          "type": "sentenceOrder",
+          "prompt": "What do you want to eat?",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "yàak",
+              "thai": "อยาก"
+            },
+            "b": {
+              "roman": "gin",
+              "thai": "กิน"
+            },
+            "c": {
+              "roman": "à-rai",
+              "thai": "อะไร"
+            },
+            "x0": {
+              "thai": "ทำ",
+              "roman": "tham"
+            },
+            "x1": {
+              "thai": "แพง",
+              "roman": "phaeng"
+            }
+          },
+          "poolOrder": [
+            "a",
+            "x0",
+            "b",
+            "c",
+            "x1"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c"
+          ],
+          "source": "Essential Thai (Higbie), p.54"
+        },
+        {
+          "id": "mc-146",
+          "type": "translationChoice",
+          "thai": "ชอบเดิน",
+          "roman": "chɔ̂ɔp dəən",
+          "options": [
+            {
+              "text": "Come and eat.",
+              "correct": false
+            },
+            {
+              "text": "I want to watch.",
+              "correct": false
+            },
+            {
+              "text": "I'm going to sleep.",
+              "correct": false
+            },
+            {
+              "text": "I like to walk.",
+              "correct": true
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.54",
+          "parts": [
+            "ชอบ",
+            "เดิน"
+          ]
+        },
+        {
+          "id": "rp-156",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "อยากทำอะไร",
+              "parts": [
+                "อยาก",
+                "ทำ",
+                "อะไร"
+              ],
+              "roman": "yàak tham à-rai",
+              "english": "What do you want to do?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "อยากนอน",
+          "roman": "yàak nɔɔn",
+          "english": "I want to sleep.",
+          "options": [
+            {
+              "thai": "อยากนอน",
+              "roman": "yàak nɔɔn",
+              "correct": true
+            },
+            {
+              "thai": "ไปเมื่อไหร่",
+              "roman": "pai mɯ̂a-rài",
+              "correct": false
+            },
+            {
+              "thai": "อยู่ที่ไหน",
+              "roman": "yùu thîi-nǎi",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.54",
+          "parts": [
+            "อยาก",
+            "นอน"
+          ]
+        },
+        {
+          "id": "rp-167",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "ไปวันไหน",
+              "parts": [
+                "ไป",
+                "วันไหน"
+              ],
+              "roman": "pai wan-nǎi",
+              "english": "What day are you going?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ไปวันศุกร์",
+          "roman": "pai wan-sùk",
+          "english": "I'm going on Friday.",
+          "options": [
+            {
+              "thai": "วันไหน",
+              "roman": "wan-nǎi",
+              "correct": false
+            },
+            {
+              "thai": "ไปเมื่อไหร่",
+              "roman": "pai mɯ̂a-rài",
+              "correct": false
+            },
+            {
+              "thai": "ไปวันศุกร์",
+              "roman": "pai wan-sùk",
+              "correct": true
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.98",
+          "parts": [
+            "ไป",
+            "วันศุกร์"
+          ]
+        },
+        {
+          "id": "rp-176",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "คนโน้นเป็นใคร",
+              "parts": [
+                "คนโน้น",
+                "เป็น",
+                "ใคร"
+              ],
+              "roman": "kon-nóon pen krai",
+              "english": "Who's that person over there?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "เค้าเป็นเพื่อน",
+          "roman": "kháo pen phɯ̂an",
+          "english": "He's a friend.",
+          "options": [
+            {
+              "thai": "เค้าเป็นเพื่อน",
+              "roman": "kháo pen phɯ̂an",
+              "correct": true
+            },
+            {
+              "thai": "คนไหน",
+              "roman": "kon-nǎi",
+              "correct": false
+            },
+            {
+              "thai": "วันอาทิตย์",
+              "roman": "wan-aa-thít",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.53",
+          "parts": [
+            "เค้า",
+            "เป็น",
+            "เพื่อน"
+          ]
+        },
+        {
+          "id": "basics-quiz-match-0",
+          "type": "match",
+          "pairs": [
+            {
+              "thai": "นี่",
+              "roman": "nîi",
+              "english": "this"
+            },
+            {
+              "thai": "น่ารัก",
+              "roman": "nâa-rák",
+              "english": "cute / lovable"
+            },
+            {
+              "thai": "จน",
+              "roman": "jon",
+              "english": "poor"
+            },
+            {
+              "thai": "แล้วก็",
+              "roman": "láew-gɔ̂ɔ",
+              "english": "and then / also"
+            },
+            {
+              "thai": "แดง",
+              "roman": "dɛɛng",
+              "english": "red"
+            }
+          ]
+        },
+        {
+          "id": "basics-quiz-match-1",
+          "type": "match",
+          "pairs": [
+            {
+              "thai": "ต้อง",
+              "roman": "tɔ̂ng",
+              "english": "have to / must"
+            },
+            {
+              "thai": "ดู",
+              "roman": "duu",
+              "english": "see / look at / watch"
+            },
+            {
+              "thai": "วันจันทร์",
+              "roman": "wan-jan",
+              "english": "Monday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b-dlg",
+      "subject_id": "basics",
+      "sort_order": 11,
       "title": "Asking about a friend",
       "steps": {
         "kind": "dialogue",
@@ -7086,9 +7704,519 @@
       ]
     },
     {
-      "id": "family-dlg",
+      "id": "family-quiz",
       "subject_id": "family",
       "sort_order": 10,
+      "title": "Unit quiz",
+      "steps": [
+        {
+          "id": "mc-4",
+          "type": "translationChoice",
+          "thai": "แม่",
+          "roman": "mɛ̂ɛ",
+          "options": [
+            {
+              "text": "Siblings.",
+              "correct": false
+            },
+            {
+              "text": "Mother.",
+              "correct": true
+            },
+            {
+              "text": "Father.",
+              "correct": false
+            },
+            {
+              "text": "Older brother.",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.82",
+          "parts": [
+            "แม่"
+          ]
+        },
+        {
+          "id": "so-12",
+          "type": "sentenceOrder",
+          "prompt": "older brother, younger brother",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "phîi-chaai",
+              "thai": "พี่ชาย"
+            },
+            "b": {
+              "roman": "nɔ́ɔng-chaai",
+              "thai": "น้องชาย"
+            },
+            "x0": {
+              "thai": "พ่อ",
+              "roman": "phɔ̂ɔ"
+            },
+            "x1": {
+              "thai": "แม่",
+              "roman": "mɛ̂ɛ"
+            }
+          },
+          "poolOrder": [
+            "a",
+            "b",
+            "x1",
+            "x0"
+          ],
+          "correctOrder": [
+            "a",
+            "b"
+          ],
+          "source": "Essential Thai (Higbie), p.82"
+        },
+        {
+          "id": "so-21",
+          "type": "sentenceOrder",
+          "prompt": "older sister, younger sister",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "phîi-sǎao",
+              "thai": "พี่สาว"
+            },
+            "b": {
+              "roman": "nɔ́ɔng-sǎao",
+              "thai": "น้องสาว"
+            },
+            "x0": {
+              "thai": "น้องชาย",
+              "roman": "nɔ́ɔng-chaai"
+            },
+            "x1": {
+              "thai": "พ่อ",
+              "roman": "phɔ̂ɔ"
+            }
+          },
+          "poolOrder": [
+            "x0",
+            "b",
+            "a",
+            "x1"
+          ],
+          "correctOrder": [
+            "a",
+            "b"
+          ],
+          "source": "Essential Thai (Higbie), p.82"
+        },
+        {
+          "id": "so-31",
+          "type": "sentenceOrder",
+          "prompt": "family and siblings",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "khrɔ̂ɔp-khrua",
+              "thai": "ครอบครัว"
+            },
+            "b": {
+              "roman": "gàp",
+              "thai": "กับ"
+            },
+            "c": {
+              "roman": "phîi-nɔ́ɔng",
+              "thai": "พี่น้อง"
+            },
+            "x0": {
+              "thai": "น้องสาว",
+              "roman": "nɔ́ɔng-sǎao"
+            },
+            "x1": {
+              "thai": "พี่สาว",
+              "roman": "phîi-sǎao"
+            }
+          },
+          "poolOrder": [
+            "b",
+            "x1",
+            "c",
+            "x0",
+            "a"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c"
+          ],
+          "source": "Essential Thai (Higbie), p.82"
+        },
+        {
+          "id": "mc-161",
+          "type": "translationChoice",
+          "thai": "มีพี่ชายคนหนึ่ง",
+          "roman": "mii phîi-chaai kon nɯ̀ng",
+          "options": [
+            {
+              "text": "How many people?",
+              "correct": false
+            },
+            {
+              "text": "I have two siblings.",
+              "correct": false
+            },
+            {
+              "text": "I have one older brother.",
+              "correct": true
+            },
+            {
+              "text": "How many siblings do you have?",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.28",
+          "parts": [
+            "มี",
+            "พี่ชาย",
+            "คน",
+            "หนึ่ง"
+          ]
+        },
+        {
+          "id": "rp-165",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "คุณมีพี่น้องกี่คน",
+              "parts": [
+                "คุณ",
+                "มี",
+                "พี่น้อง",
+                "กี่",
+                "คน"
+              ],
+              "roman": "khun mii phîi-nɔ́ɔng gìi kon",
+              "english": "How many siblings do you have?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "มีพี่น้องสองคน",
+          "roman": "mii phîi-nɔ́ɔng sɔ̌ɔng kon",
+          "english": "I have two siblings.",
+          "options": [
+            {
+              "thai": "เค้าเป็นพ่อ",
+              "roman": "kháo pen phɔ̂ɔ",
+              "correct": false
+            },
+            {
+              "thai": "มีพี่น้องสองคน",
+              "roman": "mii phîi-nɔ́ɔng sɔ̌ɔng kon",
+              "correct": true
+            },
+            {
+              "thai": "กี่คน",
+              "roman": "gìi kon",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.28",
+          "parts": [
+            "มี",
+            "พี่น้อง",
+            "สอง",
+            "คน"
+          ]
+        },
+        {
+          "id": "rp-173",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "คุณมีลูกกี่คน",
+              "parts": [
+                "คุณ",
+                "มี",
+                "ลูก",
+                "กี่",
+                "คน"
+              ],
+              "roman": "khun mii lûuk gìi kon",
+              "english": "How many children do you have?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "มีลูกสามคน",
+          "roman": "mii lûuk sǎam kon",
+          "english": "I have three children.",
+          "options": [
+            {
+              "thai": "มีลูกสามคน",
+              "roman": "mii lûuk sǎam kon",
+              "correct": true
+            },
+            {
+              "thai": "มีพี่น้องสี่คน",
+              "roman": "mii phîi-nɔ́ɔng sìi kon",
+              "correct": false
+            },
+            {
+              "thai": "กี่คน",
+              "roman": "gìi kon",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.17",
+          "parts": [
+            "มี",
+            "ลูก",
+            "สาม",
+            "คน"
+          ]
+        },
+        {
+          "id": "rp-181",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "คุณมีลูกกี่คน",
+              "parts": [
+                "คุณ",
+                "มี",
+                "ลูก",
+                "กี่",
+                "คน"
+              ],
+              "roman": "khun mii lûuk gìi kon",
+              "english": "How many children do you have?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "มีลูกสาวสองคน",
+          "roman": "mii lûuk-sǎao sɔ̌ɔng kon",
+          "english": "I have two daughters.",
+          "options": [
+            {
+              "thai": "เค้าอยู่ที่ไหน",
+              "roman": "kháo yùu thîi-nǎi",
+              "correct": false
+            },
+            {
+              "thai": "มีลูกสาวสองคน",
+              "roman": "mii lûuk-sǎao sɔ̌ɔng kon",
+              "correct": true
+            },
+            {
+              "thai": "ลูกชาย",
+              "roman": "lûuk-chaai",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.84",
+          "parts": [
+            "มี",
+            "ลูกสาว",
+            "สอง",
+            "คน"
+          ]
+        },
+        {
+          "id": "rp-189",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "ตาอยู่ที่ไหน",
+              "parts": [
+                "ตา",
+                "อยู่",
+                "ที่ไหน"
+              ],
+              "roman": "taa yùu thîi-nǎi",
+              "english": "Where is grandpa?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ตาอยู่บ้าน",
+          "roman": "taa yùu bâan",
+          "english": "Grandpa is at home.",
+          "options": [
+            {
+              "thai": "มีลูกสามคน",
+              "roman": "mii lûuk sǎam kon",
+              "correct": false
+            },
+            {
+              "thai": "ตาอยู่บ้าน",
+              "roman": "taa yùu bâan",
+              "correct": true
+            },
+            {
+              "thai": "ยาย",
+              "roman": "yaai",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.83",
+          "parts": [
+            "ตา",
+            "อยู่",
+            "บ้าน"
+          ]
+        },
+        {
+          "id": "mc-193",
+          "type": "translationChoice",
+          "thai": "ลุงกับป้าอยู่ที่นี่",
+          "roman": "lung gàp pâa yùu thîi-nîi",
+          "options": [
+            {
+              "text": "Where is your uncle?",
+              "correct": false
+            },
+            {
+              "text": "My uncle and aunt are here.",
+              "correct": true
+            },
+            {
+              "text": "My aunt is at home.",
+              "correct": false
+            },
+            {
+              "text": "He's/she's my partner.",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.83",
+          "parts": [
+            "ลุง",
+            "กับ",
+            "ป้า",
+            "อยู่",
+            "ที่นี่"
+          ]
+        },
+        {
+          "id": "so-195",
+          "type": "sentenceOrder",
+          "prompt": "My aunt/uncle is at home.",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "náa",
+              "thai": "น้า"
+            },
+            "b": {
+              "roman": "yùu",
+              "thai": "อยู่"
+            },
+            "c": {
+              "roman": "bâan",
+              "thai": "บ้าน"
+            },
+            "x0": {
+              "thai": "หนึ่ง",
+              "roman": "nɯ̀ng"
+            },
+            "x1": {
+              "thai": "สี่",
+              "roman": "sìi"
+            }
+          },
+          "poolOrder": [
+            "x0",
+            "a",
+            "c",
+            "b",
+            "x1"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c"
+          ],
+          "source": "Essential Thai (Higbie), p.83"
+        },
+        {
+          "id": "mc-207",
+          "type": "translationChoice",
+          "thai": "ยังไม่ได้แต่งงาน",
+          "roman": "yang mâi dâi tɛ̀ng-ngaan",
+          "options": [
+            {
+              "text": "I don't have a partner.",
+              "correct": false
+            },
+            {
+              "text": "I don't have children yet.",
+              "correct": false
+            },
+            {
+              "text": "I'm not married yet.",
+              "correct": true
+            },
+            {
+              "text": "I'm still single.",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.56",
+          "parts": [
+            "ยัง",
+            "ไม่",
+            "ได้",
+            "แต่งงาน"
+          ]
+        },
+        {
+          "id": "rp-213",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "มีแฟนรึยัง",
+              "parts": [
+                "มี",
+                "แฟน",
+                "รึยัง"
+              ],
+              "roman": "mii fɛɛn rɯ́-yang",
+              "english": "Do you have a partner yet?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ยังโสด",
+          "roman": "yang sòot",
+          "english": "Not yet, I'm still single.",
+          "options": [
+            {
+              "thai": "มีลูกสามคน",
+              "roman": "mii lûuk sǎam kon",
+              "correct": false
+            },
+            {
+              "thai": "ยังโสด",
+              "roman": "yang sòot",
+              "correct": true
+            },
+            {
+              "thai": "แต่งงานแล้ว",
+              "roman": "tɛ̀ng-ngaan láew",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.56",
+          "parts": [
+            "ยัง",
+            "โสด"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "family-dlg",
+      "subject_id": "family",
+      "sort_order": 11,
       "title": "Catching up on family",
       "steps": {
         "kind": "dialogue",
@@ -10701,6 +11829,340 @@
       ]
     },
     {
+      "id": "greetings-hello-quiz",
+      "subject_id": "greetings-hello",
+      "sort_order": 8,
+      "title": "Unit quiz",
+      "steps": [
+        {
+          "id": "so-26",
+          "type": "sentenceOrder",
+          "prompt": "I'm going to see a friend.",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "pai",
+              "thai": "ไป"
+            },
+            "b": {
+              "roman": "hǎa",
+              "thai": "หา"
+            },
+            "c": {
+              "roman": "phɯ̂an",
+              "thai": "เพื่อน"
+            },
+            "x0": {
+              "thai": "ค่ะ",
+              "roman": "khâ"
+            },
+            "x1": {
+              "thai": "ไหน",
+              "roman": "nǎi"
+            }
+          },
+          "poolOrder": [
+            "x1",
+            "x0",
+            "b",
+            "c",
+            "a"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c"
+          ],
+          "source": "Essential Thai (Higbie), p.22"
+        },
+        {
+          "id": "mc-69",
+          "type": "translationChoice",
+          "thai": "กับ",
+          "roman": "gàp",
+          "options": [
+            {
+              "text": "eat",
+              "correct": false
+            },
+            {
+              "text": "return / go back",
+              "correct": false
+            },
+            {
+              "text": "and / with",
+              "correct": true
+            },
+            {
+              "text": "rice",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), general reference (connecting words)",
+          "parts": [
+            "กับ"
+          ]
+        },
+        {
+          "id": "rp-77",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "ไปไหน",
+              "parts": [
+                "ไป",
+                "ไหน"
+              ],
+              "roman": "pai nǎi",
+              "english": "Where did you go?"
+            },
+            {
+              "speaker": "F",
+              "thai": "ไปเที่ยวแล้วก็กลับบ้าน",
+              "parts": [
+                "ไป",
+                "เที่ยว",
+                "แล้วก็",
+                "กลับ",
+                "บ้าน"
+              ],
+              "roman": "pai thîao láew-gɔ̂ɔ glàp bâan",
+              "english": "I went out, and then came home."
+            },
+            {
+              "speaker": "M",
+              "thai": "ดีมั้ย",
+              "parts": [
+                "ดี",
+                "มั้ย"
+              ],
+              "roman": "dii mái",
+              "english": "Was it good?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ดีมาก",
+          "roman": "dii mâak",
+          "english": "It was very good.",
+          "options": [
+            {
+              "thai": "ดีมาก",
+              "roman": "dii mâak",
+              "correct": true
+            },
+            {
+              "thai": "สวัสดีครับ",
+              "roman": "sà-wàt-dii khráp",
+              "correct": false
+            },
+            {
+              "thai": "ไม่ดี",
+              "roman": "mâi dii",
+              "correct": false
+            },
+            {
+              "thai": "ไปกินข้าว",
+              "roman": "pai gin khâao",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.24",
+          "parts": [
+            "ดี",
+            "มาก"
+          ]
+        },
+        {
+          "id": "rp-94",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "ไปไหน",
+              "parts": [
+                "ไป",
+                "ไหน"
+              ],
+              "roman": "pai nǎi",
+              "english": "Where did you go?"
+            },
+            {
+              "speaker": "F",
+              "thai": "ไปเที่ยวแล้วก็กินข้าว",
+              "parts": [
+                "ไป",
+                "เที่ยว",
+                "แล้วก็",
+                "กิน",
+                "ข้าว"
+              ],
+              "roman": "pai thîao láew-gɔ̂ɔ gin khâao",
+              "english": "I went out, and then ate."
+            },
+            {
+              "speaker": "M",
+              "thai": "สนุกมั้ย",
+              "parts": [
+                "สนุก",
+                "มั้ย"
+              ],
+              "roman": "sà-nùk mái",
+              "english": "Was it fun?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "สนุกมาก",
+          "roman": "sà-nùk mâak",
+          "english": "It was a lot of fun.",
+          "options": [
+            {
+              "thai": "ไม่สนุก",
+              "roman": "mâi sà-nùk",
+              "correct": false
+            },
+            {
+              "thai": "สวยมั้ย",
+              "roman": "sǔai mái",
+              "correct": false
+            },
+            {
+              "thai": "สนุกมาก",
+              "roman": "sà-nùk mâak",
+              "correct": true
+            },
+            {
+              "thai": "กลับบ้าน",
+              "roman": "glàp bâan",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.23",
+          "parts": [
+            "สนุก",
+            "มาก"
+          ]
+        },
+        {
+          "id": "rp-114",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "ไปไหน",
+              "parts": [
+                "ไป",
+                "ไหน"
+              ],
+              "roman": "pai nǎi",
+              "english": "Where did you go?"
+            },
+            {
+              "speaker": "F",
+              "thai": "ไปกินข้าว",
+              "parts": [
+                "ไป",
+                "กิน",
+                "ข้าว"
+              ],
+              "roman": "pai gin khâao",
+              "english": "I went to eat."
+            },
+            {
+              "speaker": "M",
+              "thai": "ชอบมั้ย",
+              "parts": [
+                "ชอบ",
+                "มั้ย"
+              ],
+              "roman": "chɔ̂ɔp mái",
+              "english": "Did you like it?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ชอบมากขอบคุณค่ะ",
+          "roman": "chɔ̂ɔp mâak, khɔ̀ɔp-khun khâ",
+          "english": "I liked it a lot, thank you.",
+          "options": [
+            {
+              "thai": "ชอบมากขอบคุณค่ะ",
+              "roman": "chɔ̂ɔp mâak, khɔ̀ɔp-khun khâ",
+              "correct": true
+            },
+            {
+              "thai": "ไม่เอาขอบคุณค่ะ",
+              "roman": "mâi ao khɔ̀ɔp-khun khâ",
+              "correct": false
+            },
+            {
+              "thai": "ไม่ดี",
+              "roman": "mâi dii",
+              "correct": false
+            },
+            {
+              "thai": "ขอโทษ",
+              "roman": "khɔ̌ɔ-thôot",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.25",
+          "parts": [
+            "ชอบ",
+            "มาก",
+            "ขอบคุณ",
+            "ค่ะ"
+          ]
+        },
+        {
+          "id": "rp-127",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "F",
+              "thai": "ขอโทษค่ะ",
+              "parts": [
+                "ขอโทษ",
+                "ค่ะ"
+              ],
+              "roman": "khɔ̌ɔ-thôot khâ",
+              "english": "Excuse me. (said by a woman)"
+            }
+          ],
+          "replySpeaker": "M",
+          "thai": "ไม่เป็นไรครับ",
+          "roman": "mâi-pen-rai khráp",
+          "english": "That's alright. (said by a man)",
+          "options": [
+            {
+              "thai": "ขอบคุณครับ",
+              "roman": "khɔ̀ɔp-khun khráp",
+              "correct": false
+            },
+            {
+              "thai": "เข้าใจครับ",
+              "roman": "khâo-jai khráp",
+              "correct": false
+            },
+            {
+              "thai": "สวัสดีครับ",
+              "roman": "sà-wàt-dii khráp",
+              "correct": false
+            },
+            {
+              "thai": "ไม่เป็นไรครับ",
+              "roman": "mâi-pen-rai khráp",
+              "correct": true
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.25",
+          "parts": [
+            "ไม่เป็นไร",
+            "ครับ"
+          ]
+        }
+      ]
+    },
+    {
       "id": "gn01",
       "subject_id": "greetings-names",
       "sort_order": 0,
@@ -13993,9 +15455,633 @@
       ]
     },
     {
-      "id": "gn07",
+      "id": "greetings-names-quiz",
       "subject_id": "greetings-names",
       "sort_order": 6,
+      "title": "Unit quiz",
+      "steps": [
+        {
+          "id": "so-136",
+          "type": "sentenceOrder",
+          "prompt": "Hello, what's your name? Thank you. (said by a man)",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "sà-wàt-dii",
+              "thai": "สวัสดี"
+            },
+            "b": {
+              "roman": "khráp",
+              "thai": "ครับ"
+            },
+            "c": {
+              "roman": "khun",
+              "thai": "คุณ"
+            },
+            "d": {
+              "roman": "chɯ̂ɯ",
+              "thai": "ชื่อ"
+            },
+            "e": {
+              "roman": "à-rai",
+              "thai": "อะไร"
+            },
+            "f": {
+              "roman": "khɔ̀ɔp-khun",
+              "thai": "ขอบคุณ"
+            },
+            "g": {
+              "roman": "khráp",
+              "thai": "ครับ"
+            },
+            "x0": {
+              "thai": "ดี",
+              "roman": "dii"
+            },
+            "x1": {
+              "thai": "หา",
+              "roman": "hǎa"
+            }
+          },
+          "poolOrder": [
+            "a",
+            "e",
+            "f",
+            "x1",
+            "c",
+            "g",
+            "b",
+            "x0",
+            "d"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g"
+          ],
+          "source": "Essential Thai (Higbie), p.38"
+        },
+        {
+          "id": "mc-151",
+          "type": "translationChoice",
+          "thai": "ผมชื่อเล็กชื่อเล่นนิดครับ",
+          "roman": "phǒm chɯ̂ɯ lék chɯ̂ɯ-lên nít khráp",
+          "options": [
+            {
+              "text": "What's your name?",
+              "correct": false
+            },
+            {
+              "text": "My name is Lek, my nickname is Nit.",
+              "correct": true
+            },
+            {
+              "text": "My name is Lek.",
+              "correct": false
+            },
+            {
+              "text": "My nickname is Daeng.",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.38",
+          "parts": [
+            "ผม",
+            "ชื่อ",
+            "เล็ก",
+            "ชื่อเล่น",
+            "นิด",
+            "ครับ"
+          ]
+        },
+        {
+          "id": "mc-153",
+          "type": "translationChoice",
+          "thai": "แดง",
+          "roman": "dɛɛng",
+          "options": [
+            {
+              "text": "Daeng (\"red\", a nickname)",
+              "correct": true
+            },
+            {
+              "text": "name",
+              "correct": false
+            },
+            {
+              "text": "Nit (\"little bit\", a nickname)",
+              "correct": false
+            },
+            {
+              "text": "nickname",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.38",
+          "parts": [
+            "แดง"
+          ]
+        },
+        {
+          "id": "so-167",
+          "type": "sentenceOrder",
+          "prompt": "Hello, are you well or not?",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "sà-wàt-dii",
+              "thai": "สวัสดี"
+            },
+            "b": {
+              "roman": "khráp",
+              "thai": "ครับ"
+            },
+            "c": {
+              "roman": "sà-baai",
+              "thai": "สบาย"
+            },
+            "d": {
+              "roman": "dii",
+              "thai": "ดี"
+            },
+            "e": {
+              "roman": "rɯ̌ɯ-plàao",
+              "thai": "หรือเปล่า"
+            },
+            "f": {
+              "roman": "khráp",
+              "thai": "ครับ"
+            },
+            "x0": {
+              "thai": "ขอบคุณ",
+              "roman": "khɔ̀ɔp-khun"
+            },
+            "x1": {
+              "thai": "กับ",
+              "roman": "gàp"
+            }
+          },
+          "poolOrder": [
+            "a",
+            "b",
+            "e",
+            "x0",
+            "c",
+            "f",
+            "d",
+            "x1"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f"
+          ],
+          "source": "Essential Thai (Higbie), p.39"
+        },
+        {
+          "id": "mc-173",
+          "type": "translationChoice",
+          "thai": "อังกฤษ",
+          "roman": "ang-krìt",
+          "options": [
+            {
+              "text": "come",
+              "correct": false
+            },
+            {
+              "text": "thank you",
+              "correct": false
+            },
+            {
+              "text": "from",
+              "correct": false
+            },
+            {
+              "text": "England",
+              "correct": true
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.39",
+          "parts": [
+            "อังกฤษ"
+          ]
+        },
+        {
+          "id": "mc-188",
+          "type": "translationChoice",
+          "thai": "สวัสดีค่ะฉันเป็นคนเยอรมันค่ะ",
+          "roman": "sà-wàt-dii khâ, chán pen kon yəə-rá-man khâ",
+          "options": [
+            {
+              "text": "He's Thai.",
+              "correct": false
+            },
+            {
+              "text": "Where are you from?",
+              "correct": false
+            },
+            {
+              "text": "I'm from America.",
+              "correct": false
+            },
+            {
+              "text": "Hello, I'm German. (said by a woman)",
+              "correct": true
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.40",
+          "parts": [
+            "สวัสดี",
+            "ค่ะ",
+            "ฉัน",
+            "เป็น",
+            "คน",
+            "เยอรมัน",
+            "ค่ะ"
+          ]
+        },
+        {
+          "id": "so-190",
+          "type": "sentenceOrder",
+          "prompt": "He's/she's Thai and (is) well.",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "kháo",
+              "thai": "เค้า"
+            },
+            "b": {
+              "roman": "pen",
+              "thai": "เป็น"
+            },
+            "c": {
+              "roman": "kon",
+              "thai": "คน"
+            },
+            "d": {
+              "roman": "thai",
+              "thai": "ไทย"
+            },
+            "e": {
+              "roman": "láew-gɔ̂ɔ",
+              "thai": "แล้วก็"
+            },
+            "f": {
+              "roman": "sà-baai",
+              "thai": "สบาย"
+            },
+            "g": {
+              "roman": "dii",
+              "thai": "ดี"
+            },
+            "x0": {
+              "thai": "กับ",
+              "roman": "gàp"
+            },
+            "x1": {
+              "thai": "จาก",
+              "roman": "jàak"
+            }
+          },
+          "poolOrder": [
+            "b",
+            "d",
+            "g",
+            "a",
+            "e",
+            "x1",
+            "c",
+            "f",
+            "x0"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g"
+          ],
+          "source": "Essential Thai (Higbie), p.40"
+        },
+        {
+          "id": "rp-199",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "สวัสดีครับ",
+              "parts": [
+                "สวัสดี",
+                "ครับ"
+              ],
+              "roman": "sà-wàt-dii khráp",
+              "english": "Hello. (said by a man)"
+            },
+            {
+              "speaker": "M",
+              "thai": "ผมชื่อเล็กคุณอายุเท่าไหร่ครับ",
+              "parts": [
+                "ผม",
+                "ชื่อ",
+                "เล็ก",
+                "คุณ",
+                "อายุ",
+                "เท่าไหร่",
+                "ครับ"
+              ],
+              "roman": "phǒm chɯ̂ɯ lék, khun aa-yú thâo-rài khráp",
+              "english": "My name is Lek. How old are you?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ฉันชื่อน้อยฉันอายุยี่สิบห้าค่ะ",
+          "roman": "chán chɯ̂ɯ nɔ́ɔi, chán aa-yú yîi-sìp-hâa khâ",
+          "english": "My name is Noi, I'm 25.",
+          "options": [
+            {
+              "thai": "สวัสดีค่ะฉันชื่อน้อยขอบคุณค่ะ",
+              "roman": "sà-wàt-dii khâ, chán chɯ̂ɯ nɔ́ɔi, khɔ̀ɔp-khun khâ",
+              "correct": false
+            },
+            {
+              "thai": "ฉันชื่อน้อยฉันอายุยี่สิบห้าค่ะ",
+              "roman": "chán chɯ̂ɯ nɔ́ɔi, chán aa-yú yîi-sìp-hâa khâ",
+              "correct": true
+            },
+            {
+              "thai": "สวัสดีค่ะฉันมาจากอเมริกาค่ะ",
+              "roman": "sà-wàt-dii khâ, chán maa jàak à-me-rí-gaa khâ",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.40",
+          "parts": [
+            "ฉัน",
+            "ชื่อ",
+            "น้อย",
+            "ฉัน",
+            "อายุ",
+            "ยี่สิบห้า",
+            "ค่ะ"
+          ]
+        },
+        {
+          "id": "mc-203",
+          "type": "translationChoice",
+          "thai": "สวัสดีครับผมชื่อเล็กคุณกินข้าวรึยังครับ",
+          "roman": "sà-wàt-dii khráp, phǒm chɯ̂ɯ lék, khun gin-khâao rɯ́-yang khráp",
+          "options": [
+            {
+              "text": "Are you well?",
+              "correct": false
+            },
+            {
+              "text": "Hello, my name is Lek. Have you eaten yet?",
+              "correct": true
+            },
+            {
+              "text": "I'm German.",
+              "correct": false
+            },
+            {
+              "text": "How old are you?",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.40",
+          "parts": [
+            "สวัสดี",
+            "ครับ",
+            "ผม",
+            "ชื่อ",
+            "เล็ก",
+            "คุณ",
+            "กินข้าว",
+            "รึยัง",
+            "ครับ"
+          ]
+        },
+        {
+          "id": "mc-214",
+          "type": "translationChoice",
+          "thai": "สวัสดีครับคุณอยู่เมืองไทยนานรึยังครับ",
+          "roman": "sà-wàt-dii khráp, khun yùu mɯang-thai naan rɯ́-yang khráp",
+          "options": [
+            {
+              "text": "Hello, have you been in Thailand long?",
+              "correct": true
+            },
+            {
+              "text": "I'm from America.",
+              "correct": false
+            },
+            {
+              "text": "How old are you?",
+              "correct": false
+            },
+            {
+              "text": "Have you eaten yet?",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.40",
+          "parts": [
+            "สวัสดี",
+            "ครับ",
+            "คุณ",
+            "อยู่",
+            "เมืองไทย",
+            "นาน",
+            "รึยัง",
+            "ครับ"
+          ]
+        },
+        {
+          "id": "so-226",
+          "type": "sentenceOrder",
+          "prompt": "Thanks a lot, I'm going now, good luck! (said by a man)",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "khɔ̀ɔp-khun",
+              "thai": "ขอบคุณ"
+            },
+            "b": {
+              "roman": "mâak",
+              "thai": "มาก"
+            },
+            "c": {
+              "roman": "khráp",
+              "thai": "ครับ"
+            },
+            "d": {
+              "roman": "phǒm",
+              "thai": "ผม"
+            },
+            "e": {
+              "roman": "pai",
+              "thai": "ไป"
+            },
+            "f": {
+              "roman": "gɔ̀ɔn",
+              "thai": "ก่อน"
+            },
+            "g": {
+              "roman": "ná",
+              "thai": "นะ"
+            },
+            "h": {
+              "roman": "khráp",
+              "thai": "ครับ"
+            },
+            "i": {
+              "roman": "chôok-dii",
+              "thai": "โชคดี"
+            },
+            "j": {
+              "roman": "ná",
+              "thai": "นะ"
+            },
+            "k": {
+              "roman": "khráp",
+              "thai": "ครับ"
+            },
+            "x0": {
+              "thai": "กับ",
+              "roman": "gàp"
+            },
+            "x1": {
+              "thai": "เหรอ",
+              "roman": "rə̌ə"
+            }
+          },
+          "poolOrder": [
+            "j",
+            "a",
+            "e",
+            "x0",
+            "i",
+            "x1",
+            "f",
+            "h",
+            "b",
+            "d",
+            "g",
+            "c",
+            "k"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h",
+            "i",
+            "j",
+            "k"
+          ],
+          "source": "Essential Thai (Higbie), p.41"
+        },
+        {
+          "id": "rp-232",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "สบายดีเหรอ",
+              "parts": [
+                "สบาย",
+                "ดี",
+                "เหรอ"
+              ],
+              "roman": "sà-baai dii rə̌ə",
+              "english": "Are you well?"
+            },
+            {
+              "speaker": "F",
+              "thai": "ฉันสบายดีค่ะขอบคุณค่ะ",
+              "parts": [
+                "ฉัน",
+                "สบาย",
+                "ดี",
+                "ค่ะ",
+                "ขอบคุณ",
+                "ค่ะ"
+              ],
+              "roman": "chán sà-baai dii khâ, khɔ̀ɔp-khun khâ",
+              "english": "I'm well, thank you. (said by a woman)"
+            },
+            {
+              "speaker": "M",
+              "thai": "ขอบคุณมากครับผมไปก่อนนะครับ",
+              "parts": [
+                "ขอบคุณ",
+                "มาก",
+                "ครับ",
+                "ผม",
+                "ไป",
+                "ก่อน",
+                "นะ",
+                "ครับ"
+              ],
+              "roman": "khɔ̀ɔp-khun mâak khráp, phǒm pai gɔ̀ɔn ná khráp",
+              "english": "Thanks a lot, I'm going now. (goodbye)"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "แล้วเจอกันใหม่นะคะ",
+          "roman": "láew jəə gan mài ná khá",
+          "english": "See you again.",
+          "options": [
+            {
+              "thai": "ไปไหน",
+              "roman": "pai nǎi",
+              "correct": false
+            },
+            {
+              "thai": "แล้วเจอกันใหม่นะคะ",
+              "roman": "láew jəə gan mài ná khá",
+              "correct": true
+            },
+            {
+              "thai": "ดีมั้ย",
+              "roman": "dii mái",
+              "correct": false
+            },
+            {
+              "thai": "ขอบคุณค่ะ",
+              "roman": "khɔ̀ɔp-khun khâ",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.41",
+          "parts": [
+            "แล้ว",
+            "เจอ",
+            "กัน",
+            "ใหม่",
+            "นะ",
+            "คะ"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gn07",
+      "subject_id": "greetings-names",
+      "sort_order": 7,
       "title": "Catching up",
       "steps": {
         "kind": "dialogue",
@@ -18312,9 +20398,594 @@
       ]
     },
     {
-      "id": "n-dlg",
+      "id": "numbers-quiz",
       "subject_id": "numbers",
       "sort_order": 12,
+      "title": "Unit quiz",
+      "steps": [
+        {
+          "id": "mc-44",
+          "type": "translationChoice",
+          "thai": "สี่สิบห้าหกสิบเจ็ด",
+          "roman": "sìi-sìp-hâa hòk-sìp-jèt",
+          "options": [
+            {
+              "text": "Forty-five, seventy-six",
+              "correct": false
+            },
+            {
+              "text": "Forty-five, sixty-seven",
+              "correct": true
+            },
+            {
+              "text": "Sixty-seven, ninety-nine",
+              "correct": false
+            },
+            {
+              "text": "Fifty-four, seventy-six",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.17",
+          "parts": [
+            "สี่",
+            "สิบ",
+            "ห้า",
+            "หก",
+            "สิบ",
+            "เจ็ด"
+          ]
+        },
+        {
+          "id": "so-60",
+          "type": "sentenceOrder",
+          "prompt": "Nine thousand nine hundred",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "kâo",
+              "thai": "เก้า"
+            },
+            "b": {
+              "roman": "phan",
+              "thai": "พัน"
+            },
+            "c": {
+              "roman": "kâo",
+              "thai": "เก้า"
+            },
+            "d": {
+              "roman": "rɔ́ɔi",
+              "thai": "ร้อย"
+            },
+            "x0": {
+              "thai": "ห้า",
+              "roman": "hâa"
+            },
+            "x1": {
+              "thai": "หก",
+              "roman": "hòk"
+            }
+          },
+          "poolOrder": [
+            "x1",
+            "a",
+            "x0",
+            "d",
+            "c",
+            "b"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "source": "Essential Thai (Higbie), p.18"
+        },
+        {
+          "id": "mc-65",
+          "type": "translationChoice",
+          "thai": "หมื่นสองหมื่นสามหมื่นสี่หมื่น",
+          "roman": "mɯ̀ɯn sɔ̌ɔng-mɯ̀ɯn sǎam-mɯ̀ɯn sìi-mɯ̀ɯn",
+          "options": [
+            {
+              "text": "Ten thousand, twenty thousand, thirty thousand, forty thousand",
+              "correct": true
+            },
+            {
+              "text": "Twenty thousand, thirty thousand, forty thousand, fifty thousand",
+              "correct": false
+            },
+            {
+              "text": "Ten thousand, twenty thousand, thirty thousand",
+              "correct": false
+            },
+            {
+              "text": "Ten thousand, thirty thousand, forty thousand, fifty thousand",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.18",
+          "parts": [
+            "หมื่น",
+            "สอง",
+            "หมื่น",
+            "สาม",
+            "หมื่น",
+            "สี่",
+            "หมื่น"
+          ]
+        },
+        {
+          "id": "so-73",
+          "type": "sentenceOrder",
+          "prompt": "Four million five hundred thousand",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "sìi",
+              "thai": "สี่"
+            },
+            "b": {
+              "roman": "láan",
+              "thai": "ล้าน"
+            },
+            "c": {
+              "roman": "hâa",
+              "thai": "ห้า"
+            },
+            "d": {
+              "roman": "sɛ̌ɛn",
+              "thai": "แสน"
+            },
+            "x0": {
+              "thai": "ศูนย์",
+              "roman": "sǔun"
+            },
+            "x1": {
+              "thai": "หก",
+              "roman": "hòk"
+            }
+          },
+          "poolOrder": [
+            "x0",
+            "d",
+            "x1",
+            "c",
+            "b",
+            "a"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "source": "Essential Thai (Higbie), p.18"
+        },
+        {
+          "id": "mc-203",
+          "type": "translationChoice",
+          "thai": "นี่แพง",
+          "roman": "nîi phaeng",
+          "options": [
+            {
+              "text": "This one is expensive.",
+              "correct": false
+            },
+            {
+              "text": "This is expensive.",
+              "correct": true
+            },
+            {
+              "text": "I'll take three.",
+              "correct": false
+            },
+            {
+              "text": "How many do you want?",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.28",
+          "parts": [
+            "นี่",
+            "แพง"
+          ]
+        },
+        {
+          "id": "rp-207",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "เอากี่อัน",
+              "parts": [
+                "เอา",
+                "กี่",
+                "อัน"
+              ],
+              "roman": "ao gìi an",
+              "english": "How many do you want?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "เอาสองอัน",
+          "roman": "ao sɔ̌ɔng an",
+          "english": "I'll take two.",
+          "options": [
+            {
+              "thai": "อันนี้แพง",
+              "roman": "an níi phaeng",
+              "correct": false
+            },
+            {
+              "thai": "เอาสองอัน",
+              "roman": "ao sɔ̌ɔng an",
+              "correct": true
+            },
+            {
+              "thai": "คนที่สอง",
+              "roman": "kon thîi sɔ̌ɔng",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.28",
+          "parts": [
+            "เอา",
+            "สอง",
+            "อัน"
+          ]
+        },
+        {
+          "id": "rp-215",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "ขวดนี้เท่าไหร่",
+              "parts": [
+                "ขวด",
+                "นี้",
+                "เท่าไหร่"
+              ],
+              "roman": "khùat níi thâo-rài",
+              "english": "How much is this bottle?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ห้าสิบบาท",
+          "roman": "hâa sìp bàat",
+          "english": "50 baht.",
+          "options": [
+            {
+              "thai": "เอากี่อัน",
+              "roman": "ao gìi an",
+              "correct": false
+            },
+            {
+              "thai": "ห้าสิบบาท",
+              "roman": "hâa sìp bàat",
+              "correct": true
+            },
+            {
+              "thai": "สองขวด",
+              "roman": "sɔ̌ɔng khùat",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.27",
+          "parts": [
+            "ห้า",
+            "สิบ",
+            "บาท"
+          ]
+        },
+        {
+          "id": "rp-223",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "เสื้อตัวนี้เท่าไหร่",
+              "parts": [
+                "เสื้อ",
+                "ตัว",
+                "นี้",
+                "เท่าไหร่"
+              ],
+              "roman": "sɯ̂a tua níi thâo-rài",
+              "english": "How much is this shirt?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "สามร้อยบาท",
+          "roman": "sǎam rɔ́ɔi bàat",
+          "english": "300 baht.",
+          "options": [
+            {
+              "thai": "มีเงินพอ",
+              "roman": "mii ngəən phɔɔ",
+              "correct": false
+            },
+            {
+              "thai": "สามร้อยบาท",
+              "roman": "sǎam rɔ́ɔi bàat",
+              "correct": true
+            },
+            {
+              "thai": "กางเกง",
+              "roman": "gaang-geeng",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.29",
+          "parts": [
+            "สาม",
+            "ร้อย",
+            "บาท"
+          ]
+        },
+        {
+          "id": "so-226",
+          "type": "sentenceOrder",
+          "prompt": "house number 26/3",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "bâan",
+              "thai": "บ้าน"
+            },
+            "b": {
+              "roman": "lêek",
+              "thai": "เลข"
+            },
+            "c": {
+              "roman": "thîi",
+              "thai": "ที่"
+            },
+            "d": {
+              "roman": "yîi-sìp",
+              "thai": "ยี่สิบ"
+            },
+            "e": {
+              "roman": "hòk",
+              "thai": "หก"
+            },
+            "f": {
+              "roman": "tháp",
+              "thai": "ทับ"
+            },
+            "g": {
+              "roman": "sǎam",
+              "thai": "สาม"
+            },
+            "x0": {
+              "thai": "สิบ",
+              "roman": "sìp"
+            },
+            "x1": {
+              "thai": "ล้าน",
+              "roman": "láan"
+            }
+          },
+          "poolOrder": [
+            "a",
+            "x0",
+            "f",
+            "e",
+            "x1",
+            "g",
+            "c",
+            "b",
+            "d"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g"
+          ],
+          "source": "Essential Thai (Higbie), p.88"
+        },
+        {
+          "id": "rp-231",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "เบอร์โทรศัพท์เท่าไหร่",
+              "parts": [
+                "เบอร์",
+                "โทรศัพท์",
+                "เท่าไหร่"
+              ],
+              "roman": "bəə thoo-rá-sàp thâo-rài",
+              "english": "What's your phone number?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ศูนย์แปดหนึ่งสองสาม",
+          "roman": "sǔun pɛ̀ɛt nɯ̀ng sɔ̌ɔng sǎam",
+          "english": "Zero, eight, one, two, three.",
+          "options": [
+            {
+              "thai": "สองร้อยบาท",
+              "roman": "sɔ̌ɔng rɔ́ɔi bàat",
+              "correct": false
+            },
+            {
+              "thai": "บ้านเลขที่สิบเอ็ด",
+              "roman": "bâan lêek thîi sìp èt",
+              "correct": false
+            },
+            {
+              "thai": "ศูนย์แปดหนึ่งสองสาม",
+              "roman": "sǔun pɛ̀ɛt nɯ̀ng sɔ̌ɔng sǎam",
+              "correct": true
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.88",
+          "parts": [
+            "ศูนย์",
+            "แปด",
+            "หนึ่ง",
+            "สอง",
+            "สาม"
+          ]
+        },
+        {
+          "id": "so-234",
+          "type": "sentenceOrder",
+          "prompt": "6 a.m.",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "hòk",
+              "thai": "หก"
+            },
+            "b": {
+              "roman": "mong",
+              "thai": "โมง"
+            },
+            "c": {
+              "roman": "cháo",
+              "thai": "เช้า"
+            },
+            "x0": {
+              "thai": "นี้",
+              "roman": "níi"
+            },
+            "x1": {
+              "thai": "เจ็ด",
+              "roman": "jèt"
+            }
+          },
+          "poolOrder": [
+            "c",
+            "a",
+            "b",
+            "x1",
+            "x0"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c"
+          ],
+          "source": "Essential Thai (Higbie), p.101"
+        },
+        {
+          "id": "so-237",
+          "type": "sentenceOrder",
+          "prompt": "5 a.m.",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "tii",
+              "thai": "ตี"
+            },
+            "b": {
+              "roman": "hâa",
+              "thai": "ห้า"
+            },
+            "x0": {
+              "thai": "เช้า",
+              "roman": "cháo"
+            },
+            "x1": {
+              "thai": "อัน",
+              "roman": "an"
+            }
+          },
+          "poolOrder": [
+            "b",
+            "a",
+            "x1",
+            "x0"
+          ],
+          "correctOrder": [
+            "a",
+            "b"
+          ],
+          "source": "Essential Thai (Higbie), p.101"
+        },
+        {
+          "id": "rp-248",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "วันนี้วันที่เท่าไหร่",
+              "parts": [
+                "วัน",
+                "นี้",
+                "วัน",
+                "ที่",
+                "เท่าไหร่"
+              ],
+              "roman": "wan níi wan thîi thâo-rài",
+              "english": "What's the date today?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "วันที่ยี่สิบ",
+          "roman": "wan thîi yîi-sìp",
+          "english": "The 20th.",
+          "options": [
+            {
+              "thai": "วันที่ยี่สิบ",
+              "roman": "wan thîi yîi-sìp",
+              "correct": true
+            },
+            {
+              "thai": "ร้อยบาท",
+              "roman": "rɔ́ɔi bàat",
+              "correct": false
+            },
+            {
+              "thai": "บ่ายสองโมง",
+              "roman": "bàai sɔ̌ɔng mong",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.114",
+          "parts": [
+            "วัน",
+            "ที่",
+            "ยี่สิบ"
+          ]
+        },
+        {
+          "id": "numbers-quiz-match-0",
+          "type": "match",
+          "pairs": [
+            {
+              "thai": "ทุ่ม",
+              "roman": "thûm",
+              "english": "evening hour (7pm-11pm count)"
+            },
+            {
+              "thai": "เที่ยง",
+              "roman": "thîang",
+              "english": "noon"
+            },
+            {
+              "thai": "หนึ่ง",
+              "roman": "nɯ̀ng",
+              "english": "one"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n-dlg",
+      "subject_id": "numbers",
+      "sort_order": 13,
       "title": "Buying a shirt",
       "steps": {
         "kind": "dialogue",
@@ -21625,9 +24296,634 @@
       ]
     },
     {
-      "id": "restaurant-dlg",
+      "id": "restaurant-quiz",
       "subject_id": "restaurant",
       "sort_order": 10,
+      "title": "Unit quiz",
+      "steps": [
+        {
+          "id": "so-23",
+          "type": "sentenceOrder",
+          "prompt": "One, two, three",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "nɯ̀ng",
+              "thai": "หนึ่ง"
+            },
+            "b": {
+              "roman": "sɔ̌ɔng",
+              "thai": "สอง"
+            },
+            "c": {
+              "roman": "sǎam",
+              "thai": "สาม"
+            },
+            "x0": {
+              "thai": "มี",
+              "roman": "mii"
+            },
+            "x1": {
+              "thai": "ด้วย",
+              "roman": "dûai"
+            }
+          },
+          "poolOrder": [
+            "x1",
+            "c",
+            "a",
+            "x0",
+            "b"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c"
+          ],
+          "source": "Essential Thai (Higbie), p.17"
+        },
+        {
+          "id": "mc-32",
+          "type": "translationChoice",
+          "thai": "ขอจานกับแก้ว",
+          "roman": "khɔ̌ɔ jaan gàp gɛ̂ɛo",
+          "options": [
+            {
+              "text": "What do you have?",
+              "correct": false
+            },
+            {
+              "text": "Two glasses, please.",
+              "correct": false
+            },
+            {
+              "text": "I'd like a plate and a glass.",
+              "correct": true
+            },
+            {
+              "text": "May I have some water?",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.116",
+          "parts": [
+            "ขอ",
+            "จาน",
+            "กับ",
+            "แก้ว"
+          ]
+        },
+        {
+          "id": "mc-161",
+          "type": "translationChoice",
+          "thai": "ขอข้าวผัดไก่หนึ่งจาน",
+          "roman": "khɔ̌ɔ khâao-phàt gài nɯ̀ng jaan",
+          "options": [
+            {
+              "text": "One more plate, please.",
+              "correct": false
+            },
+            {
+              "text": "pork fried rice",
+              "correct": false
+            },
+            {
+              "text": "One chicken fried rice, please.",
+              "correct": true
+            },
+            {
+              "text": "with chicken",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.116",
+          "parts": [
+            "ขอ",
+            "ข้าวผัด",
+            "ไก่",
+            "หนึ่ง",
+            "จาน"
+          ]
+        },
+        {
+          "id": "so-165",
+          "type": "sentenceOrder",
+          "prompt": "Another bottle of water, please.",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "khɔ̌ɔ",
+              "thai": "ขอ"
+            },
+            "b": {
+              "roman": "náam",
+              "thai": "น้ำ"
+            },
+            "c": {
+              "roman": "ìik",
+              "thai": "อีก"
+            },
+            "d": {
+              "roman": "khùat",
+              "thai": "ขวด"
+            },
+            "x0": {
+              "thai": "ใส่",
+              "roman": "sài"
+            },
+            "x1": {
+              "thai": "ข้าวผัด",
+              "roman": "khâao-phàt"
+            }
+          },
+          "poolOrder": [
+            "x0",
+            "d",
+            "c",
+            "b",
+            "x1",
+            "a"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "source": "Essential Thai (Higbie), p.116"
+        },
+        {
+          "id": "mc-163",
+          "type": "translationChoice",
+          "thai": "ข้าวผัดหมู",
+          "roman": "khâao-phàt mǔu",
+          "options": [
+            {
+              "text": "One chicken fried rice, please.",
+              "correct": false
+            },
+            {
+              "text": "with chicken",
+              "correct": false
+            },
+            {
+              "text": "pork fried rice",
+              "correct": true
+            },
+            {
+              "text": "One more plate, please.",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.116",
+          "parts": [
+            "ข้าวผัด",
+            "หมู"
+          ]
+        },
+        {
+          "id": "mc-171",
+          "type": "translationChoice",
+          "thai": "ใส่น้ำตาล",
+          "roman": "sài náam-taan",
+          "options": [
+            {
+              "text": "No chili, please.",
+              "correct": false
+            },
+            {
+              "text": "Not spicy at all.",
+              "correct": false
+            },
+            {
+              "text": "with sugar",
+              "correct": true
+            },
+            {
+              "text": "No beef, please.",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.117",
+          "parts": [
+            "ใส่",
+            "น้ำตาล"
+          ]
+        },
+        {
+          "id": "rp-175",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "ใส่อะไร",
+              "parts": [
+                "ใส่",
+                "อะไร"
+              ],
+              "roman": "sài à-rai",
+              "english": "What do you want in it?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ไม่ใส่พริก",
+          "roman": "mâi sài phrík",
+          "english": "No chili, please.",
+          "options": [
+            {
+              "thai": "ขอเมนูด้วย",
+              "roman": "khɔ̌ɔ menuu dûai",
+              "correct": false
+            },
+            {
+              "thai": "ไม่ใส่พริก",
+              "roman": "mâi sài phrík",
+              "correct": true
+            },
+            {
+              "thai": "มีอะไรบ้าง",
+              "roman": "mii à-rai bâang",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.117",
+          "parts": [
+            "ไม่",
+            "ใส่",
+            "พริก"
+          ]
+        },
+        {
+          "id": "so-181",
+          "type": "sentenceOrder",
+          "prompt": "A hot tea and an iced coffee, please.",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "khɔ̌ɔ",
+              "thai": "ขอ"
+            },
+            "b": {
+              "roman": "chaa",
+              "thai": "ชา"
+            },
+            "c": {
+              "roman": "rɔ́ɔn",
+              "thai": "ร้อน"
+            },
+            "d": {
+              "roman": "láew-gɔ̂ɔ",
+              "thai": "แล้วก็"
+            },
+            "e": {
+              "roman": "gaa-fɛɛ",
+              "thai": "กาแฟ"
+            },
+            "f": {
+              "roman": "yen",
+              "thai": "เย็น"
+            },
+            "x0": {
+              "thai": "เลย",
+              "roman": "loei"
+            },
+            "x1": {
+              "thai": "ไก่",
+              "roman": "gài"
+            }
+          },
+          "poolOrder": [
+            "x0",
+            "c",
+            "x1",
+            "e",
+            "a",
+            "d",
+            "b",
+            "f"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f"
+          ],
+          "source": "Essential Thai (Higbie), p.120"
+        },
+        {
+          "id": "rp-183",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "มีอะไรบ้าง",
+              "parts": [
+                "มี",
+                "อะไร",
+                "บ้าง"
+              ],
+              "roman": "mii à-rai bâang",
+              "english": "What do you have?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "มีกาแฟแล้วก็ชา",
+          "roman": "mii gaa-fɛɛ láew-gɔ̂ɔ chaa",
+          "english": "We have coffee and tea.",
+          "options": [
+            {
+              "thai": "มีกาแฟแล้วก็ชา",
+              "roman": "mii gaa-fɛɛ láew-gɔ̂ɔ chaa",
+              "correct": true
+            },
+            {
+              "thai": "ชาเย็น",
+              "roman": "chaa yen",
+              "correct": false
+            },
+            {
+              "thai": "ขอน้ำเปล่า",
+              "roman": "khɔ̌ɔ náam plào",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.120",
+          "parts": [
+            "มี",
+            "กาแฟ",
+            "แล้วก็",
+            "ชา"
+          ]
+        },
+        {
+          "id": "rp-191",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "มีอะไรบ้าง",
+              "parts": [
+                "มี",
+                "อะไร",
+                "บ้าง"
+              ],
+              "roman": "mii à-rai bâang",
+              "english": "What do you have?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "มีเบียร์ขวดใหญ่กับขวดเล็ก",
+          "roman": "mii bia khùat yài gàp khùat lék",
+          "english": "We have large and small bottles of beer.",
+          "options": [
+            {
+              "thai": "เปรี้ยวหวาน",
+              "roman": "prîao wǎan",
+              "correct": false
+            },
+            {
+              "thai": "มีเบียร์ขวดใหญ่กับขวดเล็ก",
+              "roman": "mii bia khùat yài gàp khùat lék",
+              "correct": true
+            },
+            {
+              "thai": "ไม่หวาน",
+              "roman": "mâi wǎan",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.121",
+          "parts": [
+            "มี",
+            "เบียร์",
+            "ขวด",
+            "ใหญ่",
+            "กับ",
+            "ขวด",
+            "เล็ก"
+          ]
+        },
+        {
+          "id": "mc-193",
+          "type": "translationChoice",
+          "thai": "ขอช้อนกับส้อม",
+          "roman": "khɔ̌ɔ chɔ́ɔn gàp sɔ̂m",
+          "options": [
+            {
+              "text": "Please wipe the table.",
+              "correct": false
+            },
+            {
+              "text": "A spoon and fork, please.",
+              "correct": true
+            },
+            {
+              "text": "The check, please.",
+              "correct": false
+            },
+            {
+              "text": "Keep the change.",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.118",
+          "parts": [
+            "ขอ",
+            "ช้อน",
+            "กับ",
+            "ส้อม"
+          ]
+        },
+        {
+          "id": "rp-206",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "มีเต้าหู้มั้ย",
+              "parts": [
+                "มี",
+                "เต้าหู้",
+                "มั้ย"
+              ],
+              "roman": "mii tâo-hûu mái",
+              "english": "Do you have tofu?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "มี",
+          "roman": "mii",
+          "english": "Yes, we do.",
+          "options": [
+            {
+              "thai": "ไม่เผ็ดเลย",
+              "roman": "mâi phèt loei",
+              "correct": false
+            },
+            {
+              "thai": "มี",
+              "roman": "mii",
+              "correct": true
+            },
+            {
+              "thai": "ฉันกินเจ",
+              "roman": "chán gin jee",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.132",
+          "parts": [
+            "มี"
+          ]
+        },
+        {
+          "id": "rp-214",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "ไม่ใส่ไข่ได้มั้ย",
+              "parts": [
+                "ไม่",
+                "ใส่",
+                "ไข่",
+                "ได้",
+                "มั้ย"
+              ],
+              "roman": "mâi sài khài dâi mái",
+              "english": "Can you make it without egg?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ได้",
+          "roman": "dâi",
+          "english": "Sure, no problem.",
+          "options": [
+            {
+              "thai": "ขอสองโล",
+              "roman": "khɔ̌ɔ sɔ̌ɔng loo",
+              "correct": false
+            },
+            {
+              "thai": "ได้",
+              "roman": "dâi",
+              "correct": true
+            },
+            {
+              "thai": "ใส่ไข่",
+              "roman": "sài khài",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.132",
+          "parts": [
+            "ได้"
+          ]
+        },
+        {
+          "id": "rp-222",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "เอากี่โล",
+              "parts": [
+                "เอา",
+                "กี่",
+                "โล"
+              ],
+              "roman": "ao gìi loo",
+              "english": "How many kilos do you want?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "เอาครึ่งโล",
+          "roman": "ao khrɯ̂ng loo",
+          "english": "Half a kilo.",
+          "options": [
+            {
+              "thai": "โลละเท่าไหร่",
+              "roman": "loo lá thâo-rài",
+              "correct": false
+            },
+            {
+              "thai": "เอาครึ่งโล",
+              "roman": "ao khrɯ̂ng loo",
+              "correct": true
+            },
+            {
+              "thai": "มีเต้าหู้มั้ย",
+              "roman": "mii tâo-hûu mái",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.134",
+          "parts": [
+            "เอา",
+            "ครึ่ง",
+            "โล"
+          ]
+        },
+        {
+          "id": "restaurant-quiz-match-0",
+          "type": "match",
+          "pairs": [
+            {
+              "thai": "เนื้อ",
+              "roman": "nɯ́a",
+              "english": "beef"
+            },
+            {
+              "thai": "ที่",
+              "roman": "thîi",
+              "english": "order (classifier)"
+            },
+            {
+              "thai": "เค็ม",
+              "roman": "khem",
+              "english": "salty"
+            },
+            {
+              "thai": "ช่วยเช็ดโต๊ะหน่อย",
+              "roman": "chûai chét tó nɔ̀i",
+              "english": "Please wipe off the table."
+            },
+            {
+              "thai": "เช็คบิล",
+              "roman": "chék-bin",
+              "english": "the bill"
+            }
+          ]
+        },
+        {
+          "id": "restaurant-quiz-match-1",
+          "type": "match",
+          "pairs": [
+            {
+              "thai": "ต้อง",
+              "roman": "tɔ̂ng",
+              "english": "have to / need to"
+            },
+            {
+              "thai": "ทอน",
+              "roman": "thɔɔn",
+              "english": "give change"
+            },
+            {
+              "thai": "น้ำมันพืช",
+              "roman": "náam-man-phɯ̂ɯt",
+              "english": "vegetable oil"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "restaurant-dlg",
+      "subject_id": "restaurant",
+      "sort_order": 11,
       "title": "Ordering dinner",
       "steps": {
         "kind": "dialogue",
@@ -24679,9 +27975,569 @@
       ]
     },
     {
-      "id": "t-dlg",
+      "id": "travel-quiz",
       "subject_id": "travel",
       "sort_order": 10,
+      "title": "Unit quiz",
+      "steps": [
+        {
+          "id": "so-150",
+          "type": "sentenceOrder",
+          "prompt": "I'm going on a trip to Phuket.",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "pai",
+              "thai": "ไป"
+            },
+            "b": {
+              "roman": "thîao",
+              "thai": "เที่ยว"
+            },
+            "c": {
+              "roman": "phuu-gèt",
+              "thai": "ภูเก็ต"
+            },
+            "x0": {
+              "thai": "ไหน",
+              "roman": "nǎi"
+            },
+            "x1": {
+              "thai": "กรุงเทพฯ",
+              "roman": "grung-thêep"
+            }
+          },
+          "poolOrder": [
+            "c",
+            "x1",
+            "b",
+            "a",
+            "x0"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c"
+          ],
+          "source": "Essential Thai (Higbie), p.33"
+        },
+        {
+          "id": "mc-156",
+          "type": "translationChoice",
+          "thai": "ไปแท็กซี่",
+          "roman": "pai thák-sîi",
+          "options": [
+            {
+              "text": "I'm going by train.",
+              "correct": false
+            },
+            {
+              "text": "I'm going by bus.",
+              "correct": false
+            },
+            {
+              "text": "I'm going by tuk-tuk.",
+              "correct": false
+            },
+            {
+              "text": "I'm going by taxi.",
+              "correct": true
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.34",
+          "parts": [
+            "ไป",
+            "แท็กซี่"
+          ]
+        },
+        {
+          "id": "mc-161",
+          "type": "translationChoice",
+          "thai": "ไปเครื่องบิน",
+          "roman": "pai khrɯ̂ang-bin",
+          "options": [
+            {
+              "text": "Where's the airport?",
+              "correct": false
+            },
+            {
+              "text": "round trip",
+              "correct": false
+            },
+            {
+              "text": "I'm going by plane.",
+              "correct": true
+            },
+            {
+              "text": "one-way",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.136",
+          "parts": [
+            "ไป",
+            "เครื่องบิน"
+          ]
+        },
+        {
+          "id": "mc-163",
+          "type": "translationChoice",
+          "thai": "ไปกลับ",
+          "roman": "pai glàp",
+          "options": [
+            {
+              "text": "I'm going by plane.",
+              "correct": false
+            },
+            {
+              "text": "one-way",
+              "correct": false
+            },
+            {
+              "text": "round trip",
+              "correct": true
+            },
+            {
+              "text": "Where's the airport?",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.136",
+          "parts": [
+            "ไป",
+            "กลับ"
+          ]
+        },
+        {
+          "id": "rp-167",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "ไปไหน",
+              "parts": [
+                "ไป",
+                "ไหน"
+              ],
+              "roman": "pai nǎi",
+              "english": "Where are you going?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ไปสนามบิน",
+          "roman": "pai sà-nǎam-bin",
+          "english": "To the airport.",
+          "options": [
+            {
+              "thai": "เที่ยวเดียว",
+              "roman": "thîao diao",
+              "correct": false
+            },
+            {
+              "thai": "สถานีรถไฟ",
+              "roman": "sà-thǎa-nee rót-fai",
+              "correct": false
+            },
+            {
+              "thai": "ไปสนามบิน",
+              "roman": "pai sà-nǎam-bin",
+              "correct": true
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.136",
+          "parts": [
+            "ไป",
+            "สนามบิน"
+          ]
+        },
+        {
+          "id": "mc-169",
+          "type": "translationChoice",
+          "thai": "เอาตั๋วไปกรุงเทพฯ",
+          "roman": "ao tǔa pai grung-thêep",
+          "options": [
+            {
+              "text": "A ticket to Bangkok, please.",
+              "correct": true
+            },
+            {
+              "text": "two tickets",
+              "correct": false
+            },
+            {
+              "text": "How many tickets?",
+              "correct": false
+            },
+            {
+              "text": "Where's the bus stop?",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.138",
+          "parts": [
+            "เอา",
+            "ตั๋ว",
+            "ไป",
+            "กรุงเทพฯ"
+          ]
+        },
+        {
+          "id": "rp-175",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "เอากี่ใบ",
+              "parts": [
+                "เอา",
+                "กี่",
+                "ใบ"
+              ],
+              "roman": "ao gìi bai",
+              "english": "How many tickets?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "สองใบ",
+          "roman": "sɔ̌ɔng bai",
+          "english": "Two.",
+          "options": [
+            {
+              "thai": "ขึ้นที่ไหน",
+              "roman": "khɯ̂n thîi-nǎi",
+              "correct": false
+            },
+            {
+              "thai": "สองใบ",
+              "roman": "sɔ̌ɔng bai",
+              "correct": true
+            },
+            {
+              "thai": "ป้ายรถเมล์",
+              "roman": "pâai rót-mee",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.138",
+          "parts": [
+            "สอง",
+            "ใบ"
+          ]
+        },
+        {
+          "id": "rp-183",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "ลงที่ไหน",
+              "parts": [
+                "ลง",
+                "ที่ไหน"
+              ],
+              "roman": "long thîi-nǎi",
+              "english": "Where are you getting off?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ลงป้ายนี้",
+          "roman": "long pâai níi",
+          "english": "At this stop.",
+          "options": [
+            {
+              "thai": "ลงป้ายนี้",
+              "roman": "long pâai níi",
+              "correct": true
+            },
+            {
+              "thai": "สองใบ",
+              "roman": "sɔ̌ɔng bai",
+              "correct": false
+            },
+            {
+              "thai": "รถเมล์คันนี้",
+              "roman": "rót-mee khan níi",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.138",
+          "parts": [
+            "ลง",
+            "ป้าย",
+            "นี้"
+          ]
+        },
+        {
+          "id": "so-186",
+          "type": "sentenceOrder",
+          "prompt": "We don't have any rooms.",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "mâi",
+              "thai": "ไม่"
+            },
+            "b": {
+              "roman": "mii",
+              "thai": "มี"
+            },
+            "c": {
+              "roman": "hɔ̂ng",
+              "thai": "ห้อง"
+            },
+            "x0": {
+              "thai": "ไป",
+              "roman": "pai"
+            },
+            "x1": {
+              "thai": "ลง",
+              "roman": "long"
+            }
+          },
+          "poolOrder": [
+            "c",
+            "a",
+            "b",
+            "x0",
+            "x1"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c"
+          ],
+          "source": "Essential Thai (Higbie), p.142"
+        },
+        {
+          "id": "rp-199",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "ขับช้าๆได้มั้ย",
+              "parts": [
+                "ขับ",
+                "ช้าๆ",
+                "ได้",
+                "มั้ย"
+              ],
+              "roman": "khàp cháa-cháa dâi mái",
+              "english": "Could you drive slowly?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ได้",
+          "roman": "dâi",
+          "english": "Sure.",
+          "options": [
+            {
+              "thai": "ไปสนามบิน",
+              "roman": "pai sà-nǎam-bin",
+              "correct": false
+            },
+            {
+              "thai": "ได้",
+              "roman": "dâi",
+              "correct": true
+            },
+            {
+              "thai": "เลี้ยวขวา",
+              "roman": "líao khwǎa",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.140",
+          "parts": [
+            "ได้"
+          ]
+        },
+        {
+          "id": "mc-205",
+          "type": "translationChoice",
+          "thai": "ใกล้",
+          "roman": "glâi",
+          "options": [
+            {
+              "text": "Is it far?",
+              "correct": false
+            },
+            {
+              "text": "Turn left.",
+              "correct": false
+            },
+            {
+              "text": "Go straight.",
+              "correct": false
+            },
+            {
+              "text": "It's near.",
+              "correct": true
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.147",
+          "parts": [
+            "ใกล้"
+          ]
+        },
+        {
+          "id": "rp-207",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "สนามบินไกลมั้ย",
+              "parts": [
+                "สนามบิน",
+                "ไกล",
+                "มั้ย"
+              ],
+              "roman": "sà-nǎam-bin glai mái",
+              "english": "Is the airport far?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ไม่ไกล",
+          "roman": "mâi glai",
+          "english": "No, not far.",
+          "options": [
+            {
+              "thai": "เลี้ยวซ้าย",
+              "roman": "líao sáai",
+              "correct": false
+            },
+            {
+              "thai": "ไม่ไกล",
+              "roman": "mâi glai",
+              "correct": true
+            },
+            {
+              "thai": "ตรงไป",
+              "roman": "trong pai",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.147",
+          "parts": [
+            "ไม่",
+            "ไกล"
+          ]
+        },
+        {
+          "id": "rp-215",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "เลี้ยวที่ไหน",
+              "parts": [
+                "เลี้ยว",
+                "ที่ไหน"
+              ],
+              "roman": "líao thîi-nǎi",
+              "english": "Where do I turn?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "เลี้ยวซ้ายที่สี่แยก",
+          "roman": "líao sáai thîi sìi-yɛ̂ɛk",
+          "english": "Turn left at the intersection.",
+          "options": [
+            {
+              "thai": "ขอกุญแจด้วย",
+              "roman": "khɔ̌ɔ gun-jɛɛ dûai",
+              "correct": false
+            },
+            {
+              "thai": "เลี้ยวซ้ายที่สี่แยก",
+              "roman": "líao sáai thîi sìi-yɛ̂ɛk",
+              "correct": true
+            },
+            {
+              "thai": "ถนนนี้",
+              "roman": "thà-nǒn níi",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.146",
+          "parts": [
+            "เลี้ยว",
+            "ซ้าย",
+            "ที่",
+            "สี่แยก"
+          ]
+        },
+        {
+          "id": "rp-223",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "ตลาดอยู่ที่ไหน",
+              "parts": [
+                "ตลาด",
+                "อยู่",
+                "ที่ไหน"
+              ],
+              "roman": "tà-làat yùu thîi-nǎi",
+              "english": "Where's the market?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "เลี้ยวซ้ายที่สี่แยก",
+          "roman": "líao sáai thîi sìi-yɛ̂ɛk",
+          "english": "Turn left at the intersection.",
+          "options": [
+            {
+              "thai": "ขอผ้าเช็ดตัวด้วย",
+              "roman": "khɔ̌ɔ phâa-chét-tua dûai",
+              "correct": false
+            },
+            {
+              "thai": "เลี้ยวซ้ายที่สี่แยก",
+              "roman": "líao sáai thîi sìi-yɛ̂ɛk",
+              "correct": true
+            },
+            {
+              "thai": "มียุง",
+              "roman": "mii yung",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.144",
+          "parts": [
+            "เลี้ยว",
+            "ซ้าย",
+            "ที่",
+            "สี่แยก"
+          ]
+        },
+        {
+          "id": "travel-quiz-match-0",
+          "type": "match",
+          "pairs": [
+            {
+              "thai": "ตุ๊กตุ๊ก",
+              "roman": "túk-túk",
+              "english": "tuk-tuk (motorized three-wheel taxi)"
+            },
+            {
+              "thai": "ธนาคาร",
+              "roman": "thá-naa-khaan",
+              "english": "bank"
+            },
+            {
+              "thai": "ไปรษณีย์",
+              "roman": "prai-sà-nii",
+              "english": "post office"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t-dlg",
+      "subject_id": "travel",
+      "sort_order": 11,
       "title": "Finding a room in town",
       "steps": {
         "kind": "dialogue",

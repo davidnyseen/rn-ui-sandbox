@@ -451,7 +451,107 @@ function interleaveWordIntros(courseSubject, maxConsecutive = 2, introduced = ne
   return { ...courseSubject, lessons };
 }
 
+// The end-of-unit quiz (user, 2026-11-10: the map's "Quiz" stop should be a real quiz, and every word the unit
+// teaches must be tested in it). Built from the unit's own questions, so it teaches nothing new: it picks questions
+// that between them use as many of the unit's words as possible, then puts any words still not covered into match
+// games. checkQuizCoverage() below fails the content build if a taught word is missing. Goes just before the unit's
+// conversation lesson (or last), where the map labels it "Quiz".
+const isDialogueLesson = (les) => les.kind === 'dialogue';
+
+function taughtWords(courseSubject) {
+  const words = new Map();
+  for (const les of courseSubject.lessons) {
+    if (isDialogueLesson(les) || les.id === courseSubject.id + '-quiz') continue;
+    for (const st of les.steps) {
+      if (st.type === 'wordIntro') words.set(st.word.thai, st.word);
+      if (st.type === 'wordIntroGroup') st.words.forEach((w) => words.set(w.thai, w));
+    }
+  }
+  return words;
+}
+
+// All the Thai a learner sees or builds in a question.
+function stepThai(st) {
+  switch (st.type) {
+    case 'translationChoice':
+    case 'speak':
+      return st.thai;
+    case 'sentenceOrder':
+      return st.correctOrder.map((k) => st.words[k].thai).join(' ');
+    case 'reply':
+      return [...st.context.map((c) => c.parts.join('')), ...st.options.map((o) => o.thai)].join(' ');
+    case 'match':
+      return st.pairs.map((p) => p.thai).join(' ');
+    default:
+      return '';
+  }
+}
+
+function addUnitQuiz(courseSubject) {
+  const words = taughtWords(courseSubject);
+  if (words.size === 0) return courseSubject;
+  const copy = (o) => JSON.parse(JSON.stringify(o));
+  const lessons = courseSubject.lessons.filter((les) => !isDialogueLesson(les));
+  const candidates = [];
+  lessons.forEach((les, li) =>
+    les.steps.forEach((st, si) => {
+      if (['translationChoice', 'sentenceOrder', 'reply'].includes(st.type)) candidates.push({ st, li, si, thai: stepThai(st) });
+    })
+  );
+  const uncovered = new Set(words.keys());
+  const picked = [];
+  const MAX_QUESTIONS = 14;
+  while (picked.length < MAX_QUESTIONS) {
+    let best = null;
+    let bestGain = 0;
+    for (const c of candidates) {
+      if (picked.includes(c)) continue;
+      let gain = 0;
+      for (const w of uncovered) if (c.thai.includes(w)) gain += 1;
+      // ties: prefer a different question type than the last one picked, for variety
+      if (gain > bestGain || (gain === bestGain && gain > 0 && best && picked.length && best.st.type === picked[picked.length - 1].st.type && c.st.type !== best.st.type)) {
+        best = c;
+        bestGain = gain;
+      }
+    }
+    if (!best || bestGain === 0) break;
+    picked.push(best);
+    for (const w of [...uncovered]) if (best.thai.includes(w)) uncovered.delete(w);
+  }
+  picked.sort((x, y) => x.li - y.li || x.si - y.si); // keep the unit's own order
+  const steps = picked.map((c) => copy(c.st));
+  // words no question covered go into match games of up to 5 pairs (topped up to 3 with covered words if needed)
+  const left = [...uncovered].map((w) => words.get(w));
+  const filler = [...words.values()].filter((w) => !uncovered.has(w.thai));
+  for (let i = 0; i < left.length; i += 5) {
+    const chunk = left.slice(i, i + 5);
+    while (chunk.length < 3 && filler.length) chunk.push(filler.shift());
+    steps.push({
+      id: courseSubject.id + '-quiz-match-' + i / 5,
+      type: 'match',
+      pairs: chunk.map((w) => ({ thai: w.thai, roman: w.roman, english: w.english })),
+    });
+  }
+  const quiz = { id: courseSubject.id + '-quiz', title: 'Unit quiz', steps };
+  const at = courseSubject.lessons.findIndex(isDialogueLesson);
+  const out = [...courseSubject.lessons];
+  out.splice(at === -1 ? out.length : at, 0, quiz);
+  return { ...courseSubject, lessons: out };
+}
+
+// Pipeline rule (user, 2026-11-10): every word a unit teaches must be tested in that unit's quiz.
+function checkQuizCoverage(courseSubject) {
+  const quiz = courseSubject.lessons.find((les) => les.id === courseSubject.id + '-quiz');
+  if (!quiz) throw new Error(`[${courseSubject.id}] has no unit quiz`);
+  const tested = quiz.steps.map(stepThai).join(' ');
+  const missing = [...taughtWords(courseSubject).keys()].filter((w) => !tested.includes(w));
+  if (missing.length) throw new Error(`[${courseSubject.id}] unit quiz does not test: ${missing.join(', ')}`);
+  return courseSubject;
+}
+
 module.exports = {
+  addUnitQuiz,
+  checkQuizCoverage,
   wordIntro,
   wordIntroGroup,
   rule,

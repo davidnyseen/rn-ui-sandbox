@@ -150,7 +150,22 @@
   CHAT M:มี แฟน รึยัง(mii fɛɛn rɯ́-yang=Do you have a partner yet?) → reply as F "Not yet, I'm still single.": มีลูกสามคน(mii lûuk sǎam kon) / *ยังโสด(yang sòot) / แต่งงานแล้ว(tɛ̀ng-ngaan láew)
   MATCH ไม่=not / no, ได้=have (done) — yang mâi dâi: not ... yet, โสด=single / unmarried
 
-## L10 Catching up on family
+## L10 Unit quiz
+  CHOICE แม่ | mɛ̂ɛ: Siblings. / *Mother. / Father. / Older brother.
+  BUILD "older brother, younger brother" = พี่ชาย(phîi-chaai) น้องชาย(nɔ́ɔng-chaai)  [extra: mɛ̂ɛ, phɔ̂ɔ]
+  BUILD "older sister, younger sister" = พี่สาว(phîi-sǎao) น้องสาว(nɔ́ɔng-sǎao)  [extra: nɔ́ɔng-chaai, phɔ̂ɔ]
+  BUILD "family and siblings" = ครอบครัว(khrɔ̂ɔp-khrua) กับ(gàp) พี่น้อง(phîi-nɔ́ɔng)  [extra: phîi-sǎao, nɔ́ɔng-sǎao]
+  CHOICE มีพี่ชายคนหนึ่ง | mii phîi-chaai kon nɯ̀ng: How many people? / I have two siblings. / *I have one older brother. / How many siblings do you have?
+  CHAT M:คุณ มี พี่น้อง กี่ คน(khun mii phîi-nɔ́ɔng gìi kon=How many siblings do you have?) → reply as F "I have two siblings.": เค้าเป็นพ่อ(kháo pen phɔ̂ɔ) / *มีพี่น้องสองคน(mii phîi-nɔ́ɔng sɔ̌ɔng kon) / กี่คน(gìi kon)
+  CHAT M:คุณ มี ลูก กี่ คน(khun mii lûuk gìi kon=How many children do you have?) → reply as F "I have three children.": *มีลูกสามคน(mii lûuk sǎam kon) / มีพี่น้องสี่คน(mii phîi-nɔ́ɔng sìi kon) / กี่คน(gìi kon)
+  CHAT M:คุณ มี ลูก กี่ คน(khun mii lûuk gìi kon=How many children do you have?) → reply as F "I have two daughters.": เค้าอยู่ที่ไหน(kháo yùu thîi-nǎi) / *มีลูกสาวสองคน(mii lûuk-sǎao sɔ̌ɔng kon) / ลูกชาย(lûuk-chaai)
+  CHAT M:ตา อยู่ ที่ไหน(taa yùu thîi-nǎi=Where is grandpa?) → reply as F "Grandpa is at home.": มีลูกสามคน(mii lûuk sǎam kon) / *ตาอยู่บ้าน(taa yùu bâan) / ยาย(yaai)
+  CHOICE ลุงกับป้าอยู่ที่นี่ | lung gàp pâa yùu thîi-nîi: Where is your uncle? / *My uncle and aunt are here. / My aunt is at home. / He's/she's my partner.
+  BUILD "My aunt/uncle is at home." = น้า(náa) อยู่(yùu) บ้าน(bâan)  [extra: nɯ̀ng, sìi]
+  CHOICE ยังไม่ได้แต่งงาน | yang mâi dâi tɛ̀ng-ngaan: I don't have a partner. / I don't have children yet. / *I'm not married yet. / I'm still single.
+  CHAT M:มี แฟน รึยัง(mii fɛɛn rɯ́-yang=Do you have a partner yet?) → reply as F "Not yet, I'm still single.": มีลูกสามคน(mii lûuk sǎam kon) / *ยังโสด(yang sòot) / แต่งงานแล้ว(tɛ̀ng-ngaan láew)
+
+## L11 Catching up on family
 scene: Two old friends catching up about marriage and family.
   D0 A: คุณแต่งงานรึยัง | khun tɛ̀ng-ngaan rɯ́-yang | Are you married yet?
   D1 B: ยังไม่ได้แต่งงานยังโสด | yang mâi dâi tɛ̀ng-ngaan, yang sòot | Not married yet, still single.

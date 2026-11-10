@@ -162,7 +162,25 @@
   CHAT M:เอา กี่ โล(ao gìi loo=How many kilos do you want?) → reply as F "Half a kilo.": โลละเท่าไหร่(loo lá thâo-rài) / *เอาครึ่งโล(ao khrɯ̂ng loo) / มีเต้าหู้มั้ย(mii tâo-hûu mái)
   MATCH เอา=want / take, กี่=how many, ครึ่ง=half
 
-## L10 Ordering dinner
+## L10 Unit quiz
+  BUILD "One, two, three" = หนึ่ง(nɯ̀ng) สอง(sɔ̌ɔng) สาม(sǎam)  [extra: dûai, mii]
+  CHOICE ขอจานกับแก้ว | khɔ̌ɔ jaan gàp gɛ̂ɛo: What do you have? / Two glasses, please. / *I'd like a plate and a glass. / May I have some water?
+  CHOICE ขอข้าวผัดไก่หนึ่งจาน | khɔ̌ɔ khâao-phàt gài nɯ̀ng jaan: One more plate, please. / pork fried rice / *One chicken fried rice, please. / with chicken
+  BUILD "Another bottle of water, please." = ขอ(khɔ̌ɔ) น้ำ(náam) อีก(ìik) ขวด(khùat)  [extra: sài, khâao-phàt]
+  CHOICE ข้าวผัดหมู | khâao-phàt mǔu: One chicken fried rice, please. / with chicken / *pork fried rice / One more plate, please.
+  CHOICE ใส่น้ำตาล | sài náam-taan: No chili, please. / Not spicy at all. / *with sugar / No beef, please.
+  CHAT M:ใส่ อะไร(sài à-rai=What do you want in it?) → reply as F "No chili, please.": ขอเมนูด้วย(khɔ̌ɔ menuu dûai) / *ไม่ใส่พริก(mâi sài phrík) / มีอะไรบ้าง(mii à-rai bâang)
+  BUILD "A hot tea and an iced coffee, please." = ขอ(khɔ̌ɔ) ชา(chaa) ร้อน(rɔ́ɔn) แล้วก็(láew-gɔ̂ɔ) กาแฟ(gaa-fɛɛ) เย็น(yen)  [extra: loei, gài]
+  CHAT M:มี อะไร บ้าง(mii à-rai bâang=What do you have?) → reply as F "We have coffee and tea.": *มีกาแฟแล้วก็ชา(mii gaa-fɛɛ láew-gɔ̂ɔ chaa) / ชาเย็น(chaa yen) / ขอน้ำเปล่า(khɔ̌ɔ náam plào)
+  CHAT M:มี อะไร บ้าง(mii à-rai bâang=What do you have?) → reply as F "We have large and small bottles of beer.": เปรี้ยวหวาน(prîao wǎan) / *มีเบียร์ขวดใหญ่กับขวดเล็ก(mii bia khùat yài gàp khùat lék) / ไม่หวาน(mâi wǎan)
+  CHOICE ขอช้อนกับส้อม | khɔ̌ɔ chɔ́ɔn gàp sɔ̂m: Please wipe the table. / *A spoon and fork, please. / The check, please. / Keep the change.
+  CHAT M:มี เต้าหู้ มั้ย(mii tâo-hûu mái=Do you have tofu?) → reply as F "Yes, we do.": ไม่เผ็ดเลย(mâi phèt loei) / *มี(mii) / ฉันกินเจ(chán gin jee)
+  CHAT M:ไม่ ใส่ ไข่ ได้ มั้ย(mâi sài khài dâi mái=Can you make it without egg?) → reply as F "Sure, no problem.": ขอสองโล(khɔ̌ɔ sɔ̌ɔng loo) / *ได้(dâi) / ใส่ไข่(sài khài)
+  CHAT M:เอา กี่ โล(ao gìi loo=How many kilos do you want?) → reply as F "Half a kilo.": โลละเท่าไหร่(loo lá thâo-rài) / *เอาครึ่งโล(ao khrɯ̂ng loo) / มีเต้าหู้มั้ย(mii tâo-hûu mái)
+  MATCH เนื้อ=beef, ที่=order (classifier), เค็ม=salty, ช่วยเช็ดโต๊ะหน่อย=Please wipe off the table., เช็คบิล=the bill
+  MATCH ต้อง=have to / need to, ทอน=give change, น้ำมันพืช=vegetable oil
+
+## L11 Ordering dinner
 scene: Two friends order food, skip the spice, and ask for the check.
   D0 A: ขอเมนูด้วย | khɔ̌ɔ menuu dûai | May I have a menu?
   D1 B: ขอข้าวผัดไก่หนึ่งจาน | khɔ̌ɔ khâao-phàt gài nɯ̀ng jaan | I'd like one plate of fried rice with chicken.

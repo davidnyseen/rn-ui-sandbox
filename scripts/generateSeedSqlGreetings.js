@@ -11,7 +11,7 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { checkDictionary, stripAuthoringFields, addOrderDistractors, interleaveWordIntros } = require('./lib/courseBuilder');
+const { checkDictionary, stripAuthoringFields, addOrderDistractors, interleaveWordIntros, addUnitQuiz, checkQuizCoverage } = require('./lib/courseBuilder');
 const { greetingsSubjects: rawSubjects } = require('./courseContent/greetings');
 
 // `introduced` tracks only words taught by PRIOR subjects in the sequence —
@@ -26,7 +26,7 @@ const subjects = rawSubjects.map((raw) => {
   const interleaved = interleaveWordIntros(raw, 2, new Set(introduced));
   introduced = checkDictionary(interleaved, new Set(introduced)); // real check; carries forward to the next subject
   const withDistractors = addOrderDistractors(interleaved, 2, introducedTiles);
-  return stripAuthoringFields(withDistractors);
+  return checkQuizCoverage(addUnitQuiz(stripAuthoringFields(withDistractors)));
 });
 
 function sqlText(s) {

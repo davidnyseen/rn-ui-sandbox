@@ -151,7 +151,24 @@
   CHAT M:ตลาด อยู่ ที่ไหน(tà-làat yùu thîi-nǎi=Where's the market?) → reply as F "Turn left at the intersection.": ขอผ้าเช็ดตัวด้วย(khɔ̌ɔ phâa-chét-tua dûai) / *เลี้ยวซ้ายที่สี่แยก(líao sáai thîi sìi-yɛ̂ɛk) / มียุง(mii yung)
   MATCH ผ้าเช็ดตัว=towel, ยุง=mosquito, ธนาคาร=bank, ไปรษณีย์=post office, ตลาด=market
 
-## L10 Finding a room in town
+## L10 Unit quiz
+  BUILD "I'm going on a trip to Phuket." = ไป(pai) เที่ยว(thîao) ภูเก็ต(phuu-gèt)  [extra: grung-thêep, nǎi]
+  CHOICE ไปแท็กซี่ | pai thák-sîi: I'm going by train. / I'm going by bus. / I'm going by tuk-tuk. / *I'm going by taxi.
+  CHOICE ไปเครื่องบิน | pai khrɯ̂ang-bin: Where's the airport? / round trip / *I'm going by plane. / one-way
+  CHOICE ไปกลับ | pai glàp: I'm going by plane. / one-way / *round trip / Where's the airport?
+  CHAT M:ไป ไหน(pai nǎi=Where are you going?) → reply as F "To the airport.": เที่ยวเดียว(thîao diao) / สถานีรถไฟ(sà-thǎa-nee rót-fai) / *ไปสนามบิน(pai sà-nǎam-bin)
+  CHOICE เอาตั๋วไปกรุงเทพฯ | ao tǔa pai grung-thêep: *A ticket to Bangkok, please. / two tickets / How many tickets? / Where's the bus stop?
+  CHAT M:เอา กี่ ใบ(ao gìi bai=How many tickets?) → reply as F "Two.": ขึ้นที่ไหน(khɯ̂n thîi-nǎi) / *สองใบ(sɔ̌ɔng bai) / ป้ายรถเมล์(pâai rót-mee)
+  CHAT M:ลง ที่ไหน(long thîi-nǎi=Where are you getting off?) → reply as F "At this stop.": *ลงป้ายนี้(long pâai níi) / สองใบ(sɔ̌ɔng bai) / รถเมล์คันนี้(rót-mee khan níi)
+  BUILD "We don't have any rooms." = ไม่(mâi) มี(mii) ห้อง(hɔ̂ng)  [extra: pai, long]
+  CHAT M:ขับ ช้าๆ ได้ มั้ย(khàp cháa-cháa dâi mái=Could you drive slowly?) → reply as F "Sure.": ไปสนามบิน(pai sà-nǎam-bin) / *ได้(dâi) / เลี้ยวขวา(líao khwǎa)
+  CHOICE ใกล้ | glâi: Is it far? / Turn left. / Go straight. / *It's near.
+  CHAT M:สนามบิน ไกล มั้ย(sà-nǎam-bin glai mái=Is the airport far?) → reply as F "No, not far.": เลี้ยวซ้าย(líao sáai) / *ไม่ไกล(mâi glai) / ตรงไป(trong pai)
+  CHAT M:เลี้ยว ที่ไหน(líao thîi-nǎi=Where do I turn?) → reply as F "Turn left at the intersection.": ขอกุญแจด้วย(khɔ̌ɔ gun-jɛɛ dûai) / *เลี้ยวซ้ายที่สี่แยก(líao sáai thîi sìi-yɛ̂ɛk) / ถนนนี้(thà-nǒn níi)
+  CHAT M:ตลาด อยู่ ที่ไหน(tà-làat yùu thîi-nǎi=Where's the market?) → reply as F "Turn left at the intersection.": ขอผ้าเช็ดตัวด้วย(khɔ̌ɔ phâa-chét-tua dûai) / *เลี้ยวซ้ายที่สี่แยก(líao sáai thîi sìi-yɛ̂ɛk) / มียุง(mii yung)
+  MATCH ตุ๊กตุ๊ก=tuk-tuk (motorized three-wheel taxi), ธนาคาร=bank, ไปรษณีย์=post office
+
+## L11 Finding a room in town
 scene: Checking into a hotel in Phuket, then asking the way to the market
   D0 A: มีห้องมั้ย | mii hɔ̂ng mái | Do you have a room?
   D1 B: มี ห้องนี้ได้มั้ย | mii, hɔ̂ng níi dâi mái | Yes — is this room OK?
