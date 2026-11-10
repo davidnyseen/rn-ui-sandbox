@@ -627,6 +627,7 @@ export function RootApp() {
             streak={state.streak}
             xp={state.xp}
             currentUnitIndex={state.currentUnitIndex}
+            focusKey={state.activeCourseSubjectId ? `course-${state.activeCourseSubjectId}-${state.activeCourseLessonIndex}` : null}
             currentLessonIndex={state.currentLessonIndex}
             unitStars={state.unitStars}
             onOpenUnit={openUnit}

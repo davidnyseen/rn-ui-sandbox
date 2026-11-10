@@ -1,10 +1,10 @@
-import { ComponentType, useState } from 'react';
+import { ComponentType, useEffect, useRef, useState } from 'react';
 import { Image, LayoutChangeEvent, NativeScrollEvent, NativeSyntheticEvent, Pressable, ScrollView, Text, View, StyleSheet } from 'react-native';
 import Svg, { Defs, Pattern, RadialGradient, Stop, Circle, Rect, Path } from 'react-native-svg';
 import { UNITS } from '../data';
 import { CourseSubject } from '../courseTypes';
 import { colors, fonts, radius, textMuted, PATH_PALETTE } from '../theme';
-import { BookIcon, CheckIcon, FlameIcon, IconProps, LockIcon, StarIcon, UtensilsIcon } from '../components/icons';
+import { BookIcon, CheckIcon, IconProps, LockIcon, StarIcon, UtensilsIcon } from '../components/icons';
 import { PulseRing } from '../components/PulseRing';
 import { BounceNode } from '../components/BounceNode';
 import { COURSE_ICONS } from '../components/courseIcons';
@@ -121,6 +121,7 @@ export function PathScreen({
   streak,
   xp,
   currentUnitIndex,
+  focusKey,
   currentLessonIndex,
   unitStars,
   onOpenUnit,
@@ -131,6 +132,9 @@ export function PathScreen({
   streak: number;
   xp: number;
   currentUnitIndex: number;
+  // The stop to bring into view when the map opens — the lesson just studied, so leaving a Restaurant lesson lands
+  // back on the Restaurant section rather than the top of the map (user, 2026-11-10).
+  focusKey?: string | null;
   currentLessonIndex: number;
   unitStars: Record<number, number>;
   onOpenUnit: (unitId: number) => void;
@@ -150,6 +154,8 @@ export function PathScreen({
     setTrackOffsetY(e.nativeEvent.layout.y);
   };
   const onScroll = (e: NativeSyntheticEvent<NativeScrollEvent>) => setScrollY(e.nativeEvent.contentOffset.y);
+  const scrollRef = useRef<ScrollView>(null);
+  const focusedOnce = useRef(false);
 
   const unitItems: PathItem[] = UNITS.map((u, i) => {
     const status: PathNode['status'] =
@@ -288,6 +294,15 @@ export function PathScreen({
   }
   const activeSection = sectionHeaders[activeSectionIndex]?.item.header ?? null;
 
+  // Once the track has its size, scroll so the focused stop sits a little below the sticky unit card.
+  const focusY = focusKey ? laidOut.find((l) => l.item.kind === 'node' && l.item.node!.key === focusKey)?.y : undefined;
+  useEffect(() => {
+    if (focusedOnce.current || trackWidth === 0 || focusY === undefined) return;
+    focusedOnce.current = true;
+    const y = Math.max(0, trackOffsetY + focusY - 220);
+    requestAnimationFrame(() => scrollRef.current?.scrollTo({ y, animated: false }));
+  }, [trackWidth, trackOffsetY, focusY]);
+
   return (
     <View style={styles.screen}>
       {/* faint temple and frangipani in the bottom corners, behind the map (ChatGPT's map, 2026-11-08) */}
@@ -295,7 +310,7 @@ export function PathScreen({
       <Image source={require('../../assets/redesign/corner-flowers.png')} style={styles.cornerFlowers} resizeMode="contain" />
       <View style={styles.headerRow}>
         <View style={styles.streak}>
-          <FlameIcon size={18} color={colors.accent700} />
+          <Image source={require('../../assets/redesign/flame.png')} style={styles.flame} resizeMode="contain" />
           <Text style={styles.streakText}>{streak}</Text>
         </View>
         <View style={styles.tag}>
@@ -333,6 +348,7 @@ export function PathScreen({
       })()}
 
       <ScrollView
+        ref={scrollRef}
         style={styles.scroll}
         contentContainerStyle={styles.content}
         onScroll={onScroll}
@@ -464,6 +480,7 @@ export function PathScreen({
 
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.white },
+  flame: { width: 16, height: 19 }, // ChatGPT's flame (same art as the lesson-complete streak card)
   cornerTemple: { position: 'absolute', pointerEvents: 'none', left: 0, bottom: 0, width: 170, height: 104, opacity: 0.55 },
   cornerFlowers: { position: 'absolute', pointerEvents: 'none', right: 0, bottom: 0, width: 130, height: 103, opacity: 0.6 },
   mascot: { position: 'absolute', pointerEvents: 'none', right: 72, top: -50, width: 78, height: 84 }, // left of the XP count

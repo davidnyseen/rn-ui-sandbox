@@ -1,7 +1,7 @@
-import { Pressable, ScrollView, Text, View, StyleSheet } from 'react-native';
+import { Image, Pressable, ScrollView, Text, View, StyleSheet } from 'react-native';
 import { CourseSubject } from '../courseTypes';
 import { colors, fonts, textMuted } from '../theme';
-import { BookIcon, ChevronRightIcon, FlameIcon, StarIcon } from '../components/icons';
+import { BookIcon, ChevronRightIcon, StarIcon } from '../components/icons';
 import { COURSE_ICONS } from '../components/courseIcons';
 
 export function ProgressScreen({
@@ -35,7 +35,7 @@ export function ProgressScreen({
         </View>
         <View style={styles.statCell}>
           <View style={styles.streakValue}>
-            <FlameIcon size={20} color={colors.accent700} />
+            <Image source={require('../../assets/redesign/flame.png')} style={{ width: 18, height: 21 }} resizeMode="contain" />
             <Text style={styles.statValueText}>{streak}</Text>
           </View>
           <Text style={styles.statLabel}>Day streak</Text>
