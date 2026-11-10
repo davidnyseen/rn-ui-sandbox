@@ -78,21 +78,33 @@ export function stopSpeech() {
   stopCurrentPlayer();
 }
 
+// Pause, then release: remove() alone frees the handle, but on iPhone the native player can keep sounding for a
+// moment — heard as two voices at once when tapping words or moving between screens quickly (user, 2026-11-10).
+function silence(player: AudioPlayer) {
+  try {
+    player.pause();
+  } catch {
+    // ignore
+  }
+  try {
+    player.remove();
+  } catch {
+    // ignore
+  }
+}
+
 function stopCurrentPlayer() {
   currentCleanup?.();
   currentCleanup = null;
   if (currentPlayer) {
-    try {
-      currentPlayer.remove();
-    } catch {
-      // ignore
-    }
+    silence(currentPlayer);
     currentPlayer = null;
   }
 }
 
 // Plays one bundled clip, cancelling whatever was playing; onDone fires once when it ends (or is replaced).
 function playClip(source: number, onDone?: () => void) {
+  stopCurrentPlayer();
   const player = createAudioPlayer(source);
   currentPlayer = player;
   let done = false;
@@ -102,11 +114,7 @@ function playClip(source: number, onDone?: () => void) {
     done = true;
     if (durationTimer) clearTimeout(durationTimer);
     listener.remove();
-    try {
-      player.remove();
-    } catch {
-      // ignore
-    }
+    silence(player);
     if (currentPlayer === player) currentPlayer = null;
     if (currentCleanup === cleanup) currentCleanup = null;
     onDone?.();

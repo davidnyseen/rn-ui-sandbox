@@ -86,6 +86,9 @@ export function DialogueLessonScreen({
     }).start();
   }, [stepIndex, progressAnim]);
 
+  // Leaving the lesson (X, or finishing) mid-clip mustn't leave it talking over the next screen.
+  useEffect(() => () => stopSpeech(), []);
+
   const resetStepUi = () => {
     // Cut off whatever the step being left was saying/playing — otherwise
     // it keeps going into the next step's own auto-play, which can be a
