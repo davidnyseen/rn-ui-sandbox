@@ -133,6 +133,15 @@ export function CourseLessonScreen({
           : step.type === 'match'
             ? matchedPairs.length === step.pairs.length
             : bankChecked;
+
+  // When the Correct/Not quite bar slides up it takes the bottom of the screen, so scroll the step down with it —
+  // otherwise the answers sit hidden under the bar (user, 2026-11-10).
+  const scrollRef = useRef<ScrollView>(null);
+  useEffect(() => {
+    if (!currentAnswered || isFreeStep) return; // intro/rule steps have no answer bar
+    const t = setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 60);
+    return () => clearTimeout(t);
+  }, [currentAnswered, isFreeStep, stepIndex]);
   const currentCorrect =
     step.type === 'translationChoice' || step.type === 'reply' || step.type === 'listenChoice'
       ? mcSelected !== null && !!step.options[mcSelected]?.correct
@@ -382,7 +391,7 @@ export function CourseLessonScreen({
           ))}
         </View>
       </View>
-      <ScrollView style={styles.body} contentContainerStyle={styles.bodyContent} showsVerticalScrollIndicator={false}>
+      <ScrollView ref={scrollRef} style={styles.body} contentContainerStyle={styles.bodyContent} showsVerticalScrollIndicator={false}>
         {step.type === 'wordIntro' && <WordIntroStep key={stepIndex} words={[step.word]} onPlayWord={onPlayWordIntroWord} />}
         {step.type === 'wordIntroGroup' && <WordIntroStep key={stepIndex} words={step.words} onPlayWord={onPlayWordIntroWord} />}
         {step.type === 'rule' && <RuleStep key={stepIndex} title={step.title} body={step.body} playing={rulePlaying} onPlay={onPlayRule} />}

@@ -185,6 +185,15 @@ export function DialogueLessonScreen({
   // capstone lessons also end in speak steps.
   const speakSkippedOnWeb = step.type === 'speak' && Platform.OS === 'web';
   const currentAnswered = step.type === 'intro' ? true : step.type === 'speak' ? speakSkippedOnWeb || speakState === 'done' : answered;
+
+  // When the Correct/Not quite bar slides up it takes the bottom of the screen, so scroll the step down with it —
+  // otherwise the answers sit hidden under the bar (user, 2026-11-10).
+  const scrollRef = useRef<ScrollView>(null);
+  useEffect(() => {
+    if (!currentAnswered || step.type === 'intro') return; // the intro has no answer bar
+    const t = setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 60);
+    return () => clearTimeout(t);
+  }, [currentAnswered, step.type, stepIndex]);
   const stepOptions = dialogueStepOptions(step);
   const currentCorrect =
     step.type === 'intro'
@@ -253,7 +262,7 @@ export function DialogueLessonScreen({
           ))}
         </View>
       </View>
-      <ScrollView style={styles.body} contentContainerStyle={styles.bodyContent}>
+      <ScrollView ref={scrollRef} style={styles.body} contentContainerStyle={styles.bodyContent}>
         {step.type === 'intro' && <DialogueIntroStep lesson={lesson} onPlayLine={onPlayIntroLine} />}
         {step.type === 'comprehension' && line && (
           <ListenChoiceStep

@@ -159,8 +159,10 @@ export function ReplyStep({
                       ]}
                     >
                       <View style={styles.bubbleTop}>
-                        <Text style={styles.bubbleThai}>{english}</Text>
-                        <PlayIcon size={14} color="rgba(255,255,255,0.9)" />
+                        <Text style={[styles.bubbleThai, styles.shrink]}>{english}</Text>
+                        <View style={styles.noShrink}>
+                          <PlayIcon size={14} color="rgba(255,255,255,0.9)" />
+                        </View>
                       </View>
                     </View>
                   </Pressable>
@@ -261,6 +263,8 @@ const styles = StyleSheet.create({
   },
   bubbleTailLeft: { borderBottomLeftRadius: TAIL_RADIUS },
   bubbleTailRight: { borderBottomRightRadius: TAIL_RADIUS },
+  noShrink: { flexShrink: 0 },
+  shrink: { flexShrink: 1 }, // a long English line wraps instead of pushing its sound icon out of the bubble
   bubbleTop: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   bubbleMeaning: { fontSize: 12, color: 'rgba(255,255,255,0.85)', marginTop: 1 },
   bubbleRoman: { fontFamily: fonts.bodySemibold, fontSize: 13, color: 'rgba(255,255,255,0.85)' },
