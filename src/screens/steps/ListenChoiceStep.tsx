@@ -3,6 +3,7 @@ import { Pressable, Text, View, StyleSheet } from 'react-native';
 import { WordItem } from '../../data';
 import { colors, fonts, textMuted } from '../../theme';
 import { Button } from '../../components/Button';
+import { AnswerMark } from '../../components/AnswerMark';
 import { PlayIcon } from '../../components/icons';
 import { PulseRing } from '../../components/PulseRing';
 
@@ -52,11 +53,9 @@ export function ListenChoiceStep({
           let opacity = 1;
           if (answered) {
             if (o.correct) {
-              bg = colors.success100; border = colors.success600; color = colors.success800;
+              bg = colors.success100; border = colors.success600;
             } else if (i === selected) {
-              bg = colors.danger100; border = colors.danger600; color = colors.danger800;
-            } else {
-              opacity = 0.4;
+              bg = colors.danger100; border = colors.danger600;
             }
           } else if (i === selected) {
             bg = colors.select100; border = colors.select; color = colors.text;
@@ -69,6 +68,7 @@ export function ListenChoiceStep({
               style={[styles.option, { backgroundColor: bg, borderColor: border, opacity }]}
             >
               <Text style={[styles.optionText, { color }]}>{o.text}</Text>
+              {answered && (o.correct || i === selected) && <AnswerMark right={o.correct} />}
             </Pressable>
           );
         })}
@@ -96,10 +96,10 @@ const styles = StyleSheet.create({
   reveal: { alignItems: 'center', marginBottom: 20 },
   revealRoman: { fontFamily: fonts.heading, fontSize: 22, color: colors.text },
   revealThai: { fontSize: 16, color: textMuted(0.55), marginTop: 2 },
-  options: { gap: 10, marginBottom: 12 },
+  options: { gap: 8, marginBottom: 12 },
   option: {
     flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 10,
-    padding: 18, minHeight: 58, borderWidth: 1.5, borderRadius: 18, shadowColor: '#7a5c00', shadowOffset: { width: 0, height: 3 }, shadowOpacity: 0.06, shadowRadius: 8, elevation: 1,
+    paddingVertical: 14, paddingHorizontal: 16, minHeight: 56, borderWidth: 1.5, borderRadius: 14,
   },
-  optionText: { fontSize: 17, fontFamily: fonts.bodySemibold },
+  optionText: { flex: 1, fontSize: 17, fontFamily: fonts.bodySemibold },
 });

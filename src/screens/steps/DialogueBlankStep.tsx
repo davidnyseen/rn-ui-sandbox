@@ -2,6 +2,7 @@ import { Pressable, Text, View, StyleSheet } from 'react-native';
 import { DialogueOption } from '../../data';
 import { colors, fonts, textMuted } from '../../theme';
 import { Button } from '../../components/Button';
+import { AnswerMark } from '../../components/AnswerMark';
 
 export function DialogueBlankStep({
   before,
@@ -68,11 +69,9 @@ export function DialogueBlankStep({
           let opacity = 1;
           if (answered) {
             if (o.correct) {
-              bg = colors.success100; border = colors.success600; color = colors.success800;
+              bg = colors.success100; border = colors.success600;
             } else if (i === selected) {
-              bg = colors.danger100; border = colors.danger600; color = colors.danger800;
-            } else {
-              opacity = 0.4;
+              bg = colors.danger100; border = colors.danger600;
             }
           } else if (i === selected) {
             bg = colors.select100; border = colors.select; color = colors.text;
@@ -85,6 +84,7 @@ export function DialogueBlankStep({
               style={[styles.option, { backgroundColor: bg, borderColor: border, opacity }]}
             >
               <Text style={[styles.optionText, { color }]}>{o.text}</Text>
+              {answered && (o.correct || i === selected) && <AnswerMark right={o.correct} />}
             </Pressable>
           );
         })}
@@ -117,6 +117,6 @@ const styles = StyleSheet.create({
   blankWrong: { backgroundColor: colors.danger100, borderColor: colors.danger600 },
   blankWrongText: { color: colors.danger800 },
   options: { flexDirection: 'row', flexWrap: 'wrap', gap: 10, marginBottom: 12 },
-  option: { paddingVertical: 12, paddingHorizontal: 18, borderWidth: 1.5, borderRadius: 14, shadowColor: '#7a5c00', shadowOffset: { width: 0, height: 3 }, shadowOpacity: 0.06, shadowRadius: 8, elevation: 1 },
+  option: { flexDirection: 'row', alignItems: 'center', gap: 8, paddingVertical: 12, paddingHorizontal: 18, borderWidth: 1.5, borderRadius: 14 },
   optionText: { fontSize: 17, fontFamily: fonts.bodySemibold },
 });
