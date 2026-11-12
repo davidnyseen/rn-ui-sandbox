@@ -103,8 +103,8 @@ const lessons = [
       { roman: 'gàp', thai: 'กับ' },
       { roman: 'gɛ̂ɛo', thai: 'แก้ว' },
     ], SRC.drinks),
-    mc('ขอจานกับแก้ว', 'khɔ̌ɔ jaan gàp gɛ̂ɛo', "I'd like a plate and a glass.", ['May I have some water?', 'What do you have?', 'Two glasses, please.'], ['ขอ', 'จาน', 'กับ', 'แก้ว'], SRC.ordering),
-    speak('ขอน้ำกับจาน', 'khɔ̌ɔ náam gàp jaan', 'May I have water and a plate?', ['ขอ', 'น้ำ', 'กับ', 'จาน'], SRC.drinks),
+    mc('ขอจานกับแก้วด้วย', 'khɔ̌ɔ jaan gàp gɛ̂ɛo dûai', "I'd like a plate and a glass.", ['May I have some water?', 'What do you have?', 'Two glasses, please.'], ['ขอ', 'จาน', 'กับ', 'แก้ว', 'ด้วย'], SRC.ordering),
+    speak('ขอน้ำกับจานด้วย', 'khɔ̌ɔ náam gàp jaan dûai', 'May I have water and a plate?', ['ขอ', 'น้ำ', 'กับ', 'จาน', 'ด้วย'], SRC.drinks),
   ]),
 
   // --------------------------------------------------------------- r05+r06
@@ -378,10 +378,10 @@ const lessons = [
     'Ordering dinner',
     'Two friends order food, skip the spice, and ask for the check.',
     [
-      { speaker: 'A', thai: 'ขอเมนูด้วย', roman: 'khɔ̌ɔ menuu dûai', english: 'May I have a menu?' },
-      { speaker: 'B', thai: 'ขอข้าวผัดไก่หนึ่งจาน', roman: 'khɔ̌ɔ khâao-phàt gài nɯ̀ng jaan', english: "I'd like one plate of fried rice with chicken." },
-      { speaker: 'A', thai: 'ไม่ใส่พริก ไม่เผ็ดเลย', roman: 'mâi sài phrík, mâi phèt loei', english: 'No chili — not spicy at all.' },
-      { speaker: 'B', thai: 'ขอเช็คบิลด้วย', roman: 'khɔ̌ɔ chék-bin dûai', english: 'Check, please.' },
+      { speaker: 'A', thai: 'ขอเมนูด้วยค่ะ', roman: 'khɔ̌ɔ menuu dûai khâ', english: 'May I have a menu?' },
+      { speaker: 'B', thai: 'ขอข้าวผัดไก่หนึ่งจานครับ', roman: 'khɔ̌ɔ khâao-phàt gài nɯ̀ng jaan khráp', english: "I'd like one plate of fried rice with chicken." },
+      { speaker: 'A', thai: 'ไม่ใส่พริก ไม่เผ็ดเลยนะคะ', roman: 'mâi sài phrík, mâi phèt loei ná khá', english: 'No chili — not spicy at all.' },
+      { speaker: 'B', thai: 'ขอเช็คบิลด้วยครับ', roman: 'khɔ̌ɔ chék-bin dûai khráp', english: 'Check, please.' },
     ],
     [
       { type: 'intro' },
@@ -429,7 +429,7 @@ const lessons = [
         type: 'blank',
         lineIndex: 2,
         before: 'mâi sài',
-        after: ', mâi phèt loei',
+        after: ', mâi phèt loei ná khá',
         options: [
           { text: 'phrík', correct: true },
           { text: 'nɯ́a', correct: false },

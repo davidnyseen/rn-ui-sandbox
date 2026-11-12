@@ -170,14 +170,14 @@
 
 ## L11 Finding a room in town
 scene: Checking into a hotel in Phuket, then asking the way to the market
-  D0 A: มีห้องมั้ย | mii hɔ̂ng mái | Do you have a room?
-  D1 B: มี ห้องนี้ได้มั้ย | mii, hɔ̂ng níi dâi mái | Yes — is this room OK?
-  D2 A: ได้ ขอกุญแจด้วย | dâi, khɔ̌ɔ gun-jɛɛ dûai | Yes. May I have the key, please?
-  D3 A: ตลาดอยู่ที่ไหน | tà-làat yùu thîi-nǎi | Where's the market?
-  D4 B: เลี้ยวขวาที่สี่แยก ไม่ไกล | líao khwǎa thîi sìi-yɛ̂ɛk, mâi glai | Turn right at the intersection — not far.
+  D0 A: มีห้องมั้ยคะ | mii hɔ̂ng mái khá | Do you have a room?
+  D1 B: มีครับ ห้องนี้ได้มั้ยครับ | mii khráp, hɔ̂ng níi dâi mái khráp | Yes — is this room OK?
+  D2 A: ได้ค่ะ ขอกุญแจด้วยค่ะ | dâi khâ, khɔ̌ɔ gun-jɛɛ dûai khâ | Yes. May I have the key, please?
+  D3 A: ตลาดอยู่ที่ไหนคะ | tà-làat yùu thîi-nǎi khá | Where's the market?
+  D4 B: เลี้ยวขวาที่สี่แยกครับ ไม่ไกล | líao khwǎa thîi sìi-yɛ̂ɛk khráp, mâi glai | Turn right at the intersection — not far.
   comprehension D0: *Do you have a room? / Where's the market? / May I have the key, please? / Not far.
   comprehension D3: *Where's the market? / Where's the bank? / Do you have a room? / Turn left.
   translate D1: *Yes — is this room OK? / Do you have a room? / Where's this room? / We don't have any rooms.
   translate D4: *Turn right at the intersection — not far. / Turn left at the intersection. / Where's the market? / Go straight along this street.
-  blank D2 "dâi, khɔ̌ɔ ___ dûai": *gun-jɛɛ / hɔ̂ng / phâa-chét-tua / tǔa
-  blank D4 "líao ___ thîi sìi-yɛ̂ɛk, mâi glai": *khwǎa / sáai / trong / long
+  blank D2 "dâi khâ, khɔ̌ɔ ___ dûai khâ": *gun-jɛɛ / hɔ̂ng / phâa-chét-tua / tǔa
+  blank D4 "líao ___ thîi sìi-yɛ̂ɛk khráp, mâi glai": *khwǎa / sáai / trong / long

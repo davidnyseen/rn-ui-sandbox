@@ -34,8 +34,8 @@
   CHOICE ขอน้ำด้วย | khɔ̌ɔ náam dûai: *May I have some water? / What do you have? / May I have a menu? / One, please.
   NEW กับ | gàp | and / with
   BUILD "I'd like a plate and a glass." = ขอ(khɔ̌ɔ) จาน(jaan) กับ(gàp) แก้ว(gɛ̂ɛo)  [extra: náam, sǎam]
-  CHOICE ขอจานกับแก้ว | khɔ̌ɔ jaan gàp gɛ̂ɛo: What do you have? / Two glasses, please. / *I'd like a plate and a glass. / May I have some water?
-  SPEAK ขอน้ำกับจาน | khɔ̌ɔ náam gàp jaan | May I have water and a plate?
+  CHOICE ขอจานกับแก้วด้วย | khɔ̌ɔ jaan gàp gɛ̂ɛo dûai: What do you have? / Two glasses, please. / *I'd like a plate and a glass. / May I have some water?
+  SPEAK ขอน้ำกับจานด้วย | khɔ̌ɔ náam gàp jaan dûai | May I have water and a plate?
   MATCH หนึ่ง=one, สอง=two, สาม=three, จาน=plate, แก้ว=glass, น้ำ=water, กับ=and / with
 
 ## L2 Ordering fried rice, and more
@@ -164,7 +164,7 @@
 
 ## L10 Unit quiz
   BUILD "One, two, three" = หนึ่ง(nɯ̀ng) สอง(sɔ̌ɔng) สาม(sǎam)  [extra: dûai, mii]
-  CHOICE ขอจานกับแก้ว | khɔ̌ɔ jaan gàp gɛ̂ɛo: What do you have? / Two glasses, please. / *I'd like a plate and a glass. / May I have some water?
+  CHOICE ขอจานกับแก้วด้วย | khɔ̌ɔ jaan gàp gɛ̂ɛo dûai: What do you have? / Two glasses, please. / *I'd like a plate and a glass. / May I have some water?
   CHOICE ขอข้าวผัดไก่หนึ่งจาน | khɔ̌ɔ khâao-phàt gài nɯ̀ng jaan: One more plate, please. / pork fried rice / *One chicken fried rice, please. / with chicken
   BUILD "Another bottle of water, please." = ขอ(khɔ̌ɔ) น้ำ(náam) อีก(ìik) ขวด(khùat)  [extra: sài, khâao-phàt]
   CHOICE ข้าวผัดหมู | khâao-phàt mǔu: One chicken fried rice, please. / with chicken / *pork fried rice / One more plate, please.
@@ -182,12 +182,12 @@
 
 ## L11 Ordering dinner
 scene: Two friends order food, skip the spice, and ask for the check.
-  D0 A: ขอเมนูด้วย | khɔ̌ɔ menuu dûai | May I have a menu?
-  D1 B: ขอข้าวผัดไก่หนึ่งจาน | khɔ̌ɔ khâao-phàt gài nɯ̀ng jaan | I'd like one plate of fried rice with chicken.
-  D2 A: ไม่ใส่พริก ไม่เผ็ดเลย | mâi sài phrík, mâi phèt loei | No chili — not spicy at all.
-  D3 B: ขอเช็คบิลด้วย | khɔ̌ɔ chék-bin dûai | Check, please.
+  D0 A: ขอเมนูด้วยค่ะ | khɔ̌ɔ menuu dûai khâ | May I have a menu?
+  D1 B: ขอข้าวผัดไก่หนึ่งจานครับ | khɔ̌ɔ khâao-phàt gài nɯ̀ng jaan khráp | I'd like one plate of fried rice with chicken.
+  D2 A: ไม่ใส่พริก ไม่เผ็ดเลยนะคะ | mâi sài phrík, mâi phèt loei ná khá | No chili — not spicy at all.
+  D3 B: ขอเช็คบิลด้วยครับ | khɔ̌ɔ chék-bin dûai khráp | Check, please.
   comprehension D0: *May I have a menu? / What do you have? / Check, please. / Not spicy at all.
   comprehension D2: *No chili — not spicy at all. / May I have a menu? / I'd like one plate of fried rice with chicken. / Check, please.
   translate D1: *I'd like one plate of fried rice with chicken. / May I have a menu? / Check, please. / Keep the change.
   translate D3: *Check, please. / May I have some water? / What do you have? / One more plate, please.
-  blank D2 "mâi sài ___ , mâi phèt loei": *phrík / nɯ́a / khài / náam-taan
+  blank D2 "mâi sài ___ , mâi phèt loei ná khá": *phrík / nɯ́a / khài / náam-taan

@@ -212,14 +212,14 @@
 
 ## L13 Buying a shirt
 scene: Haggling over the price of a shirt at a market stall
-  D0 A: เสื้อตัวนี้เท่าไหร่ | sɯ̂a tua níi thâo-rài | How much is this shirt?
-  D1 B: สามร้อยบาท | sǎam-rɔ́ɔi bàat | Three hundred baht.
-  D2 A: แพง มีเงินสองร้อยบาท | phaeng, mii ngəən sɔ̌ɔng-rɔ́ɔi bàat | That's expensive. I have two hundred baht.
-  D3 B: สองร้อยบาท เอากี่ตัว | sɔ̌ɔng-rɔ́ɔi bàat, ao gìi tua | Two hundred baht, then. How many do you want?
-  D4 A: เอาหนึ่งตัว | ao nɯ̀ng tua | I'll take one.
+  D0 A: เสื้อตัวนี้เท่าไหร่คะ | sɯ̂a tua níi thâo-rài khá | How much is this shirt?
+  D1 B: สามร้อยบาทครับ | sǎam-rɔ́ɔi bàat khráp | Three hundred baht.
+  D2 A: แพงค่ะ มีเงินสองร้อยบาท | phaeng khâ, mii ngəən sɔ̌ɔng-rɔ́ɔi bàat | That's expensive. I have two hundred baht.
+  D3 B: สองร้อยบาทครับ เอากี่ตัวครับ | sɔ̌ɔng-rɔ́ɔi bàat khráp, ao gìi tua khráp | Two hundred baht, then. How many do you want?
+  D4 A: เอาหนึ่งตัวค่ะ | ao nɯ̀ng tua khâ | I'll take one.
   comprehension D0: *How much is this shirt? / Three hundred baht. / That's expensive. I have two hundred baht. / I'll take one.
   comprehension D2: *That's expensive. I have two hundred baht. / How much is this shirt? / Three hundred baht. / Two hundred baht, then. How many do you want?
   translate D1: *Three hundred baht. / How much is this shirt? / I'll take one. / Two hundred baht, then. How many do you want?
   translate D3: *Two hundred baht, then. How many do you want? / Three hundred baht. / That's expensive. I have two hundred baht. / I'll take one.
-  blank D1 "sǎam ___ bàat": *rɔ́ɔi / phan / sɛ̌ɛn / láan
-  blank D4 "ao ___ tua": *nɯ̀ng / sɔ̌ɔng / sǎam / sìi
+  blank D1 "sǎam ___ bàat khráp": *rɔ́ɔi / phan / sɛ̌ɛn / láan
+  blank D4 "ao ___ tua khâ": *nɯ̀ng / sɔ̌ɔng / sǎam / sìi

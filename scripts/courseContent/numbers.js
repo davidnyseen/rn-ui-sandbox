@@ -593,11 +593,11 @@ const lessons = [
   // Recombines vocab already taught above — every Thai token below was
   // introduced by an earlier wordIntro in this file.
   dialogue('n-dlg', 'Buying a shirt', 'Haggling over the price of a shirt at a market stall', [
-    { speaker: 'A', thai: 'เสื้อตัวนี้เท่าไหร่', roman: 'sɯ̂a tua níi thâo-rài', english: 'How much is this shirt?' },
-    { speaker: 'B', thai: 'สามร้อยบาท', roman: 'sǎam-rɔ́ɔi bàat', english: 'Three hundred baht.' },
-    { speaker: 'A', thai: 'แพง มีเงินสองร้อยบาท', roman: 'phaeng, mii ngəən sɔ̌ɔng-rɔ́ɔi bàat', english: "That's expensive. I have two hundred baht." },
-    { speaker: 'B', thai: 'สองร้อยบาท เอากี่ตัว', roman: 'sɔ̌ɔng-rɔ́ɔi bàat, ao gìi tua', english: 'Two hundred baht, then. How many do you want?' },
-    { speaker: 'A', thai: 'เอาหนึ่งตัว', roman: 'ao nɯ̀ng tua', english: "I'll take one." },
+    { speaker: 'A', thai: 'เสื้อตัวนี้เท่าไหร่คะ', roman: 'sɯ̂a tua níi thâo-rài khá', english: 'How much is this shirt?' },
+    { speaker: 'B', thai: 'สามร้อยบาทครับ', roman: 'sǎam-rɔ́ɔi bàat khráp', english: 'Three hundred baht.' },
+    { speaker: 'A', thai: 'แพงค่ะ มีเงินสองร้อยบาท', roman: 'phaeng khâ, mii ngəən sɔ̌ɔng-rɔ́ɔi bàat', english: "That's expensive. I have two hundred baht." },
+    { speaker: 'B', thai: 'สองร้อยบาทครับ เอากี่ตัวครับ', roman: 'sɔ̌ɔng-rɔ́ɔi bàat khráp, ao gìi tua khráp', english: 'Two hundred baht, then. How many do you want?' },
+    { speaker: 'A', thai: 'เอาหนึ่งตัวค่ะ', roman: 'ao nɯ̀ng tua khâ', english: "I'll take one." },
   ], [
     { type: 'intro' },
     { type: 'comprehension', lineIndex: 0, options: [
@@ -624,13 +624,13 @@ const lessons = [
       { text: "That's expensive. I have two hundred baht.", correct: false },
       { text: "I'll take one.", correct: false },
     ] },
-    { type: 'blank', lineIndex: 1, before: 'sǎam', after: 'bàat', options: [
+    { type: 'blank', lineIndex: 1, before: 'sǎam', after: 'bàat khráp', options: [
       { text: 'rɔ́ɔi', correct: true },
       { text: 'phan', correct: false },
       { text: 'sɛ̌ɛn', correct: false },
       { text: 'láan', correct: false },
     ] },
-    { type: 'blank', lineIndex: 4, before: 'ao', after: 'tua', options: [
+    { type: 'blank', lineIndex: 4, before: 'ao', after: 'tua khâ', options: [
       { text: 'nɯ̀ng', correct: true },
       { text: 'sɔ̌ɔng', correct: false },
       { text: 'sǎam', correct: false },

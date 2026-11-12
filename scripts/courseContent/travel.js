@@ -347,11 +347,11 @@ const lessons = [
     'Finding a room in town',
     'Checking into a hotel in Phuket, then asking the way to the market',
     [
-      { speaker: 'A', thai: 'มีห้องมั้ย', roman: 'mii hɔ̂ng mái', english: 'Do you have a room?' },
-      { speaker: 'B', thai: 'มี ห้องนี้ได้มั้ย', roman: 'mii, hɔ̂ng níi dâi mái', english: 'Yes — is this room OK?' },
-      { speaker: 'A', thai: 'ได้ ขอกุญแจด้วย', roman: 'dâi, khɔ̌ɔ gun-jɛɛ dûai', english: 'Yes. May I have the key, please?' },
-      { speaker: 'A', thai: 'ตลาดอยู่ที่ไหน', roman: 'tà-làat yùu thîi-nǎi', english: "Where's the market?" },
-      { speaker: 'B', thai: 'เลี้ยวขวาที่สี่แยก ไม่ไกล', roman: 'líao khwǎa thîi sìi-yɛ̂ɛk, mâi glai', english: 'Turn right at the intersection — not far.' },
+      { speaker: 'A', thai: 'มีห้องมั้ยคะ', roman: 'mii hɔ̂ng mái khá', english: 'Do you have a room?' },
+      { speaker: 'B', thai: 'มีครับ ห้องนี้ได้มั้ยครับ', roman: 'mii khráp, hɔ̂ng níi dâi mái khráp', english: 'Yes — is this room OK?' },
+      { speaker: 'A', thai: 'ได้ค่ะ ขอกุญแจด้วยค่ะ', roman: 'dâi khâ, khɔ̌ɔ gun-jɛɛ dûai khâ', english: 'Yes. May I have the key, please?' },
+      { speaker: 'A', thai: 'ตลาดอยู่ที่ไหนคะ', roman: 'tà-làat yùu thîi-nǎi khá', english: "Where's the market?" },
+      { speaker: 'B', thai: 'เลี้ยวขวาที่สี่แยกครับ ไม่ไกล', roman: 'líao khwǎa thîi sìi-yɛ̂ɛk khráp, mâi glai', english: 'Turn right at the intersection — not far.' },
     ],
     [
       { type: 'intro' },
@@ -392,7 +392,7 @@ const lessons = [
         ],
       },
       {
-        type: 'blank', lineIndex: 2, before: 'dâi, khɔ̌ɔ', after: 'dûai',
+        type: 'blank', lineIndex: 2, before: 'dâi khâ, khɔ̌ɔ', after: 'dûai khâ',
         options: [
           { text: 'gun-jɛɛ', correct: true },
           { text: 'hɔ̂ng', correct: false },
@@ -401,7 +401,7 @@ const lessons = [
         ],
       },
       {
-        type: 'blank', lineIndex: 4, before: 'líao', after: 'thîi sìi-yɛ̂ɛk, mâi glai',
+        type: 'blank', lineIndex: 4, before: 'líao', after: 'thîi sìi-yɛ̂ɛk khráp, mâi glai',
         options: [
           { text: 'khwǎa', correct: true },
           { text: 'sáai', correct: false },

@@ -525,10 +525,12 @@ const namesLessons = [
     wordIntro('คุณ', 'khun', 'you', SRC.name),
     wordIntro('ชื่อ', 'chɯ̂ɯ', 'name', SRC.name),
     wordIntro('อะไร', 'à-rai', 'what', SRC.name),
+    // women end a question with คะ (high tone), a statement with ค่ะ — taught here so her questions can use it
+    wordIntro('คะ', 'khá', 'polite particle (women: in questions, and after ná)', SRC.name),
     wordIntro('ผม', 'phǒm', 'I (male)', SRC.name),
     wordIntro('ฉัน', 'chán', 'I (female)', SRC.name),
     wordIntro('เล็ก', 'lék', 'Lek (a name)', SRC.name),
-    mc('ขอโทษค่ะคุณชื่ออะไร', 'khɔ̌ɔ-thôot khâ, khun chɯ̂ɯ à-rai', "Excuse me, what's your name?", ['How are you?', 'Where are you from?', 'How old are you?'], ['ขอโทษ', 'ค่ะ', 'คุณ', 'ชื่อ', 'อะไร'], SRC.name),
+    mc('ขอโทษค่ะคุณชื่ออะไรคะ', 'khɔ̌ɔ-thôot khâ, khun chɯ̂ɯ à-rai khá', "Excuse me, what's your name?", ['How are you?', 'Where are you from?', 'How old are you?'], ['ขอโทษ', 'ค่ะ', 'คุณ', 'ชื่อ', 'อะไร', 'คะ'], SRC.name),
     order("Hello, what's your name? (said by a man)", [
       { roman: 'sà-wàt-dii', thai: 'สวัสดี' },
       { roman: 'khráp', thai: 'ครับ' },
@@ -546,7 +548,7 @@ const namesLessons = [
       { roman: 'chɯ̂ɯ', thai: 'ชื่อ' },
       { roman: 'lék', thai: 'เล็ก' },
     ], SRC.name),
-    speak('ผมชื่อเล็กคุณชื่ออะไร', 'phǒm chɯ̂ɯ lék, khun chɯ̂ɯ à-rai', 'My name is Lek. What\'s your name?', ['ผม', 'ชื่อ', 'เล็ก', 'คุณ', 'ชื่อ', 'อะไร'], SRC.name),
+    speak('ผมชื่อเล็กคุณชื่ออะไรครับ', 'phǒm chɯ̂ɯ lék, khun chɯ̂ɯ à-rai khráp', 'My name is Lek. What\'s your name?', ['ผม', 'ชื่อ', 'เล็ก', 'คุณ', 'ชื่อ', 'อะไร', 'ครับ'], SRC.name),
     // Cumulative sentence: "sà-wàt-dii khâ" (gh01) + this lesson's name
     // question.
     order("Hello, what's your name? (said by a woman)", [
@@ -555,6 +557,7 @@ const namesLessons = [
       { roman: 'khun', thai: 'คุณ' },
       { roman: 'chɯ̂ɯ', thai: 'ชื่อ' },
       { roman: 'à-rai', thai: 'อะไร' },
+      { roman: 'khá', thai: 'คะ' },
     ], SRC.name),
     reply(
       [
@@ -578,13 +581,12 @@ const namesLessons = [
     wordIntro('ชื่อเล่น', 'chɯ̂ɯ-lên', 'nickname', SRC.name),
     wordIntro('นิด', 'nít', 'Nit ("little bit", a nickname)', SRC.name),
     wordIntro('แดง', 'dɛɛng', 'Daeng ("red", a nickname)', SRC.name),
-    order('Hello, my name is Noi. Thank you. (said by a woman)', [
+    order('Hello, my name is Noi. (said by a woman)', [
       { roman: 'sà-wàt-dii', thai: 'สวัสดี' },
       { roman: 'khâ', thai: 'ค่ะ' },
       { roman: 'chán', thai: 'ฉัน' },
       { roman: 'chɯ̂ɯ', thai: 'ชื่อ' },
       { roman: 'nɔ́ɔi', thai: 'น้อย' },
-      { roman: 'khɔ̀ɔp-khun', thai: 'ขอบคุณ' },
       { roman: 'khâ', thai: 'ค่ะ' },
     ], SRC.name),
     mc('ผมชื่อเล็กชื่อเล่นนิดครับ', 'phǒm chɯ̂ɯ lék chɯ̂ɯ-lên nít khráp', 'My name is Lek, my nickname is Nit.', ['My name is Lek.', 'My nickname is Daeng.', "What's your name?"], ['ผม', 'ชื่อ', 'เล็ก', 'ชื่อเล่น', 'นิด', 'ครับ'], SRC.name),
@@ -613,12 +615,12 @@ const namesLessons = [
     ], SRC.name),
     reply(
       [
-        { speaker: 'M', thai: 'สวัสดีครับผมชื่อเล็กขอบคุณครับ', roman: 'sà-wàt-dii khráp, phǒm chɯ̂ɯ lék, khɔ̀ɔp-khun khráp', english: 'Hello, my name is Lek. Thank you. (said by a man)', parts: ['สวัสดี', 'ครับ', 'ผม', 'ชื่อ', 'เล็ก', 'ขอบคุณ', 'ครับ'] },
-        { speaker: 'F', thai: 'สวัสดีค่ะฉันชื่อน้อยขอบคุณค่ะ', roman: 'sà-wàt-dii khâ, chán chɯ̂ɯ nɔ́ɔi, khɔ̀ɔp-khun khâ', english: 'Hello, my name is Noi. Thank you. (said by a woman)', parts: ['สวัสดี', 'ค่ะ', 'ฉัน', 'ชื่อ', 'น้อย', 'ขอบคุณ', 'ค่ะ'] },
+        { speaker: 'M', thai: 'สวัสดีครับผมชื่อเล็กครับ', roman: 'sà-wàt-dii khráp, phǒm chɯ̂ɯ lék khráp', english: 'Hello, my name is Lek. (said by a man)', parts: ['สวัสดี', 'ครับ', 'ผม', 'ชื่อ', 'เล็ก', 'ครับ'] },
+        { speaker: 'F', thai: 'สวัสดีค่ะฉันชื่อน้อยค่ะ', roman: 'sà-wàt-dii khâ, chán chɯ̂ɯ nɔ́ɔi khâ', english: 'Hello, my name is Noi. (said by a woman)', parts: ['สวัสดี', 'ค่ะ', 'ฉัน', 'ชื่อ', 'น้อย', 'ค่ะ'] },
       ],
       [
-        { thai: 'ขอโทษค่ะคุณชื่ออะไร', roman: 'khɔ̌ɔ-thôot khâ, khun chɯ̂ɯ à-rai', parts: ['ขอโทษ', 'ค่ะ', 'คุณ', 'ชื่อ', 'อะไร'] },
-        { thai: 'ผมชื่อเล็กคุณชื่ออะไร', roman: 'phǒm chɯ̂ɯ lék, khun chɯ̂ɯ à-rai', parts: ['ผม', 'ชื่อ', 'เล็ก', 'คุณ', 'ชื่อ', 'อะไร'] },
+        { thai: 'ขอโทษค่ะคุณชื่ออะไรคะ', roman: 'khɔ̌ɔ-thôot khâ, khun chɯ̂ɯ à-rai khá', parts: ['ขอโทษ', 'ค่ะ', 'คุณ', 'ชื่อ', 'อะไร', 'คะ'] },
+        { thai: 'ผมชื่อเล็กคุณชื่ออะไรครับ', roman: 'phǒm chɯ̂ɯ lék, khun chɯ̂ɯ à-rai khráp', parts: ['ผม', 'ชื่อ', 'เล็ก', 'คุณ', 'ชื่อ', 'อะไร', 'ครับ'] },
       ],
       SRC.name
     ),
@@ -641,7 +643,7 @@ const namesLessons = [
       { roman: 'rɯ̌ɯ-plàao', thai: 'หรือเปล่า' },
       { roman: 'khráp', thai: 'ครับ' },
     ], SRC.howAreYou),
-    speak('ขอบคุณมากครับสบายดีครับ', 'khɔ̀ɔp-khun mâak khráp, sà-baai dii khráp', "Thanks a lot, I'm fine.", ['ขอบคุณ', 'มาก', 'ครับ', 'สบาย', 'ดี', 'ครับ'], SRC.howAreYou),
+    speak('สบายดีครับขอบคุณมากครับ', 'sà-baai dii khráp, khɔ̀ɔp-khun mâak khráp', "I'm fine, thanks a lot.", ['สบาย', 'ดี', 'ครับ', 'ขอบคุณ', 'มาก', 'ครับ'], SRC.howAreYou),
     mc('เหรอ', 'rə̌ə', 'really? (question particle)', ['or not?', 'well', 'want'], ['เหรอ'], SRC.howAreYou),
     mc('หรือเปล่า', 'rɯ̌ɯ-plàao', 'or not?', ['really? (question particle)', 'well', 'like'], ['หรือเปล่า'], SRC.howAreYou),
     mc('มา', 'maa', 'come', ['well', 'really? (question particle)', 'or not?'], ['มา'], SRC.howAreYou),
@@ -669,6 +671,7 @@ const namesLessons = [
       { roman: 'sà-baai', thai: 'สบาย' },
       { roman: 'dii', thai: 'ดี' },
       { roman: 'mái', thai: 'มั้ย' },
+      { roman: 'khá', thai: 'คะ' },
     ], SRC.howAreYou),
     reply(
       [
@@ -704,8 +707,8 @@ const namesLessons = [
         { speaker: 'F', thai: 'ฉันมาจากอเมริกาค่ะ', roman: 'chán maa jàak à-me-rí-gaa khâ', english: "I'm from America. (said by a woman)", parts: ['ฉัน', 'มา', 'จาก', 'อเมริกา', 'ค่ะ'] },
       ],
       [
-        { thai: 'ขอบคุณมากครับสบายดีครับ', roman: 'khɔ̀ɔp-khun mâak khráp, sà-baai dii khráp', parts: ['ขอบคุณ', 'มาก', 'ครับ', 'สบาย', 'ดี', 'ครับ'] },
-        { thai: 'ผมชื่อเล็กคุณชื่ออะไร', roman: 'phǒm chɯ̂ɯ lék, khun chɯ̂ɯ à-rai', parts: ['ผม', 'ชื่อ', 'เล็ก', 'คุณ', 'ชื่อ', 'อะไร'] },
+        { thai: 'สบายดีครับขอบคุณมากครับ', roman: 'sà-baai dii khráp, khɔ̀ɔp-khun mâak khráp', parts: ['สบาย', 'ดี', 'ครับ', 'ขอบคุณ', 'มาก', 'ครับ'] },
+        { thai: 'ผมชื่อเล็กคุณชื่ออะไรครับ', roman: 'phǒm chɯ̂ɯ lék, khun chɯ̂ɯ à-rai khráp', parts: ['ผม', 'ชื่อ', 'เล็ก', 'คุณ', 'ชื่อ', 'อะไร', 'ครับ'] },
       ],
       SRC.howAreYou
     ),
@@ -760,7 +763,7 @@ const namesLessons = [
       ],
       [
         { thai: 'สวัสดีค่ะฉันมาจากอเมริกาค่ะ', roman: 'sà-wàt-dii khâ, chán maa jàak à-me-rí-gaa khâ', parts: ['สวัสดี', 'ค่ะ', 'ฉัน', 'มา', 'จาก', 'อเมริกา', 'ค่ะ'] },
-        { thai: 'สวัสดีค่ะฉันชื่อน้อยขอบคุณค่ะ', roman: 'sà-wàt-dii khâ, chán chɯ̂ɯ nɔ́ɔi, khɔ̀ɔp-khun khâ', parts: ['สวัสดี', 'ค่ะ', 'ฉัน', 'ชื่อ', 'น้อย', 'ขอบคุณ', 'ค่ะ'] },
+        { thai: 'สวัสดีค่ะฉันชื่อน้อยค่ะ', roman: 'sà-wàt-dii khâ, chán chɯ̂ɯ nɔ́ɔi khâ', parts: ['สวัสดี', 'ค่ะ', 'ฉัน', 'ชื่อ', 'น้อย', 'ค่ะ'] },
       ],
       SRC.nationality
     ),
@@ -824,7 +827,6 @@ const namesLessons = [
     ),
     wordIntro('ก่อน', 'gɔ̀ɔn', 'first / before', SRC.goodbye),
     wordIntro('นะ', 'ná', 'softening particle', SRC.goodbye),
-    wordIntro('คะ', 'khá', 'polite particle (women: after ná, and in questions)', SRC.goodbye),
     wordIntro('โชคดี', 'chôok-dii', 'good luck', SRC.goodbye),
     order("Thanks a lot, I'm going back now. (said by a woman)", [
       { roman: 'khɔ̀ɔp-khun', thai: 'ขอบคุณ' },
@@ -836,7 +838,7 @@ const namesLessons = [
       { roman: 'ná', thai: 'นะ' },
       { roman: 'khá', thai: 'คะ' },
     ], SRC.goodbye),
-    speak('ขอบคุณมากครับผมไปก่อนนะครับ', 'khɔ̀ɔp-khun mâak khráp, phǒm pai gɔ̀ɔn ná khráp', "Thanks a lot, I'm going now.", ['ขอบคุณ', 'มาก', 'ครับ', 'ผม', 'ไป', 'ก่อน', 'นะ', 'ครับ'], SRC.goodbye),
+    speak('ผมไปก่อนนะครับ', 'phǒm pai gɔ̀ɔn ná khráp', "I'm going now.", ['ผม', 'ไป', 'ก่อน', 'นะ', 'ครับ'], SRC.goodbye),
     order("Thanks a lot, I'm going now, good luck! (said by a man)", [
       { roman: 'khɔ̀ɔp-khun', thai: 'ขอบคุณ' },
       { roman: 'mâak', thai: 'มาก' },
@@ -850,7 +852,7 @@ const namesLessons = [
       { roman: 'ná', thai: 'นะ' },
       { roman: 'khráp', thai: 'ครับ' },
     ], SRC.goodbye),
-    mc('สวัสดีค่ะคุณชื่ออะไรสบายดีมั้ย', 'sà-wàt-dii khâ, khun chɯ̂ɯ à-rai, sà-baai dii mái', "Hello, what's your name? Are you well?", ["What's your name?", 'See you again.', 'Have you eaten yet?'], ['สวัสดี', 'ค่ะ', 'คุณ', 'ชื่อ', 'อะไร', 'สบาย', 'ดี', 'มั้ย'], SRC.hello),
+    mc('สวัสดีค่ะคุณชื่ออะไรสบายดีมั้ยคะ', 'sà-wàt-dii khâ, khun chɯ̂ɯ à-rai, sà-baai dii mái khá', "Hello, what's your name? Are you well?", ["What's your name?", 'See you again.', 'Have you eaten yet?'], ['สวัสดี', 'ค่ะ', 'คุณ', 'ชื่อ', 'อะไร', 'สบาย', 'ดี', 'มั้ย', 'คะ'], SRC.hello),
     wordIntro('เจอ', 'jəə', 'meet', SRC.goodbye),
     wordIntro('กัน', 'gan', 'each other / together', SRC.goodbye),
     wordIntro('ใหม่', 'mài', 'new / again', SRC.goodbye),
@@ -859,7 +861,7 @@ const namesLessons = [
       [
         { speaker: 'M', thai: 'สบายดีมั้ย', roman: 'sà-baai dii mái', english: 'Are you well?', parts: ['สบาย', 'ดี', 'มั้ย'] },
         { speaker: 'F', thai: 'ฉันสบายดีค่ะขอบคุณค่ะ', roman: 'chán sà-baai dii khâ, khɔ̀ɔp-khun khâ', english: "I'm well, thank you. (said by a woman)", parts: ['ฉัน', 'สบาย', 'ดี', 'ค่ะ', 'ขอบคุณ', 'ค่ะ'] },
-        { speaker: 'M', thai: 'ขอบคุณมากครับผมไปก่อนนะครับ', roman: 'khɔ̀ɔp-khun mâak khráp, phǒm pai gɔ̀ɔn ná khráp', english: "Thanks a lot, I'm going now. (goodbye)", parts: ['ขอบคุณ', 'มาก', 'ครับ', 'ผม', 'ไป', 'ก่อน', 'นะ', 'ครับ'] },
+        { speaker: 'M', thai: 'ผมไปก่อนนะครับ', roman: 'phǒm pai gɔ̀ɔn ná khráp', english: "I'm going now. (goodbye)", parts: ['ผม', 'ไป', 'ก่อน', 'นะ', 'ครับ'] },
         { speaker: 'F', thai: 'แล้วเจอกันใหม่นะคะ', roman: 'láew jəə gan mài ná khá', english: 'See you again.', parts: ['แล้ว', 'เจอ', 'กัน', 'ใหม่', 'นะ', 'คะ'] },
       ],
       [
@@ -897,7 +899,7 @@ const namesLessons = [
       { speaker: 'B', thai: 'สบายดีครับ คุณมาจากไหนครับ', roman: 'sà-baai dii khráp, khun maa jàak nǎi khráp', english: "I'm fine. Where are you from?" },
       { speaker: 'A', thai: 'ฉันมาจากอเมริกาค่ะ เมืองไทยสนุกมากค่ะ', roman: 'chán maa jàak à-me-rí-gaa khâ, mɯang-thai sà-nùk mâak khâ', english: "I'm from America. Thailand is a lot of fun." },
       { speaker: 'B', thai: 'ครับ ผมชอบเมืองไทยมากครับ', roman: 'khráp, phǒm chɔ̂ɔp mɯang-thai mâak khráp', english: 'Yes, I like Thailand a lot.' },
-      { speaker: 'A', thai: 'ขอบคุณค่ะ ฉันไปก่อนนะคะ โชคดีค่ะ', roman: 'khɔ̀ɔp-khun khâ, chán pai gɔ̀ɔn ná khá, chôok-dii khâ', english: 'Thank you. I\'m going now. Good luck.' },
+      { speaker: 'A', thai: 'ฉันไปก่อนนะคะ โชคดีค่ะ', roman: 'chán pai gɔ̀ɔn ná khá, chôok-dii khâ', english: 'I\'m going now. Good luck.' },
     ],
     [
       { type: 'intro' },
@@ -938,7 +940,7 @@ const namesLessons = [
         ],
       },
       {
-        type: 'blank', lineIndex: 4, before: 'khɔ̀ɔp-khun khâ, chán pai gɔ̀ɔn ná khá,', after: '',
+        type: 'blank', lineIndex: 4, before: 'chán pai gɔ̀ɔn ná khá,', after: 'khâ',
         options: [
           { text: 'chôok-dii', correct: true, meaning: 'good luck' },
           { text: 'mâi-pen-rai', correct: false, meaning: "that's alright / never mind" },
