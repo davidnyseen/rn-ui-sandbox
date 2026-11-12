@@ -11,7 +11,12 @@ import { colors, PATH_PALETTE } from './theme';
 import { loadProgress, nextStreak, saveProgress, todayKey } from './persistence';
 import { speakThai } from './tts';
 import { matchesSpokenThai } from './text';
-import { completeWebOAuthRedirect, isSupabaseConfigured, subscribeToNativeAuthRedirect, supabase } from './lib/supabase';
+import { completeWebOAuthRedirect, isSupabaseConfigured as backendConfigured, subscribeToNativeAuthRedirect, supabase } from './lib/supabase';
+
+// Accounts (sign-in, synced progress) stay off for now (2026-11-12): TestFlight builds only got backend settings so the
+// tester feedback box can save, and sign-in has never been tried on a phone. Flip ACCOUNTS_ENABLED to turn them on.
+const ACCOUNTS_ENABLED = false;
+const isSupabaseConfigured = ACCOUNTS_ENABLED && backendConfigured;
 import { fetchRemoteCourseProgress, fetchRemoteProfile, pushRemoteCourseProgress, pushRemoteProfile } from './lib/progressSync';
 import { fetchCourseSubjects } from './lib/courseContent';
 import { lessonDisplayInfo } from './lib/lessonDisplay';

@@ -13,6 +13,17 @@ jobs:
         with:
           node-version: 22
 
+      # The app's .env never comes to this public repo, so its backend settings (the Supabase address and its public
+      # anon key — the feedback box saves there) come from repo secrets. Stop the build rather than ship an app that
+      # silently can't reach its backend (2026-11-12: "Couldn't save" on the phone).
+      - name: App settings
+        env:
+          SUPABASE_URL: ${{ secrets.EXPO_PUBLIC_SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.EXPO_PUBLIC_SUPABASE_ANON_KEY }}
+        run: |
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then echo "::error::Supabase secrets missing"; exit 1; fi
+          printf 'EXPO_PUBLIC_SUPABASE_URL=%s\nEXPO_PUBLIC_SUPABASE_ANON_KEY=%s\n' "$SUPABASE_URL" "$SUPABASE_ANON_KEY" > .env
+
       # Expo makes ios/ from app.json; the build number is the time, so every upload is newer than the last
       - name: Make the Xcode project
         run: |
