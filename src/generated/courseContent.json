@@ -25406,7 +25406,7 @@
           "source": "Essential Thai (Higbie), p.33"
         },
         {
-          "id": "mc-146",
+          "id": "mc-148",
           "type": "translationChoice",
           "thai": "ไปไหน",
           "roman": "pai nǎi",
@@ -25416,16 +25416,16 @@
               "correct": false
             },
             {
+              "text": "Where are you going?",
+              "correct": true
+            },
+            {
               "text": "I'm going to Phuket.",
               "correct": false
             },
             {
               "text": "I'm going out.",
               "correct": false
-            },
-            {
-              "text": "Where are you going?",
-              "correct": true
             }
           ],
           "source": "Essential Thai (Higbie), p.33",
@@ -25435,7 +25435,7 @@
           ]
         },
         {
-          "id": "sp-151",
+          "id": "sp-153",
           "type": "speak",
           "thai": "ไปไหน",
           "roman": "pai nǎi",
@@ -25457,7 +25457,7 @@
           "source": "Essential Thai (Higbie), p.33"
         },
         {
-          "id": "so-147",
+          "id": "so-149",
           "type": "sentenceOrder",
           "prompt": "I'm going out.",
           "tileUnit": "word",
@@ -25477,8 +25477,8 @@
           },
           "poolOrder": [
             "x0",
-            "a",
-            "b"
+            "b",
+            "a"
           ],
           "correctOrder": [
             "a",
@@ -25497,7 +25497,7 @@
           "source": "Essential Thai (Higbie), p.33"
         },
         {
-          "id": "mc-148",
+          "id": "mc-150",
           "type": "translationChoice",
           "thai": "ไปกรุงเทพฯ",
           "roman": "pai grung-thêep",
@@ -25507,15 +25507,15 @@
               "correct": false
             },
             {
+              "text": "Where are you going?",
+              "correct": false
+            },
+            {
               "text": "I'm going to Bangkok.",
               "correct": true
             },
             {
               "text": "I'm going to Phuket.",
-              "correct": false
-            },
-            {
-              "text": "Where are you going?",
               "correct": false
             }
           ],
@@ -25536,7 +25536,7 @@
           "source": "Essential Thai (Higbie), p.33"
         },
         {
-          "id": "sp-149",
+          "id": "sp-151",
           "type": "speak",
           "thai": "ไปภูเก็ต",
           "roman": "pai phuu-gèt",
@@ -25548,7 +25548,7 @@
           ]
         },
         {
-          "id": "so-150",
+          "id": "so-152",
           "type": "sentenceOrder",
           "prompt": "I'm going on a trip to Phuket.",
           "tileUnit": "word",
@@ -25566,20 +25566,20 @@
               "thai": "ภูเก็ต"
             },
             "x0": {
-              "thai": "ไหน",
-              "roman": "nǎi"
-            },
-            "x1": {
               "thai": "กรุงเทพฯ",
               "roman": "grung-thêep"
+            },
+            "x1": {
+              "thai": "ไหน",
+              "roman": "nǎi"
             }
           },
           "poolOrder": [
-            "c",
-            "x1",
             "b",
+            "c",
             "a",
-            "x0"
+            "x0",
+            "x1"
           ],
           "correctOrder": [
             "a",
@@ -25589,7 +25589,7 @@
           "source": "Essential Thai (Higbie), p.33"
         },
         {
-          "id": "rp-152",
+          "id": "rp-154",
           "type": "reply",
           "context": [
             {
@@ -25614,14 +25614,14 @@
               "correct": false
             },
             {
-              "thai": "ไปภูเก็ต",
-              "roman": "pai phuu-gèt",
-              "correct": true
-            },
-            {
               "thai": "ไปไหน",
               "roman": "pai nǎi",
               "correct": false
+            },
+            {
+              "thai": "ไปภูเก็ต",
+              "roman": "pai phuu-gèt",
+              "correct": true
             }
           ],
           "source": "Essential Thai (Higbie), p.33",
@@ -25631,7 +25631,7 @@
           ]
         },
         {
-          "id": "match-153",
+          "id": "match-155",
           "type": "match",
           "pairs": [
             {
@@ -25688,26 +25688,26 @@
           "source": "Essential Thai (Higbie), p.34"
         },
         {
-          "id": "mc-154",
+          "id": "mc-156",
           "type": "translationChoice",
           "thai": "ไปรถเมล์",
           "roman": "pai rót-mee",
           "options": [
             {
-              "text": "I'm going by tuk-tuk.",
+              "text": "I'm going by taxi.",
               "correct": false
             },
             {
-              "text": "I'm going by taxi.",
+              "text": "I'm going by train.",
+              "correct": false
+            },
+            {
+              "text": "I'm going by tuk-tuk.",
               "correct": false
             },
             {
               "text": "I'm going by bus.",
               "correct": true
-            },
-            {
-              "text": "I'm going by train.",
-              "correct": false
             }
           ],
           "source": "Essential Thai (Higbie), p.34",
@@ -25717,7 +25717,7 @@
           ]
         },
         {
-          "id": "sp-159",
+          "id": "sp-161",
           "type": "speak",
           "thai": "ไปรถเมล์",
           "roman": "pai rót-mee",
@@ -25732,6 +25732,16 @@
           "id": "wi-17",
           "type": "wordIntro",
           "word": {
+            "thai": "นั่ง",
+            "roman": "nâng",
+            "english": "take / ride (a bus, train)"
+          },
+          "source": "Essential Thai (Higbie), p.34"
+        },
+        {
+          "id": "wi-18",
+          "type": "wordIntro",
+          "word": {
             "thai": "รถไฟ",
             "roman": "rót-fai",
             "english": "train"
@@ -25739,7 +25749,7 @@
           "source": "Essential Thai (Higbie), p.34"
         },
         {
-          "id": "so-155",
+          "id": "so-157",
           "type": "sentenceOrder",
           "prompt": "I'm going by train.",
           "tileUnit": "word",
@@ -25753,19 +25763,19 @@
               "thai": "รถไฟ"
             },
             "x0": {
-              "thai": "ภูเก็ต",
-              "roman": "phuu-gèt"
+              "thai": "นั่ง",
+              "roman": "nâng"
             },
             "x1": {
-              "thai": "ไหน",
-              "roman": "nǎi"
+              "thai": "กรุงเทพฯ",
+              "roman": "grung-thêep"
             }
           },
           "poolOrder": [
             "a",
+            "x0",
             "b",
-            "x1",
-            "x0"
+            "x1"
           ],
           "correctOrder": [
             "a",
@@ -25774,43 +25784,43 @@
           "source": "Essential Thai (Higbie), p.34"
         },
         {
-          "id": "so-158",
+          "id": "so-160",
           "type": "sentenceOrder",
-          "prompt": "I'm going to Bangkok, by train.",
+          "prompt": "I'm taking the train to Bangkok.",
           "tileUnit": "word",
           "words": {
             "a": {
-              "roman": "pai",
-              "thai": "ไป"
+              "roman": "nâng",
+              "thai": "นั่ง"
             },
             "b": {
-              "roman": "grung-thêep",
-              "thai": "กรุงเทพฯ"
+              "roman": "rót-fai",
+              "thai": "รถไฟ"
             },
             "c": {
               "roman": "pai",
               "thai": "ไป"
             },
             "d": {
-              "roman": "rót-fai",
-              "thai": "รถไฟ"
+              "roman": "grung-thêep",
+              "thai": "กรุงเทพฯ"
             },
             "x0": {
-              "thai": "ไหน",
-              "roman": "nǎi"
-            },
-            "x1": {
               "thai": "รถเมล์",
               "roman": "rót-mee"
+            },
+            "x1": {
+              "thai": "ไหน",
+              "roman": "nǎi"
             }
           },
           "poolOrder": [
             "c",
+            "x0",
             "a",
-            "x1",
             "d",
             "b",
-            "x0"
+            "x1"
           ],
           "correctOrder": [
             "a",
@@ -25818,20 +25828,10 @@
             "c",
             "d"
           ],
-          "source": "Essential Thai (Higbie), p.34",
-          "groups": [
-            {
-              "label": "I'm going to Bangkok",
-              "size": 2
-            },
-            {
-              "label": "By train",
-              "size": 2
-            }
-          ]
+          "source": "Essential Thai (Higbie), p.34"
         },
         {
-          "id": "wi-22",
+          "id": "wi-23",
           "type": "wordIntro",
           "word": {
             "thai": "แท็กซี่",
@@ -25841,13 +25841,17 @@
           "source": "Essential Thai (Higbie), p.34"
         },
         {
-          "id": "mc-156",
+          "id": "mc-158",
           "type": "translationChoice",
           "thai": "ไปแท็กซี่",
           "roman": "pai thák-sîi",
           "options": [
             {
-              "text": "I'm going by train.",
+              "text": "I'm going by taxi.",
+              "correct": true
+            },
+            {
+              "text": "I'm going by tuk-tuk.",
               "correct": false
             },
             {
@@ -25855,12 +25859,8 @@
               "correct": false
             },
             {
-              "text": "I'm going by tuk-tuk.",
+              "text": "I'm going by train.",
               "correct": false
-            },
-            {
-              "text": "I'm going by taxi.",
-              "correct": true
             }
           ],
           "source": "Essential Thai (Higbie), p.34",
@@ -25870,7 +25870,7 @@
           ]
         },
         {
-          "id": "wi-23",
+          "id": "wi-24",
           "type": "wordIntro",
           "word": {
             "thai": "ตุ๊กตุ๊ก",
@@ -25880,7 +25880,7 @@
           "source": "Essential Thai (Higbie), p.136"
         },
         {
-          "id": "sp-157",
+          "id": "sp-159",
           "type": "speak",
           "thai": "ไปตุ๊กตุ๊ก",
           "roman": "pai túk-túk",
@@ -25892,13 +25892,18 @@
           ]
         },
         {
-          "id": "match-160",
+          "id": "match-162",
           "type": "match",
           "pairs": [
             {
               "thai": "รถเมล์",
               "roman": "rót-mee",
               "english": "bus"
+            },
+            {
+              "thai": "นั่ง",
+              "roman": "nâng",
+              "english": "take / ride (a bus, train)"
             },
             {
               "thai": "รถไฟ",
@@ -25927,7 +25932,7 @@
       "title": "Airplane tickets, station, airport",
       "steps": [
         {
-          "id": "wi-29",
+          "id": "wi-30",
           "type": "wordIntro",
           "word": {
             "thai": "เครื่องบิน",
@@ -25937,13 +25942,13 @@
           "source": "Essential Thai (Higbie), p.136"
         },
         {
-          "id": "mc-161",
+          "id": "mc-163",
           "type": "translationChoice",
           "thai": "ไปเครื่องบิน",
           "roman": "pai khrɯ̂ang-bin",
           "options": [
             {
-              "text": "Where's the airport?",
+              "text": "one-way",
               "correct": false
             },
             {
@@ -25955,7 +25960,7 @@
               "correct": true
             },
             {
-              "text": "one-way",
+              "text": "Where's the airport?",
               "correct": false
             }
           ],
@@ -25966,7 +25971,7 @@
           ]
         },
         {
-          "id": "sp-166",
+          "id": "sp-168",
           "type": "speak",
           "thai": "ไปเครื่องบิน",
           "roman": "pai khrɯ̂ang-bin",
@@ -25978,7 +25983,7 @@
           ]
         },
         {
-          "id": "wi-31",
+          "id": "wi-32",
           "type": "wordIntro",
           "word": {
             "thai": "เดียว",
@@ -25988,7 +25993,7 @@
           "source": "Essential Thai (Higbie), p.138"
         },
         {
-          "id": "so-162",
+          "id": "so-164",
           "type": "sentenceOrder",
           "prompt": "one-way",
           "tileUnit": "word",
@@ -26002,8 +26007,8 @@
               "thai": "เดียว"
             },
             "x0": {
-              "thai": "แท็กซี่",
-              "roman": "thák-sîi"
+              "thai": "ไป",
+              "roman": "pai"
             },
             "x1": {
               "thai": "เครื่องบิน",
@@ -26011,10 +26016,10 @@
             }
           },
           "poolOrder": [
-            "x1",
-            "x0",
             "b",
-            "a"
+            "x1",
+            "a",
+            "x0"
           ],
           "correctOrder": [
             "a",
@@ -26023,7 +26028,7 @@
           "source": "Essential Thai (Higbie), p.136"
         },
         {
-          "id": "wi-33",
+          "id": "wi-34",
           "type": "wordIntro",
           "word": {
             "thai": "กลับ",
@@ -26033,7 +26038,7 @@
           "source": "Essential Thai (Higbie), p.138"
         },
         {
-          "id": "mc-163",
+          "id": "mc-165",
           "type": "translationChoice",
           "thai": "ไปกลับ",
           "roman": "pai glàp",
@@ -26043,15 +26048,15 @@
               "correct": false
             },
             {
-              "text": "one-way",
-              "correct": false
-            },
-            {
               "text": "round trip",
               "correct": true
             },
             {
               "text": "Where's the airport?",
+              "correct": false
+            },
+            {
+              "text": "one-way",
               "correct": false
             }
           ],
@@ -26062,7 +26067,7 @@
           ]
         },
         {
-          "id": "wi-36",
+          "id": "wi-37",
           "type": "wordIntro",
           "word": {
             "thai": "สถานี",
@@ -26072,7 +26077,7 @@
           "source": "Essential Thai (Higbie), p.137"
         },
         {
-          "id": "wi-37",
+          "id": "wi-38",
           "type": "wordIntro",
           "word": {
             "thai": "สนามบิน",
@@ -26082,7 +26087,7 @@
           "source": "Essential Thai (Higbie), p.137"
         },
         {
-          "id": "rp-167",
+          "id": "rp-169",
           "type": "reply",
           "context": [
             {
@@ -26102,13 +26107,13 @@
           "english": "To the airport.",
           "options": [
             {
-              "thai": "เที่ยวเดียว",
-              "roman": "thîao diao",
+              "thai": "สถานีรถไฟ",
+              "roman": "sà-thǎa-nee rót-fai",
               "correct": false
             },
             {
-              "thai": "สถานีรถไฟ",
-              "roman": "sà-thǎa-nee rót-fai",
+              "thai": "เที่ยวเดียว",
+              "roman": "thîao diao",
               "correct": false
             },
             {
@@ -26124,7 +26129,7 @@
           ]
         },
         {
-          "id": "wi-40",
+          "id": "wi-41",
           "type": "wordIntro",
           "word": {
             "thai": "อยู่",
@@ -26134,7 +26139,7 @@
           "source": "Essential Thai (Higbie), p.137"
         },
         {
-          "id": "wi-41",
+          "id": "wi-42",
           "type": "wordIntro",
           "word": {
             "thai": "ที่ไหน",
@@ -26144,7 +26149,7 @@
           "source": "Essential Thai (Higbie), p.137"
         },
         {
-          "id": "sp-164",
+          "id": "sp-166",
           "type": "speak",
           "thai": "สนามบินอยู่ที่ไหน",
           "roman": "sà-nǎam-bin yùu thîi-nǎi",
@@ -26157,7 +26162,7 @@
           ]
         },
         {
-          "id": "so-165",
+          "id": "so-167",
           "type": "sentenceOrder",
           "prompt": "Where's the train station?",
           "tileUnit": "word",
@@ -26179,21 +26184,21 @@
               "thai": "ที่ไหน"
             },
             "x0": {
-              "thai": "ภูเก็ต",
-              "roman": "phuu-gèt"
-            },
-            "x1": {
               "thai": "รถเมล์",
               "roman": "rót-mee"
+            },
+            "x1": {
+              "thai": "เครื่องบิน",
+              "roman": "khrɯ̂ang-bin"
             }
           },
           "poolOrder": [
-            "x1",
-            "a",
             "x0",
             "d",
+            "b",
+            "a",
             "c",
-            "b"
+            "x1"
           ],
           "correctOrder": [
             "a",
@@ -26204,7 +26209,7 @@
           "source": "Essential Thai (Higbie), p.136"
         },
         {
-          "id": "match-168",
+          "id": "match-170",
           "type": "match",
           "pairs": [
             {
@@ -26254,7 +26259,7 @@
       "title": "Buying tickets, getting on the bus",
       "steps": [
         {
-          "id": "wi-45",
+          "id": "wi-46",
           "type": "wordIntro",
           "word": {
             "thai": "เอา",
@@ -26264,7 +26269,7 @@
           "source": "Essential Thai (Higbie), p.138"
         },
         {
-          "id": "wi-46",
+          "id": "wi-47",
           "type": "wordIntro",
           "word": {
             "thai": "ตั๋ว",
@@ -26274,22 +26279,22 @@
           "source": "Essential Thai (Higbie), p.138"
         },
         {
-          "id": "mc-169",
+          "id": "mc-171",
           "type": "translationChoice",
           "thai": "เอาตั๋วไปกรุงเทพฯ",
           "roman": "ao tǔa pai grung-thêep",
           "options": [
             {
-              "text": "A ticket to Bangkok, please.",
-              "correct": true
+              "text": "How many tickets?",
+              "correct": false
             },
             {
               "text": "two tickets",
               "correct": false
             },
             {
-              "text": "How many tickets?",
-              "correct": false
+              "text": "A ticket to Bangkok, please.",
+              "correct": true
             },
             {
               "text": "Where's the bus stop?",
@@ -26305,7 +26310,7 @@
           ]
         },
         {
-          "id": "sp-174",
+          "id": "sp-176",
           "type": "speak",
           "thai": "เอาตั๋วไปกรุงเทพฯ",
           "roman": "ao tǔa pai grung-thêep",
@@ -26319,7 +26324,7 @@
           ]
         },
         {
-          "id": "wi-48",
+          "id": "wi-49",
           "type": "wordIntro",
           "word": {
             "thai": "กี่",
@@ -26329,7 +26334,7 @@
           "source": "Essential Thai (Higbie), p.138"
         },
         {
-          "id": "wi-49",
+          "id": "wi-50",
           "type": "wordIntro",
           "word": {
             "thai": "ใบ",
@@ -26339,7 +26344,7 @@
           "source": "Essential Thai (Higbie), p.138"
         },
         {
-          "id": "so-170",
+          "id": "so-172",
           "type": "sentenceOrder",
           "prompt": "How many tickets?",
           "tileUnit": "word",
@@ -26357,20 +26362,20 @@
               "thai": "ใบ"
             },
             "x0": {
-              "thai": "สนามบิน",
-              "roman": "sà-nǎam-bin"
+              "thai": "เดียว",
+              "roman": "diao"
             },
             "x1": {
-              "thai": "กลับ",
-              "roman": "glàp"
+              "thai": "รถเมล์",
+              "roman": "rót-mee"
             }
           },
           "poolOrder": [
-            "a",
             "x1",
+            "c",
+            "a",
             "b",
-            "x0",
-            "c"
+            "x0"
           ],
           "correctOrder": [
             "a",
@@ -26380,7 +26385,7 @@
           "source": "Essential Thai (Higbie), p.138"
         },
         {
-          "id": "wi-51",
+          "id": "wi-52",
           "type": "wordIntro",
           "word": {
             "thai": "สอง",
@@ -26390,26 +26395,26 @@
           "source": "Essential Thai (Higbie), p.138"
         },
         {
-          "id": "mc-171",
+          "id": "mc-173",
           "type": "translationChoice",
           "thai": "สองใบ",
           "roman": "sɔ̌ɔng bai",
           "options": [
             {
-              "text": "A ticket to Bangkok, please.",
+              "text": "How many tickets?",
               "correct": false
             },
             {
-              "text": "How many tickets?",
+              "text": "Where's the bus stop?",
+              "correct": false
+            },
+            {
+              "text": "A ticket to Bangkok, please.",
               "correct": false
             },
             {
               "text": "two tickets",
               "correct": true
-            },
-            {
-              "text": "Where's the bus stop?",
-              "correct": false
             }
           ],
           "source": "Essential Thai (Higbie), p.138",
@@ -26419,7 +26424,7 @@
           ]
         },
         {
-          "id": "wi-53",
+          "id": "wi-54",
           "type": "wordIntro",
           "word": {
             "thai": "ป้าย",
@@ -26429,7 +26434,7 @@
           "source": "Essential Thai (Higbie), p.137"
         },
         {
-          "id": "sp-172",
+          "id": "sp-174",
           "type": "speak",
           "thai": "ป้ายรถเมล์อยู่ที่ไหน",
           "roman": "pâai rót-mee yùu thîi-nǎi",
@@ -26443,7 +26448,7 @@
           ]
         },
         {
-          "id": "wi-54",
+          "id": "wi-55",
           "type": "wordIntro",
           "word": {
             "thai": "ขึ้น",
@@ -26453,7 +26458,7 @@
           "source": "Essential Thai (Higbie), p.139"
         },
         {
-          "id": "so-173",
+          "id": "so-175",
           "type": "sentenceOrder",
           "prompt": "Where do I get on?",
           "tileUnit": "word",
@@ -26467,19 +26472,19 @@
               "thai": "ที่ไหน"
             },
             "x0": {
-              "thai": "ไหน",
-              "roman": "nǎi"
+              "thai": "ตุ๊กตุ๊ก",
+              "roman": "túk-túk"
             },
             "x1": {
-              "thai": "เครื่องบิน",
-              "roman": "khrɯ̂ang-bin"
+              "thai": "ไป",
+              "roman": "pai"
             }
           },
           "poolOrder": [
             "a",
             "x1",
-            "b",
-            "x0"
+            "x0",
+            "b"
           ],
           "correctOrder": [
             "a",
@@ -26488,7 +26493,7 @@
           "source": "Essential Thai (Higbie), p.138"
         },
         {
-          "id": "rp-175",
+          "id": "rp-177",
           "type": "reply",
           "context": [
             {
@@ -26509,14 +26514,14 @@
           "english": "Two.",
           "options": [
             {
-              "thai": "ขึ้นที่ไหน",
-              "roman": "khɯ̂n thîi-nǎi",
-              "correct": false
-            },
-            {
               "thai": "สองใบ",
               "roman": "sɔ̌ɔng bai",
               "correct": true
+            },
+            {
+              "thai": "ขึ้นที่ไหน",
+              "roman": "khɯ̂n thîi-nǎi",
+              "correct": false
             },
             {
               "thai": "ป้ายรถเมล์",
@@ -26531,7 +26536,7 @@
           ]
         },
         {
-          "id": "match-176",
+          "id": "match-178",
           "type": "match",
           "pairs": [
             {
@@ -26581,7 +26586,7 @@
       "title": "Getting off, which bus is this?",
       "steps": [
         {
-          "id": "wi-60",
+          "id": "wi-61",
           "type": "wordIntro",
           "word": {
             "thai": "ลง",
@@ -26591,15 +26596,11 @@
           "source": "Essential Thai (Higbie), p.138"
         },
         {
-          "id": "mc-177",
+          "id": "mc-179",
           "type": "translationChoice",
           "thai": "ลงที่ไหน",
           "roman": "long thîi-nǎi",
           "options": [
-            {
-              "text": "Where do I get off?",
-              "correct": true
-            },
             {
               "text": "this one (bus)",
               "correct": false
@@ -26611,6 +26612,10 @@
             {
               "text": "I'm getting off at this stop.",
               "correct": false
+            },
+            {
+              "text": "Where do I get off?",
+              "correct": true
             }
           ],
           "source": "Essential Thai (Higbie), p.138",
@@ -26620,7 +26625,7 @@
           ]
         },
         {
-          "id": "sp-182",
+          "id": "sp-184",
           "type": "speak",
           "thai": "ลงที่ไหน",
           "roman": "long thîi-nǎi",
@@ -26632,7 +26637,7 @@
           ]
         },
         {
-          "id": "wi-62",
+          "id": "wi-63",
           "type": "wordIntro",
           "word": {
             "thai": "นี้",
@@ -26642,7 +26647,7 @@
           "source": "Essential Thai (Higbie), p.138"
         },
         {
-          "id": "so-178",
+          "id": "so-180",
           "type": "sentenceOrder",
           "prompt": "I'm getting off at this stop.",
           "tileUnit": "word",
@@ -26660,20 +26665,20 @@
               "thai": "นี้"
             },
             "x0": {
-              "thai": "ตั๋ว",
-              "roman": "tǔa"
+              "thai": "เดียว",
+              "roman": "diao"
             },
             "x1": {
-              "thai": "ขึ้น",
-              "roman": "khɯ̂n"
+              "thai": "สถานี",
+              "roman": "sà-thǎa-nee"
             }
           },
           "poolOrder": [
-            "b",
-            "x0",
             "x1",
+            "a",
+            "x0",
             "c",
-            "a"
+            "b"
           ],
           "correctOrder": [
             "a",
@@ -26683,7 +26688,7 @@
           "source": "Essential Thai (Higbie), p.138"
         },
         {
-          "id": "wi-66",
+          "id": "wi-67",
           "type": "wordIntro",
           "word": {
             "thai": "คัน",
@@ -26693,7 +26698,7 @@
           "source": "Essential Thai (Higbie), p.139"
         },
         {
-          "id": "mc-179",
+          "id": "mc-181",
           "type": "translationChoice",
           "thai": "ขึ้นคันไหน",
           "roman": "khɯ̂n khan nǎi",
@@ -26703,11 +26708,11 @@
               "correct": false
             },
             {
-              "text": "I'm getting off at this stop.",
+              "text": "Where do I get off?",
               "correct": false
             },
             {
-              "text": "Where do I get off?",
+              "text": "I'm getting off at this stop.",
               "correct": false
             },
             {
@@ -26723,7 +26728,7 @@
           ]
         },
         {
-          "id": "sp-180",
+          "id": "sp-182",
           "type": "speak",
           "thai": "คันนี้",
           "roman": "khan níi",
@@ -26735,7 +26740,7 @@
           ]
         },
         {
-          "id": "so-181",
+          "id": "so-183",
           "type": "sentenceOrder",
           "prompt": "this bus",
           "tileUnit": "word",
@@ -26753,20 +26758,20 @@
               "thai": "นี้"
             },
             "x0": {
-              "thai": "ที่ไหน",
-              "roman": "thîi-nǎi"
+              "thai": "แท็กซี่",
+              "roman": "thák-sîi"
             },
             "x1": {
-              "thai": "อยู่",
-              "roman": "yùu"
+              "thai": "สอง",
+              "roman": "sɔ̌ɔng"
             }
           },
           "poolOrder": [
-            "a",
-            "x0",
-            "x1",
             "c",
-            "b"
+            "x1",
+            "b",
+            "a",
+            "x0"
           ],
           "correctOrder": [
             "a",
@@ -26776,7 +26781,7 @@
           "source": "Essential Thai (Higbie), p.138"
         },
         {
-          "id": "rp-183",
+          "id": "rp-185",
           "type": "reply",
           "context": [
             {
@@ -26819,7 +26824,7 @@
           ]
         },
         {
-          "id": "match-184",
+          "id": "match-186",
           "type": "match",
           "pairs": [
             {
@@ -26849,7 +26854,7 @@
       "title": "Hotel rooms and vacancy",
       "steps": [
         {
-          "id": "wi-73",
+          "id": "wi-74",
           "type": "wordIntro",
           "word": {
             "thai": "มี",
@@ -26859,7 +26864,7 @@
           "source": "Essential Thai (Higbie), p.142"
         },
         {
-          "id": "wi-74",
+          "id": "wi-75",
           "type": "wordIntro",
           "word": {
             "thai": "ห้อง",
@@ -26869,14 +26874,14 @@
           "source": "Essential Thai (Higbie), p.142"
         },
         {
-          "id": "mc-187",
+          "id": "mc-189",
           "type": "translationChoice",
           "thai": "เอาห้องนี้",
           "roman": "ao hɔ̂ng níi",
           "options": [
             {
-              "text": "I'll take this room.",
-              "correct": true
+              "text": "We don't have any rooms.",
+              "correct": false
             },
             {
               "text": "Where's this room?",
@@ -26887,8 +26892,8 @@
               "correct": false
             },
             {
-              "text": "We don't have any rooms.",
-              "correct": false
+              "text": "I'll take this room.",
+              "correct": true
             }
           ],
           "source": "Essential Thai (Higbie), p.142",
@@ -26899,7 +26904,7 @@
           ]
         },
         {
-          "id": "sp-188",
+          "id": "sp-190",
           "type": "speak",
           "thai": "ห้องนี้อยู่ที่ไหน",
           "roman": "hɔ̂ng níi yùu thîi-nǎi",
@@ -26913,7 +26918,7 @@
           ]
         },
         {
-          "id": "wi-76",
+          "id": "wi-77",
           "type": "wordIntro",
           "word": {
             "thai": "มั้ย",
@@ -26923,21 +26928,21 @@
           "source": "Essential Thai (Higbie), p.142"
         },
         {
-          "id": "mc-185",
+          "id": "mc-187",
           "type": "translationChoice",
           "thai": "มีห้องมั้ย",
           "roman": "mii hɔ̂ng mái",
           "options": [
-            {
-              "text": "We don't have any rooms.",
-              "correct": false
-            },
             {
               "text": "Do you have a room?",
               "correct": true
             },
             {
               "text": "Where's this room?",
+              "correct": false
+            },
+            {
+              "text": "We don't have any rooms.",
               "correct": false
             },
             {
@@ -26953,7 +26958,7 @@
           ]
         },
         {
-          "id": "sp-190",
+          "id": "sp-192",
           "type": "speak",
           "thai": "มีห้องมั้ย",
           "roman": "mii hɔ̂ng mái",
@@ -26966,7 +26971,7 @@
           ]
         },
         {
-          "id": "wi-79",
+          "id": "wi-80",
           "type": "wordIntro",
           "word": {
             "thai": "ไม่",
@@ -26976,7 +26981,7 @@
           "source": "Essential Thai (Higbie), p.142"
         },
         {
-          "id": "so-186",
+          "id": "so-188",
           "type": "sentenceOrder",
           "prompt": "We don't have any rooms.",
           "tileUnit": "word",
@@ -26994,8 +26999,8 @@
               "thai": "ห้อง"
             },
             "x0": {
-              "thai": "ไป",
-              "roman": "pai"
+              "thai": "ป้าย",
+              "roman": "pâai"
             },
             "x1": {
               "thai": "ลง",
@@ -27003,11 +27008,11 @@
             }
           },
           "poolOrder": [
+            "x1",
             "c",
-            "a",
             "b",
-            "x0",
-            "x1"
+            "a",
+            "x0"
           ],
           "correctOrder": [
             "a",
@@ -27017,7 +27022,7 @@
           "source": "Essential Thai (Higbie), p.142"
         },
         {
-          "id": "wi-82",
+          "id": "wi-83",
           "type": "wordIntro",
           "word": {
             "thai": "ได้",
@@ -27027,7 +27032,7 @@
           "source": "Essential Thai (Higbie), p.140"
         },
         {
-          "id": "so-189",
+          "id": "so-191",
           "type": "sentenceOrder",
           "prompt": "Is that OK?",
           "tileUnit": "word",
@@ -27041,19 +27046,19 @@
               "thai": "มั้ย"
             },
             "x0": {
-              "thai": "นี้",
-              "roman": "níi"
+              "thai": "มี",
+              "roman": "mii"
             },
             "x1": {
-              "thai": "สนามบิน",
-              "roman": "sà-nǎam-bin"
+              "thai": "เอา",
+              "roman": "ao"
             }
           },
           "poolOrder": [
+            "x1",
             "b",
             "x0",
-            "a",
-            "x1"
+            "a"
           ],
           "correctOrder": [
             "a",
@@ -27062,7 +27067,7 @@
           "source": "Essential Thai (Higbie), p.142"
         },
         {
-          "id": "rp-191",
+          "id": "rp-193",
           "type": "reply",
           "context": [
             {
@@ -27083,14 +27088,14 @@
           "english": "Yes, we do.",
           "options": [
             {
-              "thai": "ไม่ได้",
-              "roman": "mâi dâi",
-              "correct": false
-            },
-            {
               "thai": "มี",
               "roman": "mii",
               "correct": true
+            },
+            {
+              "thai": "ไม่ได้",
+              "roman": "mâi dâi",
+              "correct": false
             },
             {
               "thai": "ห้องนี้",
@@ -27104,7 +27109,7 @@
           ]
         },
         {
-          "id": "match-192",
+          "id": "match-194",
           "type": "match",
           "pairs": [
             {
@@ -27144,21 +27149,21 @@
       "title": "Drive slowly, turn right",
       "steps": [
         {
-          "id": "mc-195",
+          "id": "mc-197",
           "type": "translationChoice",
           "thai": "ไปสนามบิน",
           "roman": "pai sà-nǎam-bin",
           "options": [
+            {
+              "text": "Can you turn right?",
+              "correct": false
+            },
             {
               "text": "Could you drive slowly?",
               "correct": false
             },
             {
               "text": "Turn right.",
-              "correct": false
-            },
-            {
-              "text": "Can you turn right?",
               "correct": false
             },
             {
@@ -27173,7 +27178,7 @@
           ]
         },
         {
-          "id": "wi-86",
+          "id": "wi-87",
           "type": "wordIntro",
           "word": {
             "thai": "ขับ",
@@ -27183,7 +27188,7 @@
           "source": "Essential Thai (Higbie), p.140"
         },
         {
-          "id": "wi-87",
+          "id": "wi-88",
           "type": "wordIntro",
           "word": {
             "thai": "ช้าๆ",
@@ -27193,7 +27198,7 @@
           "source": "Essential Thai (Higbie), p.140"
         },
         {
-          "id": "mc-193",
+          "id": "mc-195",
           "type": "translationChoice",
           "thai": "ขับช้าๆได้มั้ย",
           "roman": "khàp cháa-cháa dâi mái",
@@ -27203,16 +27208,16 @@
               "correct": false
             },
             {
-              "text": "Could you drive slowly?",
-              "correct": true
-            },
-            {
               "text": "To the airport.",
               "correct": false
             },
             {
               "text": "Can you turn right?",
               "correct": false
+            },
+            {
+              "text": "Could you drive slowly?",
+              "correct": true
             }
           ],
           "source": "Essential Thai (Higbie), p.140",
@@ -27224,7 +27229,7 @@
           ]
         },
         {
-          "id": "so-197",
+          "id": "so-199",
           "type": "sentenceOrder",
           "prompt": "Drive slowly.",
           "tileUnit": "word",
@@ -27238,19 +27243,19 @@
               "thai": "ช้าๆ"
             },
             "x0": {
-              "thai": "ไหน",
-              "roman": "nǎi"
+              "thai": "มี",
+              "roman": "mii"
             },
             "x1": {
-              "thai": "ตุ๊กตุ๊ก",
-              "roman": "túk-túk"
+              "thai": "สถานี",
+              "roman": "sà-thǎa-nee"
             }
           },
           "poolOrder": [
-            "a",
+            "x1",
             "x0",
-            "b",
-            "x1"
+            "a",
+            "b"
           ],
           "correctOrder": [
             "a",
@@ -27259,7 +27264,7 @@
           "source": "Essential Thai (Higbie), p.140"
         },
         {
-          "id": "sp-198",
+          "id": "sp-200",
           "type": "speak",
           "thai": "ขับช้าๆได้มั้ย",
           "roman": "khàp cháa-cháa dâi mái",
@@ -27273,7 +27278,7 @@
           ]
         },
         {
-          "id": "wi-92",
+          "id": "wi-93",
           "type": "wordIntro",
           "word": {
             "thai": "เลี้ยว",
@@ -27283,7 +27288,7 @@
           "source": "Essential Thai (Higbie), p.147"
         },
         {
-          "id": "wi-93",
+          "id": "wi-94",
           "type": "wordIntro",
           "word": {
             "thai": "ขวา",
@@ -27293,7 +27298,7 @@
           "source": "Essential Thai (Higbie), p.147"
         },
         {
-          "id": "so-194",
+          "id": "so-196",
           "type": "sentenceOrder",
           "prompt": "Turn right.",
           "tileUnit": "word",
@@ -27307,19 +27312,19 @@
               "thai": "ขวา"
             },
             "x0": {
-              "thai": "สนามบิน",
-              "roman": "sà-nǎam-bin"
+              "thai": "ไป",
+              "roman": "pai"
             },
             "x1": {
-              "thai": "มั้ย",
-              "roman": "mái"
+              "thai": "เครื่องบิน",
+              "roman": "khrɯ̂ang-bin"
             }
           },
           "poolOrder": [
-            "x1",
+            "x0",
             "a",
             "b",
-            "x0"
+            "x1"
           ],
           "correctOrder": [
             "a",
@@ -27328,7 +27333,7 @@
           "source": "Essential Thai (Higbie), p.140"
         },
         {
-          "id": "sp-196",
+          "id": "sp-198",
           "type": "speak",
           "thai": "เลี้ยวขวาได้มั้ย",
           "roman": "líao khwǎa dâi mái",
@@ -27342,7 +27347,7 @@
           ]
         },
         {
-          "id": "rp-199",
+          "id": "rp-201",
           "type": "reply",
           "context": [
             {
@@ -27364,6 +27369,11 @@
           "english": "Sure.",
           "options": [
             {
+              "thai": "เลี้ยวขวา",
+              "roman": "líao khwǎa",
+              "correct": false
+            },
+            {
               "thai": "ไปสนามบิน",
               "roman": "pai sà-nǎam-bin",
               "correct": false
@@ -27372,11 +27382,6 @@
               "thai": "ได้",
               "roman": "dâi",
               "correct": true
-            },
-            {
-              "thai": "เลี้ยวขวา",
-              "roman": "líao khwǎa",
-              "correct": false
             }
           ],
           "source": "Essential Thai (Higbie), p.140",
@@ -27385,7 +27390,7 @@
           ]
         },
         {
-          "id": "match-200",
+          "id": "match-202",
           "type": "match",
           "pairs": [
             {
@@ -27420,14 +27425,14 @@
       "title": "Turn left, near or far?",
       "steps": [
         {
-          "id": "rule-106",
+          "id": "rule-107",
           "type": "rule",
           "title": "Near or far?",
           "body": "\"Near\" (glâi) and \"far\" (glai) differ only by tone, which causes confusion — so Thais usually solve the problem by just asking \"is it far?\" and answering \"far\" or \"not far\".",
           "source": "Essential Thai (Higbie), p.148"
         },
         {
-          "id": "wi-99",
+          "id": "wi-100",
           "type": "wordIntro",
           "word": {
             "thai": "ซ้าย",
@@ -27437,7 +27442,7 @@
           "source": "Essential Thai (Higbie), p.147"
         },
         {
-          "id": "mc-201",
+          "id": "mc-203",
           "type": "translationChoice",
           "thai": "เลี้ยวซ้าย",
           "roman": "líao sáai",
@@ -27451,11 +27456,11 @@
               "correct": true
             },
             {
-              "text": "Go straight.",
+              "text": "Is it far?",
               "correct": false
             },
             {
-              "text": "Is it far?",
+              "text": "Go straight.",
               "correct": false
             }
           ],
@@ -27466,7 +27471,7 @@
           ]
         },
         {
-          "id": "sp-206",
+          "id": "sp-208",
           "type": "speak",
           "thai": "เลี้ยวซ้าย",
           "roman": "líao sáai",
@@ -27478,7 +27483,7 @@
           ]
         },
         {
-          "id": "wi-100",
+          "id": "wi-101",
           "type": "wordIntro",
           "word": {
             "thai": "ตรง",
@@ -27488,7 +27493,7 @@
           "source": "Essential Thai (Higbie), p.147"
         },
         {
-          "id": "so-202",
+          "id": "so-204",
           "type": "sentenceOrder",
           "prompt": "Go straight.",
           "tileUnit": "word",
@@ -27502,19 +27507,19 @@
               "thai": "ไป"
             },
             "x0": {
-              "thai": "แท็กซี่",
-              "roman": "thák-sîi"
+              "thai": "ขึ้น",
+              "roman": "khɯ̂n"
             },
             "x1": {
-              "thai": "คัน",
-              "roman": "khan"
+              "thai": "รถเมล์",
+              "roman": "rót-mee"
             }
           },
           "poolOrder": [
-            "x0",
-            "b",
+            "a",
             "x1",
-            "a"
+            "b",
+            "x0"
           ],
           "correctOrder": [
             "a",
@@ -27523,7 +27528,7 @@
           "source": "Essential Thai (Higbie), p.147"
         },
         {
-          "id": "wi-107",
+          "id": "wi-108",
           "type": "wordIntro",
           "word": {
             "thai": "ใกล้",
@@ -27533,26 +27538,26 @@
           "source": "Essential Thai (Higbie), p.148"
         },
         {
-          "id": "mc-205",
+          "id": "mc-207",
           "type": "translationChoice",
           "thai": "ใกล้",
           "roman": "glâi",
           "options": [
             {
-              "text": "Is it far?",
-              "correct": false
-            },
-            {
-              "text": "Turn left.",
-              "correct": false
-            },
-            {
               "text": "Go straight.",
+              "correct": false
+            },
+            {
+              "text": "Is it far?",
               "correct": false
             },
             {
               "text": "It's near.",
               "correct": true
+            },
+            {
+              "text": "Turn left.",
+              "correct": false
             }
           ],
           "source": "Essential Thai (Higbie), p.147",
@@ -27561,7 +27566,7 @@
           ]
         },
         {
-          "id": "wi-108",
+          "id": "wi-109",
           "type": "wordIntro",
           "word": {
             "thai": "ไกล",
@@ -27571,7 +27576,7 @@
           "source": "Essential Thai (Higbie), p.148"
         },
         {
-          "id": "mc-203",
+          "id": "mc-205",
           "type": "translationChoice",
           "thai": "ไกลมั้ย",
           "roman": "glai mái",
@@ -27581,16 +27586,16 @@
               "correct": false
             },
             {
-              "text": "Is it far?",
-              "correct": true
+              "text": "Turn left.",
+              "correct": false
             },
             {
               "text": "Go straight.",
               "correct": false
             },
             {
-              "text": "Turn left.",
-              "correct": false
+              "text": "Is it far?",
+              "correct": true
             }
           ],
           "source": "Essential Thai (Higbie), p.147",
@@ -27600,7 +27605,7 @@
           ]
         },
         {
-          "id": "sp-204",
+          "id": "sp-206",
           "type": "speak",
           "thai": "ไม่ไกล",
           "roman": "mâi glai",
@@ -27612,7 +27617,7 @@
           ]
         },
         {
-          "id": "rp-207",
+          "id": "rp-209",
           "type": "reply",
           "context": [
             {
@@ -27633,11 +27638,6 @@
           "english": "No, not far.",
           "options": [
             {
-              "thai": "เลี้ยวซ้าย",
-              "roman": "líao sáai",
-              "correct": false
-            },
-            {
               "thai": "ไม่ไกล",
               "roman": "mâi glai",
               "correct": true
@@ -27645,6 +27645,11 @@
             {
               "thai": "ตรงไป",
               "roman": "trong pai",
+              "correct": false
+            },
+            {
+              "thai": "เลี้ยวซ้าย",
+              "roman": "líao sáai",
               "correct": false
             }
           ],
@@ -27655,7 +27660,7 @@
           ]
         },
         {
-          "id": "match-208",
+          "id": "match-210",
           "type": "match",
           "pairs": [
             {
@@ -27690,7 +27695,7 @@
       "title": "Streets, intersections, room key",
       "steps": [
         {
-          "id": "so-213",
+          "id": "so-215",
           "type": "sentenceOrder",
           "prompt": "this room",
           "tileUnit": "word",
@@ -27704,19 +27709,19 @@
               "thai": "นี้"
             },
             "x0": {
-              "thai": "เอา",
-              "roman": "ao"
+              "thai": "คัน",
+              "roman": "khan"
             },
             "x1": {
-              "thai": "ขับ",
-              "roman": "khàp"
+              "thai": "สนามบิน",
+              "roman": "sà-nǎam-bin"
             }
           },
           "poolOrder": [
             "b",
+            "a",
             "x1",
-            "x0",
-            "a"
+            "x0"
           ],
           "correctOrder": [
             "a",
@@ -27725,7 +27730,7 @@
           "source": "Essential Thai (Higbie), p.146"
         },
         {
-          "id": "wi-114",
+          "id": "wi-115",
           "type": "wordIntro",
           "word": {
             "thai": "ถนน",
@@ -27735,7 +27740,7 @@
           "source": "Essential Thai (Higbie), p.146"
         },
         {
-          "id": "so-210",
+          "id": "so-212",
           "type": "sentenceOrder",
           "prompt": "this street",
           "tileUnit": "word",
@@ -27749,19 +27754,19 @@
               "thai": "นี้"
             },
             "x0": {
-              "thai": "ตรง",
-              "roman": "trong"
+              "thai": "เที่ยว",
+              "roman": "thîao"
             },
             "x1": {
-              "thai": "เครื่องบิน",
-              "roman": "khrɯ̂ang-bin"
+              "thai": "เลี้ยว",
+              "roman": "líao"
             }
           },
           "poolOrder": [
-            "x1",
-            "x0",
+            "a",
             "b",
-            "a"
+            "x1",
+            "x0"
           ],
           "correctOrder": [
             "a",
@@ -27770,21 +27775,7 @@
           "source": "Essential Thai (Higbie), p.146"
         },
         {
-          "id": "sp-212",
-          "type": "speak",
-          "thai": "ตรงไปถนนนี้",
-          "roman": "trong pai thà-nǒn níi",
-          "meaning": "Go straight along this street.",
-          "source": "Essential Thai (Higbie), p.146",
-          "parts": [
-            "ตรง",
-            "ไป",
-            "ถนน",
-            "นี้"
-          ]
-        },
-        {
-          "id": "wi-115",
+          "id": "wi-116",
           "type": "wordIntro",
           "word": {
             "thai": "สี่แยก",
@@ -27797,6 +27788,31 @@
           "id": "wi-117",
           "type": "wordIntro",
           "word": {
+            "thai": "ตาม",
+            "roman": "taam",
+            "english": "along (a street)"
+          },
+          "source": "Essential Thai (Higbie), p.146"
+        },
+        {
+          "id": "sp-214",
+          "type": "speak",
+          "thai": "ตรงไปตามถนนนี้",
+          "roman": "trong pai taam thà-nǒn níi",
+          "meaning": "Go straight along this street.",
+          "source": "Essential Thai (Higbie), p.146",
+          "parts": [
+            "ตรง",
+            "ไป",
+            "ตาม",
+            "ถนน",
+            "นี้"
+          ]
+        },
+        {
+          "id": "wi-119",
+          "type": "wordIntro",
+          "word": {
             "thai": "ที่",
             "roman": "thîi",
             "english": "at"
@@ -27804,25 +27820,25 @@
           "source": "Essential Thai (Higbie), p.147"
         },
         {
-          "id": "mc-209",
+          "id": "mc-211",
           "type": "translationChoice",
           "thai": "เลี้ยวขวาที่สี่แยก",
           "roman": "líao khwǎa thîi sìi-yɛ̂ɛk",
           "options": [
             {
-              "text": "Turn right at the intersection.",
-              "correct": true
+              "text": "this street",
+              "correct": false
             },
             {
-              "text": "May I have the key, please?",
-              "correct": false
+              "text": "Turn right at the intersection.",
+              "correct": true
             },
             {
               "text": "Go straight along this street.",
               "correct": false
             },
             {
-              "text": "this street",
+              "text": "May I have the key, please?",
               "correct": false
             }
           ],
@@ -27835,7 +27851,7 @@
           ]
         },
         {
-          "id": "sp-214",
+          "id": "sp-216",
           "type": "speak",
           "thai": "เลี้ยวขวาที่สี่แยก",
           "roman": "líao khwǎa thîi sìi-yɛ̂ɛk",
@@ -27849,7 +27865,7 @@
           ]
         },
         {
-          "id": "wi-122",
+          "id": "wi-124",
           "type": "wordIntro",
           "word": {
             "thai": "ขอ",
@@ -27859,7 +27875,7 @@
           "source": "Essential Thai (Higbie), p.144"
         },
         {
-          "id": "wi-123",
+          "id": "wi-125",
           "type": "wordIntro",
           "word": {
             "thai": "กุญแจ",
@@ -27869,7 +27885,7 @@
           "source": "Essential Thai (Higbie), p.144"
         },
         {
-          "id": "wi-125",
+          "id": "wi-127",
           "type": "wordIntro",
           "word": {
             "thai": "ด้วย",
@@ -27879,21 +27895,21 @@
           "source": "Essential Thai (Higbie), p.144"
         },
         {
-          "id": "mc-211",
+          "id": "mc-213",
           "type": "translationChoice",
           "thai": "ขอกุญแจด้วย",
           "roman": "khɔ̌ɔ gun-jɛɛ dûai",
           "options": [
-            {
-              "text": "Turn right at the intersection.",
-              "correct": false
-            },
             {
               "text": "May I have the key, please?",
               "correct": true
             },
             {
               "text": "Go straight along this street.",
+              "correct": false
+            },
+            {
+              "text": "Turn right at the intersection.",
               "correct": false
             },
             {
@@ -27909,7 +27925,7 @@
           ]
         },
         {
-          "id": "rp-215",
+          "id": "rp-217",
           "type": "reply",
           "context": [
             {
@@ -27934,14 +27950,14 @@
               "correct": false
             },
             {
-              "thai": "เลี้ยวซ้ายที่สี่แยก",
-              "roman": "líao sáai thîi sìi-yɛ̂ɛk",
-              "correct": true
-            },
-            {
               "thai": "ถนนนี้",
               "roman": "thà-nǒn níi",
               "correct": false
+            },
+            {
+              "thai": "เลี้ยวซ้ายที่สี่แยก",
+              "roman": "líao sáai thîi sìi-yɛ̂ɛk",
+              "correct": true
             }
           ],
           "source": "Essential Thai (Higbie), p.146",
@@ -27953,7 +27969,7 @@
           ]
         },
         {
-          "id": "match-216",
+          "id": "match-218",
           "type": "match",
           "pairs": [
             {
@@ -27965,6 +27981,11 @@
               "thai": "สี่แยก",
               "roman": "sìi-yɛ̂ɛk",
               "english": "intersection"
+            },
+            {
+              "thai": "ตาม",
+              "roman": "taam",
+              "english": "along (a street)"
             },
             {
               "thai": "ที่",
@@ -27998,7 +28019,7 @@
       "title": "Towels, mosquitos, bank, market",
       "steps": [
         {
-          "id": "wi-130",
+          "id": "wi-132",
           "type": "wordIntro",
           "word": {
             "thai": "ผ้าเช็ดตัว",
@@ -28008,13 +28029,13 @@
           "source": "Essential Thai (Higbie), p.144"
         },
         {
-          "id": "mc-217",
+          "id": "mc-219",
           "type": "translationChoice",
           "thai": "ขอผ้าเช็ดตัวด้วย",
           "roman": "khɔ̌ɔ phâa-chét-tua dûai",
           "options": [
             {
-              "text": "There are mosquitoes.",
+              "text": "Is the post office far?",
               "correct": false
             },
             {
@@ -28022,12 +28043,12 @@
               "correct": false
             },
             {
-              "text": "A towel, please.",
-              "correct": true
+              "text": "There are mosquitoes.",
+              "correct": false
             },
             {
-              "text": "Is the post office far?",
-              "correct": false
+              "text": "A towel, please.",
+              "correct": true
             }
           ],
           "source": "Essential Thai (Higbie), p.144",
@@ -28038,7 +28059,7 @@
           ]
         },
         {
-          "id": "sp-222",
+          "id": "sp-224",
           "type": "speak",
           "thai": "ขอผ้าเช็ดตัวด้วย",
           "roman": "khɔ̌ɔ phâa-chét-tua dûai",
@@ -28051,7 +28072,7 @@
           ]
         },
         {
-          "id": "wi-133",
+          "id": "wi-135",
           "type": "wordIntro",
           "word": {
             "thai": "ยุง",
@@ -28061,7 +28082,7 @@
           "source": "Essential Thai (Higbie), p.145"
         },
         {
-          "id": "so-218",
+          "id": "so-220",
           "type": "sentenceOrder",
           "prompt": "There are mosquitoes.",
           "tileUnit": "word",
@@ -28075,19 +28096,19 @@
               "thai": "ยุง"
             },
             "x0": {
-              "thai": "เครื่องบิน",
-              "roman": "khrɯ̂ang-bin"
+              "thai": "ป้าย",
+              "roman": "pâai"
             },
             "x1": {
-              "thai": "ผ้าเช็ดตัว",
-              "roman": "phâa-chét-tua"
+              "thai": "ตั๋ว",
+              "roman": "tǔa"
             }
           },
           "poolOrder": [
             "x1",
             "b",
-            "a",
-            "x0"
+            "x0",
+            "a"
           ],
           "correctOrder": [
             "a",
@@ -28096,7 +28117,7 @@
           "source": "Essential Thai (Higbie), p.144"
         },
         {
-          "id": "wi-137",
+          "id": "wi-139",
           "type": "wordIntro",
           "word": {
             "thai": "ธนาคาร",
@@ -28106,17 +28127,17 @@
           "source": "Essential Thai (Higbie), p.146"
         },
         {
-          "id": "mc-219",
+          "id": "mc-221",
           "type": "translationChoice",
           "thai": "ธนาคารอยู่ที่ไหน",
           "roman": "thá-naa-khaan yùu thîi-nǎi",
           "options": [
             {
-              "text": "Is the post office far?",
-              "correct": false
+              "text": "Where's the bank?",
+              "correct": true
             },
             {
-              "text": "There are mosquitoes.",
+              "text": "Is the post office far?",
               "correct": false
             },
             {
@@ -28124,8 +28145,8 @@
               "correct": false
             },
             {
-              "text": "Where's the bank?",
-              "correct": true
+              "text": "There are mosquitoes.",
+              "correct": false
             }
           ],
           "source": "Essential Thai (Higbie), p.144",
@@ -28136,7 +28157,7 @@
           ]
         },
         {
-          "id": "wi-138",
+          "id": "wi-140",
           "type": "wordIntro",
           "word": {
             "thai": "ไปรษณีย์",
@@ -28146,7 +28167,7 @@
           "source": "Essential Thai (Higbie), p.146"
         },
         {
-          "id": "sp-220",
+          "id": "sp-222",
           "type": "speak",
           "thai": "ไปรษณีย์ไกลมั้ย",
           "roman": "prai-sà-nii glai mái",
@@ -28159,7 +28180,7 @@
           ]
         },
         {
-          "id": "wi-140",
+          "id": "wi-142",
           "type": "wordIntro",
           "word": {
             "thai": "ตลาด",
@@ -28169,7 +28190,7 @@
           "source": "Essential Thai (Higbie), p.146"
         },
         {
-          "id": "so-221",
+          "id": "so-223",
           "type": "sentenceOrder",
           "prompt": "Where's the market?",
           "tileUnit": "word",
@@ -28187,19 +28208,19 @@
               "thai": "ที่ไหน"
             },
             "x0": {
-              "thai": "รถไฟ",
-              "roman": "rót-fai"
+              "thai": "สี่แยก",
+              "roman": "sìi-yɛ̂ɛk"
             },
             "x1": {
-              "thai": "กรุงเทพฯ",
-              "roman": "grung-thêep"
+              "thai": "ตั๋ว",
+              "roman": "tǔa"
             }
           },
           "poolOrder": [
-            "x1",
             "c",
-            "b",
             "a",
+            "b",
+            "x1",
             "x0"
           ],
           "correctOrder": [
@@ -28210,7 +28231,7 @@
           "source": "Essential Thai (Higbie), p.144"
         },
         {
-          "id": "rp-223",
+          "id": "rp-225",
           "type": "reply",
           "context": [
             {
@@ -28231,6 +28252,11 @@
           "english": "Turn left at the intersection.",
           "options": [
             {
+              "thai": "มียุง",
+              "roman": "mii yung",
+              "correct": false
+            },
+            {
               "thai": "ขอผ้าเช็ดตัวด้วย",
               "roman": "khɔ̌ɔ phâa-chét-tua dûai",
               "correct": false
@@ -28239,11 +28265,6 @@
               "thai": "เลี้ยวซ้ายที่สี่แยก",
               "roman": "líao sáai thîi sìi-yɛ̂ɛk",
               "correct": true
-            },
-            {
-              "thai": "มียุง",
-              "roman": "mii yung",
-              "correct": false
             }
           ],
           "source": "Essential Thai (Higbie), p.144",
@@ -28255,7 +28276,7 @@
           ]
         },
         {
-          "id": "match-224",
+          "id": "match-226",
           "type": "match",
           "pairs": [
             {
@@ -28295,7 +28316,7 @@
       "title": "Unit quiz",
       "steps": [
         {
-          "id": "so-150",
+          "id": "so-152",
           "type": "sentenceOrder",
           "prompt": "I'm going on a trip to Phuket.",
           "tileUnit": "word",
@@ -28313,20 +28334,20 @@
               "thai": "ภูเก็ต"
             },
             "x0": {
-              "thai": "ไหน",
-              "roman": "nǎi"
-            },
-            "x1": {
               "thai": "กรุงเทพฯ",
               "roman": "grung-thêep"
+            },
+            "x1": {
+              "thai": "ไหน",
+              "roman": "nǎi"
             }
           },
           "poolOrder": [
-            "c",
-            "x1",
             "b",
+            "c",
             "a",
-            "x0"
+            "x0",
+            "x1"
           ],
           "correctOrder": [
             "a",
@@ -28336,13 +28357,64 @@
           "source": "Essential Thai (Higbie), p.33"
         },
         {
-          "id": "mc-156",
+          "id": "so-160",
+          "type": "sentenceOrder",
+          "prompt": "I'm taking the train to Bangkok.",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "nâng",
+              "thai": "นั่ง"
+            },
+            "b": {
+              "roman": "rót-fai",
+              "thai": "รถไฟ"
+            },
+            "c": {
+              "roman": "pai",
+              "thai": "ไป"
+            },
+            "d": {
+              "roman": "grung-thêep",
+              "thai": "กรุงเทพฯ"
+            },
+            "x0": {
+              "thai": "รถเมล์",
+              "roman": "rót-mee"
+            },
+            "x1": {
+              "thai": "ไหน",
+              "roman": "nǎi"
+            }
+          },
+          "poolOrder": [
+            "c",
+            "x0",
+            "a",
+            "d",
+            "b",
+            "x1"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "source": "Essential Thai (Higbie), p.34"
+        },
+        {
+          "id": "mc-158",
           "type": "translationChoice",
           "thai": "ไปแท็กซี่",
           "roman": "pai thák-sîi",
           "options": [
             {
-              "text": "I'm going by train.",
+              "text": "I'm going by taxi.",
+              "correct": true
+            },
+            {
+              "text": "I'm going by tuk-tuk.",
               "correct": false
             },
             {
@@ -28350,12 +28422,8 @@
               "correct": false
             },
             {
-              "text": "I'm going by tuk-tuk.",
+              "text": "I'm going by train.",
               "correct": false
-            },
-            {
-              "text": "I'm going by taxi.",
-              "correct": true
             }
           ],
           "source": "Essential Thai (Higbie), p.34",
@@ -28365,13 +28433,13 @@
           ]
         },
         {
-          "id": "mc-161",
+          "id": "mc-163",
           "type": "translationChoice",
           "thai": "ไปเครื่องบิน",
           "roman": "pai khrɯ̂ang-bin",
           "options": [
             {
-              "text": "Where's the airport?",
+              "text": "one-way",
               "correct": false
             },
             {
@@ -28383,7 +28451,7 @@
               "correct": true
             },
             {
-              "text": "one-way",
+              "text": "Where's the airport?",
               "correct": false
             }
           ],
@@ -28394,7 +28462,7 @@
           ]
         },
         {
-          "id": "mc-163",
+          "id": "mc-165",
           "type": "translationChoice",
           "thai": "ไปกลับ",
           "roman": "pai glàp",
@@ -28404,15 +28472,15 @@
               "correct": false
             },
             {
-              "text": "one-way",
-              "correct": false
-            },
-            {
               "text": "round trip",
               "correct": true
             },
             {
               "text": "Where's the airport?",
+              "correct": false
+            },
+            {
+              "text": "one-way",
               "correct": false
             }
           ],
@@ -28423,7 +28491,7 @@
           ]
         },
         {
-          "id": "rp-167",
+          "id": "rp-169",
           "type": "reply",
           "context": [
             {
@@ -28443,13 +28511,13 @@
           "english": "To the airport.",
           "options": [
             {
-              "thai": "เที่ยวเดียว",
-              "roman": "thîao diao",
+              "thai": "สถานีรถไฟ",
+              "roman": "sà-thǎa-nee rót-fai",
               "correct": false
             },
             {
-              "thai": "สถานีรถไฟ",
-              "roman": "sà-thǎa-nee rót-fai",
+              "thai": "เที่ยวเดียว",
+              "roman": "thîao diao",
               "correct": false
             },
             {
@@ -28465,22 +28533,22 @@
           ]
         },
         {
-          "id": "mc-169",
+          "id": "mc-171",
           "type": "translationChoice",
           "thai": "เอาตั๋วไปกรุงเทพฯ",
           "roman": "ao tǔa pai grung-thêep",
           "options": [
             {
-              "text": "A ticket to Bangkok, please.",
-              "correct": true
+              "text": "How many tickets?",
+              "correct": false
             },
             {
               "text": "two tickets",
               "correct": false
             },
             {
-              "text": "How many tickets?",
-              "correct": false
+              "text": "A ticket to Bangkok, please.",
+              "correct": true
             },
             {
               "text": "Where's the bus stop?",
@@ -28496,7 +28564,7 @@
           ]
         },
         {
-          "id": "rp-175",
+          "id": "rp-177",
           "type": "reply",
           "context": [
             {
@@ -28517,14 +28585,14 @@
           "english": "Two.",
           "options": [
             {
-              "thai": "ขึ้นที่ไหน",
-              "roman": "khɯ̂n thîi-nǎi",
-              "correct": false
-            },
-            {
               "thai": "สองใบ",
               "roman": "sɔ̌ɔng bai",
               "correct": true
+            },
+            {
+              "thai": "ขึ้นที่ไหน",
+              "roman": "khɯ̂n thîi-nǎi",
+              "correct": false
             },
             {
               "thai": "ป้ายรถเมล์",
@@ -28539,7 +28607,7 @@
           ]
         },
         {
-          "id": "rp-183",
+          "id": "rp-185",
           "type": "reply",
           "context": [
             {
@@ -28582,7 +28650,7 @@
           ]
         },
         {
-          "id": "so-186",
+          "id": "so-188",
           "type": "sentenceOrder",
           "prompt": "We don't have any rooms.",
           "tileUnit": "word",
@@ -28600,8 +28668,8 @@
               "thai": "ห้อง"
             },
             "x0": {
-              "thai": "ไป",
-              "roman": "pai"
+              "thai": "ป้าย",
+              "roman": "pâai"
             },
             "x1": {
               "thai": "ลง",
@@ -28609,11 +28677,11 @@
             }
           },
           "poolOrder": [
+            "x1",
             "c",
-            "a",
             "b",
-            "x0",
-            "x1"
+            "a",
+            "x0"
           ],
           "correctOrder": [
             "a",
@@ -28623,7 +28691,7 @@
           "source": "Essential Thai (Higbie), p.142"
         },
         {
-          "id": "rp-199",
+          "id": "rp-201",
           "type": "reply",
           "context": [
             {
@@ -28645,6 +28713,11 @@
           "english": "Sure.",
           "options": [
             {
+              "thai": "เลี้ยวขวา",
+              "roman": "líao khwǎa",
+              "correct": false
+            },
+            {
               "thai": "ไปสนามบิน",
               "roman": "pai sà-nǎam-bin",
               "correct": false
@@ -28653,11 +28726,6 @@
               "thai": "ได้",
               "roman": "dâi",
               "correct": true
-            },
-            {
-              "thai": "เลี้ยวขวา",
-              "roman": "líao khwǎa",
-              "correct": false
             }
           ],
           "source": "Essential Thai (Higbie), p.140",
@@ -28666,35 +28734,7 @@
           ]
         },
         {
-          "id": "mc-205",
-          "type": "translationChoice",
-          "thai": "ใกล้",
-          "roman": "glâi",
-          "options": [
-            {
-              "text": "Is it far?",
-              "correct": false
-            },
-            {
-              "text": "Turn left.",
-              "correct": false
-            },
-            {
-              "text": "Go straight.",
-              "correct": false
-            },
-            {
-              "text": "It's near.",
-              "correct": true
-            }
-          ],
-          "source": "Essential Thai (Higbie), p.147",
-          "parts": [
-            "ใกล้"
-          ]
-        },
-        {
-          "id": "rp-207",
+          "id": "rp-209",
           "type": "reply",
           "context": [
             {
@@ -28715,11 +28755,6 @@
           "english": "No, not far.",
           "options": [
             {
-              "thai": "เลี้ยวซ้าย",
-              "roman": "líao sáai",
-              "correct": false
-            },
-            {
               "thai": "ไม่ไกล",
               "roman": "mâi glai",
               "correct": true
@@ -28727,6 +28762,11 @@
             {
               "thai": "ตรงไป",
               "roman": "trong pai",
+              "correct": false
+            },
+            {
+              "thai": "เลี้ยวซ้าย",
+              "roman": "líao sáai",
               "correct": false
             }
           ],
@@ -28737,7 +28777,7 @@
           ]
         },
         {
-          "id": "rp-215",
+          "id": "rp-217",
           "type": "reply",
           "context": [
             {
@@ -28762,14 +28802,14 @@
               "correct": false
             },
             {
-              "thai": "เลี้ยวซ้ายที่สี่แยก",
-              "roman": "líao sáai thîi sìi-yɛ̂ɛk",
-              "correct": true
-            },
-            {
               "thai": "ถนนนี้",
               "roman": "thà-nǒn níi",
               "correct": false
+            },
+            {
+              "thai": "เลี้ยวซ้ายที่สี่แยก",
+              "roman": "líao sáai thîi sìi-yɛ̂ɛk",
+              "correct": true
             }
           ],
           "source": "Essential Thai (Higbie), p.146",
@@ -28781,7 +28821,7 @@
           ]
         },
         {
-          "id": "rp-223",
+          "id": "rp-225",
           "type": "reply",
           "context": [
             {
@@ -28802,6 +28842,11 @@
           "english": "Turn left at the intersection.",
           "options": [
             {
+              "thai": "มียุง",
+              "roman": "mii yung",
+              "correct": false
+            },
+            {
               "thai": "ขอผ้าเช็ดตัวด้วย",
               "roman": "khɔ̌ɔ phâa-chét-tua dûai",
               "correct": false
@@ -28810,11 +28855,6 @@
               "thai": "เลี้ยวซ้ายที่สี่แยก",
               "roman": "líao sáai thîi sìi-yɛ̂ɛk",
               "correct": true
-            },
-            {
-              "thai": "มียุง",
-              "roman": "mii yung",
-              "correct": false
             }
           ],
           "source": "Essential Thai (Higbie), p.144",
@@ -28833,6 +28873,16 @@
               "thai": "ตุ๊กตุ๊ก",
               "roman": "túk-túk",
               "english": "tuk-tuk (motorized three-wheel taxi)"
+            },
+            {
+              "thai": "ใกล้",
+              "roman": "glâi",
+              "english": "near"
+            },
+            {
+              "thai": "ตาม",
+              "roman": "taam",
+              "english": "along (a street)"
             },
             {
               "thai": "ธนาคาร",

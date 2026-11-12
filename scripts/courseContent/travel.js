@@ -87,6 +87,8 @@ const lessons = [
       SRC.howGoing
     ),
     wordIntro('รถเมล์', 'rót-mee', 'bus', SRC.howGoing),
+    // native-speech review 2026-11-12: "take the train to Bangkok" is นั่งรถไฟไปกรุงเทพฯ — ride first, then where
+    wordIntro('นั่ง', 'nâng', 'take / ride (a bus, train)', SRC.howGoing),
     wordIntro('รถไฟ', 'rót-fai', 'train', SRC.howGoing),
     mc('ไปรถเมล์', 'pai rót-mee', "I'm going by bus.", ["I'm going by train.", 'Where are you going?', "I'm going to Bangkok."], ['ไป', 'รถเมล์'], SRC.howGoing),
     order("I'm going by train.", [
@@ -275,6 +277,7 @@ const lessons = [
   lesson('t09', 'Streets, intersections, room key', [
     wordIntro('ถนน', 'thà-nǒn', 'street', SRC.placesInTown),
     wordIntro('สี่แยก', 'sìi-yɛ̂ɛk', 'intersection', SRC.placesInTown),
+    wordIntro('ตาม', 'taam', 'along (a street)', SRC.placesInTown),
     order('Turn left, this street, not far.', [
       { roman: 'líao', thai: 'เลี้ยว' },
       { roman: 'sáai', thai: 'ซ้าย' },
@@ -430,7 +433,7 @@ const REWRITES = {
     'ไป รถไฟ|I\'m going by train.',
     'ไป แท็กซี่|I\'m going by taxi.',
     'ไป ตุ๊กตุ๊ก|I\'m going by tuk-tuk.',
-    'ไป กรุงเทพฯ ไป รถไฟ|I\'m going to Bangkok, by train.',
+    'นั่ง รถไฟ ไป กรุงเทพฯ|I\'m taking the train to Bangkok.',
   ] },
   t03: { phrases: [
     'ไป เครื่องบิน|I\'m going by plane.',
@@ -478,7 +481,7 @@ const REWRITES = {
     'เลี้ยว ขวา ที่ สี่แยก|Turn right at the intersection.',
     'ถนน นี้|this street',
     'ขอ กุญแจ ด้วย|May I have the key, please?',
-    'ตรง ไป ถนน นี้|Go straight along this street.',
+    'ตรง ไป ตาม ถนน นี้|Go straight along this street.',
     'ห้อง นี้|this room',
   ], reply: { q: 'เลี้ยว ที่ไหน|Where do I turn?', a: 'เลี้ยว ซ้าย ที่ สี่แยก|Turn left at the intersection.', wrong: ['ถนน นี้', 'ขอ กุญแจ ด้วย'] } },
   t10: { phrases: [
