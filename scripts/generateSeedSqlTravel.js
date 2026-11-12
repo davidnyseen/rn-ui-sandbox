@@ -5,6 +5,7 @@
 const fs = require('fs');
 const path = require('path');
 const { checkDictionary, stripAuthoringFields, addOrderDistractors, interleaveWordIntros, addUnitQuiz, checkQuizCoverage } = require('./lib/courseBuilder');
+const { withOrderGroups } = require('./lib/orderGroups');
 const { travelSubject: raw } = require('./courseContent/travel');
 
 checkDictionary(raw);
@@ -12,7 +13,7 @@ const interleaved = interleaveWordIntros(raw);
 checkDictionary(interleaved);
 const withDistractors = addOrderDistractors(interleaved);
 checkDictionary(withDistractors);
-const travelSubject = checkQuizCoverage(addUnitQuiz(stripAuthoringFields(withDistractors)));
+const travelSubject = withOrderGroups(checkQuizCoverage(addUnitQuiz(stripAuthoringFields(withDistractors))));
 
 function sqlText(s) {
   return `$q$${s}$q$`;

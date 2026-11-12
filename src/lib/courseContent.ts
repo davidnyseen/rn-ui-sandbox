@@ -33,8 +33,14 @@ interface LessonRow {
 // whole course. Re-export it after changing scripts/courseContent/ and reloading the seeds.
 const bundled = require('../generated/courseContent.json') as { subjects: SubjectRow[]; lessons: LessonRow[] };
 
+// The shipped copy is the one source of truth for lessons (2026-11-12): the content is rebuilt and checked by the
+// pipeline (dictionary, unit-quiz coverage, audio) and bundled with every build, while the database copy only
+// changes when someone remembers to re-seed it — so a restored database could quietly serve older lessons.
+// Flip USE_DATABASE_CONTENT back on only if lessons are ever edited live in the database.
+const USE_DATABASE_CONTENT = false;
+
 export async function fetchCourseSubjects(): Promise<CourseSubject[]> {
-  if (!isSupabaseConfigured) return assemble(bundled.subjects, bundled.lessons);
+  if (!USE_DATABASE_CONTENT || !isSupabaseConfigured) return assemble(bundled.subjects, bundled.lessons);
   const [{ data: subjectRows, error: subjectError }, { data: lessonRows, error: lessonError }] = await Promise.all([
     supabase.from('course_subjects').select('*').order('sort_order', { ascending: true }),
     supabase.from('course_lessons').select('*').order('sort_order', { ascending: true }),

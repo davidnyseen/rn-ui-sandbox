@@ -22,39 +22,17 @@ export function BankStep({
     <View style={styles.screen}>
       <Text style={styles.instruction}>Build the Thai translation:</Text>
       <Text style={styles.prompt}>“{bank.prompt}”</Text>
-      <View style={styles.built}>
-        {bank.correctOrder.map((expectedKey, i) => {
-          const key = built[i];
-          if (!key) return <View key={`empty${i}`} style={styles.emptySlot} />;
-          // Compare resolved Thai text, not the tile key — a sentence that
-          // repeats a word (e.g. two "khráp" tiles) has two different keys
-          // for visually-identical tiles, so a key match/mismatch alone
-          // would misjudge which physical tile the learner used.
-          const tileMatches = bank.words[key]?.thai === bank.words[expectedKey]?.thai;
-          const tileCorrect = checked && tileMatches;
-          const tileWrong = checked && !tileMatches;
-          const tileStyle = tileCorrect
-            ? [styles.chip, styles.chipCorrect]
-            : tileWrong
-              ? [styles.chip, styles.chipWrong]
-              : styles.chip;
-          const tileTextStyle = tileCorrect
-            ? [styles.chipText, styles.chipTextCorrect]
-            : tileWrong
-              ? [styles.chipText, styles.chipTextWrong]
-              : styles.chipText;
-          return (
-            <Pressable
-              key={key}
-              disabled={checked}
-              onPress={() => onRemove(key)}
-              style={tileStyle}
-            >
-              <Text style={tileTextStyle}>{bank.words[key].roman}</Text>
-            </Pressable>
-          );
-        })}
-      </View>
+      {(bank.groups ?? [{ label: '', size: bank.correctOrder.length }]).map((group, gi, groups) => {
+        const start = groups.slice(0, gi).reduce((n, g) => n + g.size, 0);
+        return (
+          <View id="bank-phrase-row" key={`g${gi}`} style={group.label ? styles.groupRow : undefined}>
+            {group.label ? <Text style={styles.groupLabel}>{group.label}</Text> : null}
+            <View style={styles.built}>
+              {bank.correctOrder.slice(start, start + group.size).map((expectedKey, j) => renderSlot(expectedKey, start + j))}
+            </View>
+          </View>
+        );
+      })}
       <View style={styles.divider} />
       <View style={styles.spacer} />
       <View style={styles.pool}>
@@ -91,10 +69,45 @@ export function BankStep({
       )}
     </View>
   );
+
+  function renderSlot(expectedKey: string, i: number) {
+          const key = built[i];
+          if (!key) return <View key={`empty${i}`} style={styles.emptySlot} />;
+          // Compare resolved Thai text, not the tile key — a sentence that
+          // repeats a word (e.g. two "khráp" tiles) has two different keys
+          // for visually-identical tiles, so a key match/mismatch alone
+          // would misjudge which physical tile the learner used.
+          const tileMatches = bank.words[key]?.thai === bank.words[expectedKey]?.thai;
+          const tileCorrect = checked && tileMatches;
+          const tileWrong = checked && !tileMatches;
+          const tileStyle = tileCorrect
+            ? [styles.chip, styles.chipCorrect]
+            : tileWrong
+              ? [styles.chip, styles.chipWrong]
+              : styles.chip;
+          const tileTextStyle = tileCorrect
+            ? [styles.chipText, styles.chipTextCorrect]
+            : tileWrong
+              ? [styles.chipText, styles.chipTextWrong]
+              : styles.chipText;
+          return (
+            <Pressable
+              key={key}
+              disabled={checked}
+              onPress={() => onRemove(key)}
+              style={tileStyle}
+            >
+              <Text style={tileTextStyle}>{bank.words[key].roman}</Text>
+            </Pressable>
+          );
+  }
 }
 
 const styles = StyleSheet.create({
   screen: { flex: 1 },
+  // one row per phrase: small label ("Hello", "What's your name?") over that phrase's slots
+  groupRow: { marginBottom: 12 },
+  groupLabel: { fontFamily: fonts.bodySemibold, fontSize: 14, color: textMuted(0.6), marginBottom: 6 },
   spacer: { flex: 1, minHeight: 12 },
   instruction: { fontSize: 14, color: textMuted(0.55), marginBottom: 6 },
   prompt: { fontFamily: fonts.heading, fontSize: 24, color: colors.text, marginBottom: 20 },

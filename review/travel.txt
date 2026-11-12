@@ -22,7 +22,7 @@
   SPEAK ไปรถเมล์ | pai rót-mee | I'm going by bus.
   NEW รถไฟ | rót-fai | train
   BUILD "I'm going by train." = ไป(pai) รถไฟ(rót-fai)  [extra: nǎi, phuu-gèt]
-  BUILD "I'm going to Bangkok by train." = ไป(pai) กรุงเทพฯ(grung-thêep) รถไฟ(rót-fai)  [extra: nǎi, rót-mee]
+  BUILD "I'm going to Bangkok, by train." = ไป(pai) กรุงเทพฯ(grung-thêep) ไป(pai) รถไฟ(rót-fai)  [extra: rót-mee, nǎi]
   NEW แท็กซี่ | thák-sîi | taxi
   CHOICE ไปแท็กซี่ | pai thák-sîi: I'm going by train. / I'm going by bus. / I'm going by tuk-tuk. / *I'm going by taxi.
   NEW ตุ๊กตุ๊ก | túk-túk | tuk-tuk (motorized three-wheel taxi)

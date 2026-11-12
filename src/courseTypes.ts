@@ -69,6 +69,9 @@ export interface SentenceOrderStep extends StepBase {
   words: Record<string, { roman: string; thai: string }>;
   poolOrder: string[];
   correctOrder: string[];
+  // Set at build time for multi-phrase prompts ("Hello, what's your name? Thank you."): the slots show as one
+  // labelled row per phrase instead of one long row (native-speaker tester feedback, 2026-11-12).
+  groups?: { label: string; size: number }[];
   source: string;
 }
 

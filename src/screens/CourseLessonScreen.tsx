@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Animated, Platform, Pressable, ScrollView, Text, View, StyleSheet } from 'react-native';
+import { FeedbackBox } from '../components/FeedbackBox';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { CourseVocabLesson, CourseStep } from '../courseTypes';
 import { bankBuiltMatches } from '../data';
@@ -418,7 +419,7 @@ export function CourseLessonScreen({
         {step.type === 'sentenceOrder' && (
           <BankStep
             key={stepIndex}
-            bank={{ prompt: step.prompt, words: step.words, poolOrder: step.poolOrder, correctOrder: step.correctOrder }}
+            bank={{ prompt: step.prompt, words: step.words, poolOrder: step.poolOrder, correctOrder: step.correctOrder, groups: step.groups }}
             built={bankBuilt}
             checked={bankChecked}
             onAdd={onAddBank}
@@ -476,6 +477,7 @@ export function CourseLessonScreen({
             onCheck={onCheckMc}
           />
         )}
+        <FeedbackBox where={{ lessonId: lesson.id, lessonTitle: lesson.title, stepIndex, step: step as unknown as Record<string, unknown> }} />
       </ScrollView>
       {isFreeStep ? (
         <View style={[styles.introContinueWrap, { paddingBottom: 24 + insets.bottom }]}>

@@ -16,6 +16,8 @@ export interface VocabLesson {
     words: Record<string, Word>;
     poolOrder: string[];
     correctOrder: string[];
+    // Multi-phrase prompts: one labelled row of slots per phrase (see scripts/lib/orderGroups.js).
+    groups?: { label: string; size: number }[];
   };
 }
 

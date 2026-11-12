@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Animated, Platform, Pressable, ScrollView, Text, View, StyleSheet } from 'react-native';
+import { FeedbackBox } from '../components/FeedbackBox';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { DialogueStep, dialogueStepOptions, shuffleDialogueSteps } from '../data';
 
@@ -317,6 +318,14 @@ export function DialogueLessonScreen({
             onPlaySample={onPlaySampleLine}
           />
         )}
+        <FeedbackBox
+          where={{
+            lessonId: 'dialogue: ' + lesson.title,
+            lessonTitle: lesson.title,
+            stepIndex,
+            step: { ...step, line: 'lineIndex' in step ? lesson.lines[step.lineIndex as number] : undefined } as unknown as Record<string, unknown>,
+          }}
+        />
       </ScrollView>
       {step.type === 'intro' ? (
         <View style={[styles.introContinueWrap, { paddingBottom: 24 + insets.bottom }]}>

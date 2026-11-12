@@ -49,7 +49,7 @@
   BUILD "You're not short." = คุณ(khun) ไม่(mâi) เตี้ย(tîa)  [extra: an-nǎi, châi]
   CHOICE คุณเตี้ยมั้ย | khun tîa mái: Just one. / *Are you short? / Which one? / You're tall.
   SPEAK คุณไม่เตี้ย | khun mâi tîa | You're not short.
-  NEW อ้วน | ûan | fat / well-built
+  NEW อ้วน | ûan | fat / chubby
   CHOICE ไม่อ้วน | mâi ûan: Very tall. / Very thin. / *Not fat. / Not short.
   NEW ผอม | phɔ̌ɔm | thin
   NEW มาก | mâak | very / a lot
@@ -57,7 +57,7 @@
   BUILD "Very thin." = ผอม(phɔ̌ɔm) มาก(mâak)  [extra: khun, an-níi]
   SPEAK ผอมมาก | phɔ̌ɔm mâak | very thin
   CHAT M:คุณ สูง มั้ย(khun sǔung mái=Are you tall?) → reply as F "No, not tall.": *ไม่สูง(mâi sǔung) / ผอมมาก(phɔ̌ɔm mâak) / คุณเตี้ยมั้ย(khun tîa mái)
-  MATCH คุณ=you, สูง=tall, เตี้ย=short, อ้วน=fat / well-built, ผอม=thin, มาก=very / a lot
+  MATCH คุณ=you, สูง=tall, เตี้ย=short, อ้วน=fat / chubby, ผอม=thin, มาก=very / a lot
 
 ## L3 Beautiful, clean, rich
   NEW สวย | sǔai | beautiful

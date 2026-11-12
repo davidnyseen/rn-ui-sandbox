@@ -166,7 +166,7 @@ const lessons = [
     ], SRC.sentences1),
     mc('คุณเตี้ยมั้ย', 'khun tîa mái', 'Are you short?', ["You're tall.", 'Which one?', 'Just one.'], ['คุณ', 'เตี้ย', 'มั้ย'], SRC.sentences1),
     speak('คุณไม่เตี้ย', 'khun mâi tîa', "You're not short.", ['คุณ', 'ไม่', 'เตี้ย'], SRC.sentences1),
-    wordIntro('อ้วน', 'ûan', 'fat / well-built', SRC.sentences1),
+    wordIntro('อ้วน', 'ûan', 'fat / chubby', SRC.sentences1),
     wordIntro('ผอม', 'phɔ̌ɔm', 'thin', SRC.sentences1),
     wordIntro('มาก', 'mâak', 'very / a lot', SRC.sentences1),
     mc('คุณสูงมาก', 'khun sǔung mâak', "You're very tall.", ["You're very thin.", "You're not short.", 'Are you tall?'], ['คุณ', 'สูง', 'มาก'], SRC.sentences1),
