@@ -60,9 +60,11 @@ export function FeedbackBox({ where }: { where: FeedbackWhere }) {
       setStatus('error');
       return;
     }
+    // close the box so the "Feedback saved — thank you!" line shows; a tester needs to see it went through
     setStatus('sent');
     setNote('');
     setEverywhere(false);
+    setOpen(false);
   }
 
   if (!open) {
