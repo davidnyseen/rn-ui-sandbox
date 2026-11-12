@@ -271,7 +271,7 @@ export function DialogueLessonScreen({
           ))}
         </View>
       </View>
-      <ScrollView ref={scrollRef} style={styles.body} contentContainerStyle={styles.bodyContent}>
+      <ScrollView ref={scrollRef} style={styles.body} contentContainerStyle={styles.bodyContent} automaticallyAdjustKeyboardInsets keyboardShouldPersistTaps="handled" keyboardDismissMode="interactive">
         {step.type === 'intro' && <DialogueIntroStep lesson={lesson} onPlayLine={onPlayIntroLine} />}
         {step.type === 'comprehension' && line && (
           <ListenChoiceStep
@@ -319,6 +319,7 @@ export function DialogueLessonScreen({
           />
         )}
         <FeedbackBox
+          onFocus={() => setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 350)}
           where={{
             lessonId: 'dialogue: ' + lesson.title,
             lessonTitle: lesson.title,

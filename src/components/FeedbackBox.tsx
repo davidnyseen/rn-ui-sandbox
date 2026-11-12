@@ -18,7 +18,8 @@ export type FeedbackWhere = {
   step: { id?: string; type?: string } & Record<string, unknown>;
 };
 
-export function FeedbackBox({ where }: { where: FeedbackWhere }) {
+// onFocus: the lesson screen scrolls the box up above the keyboard (user, 2026-11-12: "keyboard is blocking the input").
+export function FeedbackBox({ where, onFocus }: { where: FeedbackWhere; onFocus?: () => void }) {
   const [open, setOpen] = useState(false);
   const [note, setNote] = useState('');
   const [everywhere, setEverywhere] = useState(false);
@@ -83,6 +84,8 @@ export function FeedbackBox({ where }: { where: FeedbackWhere }) {
       <TextInput
         value={note}
         onChangeText={setNote}
+        onFocus={onFocus}
+        autoFocus
         placeholder="What's wrong or confusing here?"
         placeholderTextColor={textMuted(0.4)}
         multiline
@@ -115,7 +118,8 @@ export function FeedbackBox({ where }: { where: FeedbackWhere }) {
 const styles = StyleSheet.create({
   openLink: { alignSelf: 'center', paddingVertical: 14, paddingHorizontal: 12, marginTop: 8 },
   openText: { fontSize: 13, color: textMuted(0.5), textDecorationLine: 'underline' },
-  box: { marginTop: 16, padding: 12, borderRadius: 12, borderWidth: 1, borderColor: colors.neutral300, backgroundColor: colors.white, gap: 10 },
+  // the bottom margin keeps the Send row clear of the keyboard edge
+  box: { marginTop: 16, marginBottom: 24, padding: 12, borderRadius: 12, borderWidth: 1, borderColor: colors.neutral300, backgroundColor: colors.white, gap: 10 },
   title: { fontFamily: fonts.bodySemibold, fontSize: 14, color: colors.text },
   input: {
     minHeight: 72, borderWidth: 1, borderColor: colors.neutral300, borderRadius: 8, padding: 10,

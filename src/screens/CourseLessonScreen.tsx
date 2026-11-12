@@ -401,7 +401,7 @@ export function CourseLessonScreen({
           ))}
         </View>
       </View>
-      <ScrollView ref={scrollRef} style={styles.body} contentContainerStyle={styles.bodyContent} showsVerticalScrollIndicator={false}>
+      <ScrollView ref={scrollRef} style={styles.body} contentContainerStyle={styles.bodyContent} showsVerticalScrollIndicator={false} automaticallyAdjustKeyboardInsets keyboardShouldPersistTaps="handled" keyboardDismissMode="interactive">
         {step.type === 'wordIntro' && <WordIntroStep key={stepIndex} words={[step.word]} onPlayWord={onPlayWordIntroWord} />}
         {step.type === 'wordIntroGroup' && <WordIntroStep key={stepIndex} words={step.words} onPlayWord={onPlayWordIntroWord} />}
         {step.type === 'rule' && <RuleStep key={stepIndex} title={step.title} body={step.body} playing={rulePlaying} onPlay={onPlayRule} />}
@@ -477,7 +477,7 @@ export function CourseLessonScreen({
             onCheck={onCheckMc}
           />
         )}
-        <FeedbackBox where={{ lessonId: lesson.id, lessonTitle: lesson.title, stepIndex, step: step as unknown as Record<string, unknown> }} />
+        <FeedbackBox onFocus={() => setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 350)} where={{ lessonId: lesson.id, lessonTitle: lesson.title, stepIndex, step: step as unknown as Record<string, unknown> }} />
       </ScrollView>
       {isFreeStep ? (
         <View style={[styles.introContinueWrap, { paddingBottom: 24 + insets.bottom }]}>
