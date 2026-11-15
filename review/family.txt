@@ -47,8 +47,8 @@
   SPEAK เค้าเป็นพ่อ | kháo pen phɔ̂ɔ | He's my father.
   NEW คุณ | khun | you
   NEW มี | mii | have / there is
-  CHOICE มีพี่ชาย | mii phîi-chaai: *I have an older brother. / He's my older brother. / He's my father. / She's my younger sister.
-  BUILD "I have an older sister and a younger brother." = มี(mii) พี่สาว(phîi-sǎao) กับ(gàp) น้องชาย(nɔ́ɔng-chaai)  [extra: phɔ̂ɔ, nɔ́ɔng-sǎao]
+  CHOICE ผมมีพี่ชาย | phǒm mii phîi-chaai: *I have an older brother. / He's my older brother. / He's my father. / She's my younger sister.
+  BUILD "I have an older sister and a younger brother. (said by a woman)" = ฉัน(chán) มี(mii) พี่สาว(phîi-sǎao) กับ(gàp) น้องชาย(nɔ́ɔng-chaai)  [extra: phɔ̂ɔ, nɔ́ɔng-sǎao]
   SPEAK คุณมีครอบครัว | khun mii khrɔ̂ɔp-khrua | You have a family.
   MATCH เค้า=he / she, เป็น=to be / is, คุณ=you, มี=have / there is
 
@@ -59,38 +59,38 @@
   SPEAK กี่คน | gìi kon | How many people?
   SPEAK คุณมีพี่น้องกี่คน | khun mii phîi-nɔ́ɔng gìi kon | How many siblings do you have?
   NEW หนึ่ง | nɯ̀ng | one
-  CHOICE มีพี่ชายคนหนึ่ง | mii phîi-chaai kon nɯ̀ng: How many people? / I have two siblings. / *I have one older brother. / How many siblings do you have?
+  CHOICE ผมมีพี่ชายคนหนึ่ง | phǒm mii phîi-chaai kon nɯ̀ng: How many people? / I have two siblings. / *I have one older brother. / How many siblings do you have?
   NEW สอง | sɔ̌ɔng | two
-  BUILD "I have two siblings." = มี(mii) พี่น้อง(phîi-nɔ́ɔng) สอง(sɔ̌ɔng) คน(kon)  [extra: kháo, khrɔ̂ɔp-khrua]
-  BUILD "I have two younger sisters." = มี(mii) น้องสาว(nɔ́ɔng-sǎao) สอง(sɔ̌ɔng) คน(kon)  [extra: gàp, phîi-sǎao]
-  CHAT M:คุณ มี พี่น้อง กี่ คน(khun mii phîi-nɔ́ɔng gìi kon=How many siblings do you have?) → reply as F "I have two siblings.": เค้าเป็นพ่อ(kháo pen phɔ̂ɔ) / *มีพี่น้องสองคน(mii phîi-nɔ́ɔng sɔ̌ɔng kon) / กี่คน(gìi kon)
+  BUILD "I have two siblings. (said by a woman)" = ฉัน(chán) มี(mii) พี่น้อง(phîi-nɔ́ɔng) สอง(sɔ̌ɔng) คน(kon)  [extra: kháo, khrɔ̂ɔp-khrua]
+  BUILD "I have two younger sisters. (said by a man)" = ผม(phǒm) มี(mii) น้องสาว(nɔ́ɔng-sǎao) สอง(sɔ̌ɔng) คน(kon)  [extra: gàp, phîi-sǎao]
+  CHAT M:คุณ มี พี่น้อง กี่ คน(khun mii phîi-nɔ́ɔng gìi kon=How many siblings do you have?) → reply as F "I have two siblings.": เค้าเป็นพ่อ(kháo pen phɔ̂ɔ) / *ฉันมีพี่น้องสองคน(chán mii phîi-nɔ́ɔng sɔ̌ɔng kon) / กี่คน(gìi kon)
   MATCH กี่=how many?, คน=person (classifier for people), หนึ่ง=one, สอง=two
 
 ## L4 Numbers three, four, and son
   NEW สาม | sǎam | three
-  CHOICE มีพี่น้องสามคน | mii phîi-nɔ́ɔng sǎam kon: I have four children. / I have one son. / How many children do you have? / *I have three siblings.
-  BUILD "I have three younger brothers." = มี(mii) น้องชาย(nɔ́ɔng-chaai) สาม(sǎam) คน(kon)  [extra: phîi-chaai, nɯ̀ng]
-  SPEAK มีพี่น้องสามคน | mii phîi-nɔ́ɔng sǎam kon | I have three siblings.
+  CHOICE ฉันมีพี่น้องสามคน | chán mii phîi-nɔ́ɔng sǎam kon: I have four children. / I have one son. / How many children do you have? / *I have three siblings.
+  BUILD "I have three younger brothers. (said by a man)" = ผม(phǒm) มี(mii) น้องชาย(nɔ́ɔng-chaai) สาม(sǎam) คน(kon)  [extra: phîi-chaai, nɯ̀ng]
+  SPEAK ฉันมีพี่น้องสามคน | chán mii phîi-nɔ́ɔng sǎam kon | I have three siblings.
   NEW สี่ | sìi | four
   NEW ลูก | lûuk | child / children
   CHOICE คุณมีลูกกี่คน | khun mii lûuk gìi kon: *How many children do you have? / I have one son. / I have three siblings. / I have four children.
-  SPEAK มีลูกสี่คน | mii lûuk sìi kon | I have four children.
-  CHAT M:คุณ มี ลูก กี่ คน(khun mii lûuk gìi kon=How many children do you have?) → reply as F "I have three children.": *มีลูกสามคน(mii lûuk sǎam kon) / มีพี่น้องสี่คน(mii phîi-nɔ́ɔng sìi kon) / กี่คน(gìi kon)
+  SPEAK ผมมีลูกสี่คน | phǒm mii lûuk sìi kon | I have four children.
+  CHAT M:คุณ มี ลูก กี่ คน(khun mii lûuk gìi kon=How many children do you have?) → reply as F "I have three children.": *ฉันมีลูกสามคน(chán mii lûuk sǎam kon) / มีพี่น้องสี่คน(mii phîi-nɔ́ɔng sìi kon) / กี่คน(gìi kon)
   NEW ลูกชาย | lûuk-chaai | son
-  BUILD "I have one son." = มี(mii) ลูกชาย(lûuk-chaai) คน(kon) หนึ่ง(nɯ̀ng)  [extra: sɔ̌ɔng, gìi]
+  BUILD "I have one son. (said by a woman)" = ฉัน(chán) มี(mii) ลูกชาย(lûuk-chaai) คน(kon) หนึ่ง(nɯ̀ng)  [extra: sɔ̌ɔng, gìi]
   MATCH สาม=three, สี่=four, ลูก=child / children, ลูกชาย=son
 
 ## L5 Daughters and where is home?
   NEW ลูกสาว | lûuk-sǎao | daughter
-  CHOICE มีลูกสาวสองคน | mii lûuk-sǎao sɔ̌ɔng kon: Where are your parents? / *I have two daughters. / Where is your daughter? / Where is he/she?
-  BUILD "I have one son and two daughters." = มี(mii) ลูกชาย(lûuk-chaai) คน(kon) หนึ่ง(nɯ̀ng) กับ(gàp) ลูกสาว(lûuk-sǎao) สอง(sɔ̌ɔng) คน(kon)  [extra: sǎam, lûuk]
-  SPEAK มีลูกสาวสองคน | mii lûuk-sǎao sɔ̌ɔng kon | I have two daughters.
+  CHOICE ผมมีลูกสาวสองคน | phǒm mii lûuk-sǎao sɔ̌ɔng kon: Where are your parents? / *I have two daughters. / Where is your daughter? / Where is he/she?
+  BUILD "I have one son and two daughters. (said by a woman)" = ฉัน(chán) มี(mii) ลูกชาย(lûuk-chaai) คน(kon) หนึ่ง(nɯ̀ng) กับ(gàp) ลูกสาว(lûuk-sǎao) สอง(sɔ̌ɔng) คน(kon)  [extra: sǎam, lûuk]
+  SPEAK ผมมีลูกสาวสองคน | phǒm mii lûuk-sǎao sɔ̌ɔng kon | I have two daughters.
   NEW อยู่ | yùu | be at / stay
   NEW ที่ไหน | thîi-nǎi | where?
   BUILD "Where are your parents?" = พ่อ(phɔ̂ɔ) แม่(mɛ̂ɛ) อยู่(yùu) ที่ไหน(thîi-nǎi)  [extra: sìi, kháo]
   CHOICE เค้าอยู่ที่ไหน | kháo yùu thîi-nǎi: *Where is he/she? / Where is your daughter? / Where are your parents? / I have two daughters.
   SPEAK ลูกสาวอยู่ที่ไหน | lûuk-sǎao yùu thîi-nǎi | Where is your daughter?
-  CHAT M:คุณ มี ลูก กี่ คน(khun mii lûuk gìi kon=How many children do you have?) → reply as F "I have two daughters.": เค้าอยู่ที่ไหน(kháo yùu thîi-nǎi) / *มีลูกสาวสองคน(mii lûuk-sǎao sɔ̌ɔng kon) / ลูกชาย(lûuk-chaai)
+  CHAT M:คุณ มี ลูก กี่ คน(khun mii lûuk gìi kon=How many children do you have?) → reply as F "I have two daughters.": เค้าอยู่ที่ไหน(kháo yùu thîi-nǎi) / *ฉันมีลูกสาวสองคน(chán mii lûuk-sǎao sɔ̌ɔng kon) / ลูกชาย(lûuk-chaai)
   MATCH ลูกสาว=daughter, อยู่=be at / stay, ที่ไหน=where?
 
 ## L6 Home, grandma, and grandpa
@@ -132,7 +132,7 @@
   SPEAK คุณแต่งงานรึยัง | khun tɛ̀ng-ngaan rɯ́-yang | Are you married yet?
   NEW แล้ว | láew | already
   BUILD "Yes, I'm married." = แต่งงาน(tɛ̀ng-ngaan) แล้ว(láew)  [extra: nɯ̀ng, yaai]
-  BUILD "I already have children." = มี(mii) ลูก(lûuk) แล้ว(láew)  [extra: phîi-chaai, phɔ̂ɔ]
+  BUILD "I already have children. (said by a woman)" = ฉัน(chán) มี(mii) ลูก(lûuk) แล้ว(láew)  [extra: phîi-chaai, phɔ̂ɔ]
   CHAT M:คุณ แต่งงาน รึยัง(khun tɛ̀ng-ngaan rɯ́-yang=Are you married yet?) → reply as F "Yes, I'm married.": มีแฟนรึยัง(mii fɛɛn rɯ́-yang) / *แต่งงานแล้ว(tɛ̀ng-ngaan láew) / ลุง(lung)
   NEW ยัง | yang | yet / still
   MATCH แต่งงาน=to marry, รึยัง=...yet?, แล้ว=already, ยัง=yet / still
@@ -140,13 +140,13 @@
 ## L9 Not yet married; kids, how many?
   BUILD "Do you have children yet?" = มี(mii) ลูก(lûuk) รึยัง(rɯ́-yang)  [extra: nɔ́ɔng-sǎao, fɛɛn]
   NEW ไม่ | mâi | not / no
-  CHOICE ไม่มีแฟน | mâi mii fɛɛn: *I don't have a partner. / I'm still single. / I don't have children yet. / I'm not married yet.
-  SPEAK ยังไม่มีลูก | yang mâi mii lûuk | I don't have children yet.
+  CHOICE ผมไม่มีแฟน | phǒm mâi mii fɛɛn: *I don't have a partner. / I'm still single. / I don't have children yet. / I'm not married yet.
+  SPEAK ฉันยังไม่มีลูก | chán yang mâi mii lûuk | I don't have children yet.
   NEW ได้ | dâi | have (done) — yang mâi dâi: not ... yet
-  CHOICE ยังไม่ได้แต่งงาน | yang mâi dâi tɛ̀ng-ngaan: I don't have a partner. / I don't have children yet. / *I'm not married yet. / I'm still single.
-  SPEAK ยังไม่ได้แต่งงาน | yang mâi dâi tɛ̀ng-ngaan | I'm not married yet.
+  CHOICE ผมยังไม่ได้แต่งงาน | phǒm yang mâi dâi tɛ̀ng-ngaan: I don't have a partner. / I don't have children yet. / *I'm not married yet. / I'm still single.
+  SPEAK ฉันยังไม่ได้แต่งงาน | chán yang mâi dâi tɛ̀ng-ngaan | I'm not married yet.
   NEW โสด | sòot | single / unmarried
-  BUILD "I'm still single." = ยัง(yang) โสด(sòot)  [extra: lung, lûuk-chaai]
+  BUILD "I'm still single. (said by a man)" = ผม(phǒm) ยัง(yang) โสด(sòot)  [extra: lung, lûuk-chaai]
   CHAT M:มี แฟน รึยัง(mii fɛɛn rɯ́-yang=Do you have a partner yet?) → reply as F "Not yet, I'm still single.": มีลูกสามคน(mii lûuk sǎam kon) / *ยังโสด(yang sòot) / แต่งงานแล้ว(tɛ̀ng-ngaan láew)
   MATCH ไม่=not / no, ได้=have (done) — yang mâi dâi: not ... yet, โสด=single / unmarried
 
@@ -155,14 +155,14 @@
   BUILD "older brother, younger brother" = พี่ชาย(phîi-chaai) น้องชาย(nɔ́ɔng-chaai)  [extra: mɛ̂ɛ, phɔ̂ɔ]
   BUILD "older sister, younger sister" = พี่สาว(phîi-sǎao) น้องสาว(nɔ́ɔng-sǎao)  [extra: nɔ́ɔng-chaai, phɔ̂ɔ]
   BUILD "family and siblings" = ครอบครัว(khrɔ̂ɔp-khrua) กับ(gàp) พี่น้อง(phîi-nɔ́ɔng)  [extra: phîi-sǎao, nɔ́ɔng-sǎao]
-  CHOICE มีพี่ชายคนหนึ่ง | mii phîi-chaai kon nɯ̀ng: How many people? / I have two siblings. / *I have one older brother. / How many siblings do you have?
-  CHAT M:คุณ มี พี่น้อง กี่ คน(khun mii phîi-nɔ́ɔng gìi kon=How many siblings do you have?) → reply as F "I have two siblings.": เค้าเป็นพ่อ(kháo pen phɔ̂ɔ) / *มีพี่น้องสองคน(mii phîi-nɔ́ɔng sɔ̌ɔng kon) / กี่คน(gìi kon)
-  CHAT M:คุณ มี ลูก กี่ คน(khun mii lûuk gìi kon=How many children do you have?) → reply as F "I have three children.": *มีลูกสามคน(mii lûuk sǎam kon) / มีพี่น้องสี่คน(mii phîi-nɔ́ɔng sìi kon) / กี่คน(gìi kon)
-  CHAT M:คุณ มี ลูก กี่ คน(khun mii lûuk gìi kon=How many children do you have?) → reply as F "I have two daughters.": เค้าอยู่ที่ไหน(kháo yùu thîi-nǎi) / *มีลูกสาวสองคน(mii lûuk-sǎao sɔ̌ɔng kon) / ลูกชาย(lûuk-chaai)
+  CHOICE ผมมีพี่ชายคนหนึ่ง | phǒm mii phîi-chaai kon nɯ̀ng: How many people? / I have two siblings. / *I have one older brother. / How many siblings do you have?
+  CHAT M:คุณ มี พี่น้อง กี่ คน(khun mii phîi-nɔ́ɔng gìi kon=How many siblings do you have?) → reply as F "I have two siblings.": เค้าเป็นพ่อ(kháo pen phɔ̂ɔ) / *ฉันมีพี่น้องสองคน(chán mii phîi-nɔ́ɔng sɔ̌ɔng kon) / กี่คน(gìi kon)
+  CHAT M:คุณ มี ลูก กี่ คน(khun mii lûuk gìi kon=How many children do you have?) → reply as F "I have three children.": *ฉันมีลูกสามคน(chán mii lûuk sǎam kon) / มีพี่น้องสี่คน(mii phîi-nɔ́ɔng sìi kon) / กี่คน(gìi kon)
+  CHAT M:คุณ มี ลูก กี่ คน(khun mii lûuk gìi kon=How many children do you have?) → reply as F "I have two daughters.": เค้าอยู่ที่ไหน(kháo yùu thîi-nǎi) / *ฉันมีลูกสาวสองคน(chán mii lûuk-sǎao sɔ̌ɔng kon) / ลูกชาย(lûuk-chaai)
   CHAT M:ตา อยู่ ที่ไหน(taa yùu thîi-nǎi=Where is grandpa?) → reply as F "Grandpa is at home.": มีลูกสามคน(mii lûuk sǎam kon) / *ตาอยู่บ้าน(taa yùu bâan) / ยาย(yaai)
   CHOICE ลุงกับป้าอยู่ที่นี่ | lung gàp pâa yùu thîi-nîi: Where is your uncle? / *My uncle and aunt are here. / My aunt is at home. / He's/she's my partner.
   BUILD "My aunt/uncle is at home." = น้า(náa) อยู่(yùu) บ้าน(bâan)  [extra: nɯ̀ng, sìi]
-  CHOICE ยังไม่ได้แต่งงาน | yang mâi dâi tɛ̀ng-ngaan: I don't have a partner. / I don't have children yet. / *I'm not married yet. / I'm still single.
+  CHOICE ผมยังไม่ได้แต่งงาน | phǒm yang mâi dâi tɛ̀ng-ngaan: I don't have a partner. / I don't have children yet. / *I'm not married yet. / I'm still single.
   CHAT M:มี แฟน รึยัง(mii fɛɛn rɯ́-yang=Do you have a partner yet?) → reply as F "Not yet, I'm still single.": มีลูกสามคน(mii lûuk sǎam kon) / *ยังโสด(yang sòot) / แต่งงานแล้ว(tɛ̀ng-ngaan láew)
 
 ## L11 Catching up on family

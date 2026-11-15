@@ -112,13 +112,13 @@ const lessons = [
     wordIntro('มั้ย', 'mái', 'question particle (yes/no)', SRC.yesno),
     wordIntro('ไม่', 'mâi', 'not / no', SRC.yesno),
     mc('เอามั้ย', 'ao mái', 'Do you want it?', ['I want this one.', 'How many?', 'This one.'], ['เอา', 'มั้ย'], SRC.yesno),
-    order("No, I don't want it.", [
+    order("I don't want it.", [
       { roman: 'mâi', thai: 'ไม่' },
       { roman: 'ao', thai: 'เอา' },
     ], SRC.yesno),
-    mc('ไม่เอา', 'mâi ao', "No, I don't want it.", ['Do you want it?', 'Which one?', 'Just one.'], ['ไม่', 'เอา'], SRC.yesno),
+    mc('ไม่เอา', 'mâi ao', "I don't want it.", ['Do you want it?', 'Which one?', 'Just one.'], ['ไม่', 'เอา'], SRC.yesno),
     speak('มั้ย', 'mái', 'question particle (yes/no)', ['มั้ย'], SRC.yesno),
-    speak('ไม่เอา', 'mâi ao', "No, I don't want it.", ['ไม่', 'เอา'], SRC.yesno),
+    speak('ไม่เอา', 'mâi ao', "I don't want it.", ['ไม่', 'เอา'], SRC.yesno),
     rule(
       'Confirming with châi mái',
       'Use châi mái at the end of a statement when you already think something is true and just want to confirm it, like ' +
@@ -126,18 +126,18 @@ const lessons = [
       SRC.confirm
     ),
     wordIntro('ใช่', 'châi', "right / that's correct", SRC.confirm),
-    mc('ใช่มั้ย', 'châi mái', "Isn't that right?", ["No, that's not right.", 'I want this one.', 'How many?'], ['ใช่', 'มั้ย'], SRC.confirm),
-    order("No, that's not right.", [
+    mc('ใช่มั้ย', 'châi mái', "Isn't that right?", ["That's not right.", 'I want this one.', 'How many?'], ['ใช่', 'มั้ย'], SRC.confirm),
+    order("That's not right.", [
       { roman: 'mâi', thai: 'ไม่' },
       { roman: 'châi', thai: 'ใช่' },
     ], SRC.confirm),
-    mc('ไม่ใช่', 'mâi châi', "No, that's not right.", ["Yes, that's right.", 'Do you want it?', 'Just one.'], ['ไม่', 'ใช่'], SRC.confirm),
-    speak('ใช่', 'châi', "Yes, that's right.", ['ใช่'], SRC.confirm),
+    mc('ไม่ใช่', 'mâi châi', "That's not right.", ["That's right.", 'Do you want it?', 'Just one.'], ['ไม่', 'ใช่'], SRC.confirm),
+    speak('ใช่', 'châi', "That's right.", ['ใช่'], SRC.confirm),
     speak('ใช่มั้ย', 'châi mái', "Isn't that right?", ['ใช่', 'มั้ย'], SRC.confirm),
     reply(
       [
         { speaker: 'M', thai: 'เอามั้ย', roman: 'ao mái', english: 'Do you want it?', parts: ['เอา', 'มั้ย'] },
-        { speaker: 'F', thai: 'ไม่เอา', roman: 'mâi ao', english: "No, I don't want it.", parts: ['ไม่', 'เอา'] },
+        { speaker: 'F', thai: 'ไม่เอา', roman: 'mâi ao', english: "I don't want it.", parts: ['ไม่', 'เอา'] },
       ],
       [
         { thai: 'ใช่มั้ย', roman: 'châi mái', parts: ['ใช่', 'มั้ย'] },

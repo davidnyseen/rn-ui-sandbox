@@ -6,34 +6,34 @@
   CHOICE ไปไหน | pai nǎi: I'm going to Bangkok. / *Where are you going? / I'm going to Phuket. / I'm going out.
   SPEAK ไปไหน | pai nǎi | Where are you going?
   NEW เที่ยว | thîao | go out / travel around
-  BUILD "I'm going out." = ไป(pai) เที่ยว(thîao)  [extra: nǎi]
+  BUILD "I'm going out. (said by a man)" = ผม(phǒm) ไป(pai) เที่ยว(thîao)  [extra: nǎi]
   NEW กรุงเทพฯ | grung-thêep | Bangkok
-  CHOICE ไปกรุงเทพฯ | pai grung-thêep: I'm going out. / Where are you going? / *I'm going to Bangkok. / I'm going to Phuket.
+  CHOICE ฉันไปกรุงเทพฯ | chán pai grung-thêep: I'm going out. / Where are you going? / *I'm going to Bangkok. / I'm going to Phuket.
   NEW ภูเก็ต | phuu-gèt | Phuket
-  SPEAK ไปภูเก็ต | pai phuu-gèt | I'm going to Phuket.
-  BUILD "I'm going on a trip to Phuket." = ไป(pai) เที่ยว(thîao) ภูเก็ต(phuu-gèt)  [extra: grung-thêep, nǎi]
-  CHAT M:ไป ไหน(pai nǎi=Where are you going?) → reply as F "I'm going to Phuket.": เที่ยว(thîao) / ไปไหน(pai nǎi) / *ไปภูเก็ต(pai phuu-gèt)
+  SPEAK ผมไปภูเก็ต | phǒm pai phuu-gèt | I'm going to Phuket.
+  BUILD "I'm going on a trip to Phuket. (said by a woman)" = ฉัน(chán) ไป(pai) เที่ยว(thîao) ภูเก็ต(phuu-gèt)  [extra: grung-thêep, nǎi]
+  CHAT M:ไป ไหน(pai nǎi=Where are you going?) → reply as F "I'm going to Phuket.": เที่ยว(thîao) / ไปไหน(pai nǎi) / *ฉันไปภูเก็ต(chán pai phuu-gèt)
   MATCH ไป=go, ไหน=where, เที่ยว=go out / travel around, กรุงเทพฯ=Bangkok, ภูเก็ต=Phuket
 
 ## L1 How are you going? Bus, train, taxi
   RULE "By" isn't needed: Thai doesn't use a word for "by" — "I'm going by bus" is just "go-bus" (pai + the vehicle name), with nothing in between.
   NEW รถเมล์ | rót-mee | bus
-  CHOICE ไปรถเมล์ | pai rót-mee: I'm going by taxi. / I'm going by train. / I'm going by tuk-tuk. / *I'm going by bus.
-  SPEAK ไปรถเมล์ | pai rót-mee | I'm going by bus.
+  CHOICE ผมไปรถเมล์ | phǒm pai rót-mee: I'm going by taxi. / I'm going by train. / I'm going by tuk-tuk. / *I'm going by bus.
+  SPEAK ฉันไปรถเมล์ | chán pai rót-mee | I'm going by bus.
   NEW นั่ง | nâng | take / ride (a bus, train)
   NEW รถไฟ | rót-fai | train
-  BUILD "I'm going by train." = ไป(pai) รถไฟ(rót-fai)  [extra: nâng, grung-thêep]
-  BUILD "I'm taking the train to Bangkok." = นั่ง(nâng) รถไฟ(rót-fai) ไป(pai) กรุงเทพฯ(grung-thêep)  [extra: rót-mee, nǎi]
+  BUILD "I'm going by train. (said by a man)" = ผม(phǒm) ไป(pai) รถไฟ(rót-fai)  [extra: nâng, grung-thêep]
+  BUILD "I'm taking the train to Bangkok. (said by a woman)" = ฉัน(chán) นั่ง(nâng) รถไฟ(rót-fai) ไป(pai) กรุงเทพฯ(grung-thêep)  [extra: rót-mee, nǎi]
   NEW แท็กซี่ | thák-sîi | taxi
-  CHOICE ไปแท็กซี่ | pai thák-sîi: *I'm going by taxi. / I'm going by tuk-tuk. / I'm going by bus. / I'm going by train.
+  CHOICE ผมไปแท็กซี่ | phǒm pai thák-sîi: *I'm going by taxi. / I'm going by tuk-tuk. / I'm going by bus. / I'm going by train.
   NEW ตุ๊กตุ๊ก | túk-túk | tuk-tuk (motorized three-wheel taxi)
-  SPEAK ไปตุ๊กตุ๊ก | pai túk-túk | I'm going by tuk-tuk.
+  SPEAK ฉันไปตุ๊กตุ๊ก | chán pai túk-túk | I'm going by tuk-tuk.
   MATCH รถเมล์=bus, นั่ง=take / ride (a bus, train), รถไฟ=train, แท็กซี่=taxi, ตุ๊กตุ๊ก=tuk-tuk (motorized three-wheel taxi)
 
 ## L2 Airplane tickets, station, airport
   NEW เครื่องบิน | khrɯ̂ang-bin | airplane
-  CHOICE ไปเครื่องบิน | pai khrɯ̂ang-bin: one-way / round trip / *I'm going by plane. / Where's the airport?
-  SPEAK ไปเครื่องบิน | pai khrɯ̂ang-bin | I'm going by plane.
+  CHOICE ผมไปเครื่องบิน | phǒm pai khrɯ̂ang-bin: one-way / round trip / *I'm going by plane. / Where's the airport?
+  SPEAK ฉันไปเครื่องบิน | chán pai khrɯ̂ang-bin | I'm going by plane.
   NEW เดียว | diao | single / only one
   BUILD "one-way" = เที่ยว(thîao) เดียว(diao)  [extra: khrɯ̂ang-bin, pai]
   NEW กลับ | glàp | return / go back
@@ -69,7 +69,7 @@
   CHOICE ลงที่ไหน | long thîi-nǎi: this one (bus) / Which bus do I take? / I'm getting off at this stop. / *Where do I get off?
   SPEAK ลงที่ไหน | long thîi-nǎi | Where do I get off?
   NEW นี้ | níi | this (after a noun)
-  BUILD "I'm getting off at this stop." = ลง(long) ป้าย(pâai) นี้(níi)  [extra: sà-thǎa-nee, diao]
+  BUILD "I'm getting off at this stop. (said by a man)" = ผม(phǒm) ลง(long) ป้าย(pâai) นี้(níi)  [extra: sà-thǎa-nee, diao]
   NEW คัน | khan | classifier for vehicles
   CHOICE ขึ้นคันไหน | khɯ̂n khan nǎi: this one (bus) / Where do I get off? / I'm getting off at this stop. / *Which bus do I take?
   SPEAK คันนี้ | khan níi | this one (bus)
@@ -80,7 +80,7 @@
 ## L5 Hotel rooms and vacancy
   NEW มี | mii | have
   NEW ห้อง | hɔ̂ng | room
-  CHOICE เอาห้องนี้ | ao hɔ̂ng níi: We don't have any rooms. / Where's this room? / Do you have a room? / *I'll take this room.
+  CHOICE ฉันเอาห้องนี้ | chán ao hɔ̂ng níi: We don't have any rooms. / Where's this room? / Do you have a room? / *I'll take this room.
   SPEAK ห้องนี้อยู่ที่ไหน | hɔ̂ng níi yùu thîi-nǎi | Where's this room?
   NEW มั้ย | mái | question particle (yes/no)
   CHOICE มีห้องมั้ย | mii hɔ̂ng mái: *Do you have a room? / Where's this room? / We don't have any rooms. / I'll take this room.
@@ -154,10 +154,10 @@
   MATCH ผ้าเช็ดตัว=towel, ยุง=mosquito, ธนาคาร=bank, ไปรษณีย์=post office, ตลาด=market
 
 ## L10 Unit quiz
-  BUILD "I'm going on a trip to Phuket." = ไป(pai) เที่ยว(thîao) ภูเก็ต(phuu-gèt)  [extra: grung-thêep, nǎi]
-  BUILD "I'm taking the train to Bangkok." = นั่ง(nâng) รถไฟ(rót-fai) ไป(pai) กรุงเทพฯ(grung-thêep)  [extra: rót-mee, nǎi]
-  CHOICE ไปแท็กซี่ | pai thák-sîi: *I'm going by taxi. / I'm going by tuk-tuk. / I'm going by bus. / I'm going by train.
-  CHOICE ไปเครื่องบิน | pai khrɯ̂ang-bin: one-way / round trip / *I'm going by plane. / Where's the airport?
+  BUILD "I'm going on a trip to Phuket. (said by a woman)" = ฉัน(chán) ไป(pai) เที่ยว(thîao) ภูเก็ต(phuu-gèt)  [extra: grung-thêep, nǎi]
+  BUILD "I'm taking the train to Bangkok. (said by a woman)" = ฉัน(chán) นั่ง(nâng) รถไฟ(rót-fai) ไป(pai) กรุงเทพฯ(grung-thêep)  [extra: rót-mee, nǎi]
+  CHOICE ผมไปแท็กซี่ | phǒm pai thák-sîi: *I'm going by taxi. / I'm going by tuk-tuk. / I'm going by bus. / I'm going by train.
+  CHOICE ผมไปเครื่องบิน | phǒm pai khrɯ̂ang-bin: one-way / round trip / *I'm going by plane. / Where's the airport?
   CHOICE ไปกลับ | pai glàp: I'm going by plane. / *round trip / Where's the airport? / one-way
   CHAT M:ไป ไหน(pai nǎi=Where are you going?) → reply as F "To the airport.": สถานีรถไฟ(sà-thǎa-nee rót-fai) / เที่ยวเดียว(thîao diao) / *ไปสนามบิน(pai sà-nǎam-bin)
   CHOICE เอาตั๋วไปกรุงเทพฯ | ao tǔa pai grung-thêep: How many tickets? / two tickets / *A ticket to Bangkok, please. / Where's the bus stop?

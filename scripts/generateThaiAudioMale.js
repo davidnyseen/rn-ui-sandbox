@@ -52,6 +52,16 @@ function collectMaleLines() {
     }
     }
   }
+  // Also the finished course, for the same reason as in generateThaiAudio.js.
+  const { lessons } = require('../src/generated/courseContent.json');
+  for (const les of lessons) {
+    if (!Array.isArray(les.steps)) continue;
+    for (const step of les.steps) {
+      if (step.type !== 'reply') continue;
+      for (const line of step.context || []) if (line.speaker === 'M') set.add(line.thai);
+      if (step.replySpeaker === 'M' && step.thai) set.add(step.thai);
+    }
+  }
   return [...set];
 }
 

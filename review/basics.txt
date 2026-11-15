@@ -6,7 +6,7 @@
   NEW นี่ | nîi | this
   SPEAK นี่ | nîi | this
   NEW อันนี้ | an-níi | this one
-  CHOICE เอาอันนี้ | ao an-níi: I don't want it. / *I want this one. / Which one do you want? / It's expensive.
+  CHOICE ผมเอาอันนี้ | phǒm ao an-níi: I don't want it. / *I want this one. / Which one do you want? / It's expensive.
   NEW อันไหน | an-nǎi | which one?
   BUILD "Which one do you want?" = เอา(ao) อันไหน(an-nǎi)  [extra: nîi, an-níi]
   CHOICE อันไหน | an-nǎi: I don't want it. / It's beautiful. / This one. / *Which one?
@@ -15,9 +15,9 @@
   CHOICE เอากี่อัน | ao gìi an: I have one. / *How many do you want? / I want this one. / Which one?
   SPEAK กี่อัน | gìi an | how many (items)?
   SPEAK เอากี่อัน | ao gìi an | How many do you want?
-  CHAT M:เอา อันไหน(ao an-nǎi=Which one do you want?) → reply as F "I want this one.": อันไหน(an-nǎi) / *เอาอันนี้(ao an-níi) / เอากี่อัน(ao gìi an)
+  CHAT M:เอา อันไหน(ao an-nǎi=Which one do you want?) → reply as F "I want this one.": อันไหน(an-nǎi) / *ฉันเอาอันนี้(chán ao an-níi) / เอากี่อัน(ao gìi an)
   NEW เดียว | diao | single / only one
-  BUILD "I want just one." = เอา(ao) อัน(an) เดียว(diao)  [extra: an-nǎi, gìi]
+  BUILD "I want just one. (said by a woman)" = ฉัน(chán) เอา(ao) อัน(an) เดียว(diao)  [extra: an-nǎi, gìi]
   CHOICE อันเดียว | an diao: How many? / *A single one / just one. / Two items. / This one.
   MATCH เอา=want / take, นี่=this, อันนี้=this one, อันไหน=which one?, กี่=how many?, อัน=item (classifier for objects), เดียว=single / only one
 
@@ -28,16 +28,16 @@
   CHOICE เอามั้ย | ao mái: I want this one. / How many? / *Do you want it? / This one.
   SPEAK มั้ย | mái | question particle (yes/no)
   NEW ไม่ | mâi | not / no
-  BUILD "No, I don't want it." = ไม่(mâi) เอา(ao)  [extra: gìi, an-níi]
-  CHOICE ไม่เอา | mâi ao: Do you want it? / Just one. / *No, I don't want it. / Which one?
-  SPEAK ไม่เอา | mâi ao | No, I don't want it.
+  BUILD "I don't want it. (said by a man)" = ผม(phǒm) ไม่(mâi) เอา(ao)  [extra: gìi, an-níi]
+  CHOICE ฉันไม่เอา | chán mâi ao: Do you want it? / Just one. / *I don't want it. / Which one?
+  SPEAK ผมไม่เอา | phǒm mâi ao | I don't want it.
   NEW ใช่ | châi | right / that's correct
-  CHOICE ใช่มั้ย | châi mái: *Isn't that right? / I want this one. / No, that's not right. / How many?
-  BUILD "No, that's not right." = ไม่(mâi) ใช่(châi)  [extra: ao, mái]
-  CHOICE ไม่ใช่ | mâi châi: Do you want it? / Just one. / *No, that's not right. / Yes, that's right.
-  SPEAK ใช่ | châi | Yes, that's right.
+  CHOICE ใช่มั้ย | châi mái: *Isn't that right? / I want this one. / That's not right. / How many?
+  BUILD "That's not right." = ไม่(mâi) ใช่(châi)  [extra: ao, mái]
+  CHOICE ไม่ใช่ | mâi châi: Do you want it? / Just one. / *That's not right. / That's right.
+  SPEAK ใช่ | châi | That's right.
   SPEAK ใช่มั้ย | châi mái | Isn't that right?
-  CHAT M:เอา มั้ย(ao mái=Do you want it?) → reply as F "No, I don't want it.": ใช่มั้ย(châi mái) / *ไม่เอา(mâi ao) / อันไหน(an-nǎi)
+  CHAT M:เอา มั้ย(ao mái=Do you want it?) → reply as F "I don't want it.": ใช่มั้ย(châi mái) / *ฉันไม่เอา(chán mâi ao) / อันไหน(an-nǎi)
   MATCH มั้ย=question particle (yes/no), ไม่=not / no, ใช่=right / that's correct
 
 ## L2 Tall, short, fat, thin
@@ -129,22 +129,22 @@
   NEW ขาว | khǎao | white
   CHOICE เสื้อสีขาวสวย | sɯ̂a sǐi khǎao sǔai: *The white shirt is beautiful. / The red shirt is expensive. / a black shirt / too small
   NEW ต้อง | tɔ̂ng | have to / must
-  CHOICE ต้องไป | tɔ̂ng pai: Too small. / *I have to go. / A red shirt. / I can't go.
+  CHOICE ฉันต้องไป | chán tɔ̂ng pai: Too small. / *I have to go. / A red shirt. / I can't go.
   NEW ได้ | dâi | can / able to
-  BUILD "I can't go." = ไป(pai) ไม่(mâi) ได้(dâi)  [extra: ao, mâak]
+  BUILD "I can't go. (said by a man)" = ผม(phǒm) ไป(pai) ไม่(mâi) ได้(dâi)  [extra: ao, mâak]
   CHOICE ไปได้มั้ย | pai dâi mái: *Can you go? / A black shirt. / I have to go. / The color white.
-  SPEAK ไปไม่ได้ | pai mâi dâi | I can't go.
+  SPEAK ฉันไปไม่ได้ | chán pai mâi dâi | I can't go.
   CHAT M:ไป ได้ มั้ย(pai dâi mái=Can you go?) → reply as F "No, I can't go.": *ไปไม่ได้(pai mâi dâi) / เสื้อสีดำ(sɯ̂a sǐi dam) / สีขาว(sǐi khǎao)
   MATCH สี=color, แดง=red, ดำ=black, ขาว=white, ต้อง=have to / must, ได้=can / able to
 
 ## L7 Want to, like to, and doing what
   RULE Want to / like to: "Want to" before a verb is yàak, not ao — ao is only for wanting an object, not an action. Chɔ̂ɔp before a verb means "like to" (or "always do").
   NEW อยาก | yàak | want to (+ verb)
-  CHOICE อยากไป | yàak pai: I have to go. / I like to go. / I don't want to go. / *I want to go.
-  BUILD "I don't want to go." = ไม่(mâi) อยาก(yàak) ไป(pai)  [extra: ao, diao]
-  SPEAK อยากไป | yàak pai | I want to go.
+  CHOICE ผมอยากไป | phǒm yàak pai: I have to go. / I like to go. / I don't want to go. / *I want to go.
+  BUILD "I don't want to go. (said by a woman)" = ฉัน(chán) ไม่(mâi) อยาก(yàak) ไป(pai)  [extra: ao, diao]
+  SPEAK ผมอยากไป | phǒm yàak pai | I want to go.
   NEW ชอบ | chɔ̂ɔp | like to (+ verb) / like
-  CHOICE ไม่ชอบไป | mâi chɔ̂ɔp pai: I like to go. / I can't go. / I want to go. / *I don't like to go.
+  CHOICE ฉันไม่ชอบไป | chán mâi chɔ̂ɔp pai: I like to go. / I can't go. / I want to go. / *I don't like to go.
   NEW มา | maa | come
   NEW กิน | gin | eat
   CHOICE มากิน | maa gin: What are you doing? / I want to go. / Going to eat. / *Come and eat.
@@ -160,11 +160,11 @@
   RULE Where is...?: Yùu means "to be at a place". Put thîi-nǎi ("where?") after yùu to ask where something is.
   NEW ดู | duu | see / look at / watch
   NEW เดิน | dəən | walk
-  CHOICE ชอบเดิน | chɔ̂ɔp dəən: Come and eat. / I want to watch. / I'm going to sleep. / *I like to walk.
+  CHOICE ผมชอบเดิน | phǒm chɔ̂ɔp dəən: Come and eat. / I want to watch. / I'm going to sleep. / *I like to walk.
   NEW นอน | nɔɔn | sleep
-  CHOICE ไปนอน | pai nɔɔn: Come and eat. / I like to walk. / What are you doing? / *I'm going to sleep.
-  BUILD "I want to sleep." = อยาก(yàak) นอน(nɔɔn)  [extra: sǐi, phɔ̌ɔm]
-  SPEAK ไปนอน | pai nɔɔn | I'm going to sleep.
+  CHOICE ฉันไปนอน | chán pai nɔɔn: Come and eat. / I like to walk. / What are you doing? / *I'm going to sleep.
+  BUILD "I want to sleep. (said by a man)" = ผม(phǒm) อยาก(yàak) นอน(nɔɔn)  [extra: sǐi, phɔ̌ɔm]
+  SPEAK ฉันไปนอน | chán pai nɔɔn | I'm going to sleep.
   NEW อยู่ | yùu | be at / stay
   NEW ที่ไหน | thîi-nǎi | where?
   CHOICE โรงแรมอยู่ที่ไหน | rong-raem yùu thîi-nǎi: I want to go. / When are you going? / *Where is the hotel? / Come and eat.
@@ -172,20 +172,20 @@
   SPEAK โรงแรมอยู่ที่ไหน | rong-raem yùu thîi-nǎi | Where is the hotel?
   NEW เมื่อไหร่ | mɯ̂a-rài | when?
   CHOICE ไปเมื่อไหร่ | pai mɯ̂a-rài: I like to go. / Where is it? / *When are you going? / Where's the shirt?
-  CHAT M:อยาก ทำ อะไร(yàak tham à-rai=What do you want to do?) → reply as F "I want to sleep.": *อยากนอน(yàak nɔɔn) / ไปเมื่อไหร่(pai mɯ̂a-rài) / อยู่ที่ไหน(yùu thîi-nǎi)
+  CHAT M:อยาก ทำ อะไร(yàak tham à-rai=What do you want to do?) → reply as F "I want to sleep.": *ฉันอยากนอน(chán yàak nɔɔn) / ไปเมื่อไหร่(pai mɯ̂a-rài) / อยู่ที่ไหน(yùu thîi-nǎi)
   MATCH ดู=see / look at / watch, เดิน=walk, นอน=sleep, อยู่=be at / stay, ที่ไหน=where?, เมื่อไหร่=when?
 
 ## L9 Days of the week, and who
   RULE Days of the week: Every day name starts with wan ("day"). To ask which day, put wan-nǎi ("which day?") at the end of the question — pai wan-nǎi is "What day are you going?"
   NEW วันจันทร์ | wan-jan | Monday
-  CHOICE ไปวันจันทร์ | pai wan-jan: I'm going on Friday. / I'm going on Sunday. / *I'm going on Monday. / What day?
+  CHOICE ผมไปวันจันทร์ | phǒm pai wan-jan: I'm going on Friday. / I'm going on Sunday. / *I'm going on Monday. / What day?
   NEW วันศุกร์ | wan-sùk | Friday
-  BUILD "I'm going on Friday." = ไป(pai) วันศุกร์(wan-sùk)  [extra: mái, tɔ̂ng]
+  BUILD "I'm going on Friday. (said by a woman)" = ฉัน(chán) ไป(pai) วันศุกร์(wan-sùk)  [extra: mái, tɔ̂ng]
   NEW วันอาทิตย์ | wan-aa-thít | Sunday
   SPEAK วันอาทิตย์ | wan-aa-thít | Sunday
   NEW วันไหน | wan-nǎi | what day?
   CHOICE ไปวันไหน | pai wan-nǎi: Monday. / *What day are you going? / When? / Sunday.
-  CHAT M:ไป วันไหน(pai wan-nǎi=What day are you going?) → reply as F "I'm going on Friday.": วันไหน(wan-nǎi) / ไปเมื่อไหร่(pai mɯ̂a-rài) / *ไปวันศุกร์(pai wan-sùk)
+  CHAT M:ไป วันไหน(pai wan-nǎi=What day are you going?) → reply as F "I'm going on Friday.": วันไหน(wan-nǎi) / ไปเมื่อไหร่(pai mɯ̂a-rài) / *ฉันไปวันศุกร์(chán pai wan-sùk)
   NEW คน | kon | person (classifier for people)
   NEW ใคร | krai | who?
   BUILD "Who is he?" = เค้า(kháo) เป็น(pen) ใคร(krai)  [extra: an-níi, tɔ̂ng]
@@ -198,9 +198,9 @@
   MATCH วันจันทร์=Monday, วันศุกร์=Friday, วันอาทิตย์=Sunday, วันไหน=what day?, คน=person (classifier for people), ใคร=who?, คนไหน=which person?, คนโน้น=that person over there
 
 ## L10 Unit quiz
-  CHAT M:เอา อันไหน(ao an-nǎi=Which one do you want?) → reply as F "I want this one.": อันไหน(an-nǎi) / *เอาอันนี้(ao an-níi) / เอากี่อัน(ao gìi an)
-  BUILD "I want just one." = เอา(ao) อัน(an) เดียว(diao)  [extra: an-nǎi, gìi]
-  CHOICE ใช่มั้ย | châi mái: *Isn't that right? / I want this one. / No, that's not right. / How many?
+  CHAT M:เอา อันไหน(ao an-nǎi=Which one do you want?) → reply as F "I want this one.": อันไหน(an-nǎi) / *ฉันเอาอันนี้(chán ao an-níi) / เอากี่อัน(ao gìi an)
+  BUILD "I want just one. (said by a woman)" = ฉัน(chán) เอา(ao) อัน(an) เดียว(diao)  [extra: an-nǎi, gìi]
+  CHOICE ใช่มั้ย | châi mái: *Isn't that right? / I want this one. / That's not right. / How many?
   CHOICE ไม่อ้วน | mâi ûan: Very tall. / Very thin. / *Not fat. / Not short.
   CHAT M:คุณ สูง มั้ย(khun sǔung mái=Are you tall?) → reply as F "No, not tall.": *ไม่สูง(mâi sǔung) / ผอมมาก(phɔ̌ɔm mâak) / คุณเตี้ยมั้ย(khun tîa mái)
   CHAT M:สะอาด มั้ย(sà-àat mái=Is it clean?) → reply as F "No, it's not clean.": คุณรวยมาก(khun ruai mâak) / ไม่หล่อ(mâi lɔ̀ɔ) / *ไม่สะอาด(mâi sà-àat)
@@ -208,9 +208,9 @@
   CHAT M:เอา อันนี้ มั้ย(ao an-níi mái=Do you want this one?) → reply as F "No, it's too small.": คุณเหมือนเค้า(khun mɯ̌an kháo) / เหมือนกัน(mɯ̌an gan) / *ไม่เอาเล็กไป(mâi ao, lék pai)
   CHAT M:ไป ได้ มั้ย(pai dâi mái=Can you go?) → reply as F "No, I can't go.": *ไปไม่ได้(pai mâi dâi) / เสื้อสีดำ(sɯ̂a sǐi dam) / สีขาว(sǐi khǎao)
   BUILD "What do you want to eat?" = อยาก(yàak) กิน(gin) อะไร(à-rai)  [extra: tham, phaeng]
-  CHOICE ชอบเดิน | chɔ̂ɔp dəən: Come and eat. / I want to watch. / I'm going to sleep. / *I like to walk.
-  CHAT M:อยาก ทำ อะไร(yàak tham à-rai=What do you want to do?) → reply as F "I want to sleep.": *อยากนอน(yàak nɔɔn) / ไปเมื่อไหร่(pai mɯ̂a-rài) / อยู่ที่ไหน(yùu thîi-nǎi)
-  CHAT M:ไป วันไหน(pai wan-nǎi=What day are you going?) → reply as F "I'm going on Friday.": วันไหน(wan-nǎi) / ไปเมื่อไหร่(pai mɯ̂a-rài) / *ไปวันศุกร์(pai wan-sùk)
+  CHOICE ผมชอบเดิน | phǒm chɔ̂ɔp dəən: Come and eat. / I want to watch. / I'm going to sleep. / *I like to walk.
+  CHAT M:อยาก ทำ อะไร(yàak tham à-rai=What do you want to do?) → reply as F "I want to sleep.": *ฉันอยากนอน(chán yàak nɔɔn) / ไปเมื่อไหร่(pai mɯ̂a-rài) / อยู่ที่ไหน(yùu thîi-nǎi)
+  CHAT M:ไป วันไหน(pai wan-nǎi=What day are you going?) → reply as F "I'm going on Friday.": วันไหน(wan-nǎi) / ไปเมื่อไหร่(pai mɯ̂a-rài) / *ฉันไปวันศุกร์(chán pai wan-sùk)
   CHAT M:คนโน้น เป็น ใคร(kon-nóon pen krai=Who's that person over there?) → reply as F "He's a friend.": *เค้าเป็นเพื่อน(kháo pen phɯ̂an) / คนไหน(kon-nǎi) / วันอาทิตย์(wan-aa-thít)
   MATCH นี่=this, น่ารัก=cute / lovable, จน=poor, แล้วก็=and then / also, แดง=red
   MATCH ต้อง=have to / must, ดู=see / look at / watch, วันจันทร์=Monday

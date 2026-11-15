@@ -67,6 +67,23 @@ function collectUniqueThaiStrings() {
     }
     }
   }
+  // Also the finished course (src/generated/courseContent.json): the build changes sentences after authoring (e.g.
+  // scripts/lib/subjects.js puts ผม/ฉัน into every "I ..." sentence), and those finished sentences are what the app plays.
+  // Re-export the bundle before running this.
+  const { lessons } = require('../src/generated/courseContent.json');
+  for (const les of lessons) {
+    const st = les.steps;
+    if (!Array.isArray(st)) { for (const line of (st && st.lines) || []) set.add(line.thai); continue; }
+    for (const step of st) {
+      if (step.type === 'translationChoice' || step.type === 'speak') set.add(step.thai);
+      else if (step.type === 'sentenceOrder') for (const tile of Object.values(step.words)) set.add(tile.thai);
+      else if (step.type === 'reply') {
+        for (const line of step.context || []) set.add(line.thai);
+        for (const opt of step.options || []) set.add(opt.thai);
+        if (step.thai) set.add(step.thai);
+      }
+    }
+  }
   return [...set];
 }
 

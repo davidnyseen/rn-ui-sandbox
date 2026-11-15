@@ -8,6 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const { checkDictionary, stripAuthoringFields, addOrderDistractors, interleaveWordIntros, addUnitQuiz, checkQuizCoverage } = require('./lib/courseBuilder');
+const { addSubjects } = require('./lib/subjects');
 const { withOrderGroups } = require('./lib/orderGroups');
 const { restaurantSubject: raw } = require('./courseContent/restaurant');
 
@@ -16,7 +17,7 @@ const interleaved = interleaveWordIntros(raw);
 checkDictionary(interleaved);
 const withDistractors = addOrderDistractors(interleaved);
 checkDictionary(withDistractors);
-const restaurantSubject = withOrderGroups(checkQuizCoverage(addUnitQuiz(stripAuthoringFields(withDistractors))));
+const restaurantSubject = withOrderGroups(checkQuizCoverage(addUnitQuiz(addSubjects(stripAuthoringFields(withDistractors)))));
 
 // Dollar-quoting avoids ever having to escape single quotes/apostrophes —
 // important here since English glosses like "I'd like..." contain them and

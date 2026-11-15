@@ -12,6 +12,7 @@
 const fs = require('fs');
 const path = require('path');
 const { checkDictionary, stripAuthoringFields, addOrderDistractors, interleaveWordIntros, addUnitQuiz, checkQuizCoverage } = require('./lib/courseBuilder');
+const { addSubjects } = require('./lib/subjects');
 const { withOrderGroups } = require('./lib/orderGroups');
 const { greetingsSubjects: rawSubjects } = require('./courseContent/greetings');
 
@@ -27,7 +28,7 @@ const subjects = rawSubjects.map((raw) => {
   const interleaved = interleaveWordIntros(raw, 2, new Set(introduced));
   introduced = checkDictionary(interleaved, new Set(introduced)); // real check; carries forward to the next subject
   const withDistractors = addOrderDistractors(interleaved, 2, introducedTiles);
-  return withOrderGroups(checkQuizCoverage(addUnitQuiz(stripAuthoringFields(withDistractors))));
+  return withOrderGroups(checkQuizCoverage(addUnitQuiz(addSubjects(stripAuthoringFields(withDistractors)))));
 });
 
 function sqlText(s) {

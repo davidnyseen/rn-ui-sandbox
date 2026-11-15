@@ -100,7 +100,7 @@
   SPEAK คนที่สาม | kon thîi sǎam | the third person
   SPEAK คนที่หนึ่ง | kon thîi nɯ̀ng | the first person
   NEW เอา | ao | want / take
-  SPEAK เอาสอง | ao sɔ̌ɔng | I'll take two.
+  SPEAK ผมเอาสอง | phǒm ao sɔ̌ɔng | I'll take two.
   NEW มี | mii | have
   CHOICE มีห้าคน | mii hâa kon: the first person / the second person / the third person / *There are five people.
   BUILD "There are three of us." = มี(mii) สาม(sǎam) คน(kon)  [extra: hâa, sìi]
@@ -110,7 +110,7 @@
   NEW กี่ | gìi | how many?
   NEW อัน | an | item (classifier for objects)
   CHOICE เอากี่อัน | ao gìi an: This one is expensive. / *How many do you want? / I'll take three. / This is expensive.
-  BUILD "I'll take three." = เอา(ao) สาม(sǎam) อัน(an)  [extra: phan, mii]
+  BUILD "I'll take three. (said by a woman)" = ฉัน(chán) เอา(ao) สาม(sǎam) อัน(an)  [extra: phan, mii]
   BUILD "There are five." = มี(mii) ห้า(hâa) อัน(an)  [extra: sɔ̌ɔng, phan]
   SPEAK เอากี่อัน | ao gìi an | How many do you want?
   NEW นี่ | nîi | this
@@ -118,7 +118,7 @@
   CHOICE นี่แพง | nîi phaeng: This one is expensive. / *This is expensive. / I'll take three. / How many do you want?
   NEW นี้ | níi | this (after a noun)
   SPEAK อันนี้แพง | an níi phaeng | This one is expensive.
-  CHAT M:เอา กี่ อัน(ao gìi an=How many do you want?) → reply as F "I'll take two.": อันนี้แพง(an níi phaeng) / *เอาสองอัน(ao sɔ̌ɔng an) / คนที่สอง(kon thîi sɔ̌ɔng)
+  CHAT M:เอา กี่ อัน(ao gìi an=How many do you want?) → reply as F "I'll take two.": อันนี้แพง(an níi phaeng) / *ฉันเอาสองอัน(chán ao sɔ̌ɔng an) / คนที่สอง(kon thîi sɔ̌ɔng)
   MATCH กี่=how many?, อัน=item (classifier for objects), นี่=this, แพง=expensive, นี้=this (after a noun)
 
 ## L7 How much is it? Baht and bottles
@@ -137,7 +137,7 @@
 ## L8 Clothes and money
   BUILD "200 baht" = สอง(sɔ̌ɔng) ร้อย(rɔ́ɔi) บาท(bàat)  [extra: hâa, mɯ̀ɯn]
   NEW ตัว | tua | classifier for clothes
-  BUILD "I'll take two." = เอา(ao) สอง(sɔ̌ɔng) ตัว(tua)  [extra: gìi, hâa]
+  BUILD "I'll take two. (said by a man)" = ผม(phǒm) เอา(ao) สอง(sɔ̌ɔng) ตัว(tua)  [extra: gìi, hâa]
   NEW เสื้อ | sɯ̂a | shirt
   CHOICE เสื้อตัวนี้เท่าไหร่ | sɯ̂a tua níi thâo-rài: 200 baht / These pants are expensive. / *How much is this shirt? / I have enough money.
   SPEAK เสื้อตัวนี้เท่าไหร่ | sɯ̂a tua níi thâo-rài | How much is this shirt?
@@ -145,7 +145,7 @@
   CHOICE กางเกงตัวนี้แพง | gaang-geeng tua níi phaeng: I have enough money. / 200 baht / How much is this shirt? / *These pants are expensive.
   NEW เงิน | ngəən | money
   NEW พอ | phɔɔ | enough
-  SPEAK มีเงินพอ | mii ngəən phɔɔ | I have enough money.
+  SPEAK ฉันมีเงินพอ | chán mii ngəən phɔɔ | I have enough money.
   CHAT M:เสื้อ ตัว นี้ เท่าไหร่(sɯ̂a tua níi thâo-rài=How much is this shirt?) → reply as F "300 baht.": มีเงินพอ(mii ngəən phɔɔ) / *สามร้อยบาท(sǎam rɔ́ɔi bàat) / กางเกง(gaang-geeng)
   MATCH ตัว=classifier for clothes, เสื้อ=shirt, กางเกง=pants, เงิน=money, พอ=enough
 
@@ -200,7 +200,7 @@
   CHOICE หมื่นสองหมื่นสามหมื่นสี่หมื่น | mɯ̀ɯn sɔ̌ɔng-mɯ̀ɯn sǎam-mɯ̀ɯn sìi-mɯ̀ɯn: *Ten thousand, twenty thousand, thirty thousand, forty thousand / Twenty thousand, thirty thousand, forty thousand, fifty thousand / Ten thousand, twenty thousand, thirty thousand / Ten thousand, thirty thousand, forty thousand, fifty thousand
   BUILD "Four million five hundred thousand" = สี่(sìi) ล้าน(láan) ห้า(hâa) แสน(sɛ̌ɛn)  [extra: sǔun, hòk]
   CHOICE นี่แพง | nîi phaeng: This one is expensive. / *This is expensive. / I'll take three. / How many do you want?
-  CHAT M:เอา กี่ อัน(ao gìi an=How many do you want?) → reply as F "I'll take two.": อันนี้แพง(an níi phaeng) / *เอาสองอัน(ao sɔ̌ɔng an) / คนที่สอง(kon thîi sɔ̌ɔng)
+  CHAT M:เอา กี่ อัน(ao gìi an=How many do you want?) → reply as F "I'll take two.": อันนี้แพง(an níi phaeng) / *ฉันเอาสองอัน(chán ao sɔ̌ɔng an) / คนที่สอง(kon thîi sɔ̌ɔng)
   CHAT M:ขวด นี้ เท่าไหร่(khùat níi thâo-rài=How much is this bottle?) → reply as F "50 baht.": เอากี่อัน(ao gìi an) / *ห้าสิบบาท(hâa sìp bàat) / สองขวด(sɔ̌ɔng khùat)
   CHAT M:เสื้อ ตัว นี้ เท่าไหร่(sɯ̂a tua níi thâo-rài=How much is this shirt?) → reply as F "300 baht.": มีเงินพอ(mii ngəən phɔɔ) / *สามร้อยบาท(sǎam rɔ́ɔi bàat) / กางเกง(gaang-geeng)
   BUILD "house number 26/3" = บ้าน(bâan) เลข(lêek) ที่(thîi) ยี่สิบ(yîi-sìp) หก(hòk) ทับ(tháp) สาม(sǎam)  [extra: sìp, láan]

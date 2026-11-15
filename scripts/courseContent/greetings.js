@@ -99,6 +99,16 @@ const helloLessons = [
   ]),
 
   lesson('gh02', 'Where are you going?', [
+    // Kuttika (native speaker, 2026-11-15): the English says "I" and the Thai didn't, so learners look for a word
+    // that isn't there. Teach "I" first; scripts/lib/subjects.js then puts it into every "I ..." sentence.
+    rule(
+      'Saying "I"',
+      'Everyday Thai often leaves out "I" when it\'s obvious — pai hǎa phɯ̂an on its own means "going to see a friend". ' +
+        'While you learn, say it: phǒm if you\'re a man, chán if you\'re a woman. phǒm pai hǎa phɯ̂an is "I\'m going to see a friend."',
+      SRC.name
+    ),
+    wordIntro('ผม', 'phǒm', 'I (said by a man)', SRC.name),
+    wordIntro('ฉัน', 'chán', 'I (said by a woman)', SRC.name),
     wordIntro('เที่ยว', 'thîao', 'go out / travel around', SRC.hello),
     wordIntro('หา', 'hǎa', 'look for / see (someone)', SRC.hello),
     wordIntro('เพื่อน', 'phɯ̂an', 'friend', SRC.hello),
@@ -163,8 +173,6 @@ const helloLessons = [
       SRC.places
     ),
     wordIntro('ดี', 'dii', 'good', SRC.places),
-    // ไปไหน is "where are you going?" — asking about a trip that already happened is ไปไหนมา (Gemini review 2026-11-12)
-    wordIntro('มา', 'maa', 'come (back) — pai nǎi maa: where have you been?', SRC.howAreYou),
     wordIntro('มั้ย', 'mái', 'question particle: is it ___?', SRC.places),
     mc('ดีมั้ย', 'dii mái', 'Is it good?', ['Is it fun?', 'Where are you going?', 'Hello.'], ['ดี', 'มั้ย'], SRC.places),
     order('Is it good?', [
@@ -173,8 +181,8 @@ const helloLessons = [
     ], SRC.places),
     speak('ดีมั้ย', 'dii mái', 'Is it good?', ['ดี', 'มั้ย'], SRC.places),
     wordIntro('ไม่', 'mâi', 'not / no', SRC.places),
-    mc('ไม่ดี', 'mâi dii', "No, it's not good.", ["Yes, it's good.", 'Is it good?', 'Where are you going?'], ['ไม่', 'ดี'], SRC.places),
-    order("No, it's not good.", [
+    mc('ไม่ดี', 'mâi dii', 'Not good.', ['Good.', 'Is it good?', 'Where are you going?'], ['ไม่', 'ดี'], SRC.places),
+    order('Not good.', [
       { roman: 'mâi', thai: 'ไม่' },
       { roman: 'dii', thai: 'ดี' },
     ], SRC.places),
@@ -183,15 +191,12 @@ const helloLessons = [
     // out" exchange from gh02 (verbatim) before asking how it was — a
     // longer, natural "how was your outing" conversation instead of "is it
     // good?" appearing with no lead-in.
-    // Thai verbs carry no tense marking — "pai thîao" is exactly as valid
-    // for "I went out" as "I'm going out"; glossed as past tense here (only
-    // in this exchange) so the follow-up "dii mái?" reads as asking about a
-    // trip that already happened, not one that hasn't started yet.
+    // Present tense (Kuttika, native speaker, 2026-11-15: ไปไหนมา is too much for unit 1; มา comes in gn03).
     reply(
       [
-        { speaker: 'M', thai: 'ไปไหนมา', roman: 'pai nǎi maa', english: 'Where have you been?', parts: ['ไป', 'ไหน', 'มา'] },
-        { speaker: 'F', thai: 'ไปเที่ยวมา', roman: 'pai thîao maa', english: 'I went out.', parts: ['ไป', 'เที่ยว', 'มา'] },
-        { speaker: 'M', thai: 'ดีมั้ย', roman: 'dii mái', english: 'Was it good?', parts: ['ดี', 'มั้ย'] },
+        { speaker: 'M', thai: 'ไปไหนครับ', roman: 'pai nǎi khráp', english: 'Where are you going?', parts: ['ไป', 'ไหน', 'ครับ'] },
+        { speaker: 'F', thai: 'ไปเที่ยวค่ะ', roman: 'pai thîao khâ', english: "I'm going out.", parts: ['ไป', 'เที่ยว', 'ค่ะ'] },
+        { speaker: 'M', thai: 'ดีมั้ยครับ', roman: 'dii mái khráp', english: 'Is it good?', parts: ['ดี', 'มั้ย', 'ครับ'] },
         { speaker: 'F', thai: 'ดี', roman: 'dii', english: 'Good.', parts: ['ดี'] },
       ],
       [
@@ -209,8 +214,8 @@ const helloLessons = [
       [
         { speaker: 'M', thai: 'สวัสดีครับ', roman: 'sà-wàt-dii khráp', english: 'Hello. (said by a man)', parts: ['สวัสดี', 'ครับ'] },
         { speaker: 'F', thai: 'สวัสดีค่ะ', roman: 'sà-wàt-dii khâ', english: 'Hello. (said by a woman)', parts: ['สวัสดี', 'ค่ะ'] },
-        { speaker: 'M', thai: 'ไปเที่ยวมาดีมั้ย', roman: 'pai thîao maa, dii mái', english: 'Was your trip good?', parts: ['ไป', 'เที่ยว', 'มา', 'ดี', 'มั้ย'] },
-        { speaker: 'F', thai: 'ไม่ดี', roman: 'mâi dii', english: "No, it's not good.", parts: ['ไม่', 'ดี'] },
+        { speaker: 'M', thai: 'ไปเที่ยวดีมั้ยครับ', roman: 'pai thîao dii mái khráp', english: 'Is going out good?', parts: ['ไป', 'เที่ยว', 'ดี', 'มั้ย', 'ครับ'] },
+        { speaker: 'F', thai: 'ไม่ดี', roman: 'mâi dii', english: 'Not good.', parts: ['ไม่', 'ดี'] },
       ],
       [
         { thai: 'ดี', roman: 'dii', parts: ['ดี'] },
@@ -219,7 +224,7 @@ const helloLessons = [
       ],
       SRC.places
     ),
-    speak('ไม่ดี', 'mâi dii', "No, it's not good.", ['ไม่', 'ดี'], SRC.places),
+    speak('ไม่ดี', 'mâi dii', 'Not good.', ['ไม่', 'ดี'], SRC.places),
   ]),
 
   // p.23: "I'm going to eat" (pai gin kao) / "I'm going home" (glap ban) —
@@ -301,16 +306,16 @@ const helloLessons = [
     // this lesson via sǔai mâak/a-roi mâak/chɔ̂ɔp mâak) applied to dii.
     reply(
       [
-        { speaker: 'M', thai: 'ไปไหนมา', roman: 'pai nǎi maa', english: 'Where have you been?', parts: ['ไป', 'ไหน', 'มา'] },
+        { speaker: 'M', thai: 'ไปไหนครับ', roman: 'pai nǎi khráp', english: 'Where are you going?', parts: ['ไป', 'ไหน', 'ครับ'] },
         {
           speaker: 'F',
-          thai: 'ไปเที่ยวแล้วก็กลับบ้าน',
-          roman: 'pai thîao láew-gɔ̂ɔ glàp bâan',
-          english: 'I went out, and then came home.',
-          parts: ['ไป', 'เที่ยว', 'แล้วก็', 'กลับ', 'บ้าน'],
+          thai: 'ไปเที่ยวแล้วก็กลับบ้านค่ะ',
+          roman: 'pai thîao láew-gɔ̂ɔ glàp bâan khâ',
+          english: "I'm going out, and then home.",
+          parts: ['ไป', 'เที่ยว', 'แล้วก็', 'กลับ', 'บ้าน', 'ค่ะ'],
         },
-        { speaker: 'M', thai: 'ดีมั้ย', roman: 'dii mái', english: 'Was it good?', parts: ['ดี', 'มั้ย'] },
-        { speaker: 'F', thai: 'ดีมาก', roman: 'dii mâak', english: 'It was very good.', parts: ['ดี', 'มาก'] },
+        { speaker: 'M', thai: 'ดีมั้ยครับ', roman: 'dii mái khráp', english: 'Is it good?', parts: ['ดี', 'มั้ย', 'ครับ'] },
+        { speaker: 'F', thai: 'ดีมาก', roman: 'dii mâak', english: 'Very good.', parts: ['ดี', 'มาก'] },
       ],
       [
         { thai: 'ไม่ดี', roman: 'mâi dii', parts: ['ไม่', 'ดี'] },
@@ -358,16 +363,16 @@ const helloLessons = [
     // verbatim) reads as asking about a trip that already happened.
     reply(
       [
-        { speaker: 'M', thai: 'ไปไหนมา', roman: 'pai nǎi maa', english: 'Where have you been?', parts: ['ไป', 'ไหน', 'มา'] },
+        { speaker: 'M', thai: 'ไปไหนครับ', roman: 'pai nǎi khráp', english: 'Where are you going?', parts: ['ไป', 'ไหน', 'ครับ'] },
         {
           speaker: 'F',
-          thai: 'ไปเที่ยวแล้วก็กินข้าว',
-          roman: 'pai thîao láew-gɔ̂ɔ gin khâao',
-          english: 'I went out, and then ate.',
-          parts: ['ไป', 'เที่ยว', 'แล้วก็', 'กิน', 'ข้าว'],
+          thai: 'ไปเที่ยวแล้วก็กินข้าวค่ะ',
+          roman: 'pai thîao láew-gɔ̂ɔ gin khâao khâ',
+          english: "I'm going out, and then to eat.",
+          parts: ['ไป', 'เที่ยว', 'แล้วก็', 'กิน', 'ข้าว', 'ค่ะ'],
         },
-        { speaker: 'M', thai: 'สนุกมั้ย', roman: 'sà-nùk mái', english: 'Was it fun?', parts: ['สนุก', 'มั้ย'] },
-        { speaker: 'F', thai: 'สนุกมาก', roman: 'sà-nùk mâak', english: 'It was a lot of fun.', parts: ['สนุก', 'มาก'] },
+        { speaker: 'M', thai: 'สนุกมั้ยครับ', roman: 'sà-nùk mái khráp', english: 'Is it fun?', parts: ['สนุก', 'มั้ย', 'ครับ'] },
+        { speaker: 'F', thai: 'สนุกมาก', roman: 'sà-nùk mâak', english: 'A lot of fun.', parts: ['สนุก', 'มาก'] },
       ],
       [
         { thai: 'ไม่สนุก', roman: 'mâi sà-nùk', parts: ['ไม่', 'สนุก'] },
@@ -427,10 +432,10 @@ const helloLessons = [
     // about an abstract trip. Past-tense-glossed like the gh03/05/06 fixes.
     reply(
       [
-        { speaker: 'M', thai: 'ไปไหนมา', roman: 'pai nǎi maa', english: 'Where have you been?', parts: ['ไป', 'ไหน', 'มา'] },
-        { speaker: 'F', thai: 'ไปกินข้าวมา', roman: 'pai gin khâao maa', english: 'I went to eat.', parts: ['ไป', 'กิน', 'ข้าว', 'มา'] },
-        { speaker: 'M', thai: 'ชอบมั้ย', roman: 'chɔ̂ɔp mái', english: 'Did you like it?', parts: ['ชอบ', 'มั้ย'] },
-        { speaker: 'F', thai: 'ชอบมากค่ะขอบคุณค่ะ', roman: 'chɔ̂ɔp mâak khâ, khɔ̀ɔp-khun khâ', english: 'I liked it a lot, thank you.', parts: ['ชอบ', 'มาก', 'ค่ะ', 'ขอบคุณ', 'ค่ะ'] },
+        { speaker: 'M', thai: 'ไปไหนครับ', roman: 'pai nǎi khráp', english: 'Where are you going?', parts: ['ไป', 'ไหน', 'ครับ'] },
+        { speaker: 'F', thai: 'ไปกินข้าวค่ะ', roman: 'pai gin khâao khâ', english: "I'm going to eat.", parts: ['ไป', 'กิน', 'ข้าว', 'ค่ะ'] },
+        { speaker: 'M', thai: 'ชอบมั้ยครับ', roman: 'chɔ̂ɔp mái khráp', english: 'Do you like it?', parts: ['ชอบ', 'มั้ย', 'ครับ'] },
+        { speaker: 'F', thai: 'ชอบมากค่ะขอบคุณค่ะ', roman: 'chɔ̂ɔp mâak khâ, khɔ̀ɔp-khun khâ', english: 'I like it a lot, thank you.', parts: ['ชอบ', 'มาก', 'ค่ะ', 'ขอบคุณ', 'ค่ะ'] },
       ],
       [
         { thai: 'ไม่ดี', roman: 'mâi dii', parts: ['ไม่', 'ดี'] },
@@ -527,8 +532,7 @@ const namesLessons = [
     wordIntro('อะไร', 'à-rai', 'what', SRC.name),
     // women end a question with คะ (high tone), a statement with ค่ะ — taught here so her questions can use it
     wordIntro('คะ', 'khá', 'polite particle (women: in questions, and after ná)', SRC.name),
-    wordIntro('ผม', 'phǒm', 'I (male)', SRC.name),
-    wordIntro('ฉัน', 'chán', 'I (female)', SRC.name),
+    // ผม and ฉัน are taught in gh02 now (see the note there).
     wordIntro('เล็ก', 'lék', 'Lek (a name)', SRC.name),
     mc('ขอโทษค่ะคุณชื่ออะไรคะ', 'khɔ̌ɔ-thôot khâ, khun chɯ̂ɯ à-rai khá', "Excuse me, what's your name?", ['How are you?', 'Where are you from?', 'How old are you?'], ['ขอโทษ', 'ค่ะ', 'คุณ', 'ชื่อ', 'อะไร', 'คะ'], SRC.name),
     order("Hello, what's your name? (said by a man)", [
