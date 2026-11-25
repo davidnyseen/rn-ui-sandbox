@@ -234,9 +234,15 @@ export function testedThaiInStep(step: CourseStep): string[] {
 // yet), not just what's been formally unlocked. Dialogue lessons never
 // introduce new words (see isDialogueCourseLesson), so they're skipped.
 // Deduped by thai text, first occurrence wins, in teaching order.
-export function subjectWords(subject: CourseSubject): CourseWord[] {
+// Each entry also carries the title of the lesson that first teaches it, so
+// the Words page can group a unit's list by topic.
+export interface DictionaryEntry extends CourseWord {
+  lesson: string;
+}
+
+export function subjectWords(subject: CourseSubject): DictionaryEntry[] {
   const seen = new Set<string>();
-  const words: CourseWord[] = [];
+  const words: DictionaryEntry[] = [];
   for (const lesson of subject.lessons) {
     if (isDialogueCourseLesson(lesson)) continue;
     for (const step of lesson.steps) {
@@ -244,7 +250,7 @@ export function subjectWords(subject: CourseSubject): CourseWord[] {
       for (const w of stepWords) {
         if (seen.has(w.thai)) continue;
         seen.add(w.thai);
-        words.push(w);
+        words.push({ thai: w.thai, roman: w.roman, english: w.english, lesson: lesson.title });
       }
     }
   }
@@ -258,16 +264,18 @@ export function subjectWords(subject: CourseSubject): CourseWord[] {
 // dialogue lines. Deduped by thai text, first occurrence wins, in teaching
 // order — and a "sentence" that is just one of the subject's taught words is
 // left out, since the Words tab already has it.
-export function subjectSentences(subject: CourseSubject): CourseWord[] {
+export function subjectSentences(subject: CourseSubject): DictionaryEntry[] {
   const wordThai = new Set(subjectWords(subject).map((w) => w.thai));
   const seen = new Set<string>();
-  const out: CourseWord[] = [];
+  const out: DictionaryEntry[] = [];
+  let lessonTitle = '';
   const add = (thai: string, roman: string, english: string | undefined) => {
     if (!thai || !english || seen.has(thai) || wordThai.has(thai)) return;
     seen.add(thai);
-    out.push({ thai, roman, english });
+    out.push({ thai, roman, english, lesson: lessonTitle });
   };
   for (const lesson of subject.lessons) {
+    lessonTitle = lesson.title;
     if (isDialogueCourseLesson(lesson)) {
       for (const l of lesson.lines) add(l.thai, l.roman, l.english);
       continue;

@@ -1,15 +1,18 @@
 import { useRef, useState } from 'react';
 import { Animated, Pressable, ScrollView, Text, TextInput, View, StyleSheet } from 'react-native';
-import { CourseSubject, CourseWord, subjectSentences, subjectWords } from '../courseTypes';
+import { CourseSubject, CourseWord, DictionaryEntry, subjectSentences, subjectWords } from '../courseTypes';
 import { colors, fonts, textMuted } from '../theme';
-import { BookIcon, PlayIcon } from '../components/icons';
+import { BookIcon, ChevronRightIcon, PlayIcon } from '../components/icons';
 import { COURSE_ICONS } from '../components/courseIcons';
 import { speakThai } from '../tts';
 
 // The app's dictionary, grouped by subject: every unit's whole word list
 // (started or not, so it doubles as a preview of what's coming), and a
 // Sentences tab with the full sentences the lessons use (subjectSentences).
-// Search box since this list only grows. Each row is a flashcard, so the list
+// Each unit starts collapsed — tap its header to open it — and inside, the
+// entries sit under the lesson that teaches them ("Asking for a menu…",
+// "Days of the week…"), so the list reads by topic. A search opens every
+// unit with a match. Search box since this list only grows. Each row is a flashcard, so the list
 // works as self-testing rather than just a reference sheet; a toggle picks
 // which side faces up — English first (the default, asked for 2026-11-24) or
 // Thai first — and every flip reads the Thai aloud.
@@ -23,6 +26,14 @@ export function WordsReviewScreen({
   const [query, setQuery] = useState('');
   const [tab, setTab] = useState<'words' | 'sentences'>('words');
   const [front, setFront] = useState<CardFront>('english');
+  const [open, setOpen] = useState<Set<string>>(new Set());
+  const toggleUnit = (id: string) =>
+    setOpen((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
   const noun = tab === 'words' ? 'word' : 'sentence';
 
   const groups = courseSubjects
@@ -89,9 +100,16 @@ export function WordsReviewScreen({
       <ScrollView style={styles.scroll} contentContainerStyle={styles.scrollContent}>
         {filteredGroups.map((g) => {
           const Icon = COURSE_ICONS[g.subject.id] ?? BookIcon;
+          const isOpen = q !== '' || open.has(g.subject.id);
           return (
             <View key={g.subject.id} style={styles.group}>
-              <View style={styles.groupHeader}>
+              <Pressable
+                id={`dictionary-unit-${g.subject.id}`}
+                onPress={() => toggleUnit(g.subject.id)}
+                accessibilityRole="button"
+                accessibilityState={{ expanded: isOpen }}
+                style={styles.groupHeader}
+              >
                 <View style={styles.groupIcon}>
                   <Icon size={16} color={colors.accent700} />
                 </View>
@@ -100,12 +118,21 @@ export function WordsReviewScreen({
                   {g.started ? '' : 'Not started · '}
                   {g.words.length}
                 </Text>
-              </View>
-              {g.words.map((w) => (
-                // Keyed per subject so the same word appearing in two units
-                // keeps its own flip state in each.
-                <WordCard key={`${tab}:${front}:${g.subject.id}:${w.thai}`} word={w} front={front} />
-              ))}
+                <View style={isOpen ? styles.chevronOpen : undefined}>
+                  <ChevronRightIcon size={16} color={textMuted(0.45)} />
+                </View>
+              </Pressable>
+              {isOpen &&
+                byLesson(g.words).map(([lesson, entries]) => (
+                  <View key={lesson} style={styles.lessonGroup}>
+                    <Text style={styles.lessonTitle}>{lesson}</Text>
+                    {entries.map((w) => (
+                      // Keyed per subject so the same word appearing in two
+                      // units keeps its own flip state in each.
+                      <WordCard key={`${tab}:${front}:${g.subject.id}:${w.thai}`} word={w} front={front} />
+                    ))}
+                  </View>
+                ))}
             </View>
           );
         })}
@@ -201,6 +228,17 @@ function ThaiSide({ word }: { word: CourseWord }) {
   );
 }
 
+// Entries in teaching order, split into runs by the lesson that teaches them.
+function byLesson(entries: DictionaryEntry[]): [string, DictionaryEntry[]][] {
+  const out: [string, DictionaryEntry[]][] = [];
+  for (const e of entries) {
+    const last = out[out.length - 1];
+    if (last && last[0] === e.lesson) last[1].push(e);
+    else out.push([e.lesson, [e]]);
+  }
+  return out;
+}
+
 function matchesQuery(w: CourseWord, q: string): boolean {
   return w.thai.includes(q) || w.roman.toLowerCase().includes(q) || w.english.toLowerCase().includes(q);
 }
@@ -230,8 +268,16 @@ const styles = StyleSheet.create({
   },
   scroll: { flex: 1 },
   scrollContent: { paddingBottom: 8 },
-  group: { marginBottom: 20 },
-  groupHeader: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 8 },
+  group: { marginBottom: 10 },
+  groupHeader: {
+    flexDirection: 'row', alignItems: 'center', gap: 8, paddingVertical: 12, paddingHorizontal: 12,
+    borderRadius: 16, backgroundColor: colors.white, borderWidth: 1.5, borderColor: 'rgba(230,176,0,0.28)',
+  },
+  chevronOpen: { transform: [{ rotate: '90deg' }] },
+  lessonGroup: { marginTop: 12 },
+  lessonTitle: {
+    fontFamily: fonts.bodySemibold, fontSize: 12, letterSpacing: 0.4, color: textMuted(0.5), marginBottom: 6, marginLeft: 4,
+  },
   groupIcon: {
     width: 26, height: 26, borderRadius: 9999, backgroundColor: colors.accent100,
     alignItems: 'center', justifyContent: 'center',
