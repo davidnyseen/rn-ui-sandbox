@@ -1,0 +1,24 @@
+name: keep backend awake
+
+# Supabase pauses a free project after about a week with no traffic, and a paused backend makes the app's
+# feedback box fail with "Couldn't save" (found paused 2026-11-25). One tiny read every 3 days keeps it awake.
+# Uses the same public URL + anon key the build already gets from repo secrets.
+on:
+  schedule:
+    - cron: '17 3 */3 * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Read one row
+        env:
+          SUPABASE_URL: ${{ secrets.EXPO_PUBLIC_SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.EXPO_PUBLIC_SUPABASE_ANON_KEY }}
+        run: |
+          code=$(curl -s -o /dev/null -w '%{http_code}' "$SUPABASE_URL/rest/v1/course_subjects?select=id&limit=1" \
+            -H "apikey: $SUPABASE_ANON_KEY" -H "Authorization: Bearer $SUPABASE_ANON_KEY")
+          echo "status $code"
+          test "$code" = 200
