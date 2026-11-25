@@ -1,17 +1,17 @@
 import { useRef, useState } from 'react';
 import { Animated, Pressable, ScrollView, Text, TextInput, View, StyleSheet } from 'react-native';
-import { CourseSubject, CourseWord, subjectWords } from '../courseTypes';
+import { CourseSubject, CourseWord, subjectSentences, subjectWords } from '../courseTypes';
 import { colors, fonts, textMuted } from '../theme';
 import { BookIcon, PlayIcon } from '../components/icons';
 import { COURSE_ICONS } from '../components/courseIcons';
 import { speakThai } from '../tts';
 
-// A flat glossary grouped by subject — once a subject has been started at
-// all, its whole word list shows here (not just lessons already finished),
-// so it doubles as a preview of what's coming next in that unit. Search box
-// since this list only grows. Each row is a flashcard: Thai on the front,
-// English on the back, so the list works as self-testing rather than just a
-// reference sheet.
+// The app's dictionary, grouped by subject: every unit's whole word list
+// (started or not, so it doubles as a preview of what's coming), and a
+// Sentences tab with the full sentences the lessons use (subjectSentences).
+// Search box since this list only grows. Each row is a flashcard: English on
+// the front, the Thai on the back (asked for English first, 2026-11-24), so
+// the list works as self-testing rather than just a reference sheet.
 export function WordsReviewScreen({
   courseSubjects,
   courseProgress,
@@ -20,10 +20,15 @@ export function WordsReviewScreen({
   courseProgress: Record<string, { unlockedLessonIndex: number; stars: Record<number, number> }>;
 }) {
   const [query, setQuery] = useState('');
+  const [tab, setTab] = useState<'words' | 'sentences'>('words');
+  const noun = tab === 'words' ? 'word' : 'sentence';
 
   const groups = courseSubjects
-    .filter((s) => (courseProgress[s.id]?.unlockedLessonIndex ?? 0) > 0)
-    .map((s) => ({ subject: s, words: subjectWords(s) }))
+    .map((s) => ({
+      subject: s,
+      started: (courseProgress[s.id]?.unlockedLessonIndex ?? 0) > 0,
+      words: tab === 'words' ? subjectWords(s) : subjectSentences(s),
+    }))
     .filter((g) => g.words.length > 0);
 
   const q = query.trim().toLowerCase();
@@ -37,13 +42,19 @@ export function WordsReviewScreen({
 
   return (
     <View style={styles.screen}>
-      <Text style={styles.kicker}>Review</Text>
+      <Text style={styles.kicker}>Dictionary</Text>
       <View style={styles.kickerRule} />
-      <Text style={styles.title}>Words you've learned</Text>
+      <View id="dictionary-tabs" style={styles.tabRow}>
+        {(['words', 'sentences'] as const).map((t) => (
+          <Pressable key={t} onPress={() => setTab(t)} accessibilityRole="tab" accessibilityState={{ selected: tab === t }}>
+            <Text style={[styles.title, tab !== t && styles.titleInactive]}>{t === 'words' ? 'Words' : 'Sentences'}</Text>
+          </Pressable>
+        ))}
+      </View>
       <Text style={styles.subtitle}>
         {totalCount > 0
-          ? `${totalCount} word${totalCount === 1 ? '' : 's'} across ${groups.length} unit${groups.length === 1 ? '' : 's'}. Tap a card to flip it.`
-          : 'Finish a lesson and its words will show up here.'}
+          ? `${totalCount} ${noun}${totalCount === 1 ? '' : 's'} across ${groups.length} unit${groups.length === 1 ? '' : 's'}. Tap a card to see the Thai.`
+          : 'No course content loaded yet.'}
       </Text>
 
       {totalCount > 0 && (
@@ -66,12 +77,15 @@ export function WordsReviewScreen({
                   <Icon size={16} color={colors.accent700} />
                 </View>
                 <Text style={styles.groupTitle}>{g.subject.title}</Text>
-                <Text style={styles.groupCount}>{g.words.length}</Text>
+                <Text style={styles.groupCount}>
+                  {g.started ? '' : 'Not started · '}
+                  {g.words.length}
+                </Text>
               </View>
               {g.words.map((w) => (
                 // Keyed per subject so the same word appearing in two units
                 // keeps its own flip state in each.
-                <WordCard key={`${g.subject.id}:${w.thai}`} word={w} />
+                <WordCard key={`${tab}:${g.subject.id}:${w.thai}`} word={w} />
               ))}
             </View>
           );
@@ -124,14 +138,24 @@ function WordCard({ word }: { word: CourseWord }) {
       onPress={flip}
       accessibilityRole="button"
       accessibilityLabel={
-        flipped ? `${word.roman}, ${word.english}. Tap to flip back.` : `${word.roman}. Tap to flip and hear it.`
+        flipped ? `${word.english}: ${word.roman}. Tap to flip back.` : `${word.english}. Tap to flip and hear it in Thai.`
       }
       style={styles.cardWrap}
     >
+      {/* English on the front (in normal flow, so it sets the row height —
+          sentences can wrap to a few lines; front's minHeight keeps a one-line
+          card as tall as the two-line Thai on the back); the Thai is the
+          answer on the back, with the sound button there. */}
       <Animated.View style={[styles.face, styles.front, frontStyle]} pointerEvents={flipped ? 'none' : 'auto'}>
+        <Text style={styles.frontEnglish}>{word.english}</Text>
+      </Animated.View>
+      <Animated.View
+        style={[styles.face, styles.back, StyleSheet.absoluteFill, backStyle]}
+        pointerEvents={flipped ? 'auto' : 'none'}
+      >
         <View style={styles.rowText}>
-          <Text style={styles.rowRoman}>{word.roman}</Text>
-          <Text style={styles.rowThai}>{word.thai}</Text>
+          <Text style={styles.rowRoman} numberOfLines={2}>{word.roman}</Text>
+          <Text style={styles.rowThai} numberOfLines={2}>{word.thai}</Text>
         </View>
         <Pressable
           onPress={() => speakThai(word.thai)}
@@ -141,14 +165,6 @@ function WordCard({ word }: { word: CourseWord }) {
         >
           <View style={styles.soundBtn}><PlayIcon size={17} color={colors.accent700} /></View>
         </Pressable>
-      </Animated.View>
-      <Animated.View
-        style={[styles.face, styles.back, StyleSheet.absoluteFill, backStyle]}
-        pointerEvents={flipped ? 'auto' : 'none'}
-      >
-        <Text style={styles.backEnglish} numberOfLines={2}>
-          {word.english}
-        </Text>
       </Animated.View>
     </Pressable>
   );
@@ -164,6 +180,8 @@ const styles = StyleSheet.create({
   // a short gold bar under the label (ChatGPT's 'improve' pass, 2026-11-08)
   kickerRule: { width: 28, height: 3, borderRadius: 2, backgroundColor: colors.accent, marginTop: -4, marginBottom: 12 },
   title: { fontFamily: fonts.heading, fontSize: 30, letterSpacing: -0.3, color: colors.text, marginBottom: 10 },
+  tabRow: { flexDirection: 'row', gap: 18, alignItems: 'baseline' },
+  titleInactive: { color: textMuted(0.3) },
   subtitle: { fontSize: 15, lineHeight: 22, color: textMuted(0.6), marginBottom: 18 },
   search: {
     borderWidth: 1.5, borderColor: 'rgba(230,176,0,0.4)', borderRadius: 9999, paddingHorizontal: 18, paddingVertical: 12,
@@ -186,15 +204,17 @@ const styles = StyleSheet.create({
     backfaceVisibility: 'hidden',
   },
   front: {
-    flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 10,
+    flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 10, minHeight: 68,
     borderWidth: 1.5, borderColor: 'rgba(230,176,0,0.28)', backgroundColor: colors.white,
     shadowColor: '#7a5c00', shadowOffset: { width: 0, height: 3 }, shadowOpacity: 0.06, shadowRadius: 8, elevation: 1,
   },
   // Tinted rather than neutral so a flipped card reads as "turned over" at a
   // glance while scrolling a long list.
-  back: { backgroundColor: colors.accent100, alignItems: 'center', justifyContent: 'center' },
-  backEnglish: { fontFamily: fonts.bodySemibold, fontSize: 15, color: colors.text, textAlign: 'center' },
-  rowText: { minWidth: 92 },
+  back: {
+    backgroundColor: colors.accent100, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 10,
+  },
+  frontEnglish: { flex: 1, fontFamily: fonts.bodySemibold, fontSize: 16, lineHeight: 22, color: colors.text },
+  rowText: { flex: 1, minWidth: 92 },
   soundBtn: { width: 36, height: 36, borderRadius: 9999, backgroundColor: colors.accent100, alignItems: 'center', justifyContent: 'center' },
   rowRoman: { fontFamily: fonts.bodySemibold, fontSize: 16, color: colors.text },
   rowThai: { fontSize: 15, color: textMuted(0.55), marginTop: 1 },
