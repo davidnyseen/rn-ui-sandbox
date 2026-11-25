@@ -22374,13 +22374,13 @@
           "source": "Essential Thai (Higbie), p.116"
         },
         {
-          "id": "mc-161",
+          "id": "mc-163",
           "type": "translationChoice",
           "thai": "ขอข้าวผัดไก่หนึ่งจาน",
           "roman": "khɔ̌ɔ khâao-phàt gài nɯ̀ng jaan",
           "options": [
             {
-              "text": "One more plate, please.",
+              "text": "with chicken",
               "correct": false
             },
             {
@@ -22392,7 +22392,7 @@
               "correct": true
             },
             {
-              "text": "with chicken",
+              "text": "One more plate, please.",
               "correct": false
             }
           ],
@@ -22406,7 +22406,7 @@
           ]
         },
         {
-          "id": "sp-166",
+          "id": "sp-168",
           "type": "speak",
           "thai": "ขอข้าวผัดไก่หนึ่งจาน",
           "roman": "khɔ̌ɔ khâao-phàt gài nɯ̀ng jaan",
@@ -22431,7 +22431,7 @@
           "source": "Essential Thai (Higbie), p.116"
         },
         {
-          "id": "so-162",
+          "id": "so-164",
           "type": "sentenceOrder",
           "prompt": "with chicken",
           "tileUnit": "word",
@@ -22445,19 +22445,19 @@
               "thai": "ไก่"
             },
             "x0": {
-              "thai": "แก้ว",
-              "roman": "gɛ̂ɛo"
+              "thai": "เมนู",
+              "roman": "menuu"
             },
             "x1": {
-              "thai": "อะไร",
-              "roman": "à-rai"
+              "thai": "ด้วย",
+              "roman": "dûai"
             }
           },
           "poolOrder": [
-            "x1",
             "b",
-            "a",
-            "x0"
+            "x0",
+            "x1",
+            "a"
           ],
           "correctOrder": [
             "a",
@@ -22476,7 +22476,7 @@
           "source": "Essential Thai (Higbie), p.117"
         },
         {
-          "id": "sp-164",
+          "id": "sp-166",
           "type": "speak",
           "thai": "ขออีกจานหนึ่ง",
           "roman": "khɔ̌ɔ ìik jaan nɯ̀ng",
@@ -22500,7 +22500,7 @@
           "source": "Essential Thai (Higbie), p.117"
         },
         {
-          "id": "so-165",
+          "id": "so-167",
           "type": "sentenceOrder",
           "prompt": "Another bottle of water, please.",
           "tileUnit": "word",
@@ -22522,21 +22522,21 @@
               "thai": "ขวด"
             },
             "x0": {
-              "thai": "ใส่",
-              "roman": "sài"
+              "thai": "อะไร",
+              "roman": "à-rai"
             },
             "x1": {
-              "thai": "ข้าวผัด",
-              "roman": "khâao-phàt"
+              "thai": "ใส่",
+              "roman": "sài"
             }
           },
           "poolOrder": [
-            "x0",
-            "d",
-            "c",
-            "b",
             "x1",
-            "a"
+            "b",
+            "d",
+            "a",
+            "c",
+            "x0"
           ],
           "correctOrder": [
             "a",
@@ -22547,7 +22547,7 @@
           "source": "Essential Thai (Higbie), p.116"
         },
         {
-          "id": "rp-167",
+          "id": "rp-169",
           "type": "reply",
           "context": [
             {
@@ -22567,13 +22567,13 @@
           "english": "With chicken.",
           "options": [
             {
-              "thai": "ขวด",
-              "roman": "khùat",
+              "thai": "ขอเมนูด้วย",
+              "roman": "khɔ̌ɔ menuu dûai",
               "correct": false
             },
             {
-              "thai": "ขอเมนูด้วย",
-              "roman": "khɔ̌ɔ menuu dûai",
+              "thai": "ขวด",
+              "roman": "khùat",
               "correct": false
             },
             {
@@ -22599,7 +22599,7 @@
           "source": "Essential Thai (Higbie), p.116"
         },
         {
-          "id": "mc-163",
+          "id": "mc-165",
           "type": "translationChoice",
           "thai": "ข้าวผัดหมู",
           "roman": "khâao-phàt mǔu",
@@ -22609,15 +22609,15 @@
               "correct": false
             },
             {
-              "text": "with chicken",
-              "correct": false
-            },
-            {
               "text": "pork fried rice",
               "correct": true
             },
             {
               "text": "One more plate, please.",
+              "correct": false
+            },
+            {
+              "text": "with chicken",
               "correct": false
             }
           ],
@@ -22628,7 +22628,7 @@
           ]
         },
         {
-          "id": "match-168",
+          "id": "match-170",
           "type": "match",
           "pairs": [
             {
@@ -22693,7 +22693,7 @@
           "source": "Essential Thai (Higbie), p.117"
         },
         {
-          "id": "sp-172",
+          "id": "sp-174",
           "type": "speak",
           "thai": "ไม่ใส่เนื้อ",
           "roman": "mâi sài nɯ́a",
@@ -22716,26 +22716,26 @@
           "source": "Essential Thai (Higbie), p.117"
         },
         {
-          "id": "mc-171",
+          "id": "mc-173",
           "type": "translationChoice",
           "thai": "ใส่น้ำตาล",
           "roman": "sài náam-taan",
           "options": [
             {
-              "text": "No chili, please.",
+              "text": "Not spicy at all.",
               "correct": false
             },
             {
-              "text": "Not spicy at all.",
+              "text": "No beef, please.",
+              "correct": false
+            },
+            {
+              "text": "No chili, please.",
               "correct": false
             },
             {
               "text": "with sugar",
               "correct": true
-            },
-            {
-              "text": "No beef, please.",
-              "correct": false
             }
           ],
           "source": "Essential Thai (Higbie), p.117",
@@ -22755,7 +22755,7 @@
           "source": "Essential Thai (Higbie), p.117"
         },
         {
-          "id": "so-173",
+          "id": "so-175",
           "type": "sentenceOrder",
           "prompt": "fried rice, not spicy",
           "tileUnit": "word",
@@ -22773,20 +22773,20 @@
               "thai": "เผ็ด"
             },
             "x0": {
-              "thai": "สอง",
-              "roman": "sɔ̌ɔng"
+              "thai": "น้ำตาล",
+              "roman": "náam-taan"
             },
             "x1": {
-              "thai": "จาน",
-              "roman": "jaan"
+              "thai": "ไก่",
+              "roman": "gài"
             }
           },
           "poolOrder": [
-            "c",
-            "x0",
-            "x1",
+            "a",
             "b",
-            "a"
+            "x1",
+            "x0",
+            "c"
           ],
           "correctOrder": [
             "a",
@@ -22806,22 +22806,22 @@
           "source": "Essential Thai (Higbie), p.117"
         },
         {
-          "id": "mc-169",
+          "id": "mc-171",
           "type": "translationChoice",
           "thai": "ไม่ใส่พริก",
           "roman": "mâi sài phrík",
           "options": [
             {
-              "text": "No chili, please.",
-              "correct": true
+              "text": "Not spicy at all.",
+              "correct": false
             },
             {
               "text": "with sugar",
               "correct": false
             },
             {
-              "text": "Not spicy at all.",
-              "correct": false
+              "text": "No chili, please.",
+              "correct": true
             },
             {
               "text": "No beef, please.",
@@ -22836,7 +22836,7 @@
           ]
         },
         {
-          "id": "sp-174",
+          "id": "sp-176",
           "type": "speak",
           "thai": "ไม่ใส่พริก",
           "roman": "mâi sài phrík",
@@ -22849,7 +22849,7 @@
           ]
         },
         {
-          "id": "rp-175",
+          "id": "rp-177",
           "type": "reply",
           "context": [
             {
@@ -22869,14 +22869,14 @@
           "english": "No chili, please.",
           "options": [
             {
-              "thai": "ขอเมนูด้วย",
-              "roman": "khɔ̌ɔ menuu dûai",
-              "correct": false
-            },
-            {
               "thai": "ไม่ใส่พริก",
               "roman": "mâi sài phrík",
               "correct": true
+            },
+            {
+              "thai": "ขอเมนูด้วย",
+              "roman": "khɔ̌ɔ menuu dûai",
+              "correct": false
             },
             {
               "thai": "มีอะไรบ้าง",
@@ -22902,7 +22902,7 @@
           "source": "Essential Thai (Higbie), p.117"
         },
         {
-          "id": "so-170",
+          "id": "so-172",
           "type": "sentenceOrder",
           "prompt": "Not spicy at all.",
           "tileUnit": "word",
@@ -22920,20 +22920,20 @@
               "thai": "เลย"
             },
             "x0": {
-              "thai": "หมู",
-              "roman": "mǔu"
+              "thai": "มี",
+              "roman": "mii"
             },
             "x1": {
-              "thai": "ไก่",
-              "roman": "gài"
+              "thai": "สาม",
+              "roman": "sǎam"
             }
           },
           "poolOrder": [
-            "a",
-            "x1",
-            "x0",
             "b",
-            "c"
+            "x1",
+            "c",
+            "a",
+            "x0"
           ],
           "correctOrder": [
             "a",
@@ -22943,7 +22943,7 @@
           "source": "Essential Thai (Higbie), p.117"
         },
         {
-          "id": "match-176",
+          "id": "match-178",
           "type": "match",
           "pairs": [
             {
@@ -23018,15 +23018,11 @@
           "source": "Essential Thai (Higbie), p.120"
         },
         {
-          "id": "mc-177",
+          "id": "mc-179",
           "type": "translationChoice",
           "thai": "ขอกาแฟร้อน",
           "roman": "khɔ̌ɔ gaa-fɛɛ rɔ́ɔn",
           "options": [
-            {
-              "text": "A hot coffee, please.",
-              "correct": true
-            },
             {
               "text": "two iced coffees",
               "correct": false
@@ -23038,6 +23034,10 @@
             {
               "text": "iced tea",
               "correct": false
+            },
+            {
+              "text": "A hot coffee, please.",
+              "correct": true
             }
           ],
           "source": "Essential Thai (Higbie), p.120",
@@ -23048,7 +23048,7 @@
           ]
         },
         {
-          "id": "sp-182",
+          "id": "sp-184",
           "type": "speak",
           "thai": "ขอกาแฟร้อน",
           "roman": "khɔ̌ɔ gaa-fɛɛ rɔ́ɔn",
@@ -23081,7 +23081,7 @@
           "source": "Essential Thai (Higbie), p.120"
         },
         {
-          "id": "so-178",
+          "id": "so-180",
           "type": "sentenceOrder",
           "prompt": "iced tea",
           "tileUnit": "word",
@@ -23095,19 +23095,19 @@
               "thai": "เย็น"
             },
             "x0": {
-              "thai": "ด้วย",
-              "roman": "dûai"
+              "thai": "ใส่",
+              "roman": "sài"
             },
             "x1": {
-              "thai": "พริก",
-              "roman": "phrík"
+              "thai": "อะไร",
+              "roman": "à-rai"
             }
           },
           "poolOrder": [
-            "b",
+            "a",
             "x0",
-            "x1",
-            "a"
+            "b",
+            "x1"
           ],
           "correctOrder": [
             "a",
@@ -23116,7 +23116,7 @@
           "source": "Essential Thai (Higbie), p.120"
         },
         {
-          "id": "so-181",
+          "id": "so-183",
           "type": "sentenceOrder",
           "prompt": "A hot tea and an iced coffee, please.",
           "tileUnit": "word",
@@ -23146,23 +23146,23 @@
               "thai": "เย็น"
             },
             "x0": {
-              "thai": "เลย",
-              "roman": "loei"
-            },
-            "x1": {
               "thai": "ไก่",
               "roman": "gài"
+            },
+            "x1": {
+              "thai": "สาม",
+              "roman": "sǎam"
             }
           },
           "poolOrder": [
-            "x0",
-            "c",
-            "x1",
-            "e",
-            "a",
+            "f",
             "d",
+            "c",
+            "a",
             "b",
-            "f"
+            "x0",
+            "x1",
+            "e"
           ],
           "correctOrder": [
             "a",
@@ -23185,7 +23185,7 @@
           "source": "Essential Thai (Higbie), p.120"
         },
         {
-          "id": "mc-179",
+          "id": "mc-181",
           "type": "translationChoice",
           "thai": "ขอน้ำเปล่า",
           "roman": "khɔ̌ɔ náam plào",
@@ -23195,11 +23195,11 @@
               "correct": false
             },
             {
-              "text": "iced tea",
+              "text": "A hot coffee, please.",
               "correct": false
             },
             {
-              "text": "A hot coffee, please.",
+              "text": "iced tea",
               "correct": false
             },
             {
@@ -23215,7 +23215,7 @@
           ]
         },
         {
-          "id": "rp-183",
+          "id": "rp-185",
           "type": "reply",
           "context": [
             {
@@ -23270,7 +23270,7 @@
           "source": "Essential Thai (Higbie), p.116"
         },
         {
-          "id": "sp-180",
+          "id": "sp-182",
           "type": "speak",
           "thai": "กาแฟเย็นสองที่",
           "roman": "gaa-fɛɛ yen sɔ̌ɔng thîi",
@@ -23284,7 +23284,7 @@
           ]
         },
         {
-          "id": "match-184",
+          "id": "match-186",
           "type": "match",
           "pairs": [
             {
@@ -23354,21 +23354,21 @@
           "source": "Essential Thai (Higbie), p.121"
         },
         {
-          "id": "mc-185",
+          "id": "mc-187",
           "type": "translationChoice",
           "thai": "ขอเบียร์ขวดใหญ่",
           "roman": "khɔ̌ɔ bia khùat yài",
           "options": [
-            {
-              "text": "a small bottle",
-              "correct": false
-            },
             {
               "text": "A large bottle of beer, please.",
               "correct": true
             },
             {
               "text": "not sweet",
+              "correct": false
+            },
+            {
+              "text": "a small bottle",
               "correct": false
             },
             {
@@ -23385,7 +23385,7 @@
           ]
         },
         {
-          "id": "sp-190",
+          "id": "sp-192",
           "type": "speak",
           "thai": "ขอเบียร์ขวดใหญ่",
           "roman": "khɔ̌ɔ bia khùat yài",
@@ -23409,7 +23409,7 @@
           "source": "Essential Thai (Higbie), p.121"
         },
         {
-          "id": "so-186",
+          "id": "so-188",
           "type": "sentenceOrder",
           "prompt": "a small bottle",
           "tileUnit": "word",
@@ -23423,19 +23423,19 @@
               "thai": "เล็ก"
             },
             "x0": {
-              "thai": "ใหญ่",
-              "roman": "yài"
+              "thai": "เลย",
+              "roman": "loei"
             },
             "x1": {
-              "thai": "ไม่",
-              "roman": "mâi"
+              "thai": "แก้ว",
+              "roman": "gɛ̂ɛo"
             }
           },
           "poolOrder": [
             "b",
-            "x1",
             "x0",
-            "a"
+            "a",
+            "x1"
           ],
           "correctOrder": [
             "a",
@@ -23454,7 +23454,7 @@
           "source": "Essential Thai (Higbie), p.119"
         },
         {
-          "id": "sp-188",
+          "id": "sp-190",
           "type": "speak",
           "thai": "ไม่หวาน",
           "roman": "mâi wǎan",
@@ -23476,14 +23476,14 @@
           "source": "Essential Thai (Higbie), p.119"
         },
         {
-          "id": "mc-187",
+          "id": "mc-189",
           "type": "translationChoice",
           "thai": "เปรี้ยวหวาน",
           "roman": "prîao wǎan",
           "options": [
             {
-              "text": "sweet and sour",
-              "correct": true
+              "text": "a small bottle",
+              "correct": false
             },
             {
               "text": "not sweet",
@@ -23494,8 +23494,8 @@
               "correct": false
             },
             {
-              "text": "a small bottle",
-              "correct": false
+              "text": "sweet and sour",
+              "correct": true
             }
           ],
           "source": "Essential Thai (Higbie), p.121",
@@ -23505,7 +23505,7 @@
           ]
         },
         {
-          "id": "rp-191",
+          "id": "rp-193",
           "type": "reply",
           "context": [
             {
@@ -23526,14 +23526,14 @@
           "english": "We have large and small bottles of beer.",
           "options": [
             {
-              "thai": "เปรี้ยวหวาน",
-              "roman": "prîao wǎan",
-              "correct": false
-            },
-            {
               "thai": "มีเบียร์ขวดใหญ่กับขวดเล็ก",
               "roman": "mii bia khùat yài gàp khùat lék",
               "correct": true
+            },
+            {
+              "thai": "เปรี้ยวหวาน",
+              "roman": "prîao wǎan",
+              "correct": false
             },
             {
               "thai": "ไม่หวาน",
@@ -23563,7 +23563,7 @@
           "source": "Essential Thai (Higbie), p.119"
         },
         {
-          "id": "so-189",
+          "id": "so-191",
           "type": "sentenceOrder",
           "prompt": "not salty",
           "tileUnit": "word",
@@ -23577,19 +23577,19 @@
               "thai": "เค็ม"
             },
             "x0": {
-              "thai": "น้ำตาล",
-              "roman": "náam-taan"
+              "thai": "บ้าง",
+              "roman": "bâang"
             },
             "x1": {
-              "thai": "จาน",
-              "roman": "jaan"
+              "thai": "ที่",
+              "roman": "thîi"
             }
           },
           "poolOrder": [
-            "x1",
+            "a",
             "x0",
             "b",
-            "a"
+            "x1"
           ],
           "correctOrder": [
             "a",
@@ -23598,7 +23598,7 @@
           "source": "Essential Thai (Higbie), p.121"
         },
         {
-          "id": "match-192",
+          "id": "match-194",
           "type": "match",
           "pairs": [
             {
@@ -23653,7 +23653,7 @@
           "source": "Essential Thai (Higbie), p.118"
         },
         {
-          "id": "so-197",
+          "id": "so-199",
           "type": "sentenceOrder",
           "prompt": "A spoon, please.",
           "tileUnit": "word",
@@ -23671,20 +23671,20 @@
               "thai": "ด้วย"
             },
             "x0": {
-              "thai": "อีก",
-              "roman": "ìik"
+              "thai": "กับ",
+              "roman": "gàp"
             },
             "x1": {
-              "thai": "เล็ก",
-              "roman": "lék"
+              "thai": "บ้าง",
+              "roman": "bâang"
             }
           },
           "poolOrder": [
-            "x0",
             "c",
-            "x1",
+            "x0",
             "b",
-            "a"
+            "a",
+            "x1"
           ],
           "correctOrder": [
             "a",
@@ -23704,7 +23704,7 @@
           "source": "Essential Thai (Higbie), p.118"
         },
         {
-          "id": "mc-193",
+          "id": "mc-195",
           "type": "translationChoice",
           "thai": "ขอช้อนกับส้อม",
           "roman": "khɔ̌ɔ chɔ́ɔn gàp sɔ̂m",
@@ -23714,16 +23714,16 @@
               "correct": false
             },
             {
-              "text": "A spoon and fork, please.",
-              "correct": true
-            },
-            {
               "text": "The check, please.",
               "correct": false
             },
             {
               "text": "Keep the change.",
               "correct": false
+            },
+            {
+              "text": "A spoon and fork, please.",
+              "correct": true
             }
           ],
           "source": "Essential Thai (Higbie), p.118",
@@ -23735,7 +23735,7 @@
           ]
         },
         {
-          "id": "sp-198",
+          "id": "sp-200",
           "type": "speak",
           "thai": "ขอช้อนกับส้อม",
           "roman": "khɔ̌ɔ chɔ́ɔn gàp sɔ̂m",
@@ -23759,17 +23759,17 @@
           "source": "Essential Thai (Higbie), p.118"
         },
         {
-          "id": "mc-194",
+          "id": "mc-196",
           "type": "translationChoice",
           "thai": "ช่วยเช็ดโต๊ะหน่อย",
           "roman": "chûai chét tó nɔ̀i",
           "options": [
             {
-              "text": "The check, please.",
-              "correct": false
+              "text": "Please wipe the table.",
+              "correct": true
             },
             {
-              "text": "A spoon and fork, please.",
+              "text": "The check, please.",
               "correct": false
             },
             {
@@ -23777,8 +23777,8 @@
               "correct": false
             },
             {
-              "text": "Please wipe the table.",
-              "correct": true
+              "text": "A spoon and fork, please.",
+              "correct": false
             }
           ],
           "source": "Essential Thai (Higbie), p.118",
@@ -23797,21 +23797,21 @@
           "source": "Essential Thai (Higbie), p.118"
         },
         {
-          "id": "mc-195",
+          "id": "mc-197",
           "type": "translationChoice",
           "thai": "ขอเช็คบิลด้วย",
           "roman": "khɔ̌ɔ chék-bin dûai",
           "options": [
+            {
+              "text": "Keep the change.",
+              "correct": false
+            },
             {
               "text": "A spoon and fork, please.",
               "correct": false
             },
             {
               "text": "Please wipe the table.",
-              "correct": false
-            },
-            {
-              "text": "Keep the change.",
               "correct": false
             },
             {
@@ -23847,7 +23847,7 @@
           "source": "Essential Thai (Higbie), p.118"
         },
         {
-          "id": "sp-196",
+          "id": "sp-198",
           "type": "speak",
           "thai": "ไม่ต้องทอน",
           "roman": "mâi tɔ̂ng thɔɔn",
@@ -23860,7 +23860,7 @@
           ]
         },
         {
-          "id": "match-199",
+          "id": "match-201",
           "type": "match",
           "pairs": [
             {
@@ -23925,7 +23925,7 @@
           "source": "Essential Thai (Higbie), p.132"
         },
         {
-          "id": "so-201",
+          "id": "so-203",
           "type": "sentenceOrder",
           "prompt": "I don't eat beef.",
           "tileUnit": "word",
@@ -23947,21 +23947,21 @@
               "thai": "เนื้อ"
             },
             "x0": {
-              "thai": "พริก",
-              "roman": "phrík"
+              "thai": "เล็ก",
+              "roman": "lék"
             },
             "x1": {
-              "thai": "ขอ",
-              "roman": "khɔ̌ɔ"
+              "thai": "แก้ว",
+              "roman": "gɛ̂ɛo"
             }
           },
           "poolOrder": [
-            "a",
-            "d",
             "b",
-            "x0",
+            "d",
             "x1",
-            "c"
+            "c",
+            "a",
+            "x0"
           ],
           "correctOrder": [
             "a",
@@ -23982,22 +23982,22 @@
           "source": "Essential Thai (Higbie), p.132"
         },
         {
-          "id": "mc-200",
+          "id": "mc-202",
           "type": "translationChoice",
           "thai": "ฉันกินเจ",
           "roman": "chán gin jee",
           "options": [
             {
-              "text": "Do you have tofu?",
-              "correct": false
+              "text": "I'm vegetarian.",
+              "correct": true
             },
             {
               "text": "Do you eat spicy food?",
               "correct": false
             },
             {
-              "text": "I'm vegetarian.",
-              "correct": true
+              "text": "Do you have tofu?",
+              "correct": false
             },
             {
               "text": "I don't eat beef.",
@@ -24012,7 +24012,7 @@
           ]
         },
         {
-          "id": "sp-205",
+          "id": "sp-207",
           "type": "speak",
           "thai": "ฉันกินเจ",
           "roman": "chán gin jee",
@@ -24045,7 +24045,7 @@
           "source": "Essential Thai (Higbie), p.132"
         },
         {
-          "id": "so-204",
+          "id": "so-206",
           "type": "sentenceOrder",
           "prompt": "with vegetable oil",
           "tileUnit": "word",
@@ -24059,8 +24059,8 @@
               "thai": "น้ำมันพืช"
             },
             "x0": {
-              "thai": "เค็ม",
-              "roman": "khem"
+              "thai": "จาน",
+              "roman": "jaan"
             },
             "x1": {
               "thai": "สอง",
@@ -24068,8 +24068,8 @@
             }
           },
           "poolOrder": [
-            "x1",
             "x0",
+            "x1",
             "a",
             "b"
           ],
@@ -24090,21 +24090,21 @@
           "source": "Essential Thai (Higbie), p.132"
         },
         {
-          "id": "mc-202",
+          "id": "mc-204",
           "type": "translationChoice",
           "thai": "มีเต้าหู้มั้ย",
           "roman": "mii tâo-hûu mái",
           "options": [
+            {
+              "text": "I don't eat beef.",
+              "correct": false
+            },
             {
               "text": "Do you have tofu?",
               "correct": true
             },
             {
               "text": "Do you eat spicy food?",
-              "correct": false
-            },
-            {
-              "text": "I don't eat beef.",
               "correct": false
             },
             {
@@ -24120,7 +24120,7 @@
           ]
         },
         {
-          "id": "sp-203",
+          "id": "sp-205",
           "type": "speak",
           "thai": "กินเผ็ดมั้ย",
           "roman": "gin phèt mái",
@@ -24133,7 +24133,7 @@
           ]
         },
         {
-          "id": "rp-206",
+          "id": "rp-208",
           "type": "reply",
           "context": [
             {
@@ -24154,8 +24154,8 @@
           "english": "Yes, we do.",
           "options": [
             {
-              "thai": "ไม่เผ็ดเลย",
-              "roman": "mâi phèt loei",
+              "thai": "ฉันกินเจ",
+              "roman": "chán gin jee",
               "correct": false
             },
             {
@@ -24164,8 +24164,8 @@
               "correct": true
             },
             {
-              "thai": "ฉันกินเจ",
-              "roman": "chán gin jee",
+              "thai": "ไม่เผ็ดเลย",
+              "roman": "mâi phèt loei",
               "correct": false
             }
           ],
@@ -24175,7 +24175,7 @@
           ]
         },
         {
-          "id": "match-207",
+          "id": "match-209",
           "type": "match",
           "pairs": [
             {
@@ -24230,7 +24230,7 @@
           "source": "Essential Thai (Higbie), p.132"
         },
         {
-          "id": "so-209",
+          "id": "so-211",
           "type": "sentenceOrder",
           "prompt": "with egg",
           "tileUnit": "word",
@@ -24244,19 +24244,19 @@
               "thai": "ไข่"
             },
             "x0": {
-              "thai": "เต้าหู้",
-              "roman": "tâo-hûu"
+              "thai": "เล็ก",
+              "roman": "lék"
             },
             "x1": {
-              "thai": "กับ",
-              "roman": "gàp"
+              "thai": "เต้าหู้",
+              "roman": "tâo-hûu"
             }
           },
           "poolOrder": [
             "a",
-            "x0",
             "x1",
-            "b"
+            "b",
+            "x0"
           ],
           "correctOrder": [
             "a",
@@ -24275,11 +24275,19 @@
           "source": "Essential Thai (Higbie), p.132"
         },
         {
-          "id": "mc-208",
+          "id": "mc-210",
           "type": "translationChoice",
           "thai": "ไม่ใส่ไข่ได้มั้ย",
           "roman": "mâi sài khài dâi mái",
           "options": [
+            {
+              "text": "How much per kilo?",
+              "correct": false
+            },
+            {
+              "text": "Two kilos, please.",
+              "correct": false
+            },
             {
               "text": "with egg",
               "correct": false
@@ -24287,14 +24295,6 @@
             {
               "text": "Can you make it without egg?",
               "correct": true
-            },
-            {
-              "text": "Two kilos, please.",
-              "correct": false
-            },
-            {
-              "text": "How much per kilo?",
-              "correct": false
             }
           ],
           "source": "Essential Thai (Higbie), p.132",
@@ -24307,11 +24307,15 @@
           ]
         },
         {
-          "id": "mc-212",
+          "id": "mc-214",
           "type": "translationChoice",
           "thai": "ได้",
           "roman": "dâi",
           "options": [
+            {
+              "text": "Sure, I can.",
+              "correct": true
+            },
             {
               "text": "with egg",
               "correct": false
@@ -24323,10 +24327,6 @@
             {
               "text": "Can you make it without egg?",
               "correct": false
-            },
-            {
-              "text": "Sure, I can.",
-              "correct": true
             }
           ],
           "source": "Essential Thai (Higbie), p.132",
@@ -24335,7 +24335,7 @@
           ]
         },
         {
-          "id": "sp-213",
+          "id": "sp-215",
           "type": "speak",
           "thai": "ไม่ใส่ไข่ได้มั้ย",
           "roman": "mâi sài khài dâi mái",
@@ -24360,7 +24360,7 @@
           "source": "Essential Thai (Higbie), p.134"
         },
         {
-          "id": "sp-211",
+          "id": "sp-213",
           "type": "speak",
           "thai": "ขอสองโล",
           "roman": "khɔ̌ɔ sɔ̌ɔng loo",
@@ -24373,7 +24373,7 @@
           ]
         },
         {
-          "id": "rp-214",
+          "id": "rp-216",
           "type": "reply",
           "context": [
             {
@@ -24396,11 +24396,6 @@
           "english": "Sure, no problem.",
           "options": [
             {
-              "thai": "ขอสองโล",
-              "roman": "khɔ̌ɔ sɔ̌ɔng loo",
-              "correct": false
-            },
-            {
               "thai": "ได้",
               "roman": "dâi",
               "correct": true
@@ -24408,6 +24403,11 @@
             {
               "thai": "ใส่ไข่",
               "roman": "sài khài",
+              "correct": false
+            },
+            {
+              "thai": "ขอสองโล",
+              "roman": "khɔ̌ɔ sɔ̌ɔng loo",
               "correct": false
             }
           ],
@@ -24437,7 +24437,7 @@
           "source": "Essential Thai (Higbie), p.134"
         },
         {
-          "id": "mc-210",
+          "id": "mc-212",
           "type": "translationChoice",
           "thai": "โลละเท่าไหร่",
           "roman": "loo lá thâo-rài",
@@ -24467,7 +24467,7 @@
           ]
         },
         {
-          "id": "match-215",
+          "id": "match-217",
           "type": "match",
           "pairs": [
             {
@@ -24507,7 +24507,7 @@
       "title": "How many kilos do you want?",
       "steps": [
         {
-          "id": "sp-219",
+          "id": "sp-221",
           "type": "speak",
           "thai": "โลละเท่าไหร่",
           "roman": "loo lá thâo-rài",
@@ -24530,25 +24530,25 @@
           "source": "Essential Thai (Higbie), p.134"
         },
         {
-          "id": "mc-218",
+          "id": "mc-220",
           "type": "translationChoice",
           "thai": "ผมเอาเต้าหู้สองโล",
           "roman": "phǒm ao tâo-hûu sɔ̌ɔng loo",
           "options": [
             {
-              "text": "I'll take two kilos of tofu.",
-              "correct": true
+              "text": "How many kilos do you want?",
+              "correct": false
             },
             {
-              "text": "How much per kilo?",
-              "correct": false
+              "text": "I'll take two kilos of tofu.",
+              "correct": true
             },
             {
               "text": "I'll take half a kilo.",
               "correct": false
             },
             {
-              "text": "How many kilos do you want?",
+              "text": "How much per kilo?",
               "correct": false
             }
           ],
@@ -24562,51 +24562,35 @@
           ]
         },
         {
-          "id": "so-220",
-          "type": "sentenceOrder",
-          "prompt": "I'll take one kilo. (said by a woman)",
-          "tileUnit": "word",
-          "words": {
-            "a": {
-              "roman": "ao",
-              "thai": "เอา"
+          "id": "mc-224",
+          "type": "translationChoice",
+          "thai": "ฉันเอาหนึ่งโล",
+          "roman": "chán ao nɯ̀ng loo",
+          "options": [
+            {
+              "text": "I'll take one kilo.",
+              "correct": true
             },
-            "b": {
-              "roman": "nɯ̀ng",
-              "thai": "หนึ่ง"
+            {
+              "text": "I'll take two kilos of tofu.",
+              "correct": false
             },
-            "c": {
-              "roman": "loo",
-              "thai": "โล"
+            {
+              "text": "How many kilos do you want?",
+              "correct": false
             },
-            "x0": {
-              "thai": "ใหญ่",
-              "roman": "yài"
-            },
-            "x1": {
-              "thai": "เปล่า",
-              "roman": "plào"
-            },
-            "subj": {
-              "thai": "ฉัน",
-              "roman": "chán"
+            {
+              "text": "I'll take half a kilo.",
+              "correct": false
             }
-          },
-          "poolOrder": [
-            "x1",
-            "b",
-            "x0",
-            "subj",
-            "a",
-            "c"
           ],
-          "correctOrder": [
-            "subj",
-            "a",
-            "b",
-            "c"
-          ],
-          "source": "Essential Thai (Higbie), p.134"
+          "source": "Essential Thai (Higbie), p.134",
+          "parts": [
+            "ฉัน",
+            "เอา",
+            "หนึ่ง",
+            "โล"
+          ]
         },
         {
           "id": "wi-153",
@@ -24619,7 +24603,7 @@
           "source": "Essential Thai (Higbie), p.134"
         },
         {
-          "id": "mc-216",
+          "id": "mc-218",
           "type": "translationChoice",
           "thai": "เอากี่โล",
           "roman": "ao gìi loo",
@@ -24633,11 +24617,11 @@
               "correct": false
             },
             {
-              "text": "I'll take half a kilo.",
+              "text": "I'll take two kilos of tofu.",
               "correct": false
             },
             {
-              "text": "I'll take two kilos of tofu.",
+              "text": "I'll take half a kilo.",
               "correct": false
             }
           ],
@@ -24649,7 +24633,7 @@
           ]
         },
         {
-          "id": "sp-221",
+          "id": "sp-225",
           "type": "speak",
           "thai": "เอากี่โล",
           "roman": "ao gìi loo",
@@ -24672,7 +24656,7 @@
           "source": "Essential Thai (Higbie), p.134"
         },
         {
-          "id": "so-217",
+          "id": "so-219",
           "type": "sentenceOrder",
           "prompt": "I'll take half a kilo. (said by a man)",
           "tileUnit": "word",
@@ -24690,12 +24674,12 @@
               "thai": "โล"
             },
             "x0": {
-              "thai": "ที่",
-              "roman": "thîi"
+              "thai": "เผ็ด",
+              "roman": "phèt"
             },
             "x1": {
-              "thai": "ขอ",
-              "roman": "khɔ̌ɔ"
+              "thai": "เย็น",
+              "roman": "yen"
             },
             "subj": {
               "thai": "ผม",
@@ -24703,12 +24687,12 @@
             }
           },
           "poolOrder": [
-            "a",
-            "x0",
+            "x1",
+            "c",
             "b",
             "subj",
-            "x1",
-            "c"
+            "a",
+            "x0"
           ],
           "correctOrder": [
             "subj",
@@ -24719,7 +24703,7 @@
           "source": "Essential Thai (Higbie), p.134"
         },
         {
-          "id": "rp-222",
+          "id": "rp-226",
           "type": "reply",
           "context": [
             {
@@ -24763,7 +24747,100 @@
           ]
         },
         {
-          "id": "match-223",
+          "id": "wi-155",
+          "type": "wordIntro",
+          "word": {
+            "thai": "ไข่เจียว",
+            "roman": "khài-jiao",
+            "english": "omelette"
+          },
+          "source": "Requested by the app owner (2026-11-25)"
+        },
+        {
+          "id": "sp-223",
+          "type": "speak",
+          "thai": "ไข่เจียวไม่ใส่หมู",
+          "roman": "khài-jiao mâi sài mǔu",
+          "meaning": "an omelette with no pork",
+          "source": "Essential Thai (Higbie), p.134",
+          "parts": [
+            "ไข่เจียว",
+            "ไม่",
+            "ใส่",
+            "หมู"
+          ]
+        },
+        {
+          "id": "wi-156",
+          "type": "wordIntro",
+          "word": {
+            "thai": "ผม",
+            "roman": "phǒm",
+            "english": "I (said by a man)"
+          },
+          "source": "Requested by the app owner (2026-11-25)"
+        },
+        {
+          "id": "so-222",
+          "type": "sentenceOrder",
+          "prompt": "I want an omelette with no pork.",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "phǒm",
+              "thai": "ผม"
+            },
+            "b": {
+              "roman": "ao",
+              "thai": "เอา"
+            },
+            "c": {
+              "roman": "khài-jiao",
+              "thai": "ไข่เจียว"
+            },
+            "d": {
+              "roman": "mâi",
+              "thai": "ไม่"
+            },
+            "e": {
+              "roman": "sài",
+              "thai": "ใส่"
+            },
+            "f": {
+              "roman": "mǔu",
+              "thai": "หมู"
+            },
+            "x0": {
+              "thai": "โล",
+              "roman": "loo"
+            },
+            "x1": {
+              "thai": "ละ",
+              "roman": "lá"
+            }
+          },
+          "poolOrder": [
+            "b",
+            "d",
+            "a",
+            "e",
+            "c",
+            "x1",
+            "f",
+            "x0"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f"
+          ],
+          "source": "Essential Thai (Higbie), p.134"
+        },
+        {
+          "id": "match-227",
           "type": "match",
           "pairs": [
             {
@@ -24780,6 +24857,16 @@
               "thai": "ครึ่ง",
               "roman": "khrɯ̂ng",
               "english": "half"
+            },
+            {
+              "thai": "ไข่เจียว",
+              "roman": "khài-jiao",
+              "english": "omelette"
+            },
+            {
+              "thai": "ผม",
+              "roman": "phǒm",
+              "english": "I (said by a man)"
             }
           ],
           "source": "Essential Thai (Higbie), p.134"
@@ -24867,13 +24954,13 @@
           ]
         },
         {
-          "id": "mc-161",
+          "id": "mc-163",
           "type": "translationChoice",
           "thai": "ขอข้าวผัดไก่หนึ่งจาน",
           "roman": "khɔ̌ɔ khâao-phàt gài nɯ̀ng jaan",
           "options": [
             {
-              "text": "One more plate, please.",
+              "text": "with chicken",
               "correct": false
             },
             {
@@ -24885,7 +24972,7 @@
               "correct": true
             },
             {
-              "text": "with chicken",
+              "text": "One more plate, please.",
               "correct": false
             }
           ],
@@ -24899,7 +24986,7 @@
           ]
         },
         {
-          "id": "so-165",
+          "id": "so-167",
           "type": "sentenceOrder",
           "prompt": "Another bottle of water, please.",
           "tileUnit": "word",
@@ -24921,21 +25008,21 @@
               "thai": "ขวด"
             },
             "x0": {
-              "thai": "ใส่",
-              "roman": "sài"
+              "thai": "อะไร",
+              "roman": "à-rai"
             },
             "x1": {
-              "thai": "ข้าวผัด",
-              "roman": "khâao-phàt"
+              "thai": "ใส่",
+              "roman": "sài"
             }
           },
           "poolOrder": [
-            "x0",
-            "d",
-            "c",
-            "b",
             "x1",
-            "a"
+            "b",
+            "d",
+            "a",
+            "c",
+            "x0"
           ],
           "correctOrder": [
             "a",
@@ -24946,55 +25033,26 @@
           "source": "Essential Thai (Higbie), p.116"
         },
         {
-          "id": "mc-163",
-          "type": "translationChoice",
-          "thai": "ข้าวผัดหมู",
-          "roman": "khâao-phàt mǔu",
-          "options": [
-            {
-              "text": "One chicken fried rice, please.",
-              "correct": false
-            },
-            {
-              "text": "with chicken",
-              "correct": false
-            },
-            {
-              "text": "pork fried rice",
-              "correct": true
-            },
-            {
-              "text": "One more plate, please.",
-              "correct": false
-            }
-          ],
-          "source": "Essential Thai (Higbie), p.116",
-          "parts": [
-            "ข้าวผัด",
-            "หมู"
-          ]
-        },
-        {
-          "id": "mc-171",
+          "id": "mc-173",
           "type": "translationChoice",
           "thai": "ใส่น้ำตาล",
           "roman": "sài náam-taan",
           "options": [
             {
-              "text": "No chili, please.",
+              "text": "Not spicy at all.",
               "correct": false
             },
             {
-              "text": "Not spicy at all.",
+              "text": "No beef, please.",
+              "correct": false
+            },
+            {
+              "text": "No chili, please.",
               "correct": false
             },
             {
               "text": "with sugar",
               "correct": true
-            },
-            {
-              "text": "No beef, please.",
-              "correct": false
             }
           ],
           "source": "Essential Thai (Higbie), p.117",
@@ -25004,7 +25062,7 @@
           ]
         },
         {
-          "id": "rp-175",
+          "id": "rp-177",
           "type": "reply",
           "context": [
             {
@@ -25024,14 +25082,14 @@
           "english": "No chili, please.",
           "options": [
             {
-              "thai": "ขอเมนูด้วย",
-              "roman": "khɔ̌ɔ menuu dûai",
-              "correct": false
-            },
-            {
               "thai": "ไม่ใส่พริก",
               "roman": "mâi sài phrík",
               "correct": true
+            },
+            {
+              "thai": "ขอเมนูด้วย",
+              "roman": "khɔ̌ɔ menuu dûai",
+              "correct": false
             },
             {
               "thai": "มีอะไรบ้าง",
@@ -25047,7 +25105,7 @@
           ]
         },
         {
-          "id": "so-181",
+          "id": "so-183",
           "type": "sentenceOrder",
           "prompt": "A hot tea and an iced coffee, please.",
           "tileUnit": "word",
@@ -25077,23 +25135,23 @@
               "thai": "เย็น"
             },
             "x0": {
-              "thai": "เลย",
-              "roman": "loei"
-            },
-            "x1": {
               "thai": "ไก่",
               "roman": "gài"
+            },
+            "x1": {
+              "thai": "สาม",
+              "roman": "sǎam"
             }
           },
           "poolOrder": [
-            "x0",
-            "c",
-            "x1",
-            "e",
-            "a",
+            "f",
             "d",
+            "c",
+            "a",
             "b",
-            "f"
+            "x0",
+            "x1",
+            "e"
           ],
           "correctOrder": [
             "a",
@@ -25106,7 +25164,7 @@
           "source": "Essential Thai (Higbie), p.120"
         },
         {
-          "id": "rp-183",
+          "id": "rp-185",
           "type": "reply",
           "context": [
             {
@@ -25151,7 +25209,7 @@
           ]
         },
         {
-          "id": "rp-191",
+          "id": "rp-193",
           "type": "reply",
           "context": [
             {
@@ -25172,14 +25230,14 @@
           "english": "We have large and small bottles of beer.",
           "options": [
             {
-              "thai": "เปรี้ยวหวาน",
-              "roman": "prîao wǎan",
-              "correct": false
-            },
-            {
               "thai": "มีเบียร์ขวดใหญ่กับขวดเล็ก",
               "roman": "mii bia khùat yài gàp khùat lék",
               "correct": true
+            },
+            {
+              "thai": "เปรี้ยวหวาน",
+              "roman": "prîao wǎan",
+              "correct": false
             },
             {
               "thai": "ไม่หวาน",
@@ -25199,7 +25257,7 @@
           ]
         },
         {
-          "id": "mc-193",
+          "id": "mc-195",
           "type": "translationChoice",
           "thai": "ขอช้อนกับส้อม",
           "roman": "khɔ̌ɔ chɔ́ɔn gàp sɔ̂m",
@@ -25209,16 +25267,16 @@
               "correct": false
             },
             {
-              "text": "A spoon and fork, please.",
-              "correct": true
-            },
-            {
               "text": "The check, please.",
               "correct": false
             },
             {
               "text": "Keep the change.",
               "correct": false
+            },
+            {
+              "text": "A spoon and fork, please.",
+              "correct": true
             }
           ],
           "source": "Essential Thai (Higbie), p.118",
@@ -25230,7 +25288,35 @@
           ]
         },
         {
-          "id": "rp-206",
+          "id": "mc-196",
+          "type": "translationChoice",
+          "thai": "ช่วยเช็ดโต๊ะหน่อย",
+          "roman": "chûai chét tó nɔ̀i",
+          "options": [
+            {
+              "text": "Please wipe the table.",
+              "correct": true
+            },
+            {
+              "text": "The check, please.",
+              "correct": false
+            },
+            {
+              "text": "Keep the change.",
+              "correct": false
+            },
+            {
+              "text": "A spoon and fork, please.",
+              "correct": false
+            }
+          ],
+          "source": "Essential Thai (Higbie), p.118",
+          "parts": [
+            "ช่วยเช็ดโต๊ะหน่อย"
+          ]
+        },
+        {
+          "id": "rp-208",
           "type": "reply",
           "context": [
             {
@@ -25251,8 +25337,8 @@
           "english": "Yes, we do.",
           "options": [
             {
-              "thai": "ไม่เผ็ดเลย",
-              "roman": "mâi phèt loei",
+              "thai": "ฉันกินเจ",
+              "roman": "chán gin jee",
               "correct": false
             },
             {
@@ -25261,8 +25347,8 @@
               "correct": true
             },
             {
-              "thai": "ฉันกินเจ",
-              "roman": "chán gin jee",
+              "thai": "ไม่เผ็ดเลย",
+              "roman": "mâi phèt loei",
               "correct": false
             }
           ],
@@ -25272,51 +25358,7 @@
           ]
         },
         {
-          "id": "rp-214",
-          "type": "reply",
-          "context": [
-            {
-              "speaker": "M",
-              "thai": "ไม่ใส่ไข่ได้มั้ย",
-              "parts": [
-                "ไม่",
-                "ใส่",
-                "ไข่",
-                "ได้",
-                "มั้ย"
-              ],
-              "roman": "mâi sài khài dâi mái",
-              "english": "Can you make it without egg?"
-            }
-          ],
-          "replySpeaker": "F",
-          "thai": "ได้",
-          "roman": "dâi",
-          "english": "Sure, no problem.",
-          "options": [
-            {
-              "thai": "ขอสองโล",
-              "roman": "khɔ̌ɔ sɔ̌ɔng loo",
-              "correct": false
-            },
-            {
-              "thai": "ได้",
-              "roman": "dâi",
-              "correct": true
-            },
-            {
-              "thai": "ใส่ไข่",
-              "roman": "sài khài",
-              "correct": false
-            }
-          ],
-          "source": "Essential Thai (Higbie), p.132",
-          "parts": [
-            "ได้"
-          ]
-        },
-        {
-          "id": "rp-222",
+          "id": "rp-226",
           "type": "reply",
           "context": [
             {
@@ -25360,6 +25402,65 @@
           ]
         },
         {
+          "id": "so-222",
+          "type": "sentenceOrder",
+          "prompt": "I want an omelette with no pork.",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "phǒm",
+              "thai": "ผม"
+            },
+            "b": {
+              "roman": "ao",
+              "thai": "เอา"
+            },
+            "c": {
+              "roman": "khài-jiao",
+              "thai": "ไข่เจียว"
+            },
+            "d": {
+              "roman": "mâi",
+              "thai": "ไม่"
+            },
+            "e": {
+              "roman": "sài",
+              "thai": "ใส่"
+            },
+            "f": {
+              "roman": "mǔu",
+              "thai": "หมู"
+            },
+            "x0": {
+              "thai": "โล",
+              "roman": "loo"
+            },
+            "x1": {
+              "thai": "ละ",
+              "roman": "lá"
+            }
+          },
+          "poolOrder": [
+            "b",
+            "d",
+            "a",
+            "e",
+            "c",
+            "x1",
+            "f",
+            "x0"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f"
+          ],
+          "source": "Essential Thai (Higbie), p.134"
+        },
+        {
           "id": "restaurant-quiz-match-0",
           "type": "match",
           "pairs": [
@@ -25379,14 +25480,14 @@
               "english": "salty"
             },
             {
-              "thai": "ช่วยเช็ดโต๊ะหน่อย",
-              "roman": "chûai chét tó nɔ̀i",
-              "english": "Please wipe off the table."
-            },
-            {
               "thai": "เช็คบิล",
               "roman": "chék-bin",
               "english": "the bill"
+            },
+            {
+              "thai": "ต้อง",
+              "roman": "tɔ̂ng",
+              "english": "have to / need to"
             }
           ]
         },
@@ -25394,11 +25495,6 @@
           "id": "restaurant-quiz-match-1",
           "type": "match",
           "pairs": [
-            {
-              "thai": "ต้อง",
-              "roman": "tɔ̂ng",
-              "english": "have to / need to"
-            },
             {
               "thai": "ทอน",
               "roman": "thɔɔn",
@@ -25408,6 +25504,11 @@
               "thai": "น้ำมันพืช",
               "roman": "náam-man-phɯ̂ɯt",
               "english": "vegetable oil"
+            },
+            {
+              "thai": "ได้",
+              "roman": "dâi",
+              "english": "can / able to"
             }
           ]
         }

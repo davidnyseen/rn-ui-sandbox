@@ -37,6 +37,9 @@ const SRC = {
   numbers: 'Essential Thai (Higbie), p.17',
   pronunciation: 'Essential Thai (Higbie), pp.8-9',
   connector: 'Essential Thai (Higbie), general reference (connecting words)',
+  // Not from the book: a sentence the app's owner asked for by name (2026-11-25), built from words this unit
+  // already teaches plus ไข่เจียว and ผม.
+  owner: 'Requested by the app owner (2026-11-25)',
 };
 
 const lessons = [
@@ -352,6 +355,8 @@ const lessons = [
     wordIntro('เอา', 'ao', 'want / take', SRC.market),
     wordIntro('กี่', 'gìi', 'how many', SRC.market),
     wordIntro('ครึ่ง', 'khrɯ̂ng', 'half', SRC.market),
+    wordIntro('ไข่เจียว', 'khài-jiao', 'omelette', SRC.owner),
+    wordIntro('ผม', 'phǒm', 'I (said by a man)', SRC.owner),
     mc('ฉันกินเจไม่กินเนื้อเอาเต้าหู้สองโล', 'chán gin jee mâi gin nɯ́a ao tâo-hûu sɔ̌ɔng loo', "I'm a vegetarian, I don't eat meat, I'll take two kilos of tofu.", ["How many kilos do you want?", "I'd like two kilos.", "Do you have tofu?"], ['ฉัน', 'กิน', 'เจ', 'ไม่', 'กิน', 'เนื้อ', 'เอา', 'เต้าหู้', 'สอง', 'โล'], SRC.market),
     order("I'd like fried rice with chicken, I'll take half a kilo of tofu, and how much per kilo?", [
       { roman: 'khɔ̌ɔ', thai: 'ขอ' },
@@ -500,6 +505,8 @@ const REWRITES = {
     'เอา ครึ่ง โล|I\'ll take half a kilo.',
     'เอา เต้าหู้ สอง โล|I\'ll take two kilos of tofu.',
     'โล ละ เท่าไหร่|How much per kilo?',
+    'ผม เอา ไข่เจียว ไม่ ใส่ หมู|I want an omelette with no pork.',
+    'ไข่เจียว ไม่ ใส่ หมู|an omelette with no pork',
     'เอา หนึ่ง โล|I\'ll take one kilo.',
   ], reply: { q: 'เอา กี่ โล|How many kilos do you want?', a: 'เอา ครึ่ง โล|Half a kilo.', wrong: ['โล ละ เท่าไหร่', 'มี เต้าหู้ มั้ย'] } },
 };
