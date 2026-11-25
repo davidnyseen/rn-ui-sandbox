@@ -9,9 +9,10 @@ import { speakThai } from '../tts';
 // The app's dictionary, grouped by subject: every unit's whole word list
 // (started or not, so it doubles as a preview of what's coming), and a
 // Sentences tab with the full sentences the lessons use (subjectSentences).
-// Search box since this list only grows. Each row is a flashcard: English on
-// the front, the Thai on the back (asked for English first, 2026-11-24), so
-// the list works as self-testing rather than just a reference sheet.
+// Search box since this list only grows. Each row is a flashcard, so the list
+// works as self-testing rather than just a reference sheet; a toggle picks
+// which side faces up — English first (the default, asked for 2026-11-24) or
+// Thai first — and every flip reads the Thai aloud.
 export function WordsReviewScreen({
   courseSubjects,
   courseProgress,
@@ -21,6 +22,7 @@ export function WordsReviewScreen({
 }) {
   const [query, setQuery] = useState('');
   const [tab, setTab] = useState<'words' | 'sentences'>('words');
+  const [front, setFront] = useState<CardFront>('english');
   const noun = tab === 'words' ? 'word' : 'sentence';
 
   const groups = courseSubjects
@@ -53,9 +55,26 @@ export function WordsReviewScreen({
       </View>
       <Text style={styles.subtitle}>
         {totalCount > 0
-          ? `${totalCount} ${noun}${totalCount === 1 ? '' : 's'} across ${groups.length} unit${groups.length === 1 ? '' : 's'}. Tap a card to see the Thai.`
+          ? `${totalCount} ${noun}${totalCount === 1 ? '' : 's'} across ${groups.length} unit${groups.length === 1 ? '' : 's'}. Tap a card to see the ${front === 'english' ? 'Thai' : 'English'}.`
           : 'No course content loaded yet.'}
       </Text>
+
+      {totalCount > 0 && (
+        <View id="dictionary-front-toggle" style={styles.toggleRow}>
+          <Text style={styles.toggleLabel}>Show first</Text>
+          {(['english', 'thai'] as const).map((f) => (
+            <Pressable
+              key={f}
+              onPress={() => setFront(f)}
+              accessibilityRole="button"
+              accessibilityState={{ selected: front === f }}
+              style={[styles.toggleBtn, front === f && styles.toggleBtnActive]}
+            >
+              <Text style={[styles.toggleText, front === f && styles.toggleTextActive]}>{f === 'english' ? 'English' : 'Thai'}</Text>
+            </Pressable>
+          ))}
+        </View>
+      )}
 
       {totalCount > 0 && (
         <TextInput
@@ -85,7 +104,7 @@ export function WordsReviewScreen({
               {g.words.map((w) => (
                 // Keyed per subject so the same word appearing in two units
                 // keeps its own flip state in each.
-                <WordCard key={`${tab}:${g.subject.id}:${w.thai}`} word={w} />
+                <WordCard key={`${tab}:${front}:${g.subject.id}:${w.thai}`} word={w} front={front} />
               ))}
             </View>
           );
@@ -102,16 +121,18 @@ export function WordsReviewScreen({
 // two-sided card trick, so there's a real edge-on moment mid-flip rather
 // than a crossfade. The front stays in normal flow so it sets the row
 // height; the back is absolutely positioned to match it.
-function WordCard({ word }: { word: CourseWord }) {
+type CardFront = 'english' | 'thai';
+
+function WordCard({ word, front }: { word: CourseWord; front: CardFront }) {
   const [flipped, setFlipped] = useState(false);
   const turn = useRef(new Animated.Value(0)).current;
 
   const flip = () => {
     const next = !flipped;
     setFlipped(next);
-    // Speaking on the way to the answer costs nothing now that the flip
-    // itself reveals it, and hearing the word as it turns is the point.
-    if (next) speakThai(word.thai);
+    // Read the Thai aloud on every turn, either way over — hearing it as the
+    // card flips is the point (asked for 2026-11-25).
+    speakThai(word.thai);
     Animated.spring(turn, {
       toValue: next ? 1 : 0,
       useNativeDriver: true,
@@ -137,36 +158,46 @@ function WordCard({ word }: { word: CourseWord }) {
     <Pressable
       onPress={flip}
       accessibilityRole="button"
-      accessibilityLabel={
-        flipped ? `${word.english}: ${word.roman}. Tap to flip back.` : `${word.english}. Tap to flip and hear it in Thai.`
-      }
+      accessibilityLabel={`${front === 'english' ? word.english : word.roman}. Tap to flip and hear it in Thai.`}
       style={styles.cardWrap}
     >
-      {/* English on the front (in normal flow, so it sets the row height —
-          sentences can wrap to a few lines; front's minHeight keeps a one-line
-          card as tall as the two-line Thai on the back); the Thai is the
-          answer on the back, with the sound button there. */}
+      {/* The face-up side is in normal flow, so it sets the row height —
+          sentences can wrap to a few lines; front's minHeight keeps a
+          one-line card as tall as the two-line Thai side. The other side is
+          absolutely positioned to match. */}
       <Animated.View style={[styles.face, styles.front, frontStyle]} pointerEvents={flipped ? 'none' : 'auto'}>
-        <Text style={styles.frontEnglish}>{word.english}</Text>
+        {front === 'english' ? <EnglishSide word={word} /> : <ThaiSide word={word} />}
       </Animated.View>
       <Animated.View
         style={[styles.face, styles.back, StyleSheet.absoluteFill, backStyle]}
         pointerEvents={flipped ? 'auto' : 'none'}
       >
-        <View style={styles.rowText}>
-          <Text style={styles.rowRoman} numberOfLines={2}>{word.roman}</Text>
-          <Text style={styles.rowThai} numberOfLines={2}>{word.thai}</Text>
-        </View>
-        <Pressable
-          onPress={() => speakThai(word.thai)}
-          hitSlop={10}
-          accessibilityRole="button"
-          accessibilityLabel={`Hear ${word.roman}`}
-        >
-          <View style={styles.soundBtn}><PlayIcon size={17} color={colors.accent700} /></View>
-        </Pressable>
+        {front === 'english' ? <ThaiSide word={word} /> : <EnglishSide word={word} />}
       </Animated.View>
     </Pressable>
+  );
+}
+
+function EnglishSide({ word }: { word: CourseWord }) {
+  return <Text style={styles.frontEnglish}>{word.english}</Text>;
+}
+
+function ThaiSide({ word }: { word: CourseWord }) {
+  return (
+    <>
+      <View style={styles.rowText}>
+        <Text style={styles.rowRoman} numberOfLines={2}>{word.roman}</Text>
+        <Text style={styles.rowThai} numberOfLines={2}>{word.thai}</Text>
+      </View>
+      <Pressable
+        onPress={() => speakThai(word.thai)}
+        hitSlop={10}
+        accessibilityRole="button"
+        accessibilityLabel={`Hear ${word.roman}`}
+      >
+        <View style={styles.soundBtn}><PlayIcon size={17} color={colors.accent700} /></View>
+      </Pressable>
+    </>
   );
 }
 
@@ -182,6 +213,15 @@ const styles = StyleSheet.create({
   title: { fontFamily: fonts.heading, fontSize: 30, letterSpacing: -0.3, color: colors.text, marginBottom: 10 },
   tabRow: { flexDirection: 'row', gap: 18, alignItems: 'baseline' },
   titleInactive: { color: textMuted(0.3) },
+  toggleRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: -6, marginBottom: 14 },
+  toggleLabel: { fontSize: 13, color: textMuted(0.55), marginRight: 2 },
+  toggleBtn: {
+    paddingHorizontal: 14, paddingVertical: 6, borderRadius: 9999,
+    borderWidth: 1.5, borderColor: 'rgba(230,176,0,0.4)', backgroundColor: colors.white,
+  },
+  toggleBtnActive: { backgroundColor: colors.accent100, borderColor: colors.accent },
+  toggleText: { fontFamily: fonts.bodySemibold, fontSize: 13, color: textMuted(0.6) },
+  toggleTextActive: { color: colors.accent700 },
   subtitle: { fontSize: 15, lineHeight: 22, color: textMuted(0.6), marginBottom: 18 },
   search: {
     borderWidth: 1.5, borderColor: 'rgba(230,176,0,0.4)', borderRadius: 9999, paddingHorizontal: 18, paddingVertical: 12,
