@@ -2,10 +2,6 @@ name: build
 
 on:
   workflow_dispatch:
-  # TEMPORARY (2026-11-25): Claude's GitHub access can't press Run workflow, so a push to this one branch
-  # starts the build instead. Removed again in the next commit.
-  push:
-    branches: [claude/dictionary-sentences]
 
 jobs:
   upload:
