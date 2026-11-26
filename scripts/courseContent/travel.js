@@ -363,6 +363,18 @@ const lessons = [
     wordIntro('ออสเตรเลีย', 'ɔ́ɔt-sà-tree-lia', 'Australia', SRC.owner),
   ]),
 
+  // --------------------------------------------------------------- t12: more in / at, no new words (owner, 2026-11-26)
+  // A review lesson like greetings gh08: "X อยู่ใน/ที่ <place>" sentences built only from words taught above.
+  lesson('t12', 'Where is it? In the room, at the station', [
+    rule(
+      'Where something is',
+      'Thing + อยู่ (yùu, "is at") + ที่ or ใน + place: กุญแจอยู่ในห้อง — "the key is in the room", ' +
+        'ป้ายรถเมล์อยู่ที่สี่แยก — "the bus stop is at the intersection". Leave the thing out and it means you: ' +
+        'อยู่ที่สนามบิน — "(I\'m) at the airport".',
+      SRC.owner
+    ),
+  ]),
+
   // --------------------------------------------------------------- (Conversation — recombines vocab taught above, no new words)
   dialogue(
     't-dlg',
@@ -518,6 +530,14 @@ const REWRITES = {
     'ที่ ออสเตรเลีย ปลูก ข้าว|They grow rice in Australia.',
     'ใน ห้อง ไม่ มี ยุง|There are no mosquitoes in the room.',
   ], reply: { q: 'อยู่ ที่ไหน|Where are you?', a: 'อยู่ ที่ กรุงเทพฯ|(I\'m) in Bangkok.', wrong: ['ใน ห้อง มี ยุง', 'ปลูก ข้าว'] } },
+  t12: { phrases: [
+    'กุญแจ อยู่ ใน ห้อง|The key is in the room.',
+    'อยู่ ที่ สนามบิน|(I\'m) at the airport.',
+    'ผ้าเช็ดตัว อยู่ ใน ห้อง|The towel is in the room.',
+    'อยู่ ที่ สถานี รถไฟ|(I\'m) at the train station.',
+    'ป้าย รถเมล์ อยู่ ที่ สี่แยก|The bus stop is at the intersection.',
+    'ใน ตลาด มี ธนาคาร มั้ย|Is there a bank in the market?',
+  ], reply: { q: 'กุญแจ อยู่ ที่ไหน|Where\'s the key?', a: 'อยู่ ใน ห้อง|It\'s in the room.', wrong: ['อยู่ ที่ สนามบิน', 'ป้าย รถเมล์'] } },
 };
 
 const travelSubject = subject(
