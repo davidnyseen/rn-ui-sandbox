@@ -52,6 +52,9 @@ const SRC = {
   placesInTown: 'Essential Thai (Higbie), p.146',
   directions: 'Essential Thai (Higbie), p.147',
   nearFar: 'Essential Thai (Higbie), p.148',
+  // Not from the book: in/at sentences the app's owner asked for (2026-11-26, from "there's no rice growing in
+  // Australia" — rice is in fact grown there, so the lesson says it is).
+  owner: 'Requested by the app owner (2026-11-26)',
 };
 
 const lessons = [
@@ -344,6 +347,22 @@ const lessons = [
     speak('ไปรษณีย์อยู่ที่ไหนเลี้ยวซ้ายที่สี่แยกใกล้', 'prai-sà-nii yùu thîi-nǎi, líao sáai thîi sìi-yɛ̂ɛk, glâi', "Where's the post office? Turn left at the intersection — near.", ['ไปรษณีย์', 'อยู่', 'ที่ไหน', 'เลี้ยว', 'ซ้าย', 'ที่', 'สี่แยก', 'ใกล้'], SRC.placesInTown),
   ]),
 
+  // --------------------------------------------------------------- t11: in / at (owner request, 2026-11-26)
+  // Sits before the conversation; its exercises come from REWRITES.t11 below.
+  lesson('t11', 'In or at? Rice in Thailand and Australia', [
+    rule(
+      'In or at: ที่ and ใน',
+      'ที่ (thîi) is the everyday "in / at" for a place: อยู่ที่ภูเก็ต — "(I\'m) in Phuket", ที่เมืองไทย — "in Thailand". ' +
+        'ใน (nai) means inside something: ในห้อง — "in the room".',
+      SRC.owner
+    ),
+    wordIntro('ใน', 'nai', 'in / inside', SRC.owner),
+    wordIntro('ข้าว', 'khâao', 'rice', SRC.owner),
+    wordIntro('ปลูก', 'plùuk', 'grow / plant', SRC.owner),
+    wordIntro('เมืองไทย', 'mɯang-thai', 'Thailand', SRC.owner),
+    wordIntro('ออสเตรเลีย', 'ɔ́ɔt-sà-tree-lia', 'Australia', SRC.owner),
+  ]),
+
   // --------------------------------------------------------------- (Conversation — recombines vocab taught above, no new words)
   dialogue(
     't-dlg',
@@ -491,6 +510,14 @@ const REWRITES = {
     'ไปรษณีย์ ไกล มั้ย|Is the post office far?',
     'ตลาด อยู่ ที่ไหน|Where\'s the market?',
   ], reply: { q: 'ตลาด อยู่ ที่ไหน|Where\'s the market?', a: 'เลี้ยว ซ้าย ที่ สี่แยก|Turn left at the intersection.', wrong: ['มี ยุง', 'ขอ ผ้าเช็ดตัว ด้วย'] } },
+  t11: { phrases: [
+    'ใน ห้อง|in the room',
+    'ที่ เมืองไทย ปลูก ข้าว|They grow rice in Thailand.',
+    'อยู่ ที่ ภูเก็ต|(I\'m) in Phuket.',
+    'ใน ห้อง มี ยุง|There are mosquitoes in the room.',
+    'ที่ ออสเตรเลีย ปลูก ข้าว|They grow rice in Australia.',
+    'ใน ห้อง ไม่ มี ยุง|There are no mosquitoes in the room.',
+  ], reply: { q: 'อยู่ ที่ไหน|Where are you?', a: 'อยู่ ที่ กรุงเทพฯ|(I\'m) in Bangkok.', wrong: ['ใน ห้อง มี ยุง', 'ปลูก ข้าว'] } },
 };
 
 const travelSubject = subject(
