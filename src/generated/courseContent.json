@@ -28993,86 +28993,40 @@
           "source": "Requested by the app owner (2026-11-26)"
         },
         {
-          "id": "so-246",
-          "type": "sentenceOrder",
-          "prompt": "The key is in the room.",
-          "tileUnit": "word",
-          "words": {
-            "a": {
-              "roman": "gun-jɛɛ",
-              "thai": "กุญแจ"
-            },
-            "b": {
-              "roman": "yùu",
-              "thai": "อยู่"
-            },
-            "c": {
-              "roman": "nai",
-              "thai": "ใน"
-            },
-            "d": {
-              "roman": "hɔ̂ng",
-              "thai": "ห้อง"
-            },
-            "x0": {
-              "thai": "สอง",
-              "roman": "sɔ̌ɔng"
-            },
-            "x1": {
-              "thai": "ผ้าเช็ดตัว",
-              "roman": "phâa-chét-tua"
-            }
-          },
-          "poolOrder": [
-            "x1",
-            "x0",
-            "b",
-            "d",
-            "c",
-            "a"
-          ],
-          "correctOrder": [
-            "a",
-            "b",
-            "c",
-            "d"
-          ],
-          "source": "Requested by the app owner (2026-11-26)"
-        },
-        {
-          "id": "mc-247",
+          "id": "mc-245",
           "type": "translationChoice",
-          "thai": "อยู่ที่สนามบิน",
-          "roman": "yùu thîi sà-nǎam-bin",
+          "thai": "กุญแจอยู่ในห้อง",
+          "roman": "gun-jɛɛ yùu nai hɔ̂ng",
           "options": [
             {
               "text": "The key is in the room.",
-              "correct": false
+              "correct": true
             },
             {
-              "text": "Where's the toilet?",
-              "correct": false
-            },
-            {
-              "text": "Does this room have a bathroom?",
+              "text": "The towel is in the room.",
               "correct": false
             },
             {
               "text": "(I'm) at the airport.",
-              "correct": true
+              "correct": false
+            },
+            {
+              "text": "(I'm) at the train station.",
+              "correct": false
             }
           ],
           "source": "Requested by the app owner (2026-11-26)",
           "parts": [
+            "กุญแจ",
             "อยู่",
-            "ที่",
-            "สนามบิน"
+            "ใน",
+            "ห้อง"
           ]
         },
         {
-          "id": "so-249",
+          "id": "so-246",
           "type": "sentenceOrder",
-          "prompt": "(I'm) at the train station.",
+          "prompt": "(I'm) at the airport.",
           "tileUnit": "word",
           "words": {
             "a": {
@@ -29084,67 +29038,38 @@
               "thai": "ที่"
             },
             "c": {
-              "roman": "sà-thǎa-nee",
-              "thai": "สถานี"
-            },
-            "d": {
-              "roman": "rót-fai",
-              "thai": "รถไฟ"
+              "roman": "sà-nǎam-bin",
+              "thai": "สนามบิน"
             },
             "x0": {
-              "thai": "ด้วย",
-              "roman": "dûai"
+              "thai": "ป้าย",
+              "roman": "pâai"
             },
             "x1": {
-              "thai": "ใบ",
-              "roman": "bai"
+              "thai": "ผ้าเช็ดตัว",
+              "roman": "phâa-chét-tua"
             }
           },
           "poolOrder": [
-            "x0",
-            "b",
-            "d",
-            "c",
+            "a",
             "x1",
-            "a"
+            "c",
+            "b",
+            "x0"
           ],
           "correctOrder": [
             "a",
             "b",
-            "c",
-            "d"
+            "c"
           ],
           "source": "Requested by the app owner (2026-11-26)"
         },
         {
-          "id": "sp-250",
-          "type": "speak",
-          "thai": "ป้ายรถเมล์อยู่ที่สี่แยก",
-          "roman": "pâai rót-mee yùu thîi sìi-yɛ̂ɛk",
-          "meaning": "The bus stop is at the intersection.",
-          "source": "Requested by the app owner (2026-11-26)",
-          "parts": [
-            "ป้าย",
-            "รถเมล์",
-            "อยู่",
-            "ที่",
-            "สี่แยก"
-          ]
-        },
-        {
-          "id": "mc-251",
+          "id": "mc-247",
           "type": "translationChoice",
-          "thai": "ในตลาดมีธนาคารมั้ย",
-          "roman": "nai tà-làat mii thá-naa-khaan mái",
+          "thai": "ผ้าเช็ดตัวอยู่ในห้อง",
+          "roman": "phâa-chét-tua yùu nai hɔ̂ng",
           "options": [
-            {
-              "text": "Where's the toilet?",
-              "correct": false
-            },
-            {
-              "text": "Is there a bank in the market?",
-              "correct": true
-            },
             {
               "text": "(I'm) at the airport.",
               "correct": false
@@ -29152,8 +29077,97 @@
             {
               "text": "The key is in the room.",
               "correct": false
+            },
+            {
+              "text": "(I'm) at the train station.",
+              "correct": false
+            },
+            {
+              "text": "The towel is in the room.",
+              "correct": true
             }
           ],
+          "source": "Requested by the app owner (2026-11-26)",
+          "parts": [
+            "ผ้าเช็ดตัว",
+            "อยู่",
+            "ใน",
+            "ห้อง"
+          ]
+        },
+        {
+          "id": "sp-248",
+          "type": "speak",
+          "thai": "อยู่ที่สถานีรถไฟ",
+          "roman": "yùu thîi sà-thǎa-nee rót-fai",
+          "meaning": "(I'm) at the train station.",
+          "source": "Requested by the app owner (2026-11-26)",
+          "parts": [
+            "อยู่",
+            "ที่",
+            "สถานี",
+            "รถไฟ"
+          ]
+        },
+        {
+          "id": "so-249",
+          "type": "sentenceOrder",
+          "prompt": "The bus stop is at the intersection.",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "pâai",
+              "thai": "ป้าย"
+            },
+            "b": {
+              "roman": "rót-mee",
+              "thai": "รถเมล์"
+            },
+            "c": {
+              "roman": "yùu",
+              "thai": "อยู่"
+            },
+            "d": {
+              "roman": "thîi",
+              "thai": "ที่"
+            },
+            "e": {
+              "roman": "sìi-yɛ̂ɛk",
+              "thai": "สี่แยก"
+            },
+            "x0": {
+              "thai": "ด้วย",
+              "roman": "dûai"
+            },
+            "x1": {
+              "thai": "กี่",
+              "roman": "gìi"
+            }
+          },
+          "poolOrder": [
+            "x0",
+            "c",
+            "x1",
+            "e",
+            "d",
+            "b",
+            "a"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "source": "Requested by the app owner (2026-11-26)"
+        },
+        {
+          "id": "sp-250",
+          "type": "speak",
+          "thai": "ในตลาดมีธนาคารมั้ย",
+          "roman": "nai tà-làat mii thá-naa-khaan mái",
+          "meaning": "Is there a bank in the market?",
           "source": "Requested by the app owner (2026-11-26)",
           "parts": [
             "ใน",
@@ -29164,7 +29178,21 @@
           ]
         },
         {
-          "id": "rp-253",
+          "id": "sp-251",
+          "type": "speak",
+          "thai": "กุญแจอยู่ในห้อง",
+          "roman": "gun-jɛɛ yùu nai hɔ̂ng",
+          "meaning": "The key is in the room.",
+          "source": "Requested by the app owner (2026-11-26)",
+          "parts": [
+            "กุญแจ",
+            "อยู่",
+            "ใน",
+            "ห้อง"
+          ]
+        },
+        {
+          "id": "rp-252",
           "type": "reply",
           "context": [
             {
@@ -29185,14 +29213,14 @@
           "english": "It's in the room.",
           "options": [
             {
-              "thai": "อยู่ที่สนามบิน",
-              "roman": "yùu thîi sà-nǎam-bin",
-              "correct": false
-            },
-            {
               "thai": "อยู่ในห้อง",
               "roman": "yùu nai hɔ̂ng",
               "correct": true
+            },
+            {
+              "thai": "อยู่ที่สนามบิน",
+              "roman": "yùu thîi sà-nǎam-bin",
+              "correct": false
             },
             {
               "thai": "ป้ายรถเมล์",
@@ -29206,7 +29234,15 @@
             "ใน",
             "ห้อง"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "t13",
+      "subject_id": "travel",
+      "sort_order": 12,
+      "title": "Where's the toilet?",
+      "steps": [
         {
           "id": "wi-156",
           "type": "wordIntro",
@@ -29218,25 +29254,25 @@
           "source": "Requested by the app owner (2026-11-26)"
         },
         {
-          "id": "mc-245",
+          "id": "mc-253",
           "type": "translationChoice",
           "thai": "ห้องน้ำอยู่ที่ไหน",
           "roman": "hɔ̂ng-náam yùu thîi-nǎi",
           "options": [
             {
-              "text": "Where's the toilet?",
-              "correct": true
-            },
-            {
-              "text": "(I'm) at the airport.",
-              "correct": false
-            },
-            {
-              "text": "The key is in the room.",
+              "text": "(I'm) going to the toilet.",
               "correct": false
             },
             {
               "text": "Does this room have a bathroom?",
+              "correct": false
+            },
+            {
+              "text": "Where's the toilet?",
+              "correct": true
+            },
+            {
+              "text": "The toilet isn't far.",
               "correct": false
             }
           ],
@@ -29248,7 +29284,72 @@
           ]
         },
         {
-          "id": "sp-248",
+          "id": "so-254",
+          "type": "sentenceOrder",
+          "prompt": "(I'm) going to the toilet.",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "pai",
+              "thai": "ไป"
+            },
+            "b": {
+              "roman": "hɔ̂ng-náam",
+              "thai": "ห้องน้ำ"
+            },
+            "x0": {
+              "thai": "ตลาด",
+              "roman": "tà-làat"
+            },
+            "x1": {
+              "thai": "ข้าว",
+              "roman": "khâao"
+            }
+          },
+          "poolOrder": [
+            "a",
+            "x0",
+            "b",
+            "x1"
+          ],
+          "correctOrder": [
+            "a",
+            "b"
+          ],
+          "source": "Requested by the app owner (2026-11-26)"
+        },
+        {
+          "id": "mc-255",
+          "type": "translationChoice",
+          "thai": "ห้องน้ำไม่ไกล",
+          "roman": "hɔ̂ng-náam mâi glai",
+          "options": [
+            {
+              "text": "Where's the toilet?",
+              "correct": false
+            },
+            {
+              "text": "(I'm) going to the toilet.",
+              "correct": false
+            },
+            {
+              "text": "The toilet isn't far.",
+              "correct": true
+            },
+            {
+              "text": "Does this room have a bathroom?",
+              "correct": false
+            }
+          ],
+          "source": "Requested by the app owner (2026-11-26)",
+          "parts": [
+            "ห้องน้ำ",
+            "ไม่",
+            "ไกล"
+          ]
+        },
+        {
+          "id": "sp-256",
           "type": "speak",
           "thai": "ห้องนี้มีห้องน้ำมั้ย",
           "roman": "hɔ̂ng níi mii hɔ̂ng-náam mái",
@@ -29263,7 +29364,74 @@
           ]
         },
         {
-          "id": "sp-252",
+          "id": "so-257",
+          "type": "sentenceOrder",
+          "prompt": "Is there a toilet at the airport?",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "thîi",
+              "thai": "ที่"
+            },
+            "b": {
+              "roman": "sà-nǎam-bin",
+              "thai": "สนามบิน"
+            },
+            "c": {
+              "roman": "mii",
+              "thai": "มี"
+            },
+            "d": {
+              "roman": "hɔ̂ng-náam",
+              "thai": "ห้องน้ำ"
+            },
+            "e": {
+              "roman": "mái",
+              "thai": "มั้ย"
+            },
+            "x0": {
+              "thai": "ที่ไหน",
+              "roman": "thîi-nǎi"
+            },
+            "x1": {
+              "thai": "ตรง",
+              "roman": "trong"
+            }
+          },
+          "poolOrder": [
+            "b",
+            "d",
+            "x1",
+            "a",
+            "x0",
+            "c",
+            "e"
+          ],
+          "correctOrder": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "source": "Requested by the app owner (2026-11-26)"
+        },
+        {
+          "id": "sp-258",
+          "type": "speak",
+          "thai": "ห้องน้ำอยู่ใกล้ตลาด",
+          "roman": "hɔ̂ng-náam yùu glâi tà-làat",
+          "meaning": "The toilet is near the market.",
+          "source": "Requested by the app owner (2026-11-26)",
+          "parts": [
+            "ห้องน้ำ",
+            "อยู่",
+            "ใกล้",
+            "ตลาด"
+          ]
+        },
+        {
+          "id": "sp-259",
           "type": "speak",
           "thai": "ห้องน้ำอยู่ที่ไหน",
           "roman": "hɔ̂ng-náam yùu thîi-nǎi",
@@ -29274,13 +29442,58 @@
             "อยู่",
             "ที่ไหน"
           ]
+        },
+        {
+          "id": "rp-260",
+          "type": "reply",
+          "context": [
+            {
+              "speaker": "M",
+              "thai": "ห้องน้ำอยู่ที่ไหน",
+              "parts": [
+                "ห้องน้ำ",
+                "อยู่",
+                "ที่ไหน"
+              ],
+              "roman": "hɔ̂ng-náam yùu thîi-nǎi",
+              "english": "Where's the toilet?"
+            }
+          ],
+          "replySpeaker": "F",
+          "thai": "ตรงไปเลี้ยวขวา",
+          "roman": "trong pai líao khwǎa",
+          "english": "Go straight, then turn right.",
+          "options": [
+            {
+              "thai": "ตรงไปเลี้ยวขวา",
+              "roman": "trong pai líao khwǎa",
+              "correct": true
+            },
+            {
+              "thai": "ไปห้องน้ำ",
+              "roman": "pai hɔ̂ng-náam",
+              "correct": false
+            },
+            {
+              "thai": "ห้องนี้",
+              "roman": "hɔ̂ng níi",
+              "correct": false
+            }
+          ],
+          "source": "Requested by the app owner (2026-11-26)",
+          "parts": [
+            "ตรง",
+            "ไป",
+            "เลี้ยว",
+            "ขวา"
+          ]
         }
       ]
     },
     {
       "id": "travel-quiz",
       "subject_id": "travel",
-      "sort_order": 12,
+      "sort_order": 13,
       "title": "Unit quiz",
       "steps": [
         {
@@ -29644,47 +29857,39 @@
           ]
         },
         {
-          "id": "rp-218",
-          "type": "reply",
-          "context": [
-            {
-              "speaker": "M",
-              "thai": "สนามบินไกลมั้ย",
-              "parts": [
-                "สนามบิน",
-                "ไกล",
-                "มั้ย"
-              ],
-              "roman": "sà-nǎam-bin glai mái",
-              "english": "Is the airport far?"
-            }
-          ],
-          "replySpeaker": "F",
-          "thai": "ไม่ไกล",
-          "roman": "mâi glai",
-          "english": "No, not far.",
-          "options": [
-            {
-              "thai": "ตรงไป",
-              "roman": "trong pai",
-              "correct": false
+          "id": "so-213",
+          "type": "sentenceOrder",
+          "prompt": "Go straight.",
+          "tileUnit": "word",
+          "words": {
+            "a": {
+              "roman": "trong",
+              "thai": "ตรง"
             },
-            {
-              "thai": "ไม่ไกล",
-              "roman": "mâi glai",
-              "correct": true
+            "b": {
+              "roman": "pai",
+              "thai": "ไป"
             },
-            {
-              "thai": "เลี้ยวซ้าย",
-              "roman": "líao sáai",
-              "correct": false
+            "x0": {
+              "thai": "เลี้ยว",
+              "roman": "líao"
+            },
+            "x1": {
+              "thai": "ซ้าย",
+              "roman": "sáai"
             }
+          },
+          "poolOrder": [
+            "a",
+            "b",
+            "x1",
+            "x0"
           ],
-          "source": "Essential Thai (Higbie), p.147",
-          "parts": [
-            "ไม่",
-            "ไกล"
-          ]
+          "correctOrder": [
+            "a",
+            "b"
+          ],
+          "source": "Essential Thai (Higbie), p.147"
         },
         {
           "id": "rp-226",
@@ -29819,51 +30024,34 @@
           ]
         },
         {
-          "id": "so-237",
-          "type": "sentenceOrder",
-          "prompt": "They grow rice in Thailand.",
-          "tileUnit": "word",
-          "words": {
-            "a": {
-              "roman": "thîi",
-              "thai": "ที่"
+          "id": "mc-255",
+          "type": "translationChoice",
+          "thai": "ห้องน้ำไม่ไกล",
+          "roman": "hɔ̂ng-náam mâi glai",
+          "options": [
+            {
+              "text": "Where's the toilet?",
+              "correct": false
             },
-            "b": {
-              "roman": "mɯang-thai",
-              "thai": "เมืองไทย"
+            {
+              "text": "(I'm) going to the toilet.",
+              "correct": false
             },
-            "c": {
-              "roman": "plùuk",
-              "thai": "ปลูก"
+            {
+              "text": "The toilet isn't far.",
+              "correct": true
             },
-            "d": {
-              "roman": "khâao",
-              "thai": "ข้าว"
-            },
-            "x0": {
-              "thai": "กลับ",
-              "roman": "glàp"
-            },
-            "x1": {
-              "thai": "แท็กซี่",
-              "roman": "thák-sîi"
+            {
+              "text": "Does this room have a bathroom?",
+              "correct": false
             }
-          },
-          "poolOrder": [
-            "x0",
-            "d",
-            "a",
-            "x1",
-            "b",
-            "c"
           ],
-          "correctOrder": [
-            "a",
-            "b",
-            "c",
-            "d"
-          ],
-          "source": "Requested by the app owner (2026-11-26)"
+          "source": "Requested by the app owner (2026-11-26)",
+          "parts": [
+            "ห้องน้ำ",
+            "ไม่",
+            "ไกล"
+          ]
         },
         {
           "id": "travel-quiz-match-0",
@@ -29906,14 +30094,14 @@
               "english": "post office"
             },
             {
+              "thai": "เมืองไทย",
+              "roman": "mɯang-thai",
+              "english": "Thailand"
+            },
+            {
               "thai": "ออสเตรเลีย",
               "roman": "ɔ́ɔt-sà-tree-lia",
               "english": "Australia"
-            },
-            {
-              "thai": "ห้องน้ำ",
-              "roman": "hɔ̂ng-náam",
-              "english": "toilet / bathroom"
             }
           ]
         }
@@ -29922,7 +30110,7 @@
     {
       "id": "t-dlg",
       "subject_id": "travel",
-      "sort_order": 13,
+      "sort_order": 14,
       "title": "Finding a room in town",
       "steps": {
         "kind": "dialogue",

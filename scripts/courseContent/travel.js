@@ -364,7 +364,7 @@ const lessons = [
   ]),
 
   // --------------------------------------------------------------- t12: more in / at, no new words (owner, 2026-11-26)
-  // "X อยู่ใน/ที่ <place>" sentences built from words taught above, plus ห้องน้ำ (toilet).
+  // A review lesson like greetings gh08: "X อยู่ใน/ที่ <place>" sentences built only from words taught above.
   lesson('t12', 'Where is it? In the room, at the station', [
     rule(
       'Where something is',
@@ -373,7 +373,11 @@ const lessons = [
         'อยู่ที่สนามบิน — "(I\'m) at the airport".',
       SRC.owner
     ),
-    // owner, 2026-11-27: "can't see the word toilet"
+  ]),
+
+  // --------------------------------------------------------------- t13: the toilet (owner, 2026-11-27: "can't see the
+  // word toilet … add it and relevant sentences"). One new word; everything else is Travel vocabulary from above.
+  lesson('t13', "Where's the toilet?", [
     wordIntro('ห้องน้ำ', 'hɔ̂ng-náam', 'toilet / bathroom', SRC.owner),
   ]),
 
@@ -533,14 +537,21 @@ const REWRITES = {
     'ใน ห้อง ไม่ มี ยุง|There are no mosquitoes in the room.',
   ], reply: { q: 'อยู่ ที่ไหน|Where are you?', a: 'อยู่ ที่ กรุงเทพฯ|(I\'m) in Bangkok.', wrong: ['ใน ห้อง มี ยุง', 'ปลูก ข้าว'] } },
   t12: { phrases: [
-    'ห้องน้ำ อยู่ ที่ไหน|Where\'s the toilet?',
     'กุญแจ อยู่ ใน ห้อง|The key is in the room.',
     'อยู่ ที่ สนามบิน|(I\'m) at the airport.',
-    'ห้อง นี้ มี ห้องน้ำ มั้ย|Does this room have a bathroom?',
+    'ผ้าเช็ดตัว อยู่ ใน ห้อง|The towel is in the room.',
     'อยู่ ที่ สถานี รถไฟ|(I\'m) at the train station.',
     'ป้าย รถเมล์ อยู่ ที่ สี่แยก|The bus stop is at the intersection.',
     'ใน ตลาด มี ธนาคาร มั้ย|Is there a bank in the market?',
   ], reply: { q: 'กุญแจ อยู่ ที่ไหน|Where\'s the key?', a: 'อยู่ ใน ห้อง|It\'s in the room.', wrong: ['อยู่ ที่ สนามบิน', 'ป้าย รถเมล์'] } },
+  t13: { phrases: [
+    'ห้องน้ำ อยู่ ที่ไหน|Where\'s the toilet?',
+    'ไป ห้องน้ำ|(I\'m) going to the toilet.',
+    'ห้องน้ำ ไม่ ไกล|The toilet isn\'t far.',
+    'ห้อง นี้ มี ห้องน้ำ มั้ย|Does this room have a bathroom?',
+    'ที่ สนามบิน มี ห้องน้ำ มั้ย|Is there a toilet at the airport?',
+    'ห้องน้ำ อยู่ ใกล้ ตลาด|The toilet is near the market.',
+  ], reply: { q: 'ห้องน้ำ อยู่ ที่ไหน|Where\'s the toilet?', a: 'ตรง ไป เลี้ยว ขวา|Go straight, then turn right.', wrong: ['ไป ห้องน้ำ', 'ห้อง นี้'] } },
 };
 
 const travelSubject = subject(
