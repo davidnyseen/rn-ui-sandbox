@@ -2,6 +2,10 @@ name: build
 
 on:
   workflow_dispatch:
+  # TEMPORARY (2026-11-27, owner asked to update the app): Claude's GitHub access can't press Run workflow, so a
+  # push to this one branch (main + this file) starts the build. The branch is never merged.
+  push:
+    branches: [claude/build-main]
 
 jobs:
   upload:
