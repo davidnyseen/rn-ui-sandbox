@@ -2,6 +2,20 @@ name: build
 
 on:
   workflow_dispatch:
+  # Every merge to main goes to TestFlight on its own (owner, 2026-11-27: "update main" / "stop asking me to do
+  # things"). Docs-only and backend-only changes don't need a new app build.
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'docs/**'
+      - '**/*.md'
+      - 'supabase/**'
+      - '.github/workflows/keep-backend-awake.yml'
+
+# One build at a time: a newer push cancels a build that's still running, so TestFlight gets the latest.
+concurrency:
+  group: build-main
+  cancel-in-progress: true
 
 jobs:
   upload:
